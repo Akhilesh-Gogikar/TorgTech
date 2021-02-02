@@ -1,0 +1,7 @@
+#Sun Jan 31 12:11:43 PST 2021
+base.0=/home/tarzan/work/android_tflite/tflite_blazeface/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/home/tarzan/work/android_tflite/tflite_blazeface/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex

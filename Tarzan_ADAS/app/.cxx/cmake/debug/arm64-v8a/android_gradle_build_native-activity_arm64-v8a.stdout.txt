@@ -1,0 +1,61 @@
+ninja: Entering directory `/home/tarzan/work/android_tflite/tflite_dense_depth/app/.cxx/cmake/debug/arm64-v8a'
+[1/5] Building CXX object CMakeFiles/native-activity.dir/android_main.cpp.o
+/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/android_main.cpp:28:14: warning: unused variable 'count' [-Wunused-variable]
+    int32_t  count  = AMotionEvent_getPointerCount (event);
+             ^
+/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/android_main.cpp:73:31: warning: unused variable 'tapState' [-Wunused-variable]
+    ndk_helper::GESTURE_STATE tapState  = engine->tap_detector_ .Detect(event);
+                              ^
+/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/android_main.cpp:74:31: warning: unused variable 'dragState' [-Wunused-variable]
+    ndk_helper::GESTURE_STATE dragState = engine->drag_detector_.Detect(event);
+                              ^
+3 warnings generated.
+[2/5] Building CXX object CMakeFiles/native-activity.dir/app_engine.cpp.o
+[3/5] Building CXX object CMakeFiles/native-activity.dir/tflite_dense_depth.cpp.o
+[4/5] Building CXX object CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/util_tflite.cpp.o
+[5/5] Linking CXX shared library /home/tarzan/work/android_tflite/tflite_dense_depth/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so
+FAILED: /home/tarzan/work/android_tflite/tflite_dense_depth/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so 
+: && /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=aarch64-none-linux-android27 --gcc-toolchain=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/sysroot -fPIC -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -std=gnu++11 -Wall -O0 -fno-limit-debug-info  -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  -u ANativeActivity_onCreate -shared -Wl,-soname,libnative-activity.so -o /home/tarzan/work/android_tflite/tflite_dense_depth/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so CMakeFiles/native-activity.dir/android_main.cpp.o CMakeFiles/native-activity.dir/app_engine.cpp.o CMakeFiles/native-activity.dir/tflite_dense_depth.cpp.o CMakeFiles/native-activity.dir/render_dense_depth.c.o CMakeFiles/native-activity.dir/touch_event.c.o CMakeFiles/native-activity.dir/render_imgui.cpp.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/android/camera_manager.cpp.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/android/camera_utils.cpp.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/android/gestureDetector.cpp.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/android/util_asset.cpp.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/assertgl.c.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/assertegl.c.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/util_egl.c.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/util_shader.c.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/util_matrix.c.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/util_texture.c.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/util_render2d.c.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/util_render_target.c.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/util_debugstr.c.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/util_pmeter.c.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/util_tflite.cpp.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/winsys/winsys_null.c.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/third_party/imgui/imgui.cpp.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/third_party/imgui/imgui_draw.cpp.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/third_party/imgui/imgui_widgets.cpp.o CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/third_party/imgui/examples/imgui_impl_opengl3.cpp.o  -landroid libnative_app_glue.a -lm -lcamera2ndk -lmediandk -lEGL -lGLESv2 /home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../jniLibs/arm64-v8a/libtensorflowlite.so /home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../jniLibs/arm64-v8a/libtensorflowlite_gpu_delegate.so -llog -latomic -lm && :
+ld: error: undefined symbol: get_detect_input_buf
+>>> referenced by app_engine.cpp:34 (/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/app_engine.cpp:34)
+>>>               CMakeFiles/native-activity.dir/app_engine.cpp.o:(feed_detect_image_uint8(_texture_2d_t*, int, int))
+>>> referenced by app_engine.cpp:71 (/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/app_engine.cpp:71)
+>>>               CMakeFiles/native-activity.dir/app_engine.cpp.o:(feed_detect_image_float(_texture_2d_t*, int, int))
+
+ld: error: undefined symbol: get_detect_input_type
+>>> referenced by app_engine.cpp:108 (/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/app_engine.cpp:108)
+>>>               CMakeFiles/native-activity.dir/app_engine.cpp.o:(feed_detect_image(_texture_2d_t*, int, int))
+
+ld: error: undefined symbol: get_detect_class_color
+>>> referenced by app_engine.cpp:131 (/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/app_engine.cpp:131)
+>>>               CMakeFiles/native-activity.dir/app_engine.cpp.o:(render_detect_region(int, int, int, int, _detect_result_t*))
+
+ld: error: undefined symbol: get_detect_class_name
+>>> referenced by app_engine.cpp:135 (/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/app_engine.cpp:135)
+>>>               CMakeFiles/native-activity.dir/app_engine.cpp.o:(render_detect_region(int, int, int, int, _detect_result_t*))
+
+ld: error: undefined symbol: get_deeplab_input_buf
+>>> referenced by app_engine.cpp:147 (/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/app_engine.cpp:147)
+>>>               CMakeFiles/native-activity.dir/app_engine.cpp.o:(feed_deeplab_image(_texture_2d_t*, int, int))
+
+ld: error: undefined symbol: get_deeplab_class_name
+>>> referenced by app_engine.cpp:313 (/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/app_engine.cpp:313)
+>>>               CMakeFiles/native-activity.dir/app_engine.cpp.o:(render_deeplab_heatmap(int, int, int, int, _deeplab_result_t*))
+>>> referenced by app_engine.cpp:238 (/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/app_engine.cpp:238)
+>>>               CMakeFiles/native-activity.dir/app_engine.cpp.o:(render_deeplab_result(int, int, int, int, _deeplab_result_t*))
+
+ld: error: undefined symbol: invoke_deeplab
+>>> referenced by app_engine.cpp:665 (/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/app_engine.cpp:665)
+>>>               CMakeFiles/native-activity.dir/app_engine.cpp.o:(AppEngine::RenderFrame())
+
+ld: error: undefined symbol: invoke_detect
+>>> referenced by app_engine.cpp:675 (/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/app_engine.cpp:675)
+>>>               CMakeFiles/native-activity.dir/app_engine.cpp.o:(AppEngine::RenderFrame())
+
+ld: error: undefined symbol: get_deeplab_class_color
+>>> referenced by app_engine.cpp:207 (/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/app_engine.cpp:207)
+>>>               CMakeFiles/native-activity.dir/app_engine.cpp.o:(render_deeplab_result(int, int, int, int, _deeplab_result_t*))
+>>> referenced by app_engine.cpp:237 (/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/app_engine.cpp:237)
+>>>               CMakeFiles/native-activity.dir/app_engine.cpp.o:(render_deeplab_result(int, int, int, int, _deeplab_result_t*))
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,371 @@
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"supportedProtocolVersions":[{"isExperimental":true,"major":1,"minor":1}],"type":"hello"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {
+  "type": "handshake",
+  "cookie": "gradle-cmake-cookie",
+  "protocolVersion": {
+    "isExperimental": true,
+    "major": 1,
+    "minor": 1
+  },
+  "sourceDirectory": "/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp",
+  "buildDirectory": "/home/tarzan/work/android_tflite/tflite_dense_depth/app/.cxx/cmake/release/arm64-v8a",
+  "generator": "Ninja"
+}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"gradle-cmake-cookie","inReplyTo":"handshake","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {
+  "type": "configure",
+  "cacheArguments": [
+    "",
+    "-DANDROID_ABI\u003darm64-v8a",
+    "-DANDROID_PLATFORM\u003dandroid-27",
+    "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/tarzan/work/android_tflite/tflite_dense_depth/app/build/intermediates/cmake/release/obj/arm64-v8a",
+    "-DCMAKE_BUILD_TYPE\u003dRelease",
+    "-DANDROID_NDK\u003d/home/tarzan/Android/Sdk/ndk/22.0.7026061",
+    "-DCMAKE_SYSTEM_NAME\u003dAndroid",
+    "-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a",
+    "-DCMAKE_SYSTEM_VERSION\u003d27",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON",
+    "-DCMAKE_ANDROID_NDK\u003d/home/tarzan/Android/Sdk/ndk/22.0.7026061",
+    "-DCMAKE_TOOLCHAIN_FILE\u003d/home/tarzan/Android/Sdk/ndk/22.0.7026061/build/cmake/android.toolchain.cmake",
+    "-G Ninja",
+    "-DCMAKE_MAKE_PROGRAM\u003d/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-DANDROID_STL\u003dc++_static"
+  ]
+}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"The C compiler identification is Clang 11.0.5","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: The C compiler identification is Clang 11.0.5
+CMAKE SERVER: The C compiler identification is Clang 11.0.5
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"The CXX compiler identification is Clang 11.0.5","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: The CXX compiler identification is Clang 11.0.5
+CMAKE SERVER: The CXX compiler identification is Clang 11.0.5
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Check for working C compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Check for working C compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
+CMAKE SERVER: Check for working C compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":33,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Check for working C compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -- works","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Check for working C compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -- works
+CMAKE SERVER: Check for working C compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -- works
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Detecting C compiler ABI info","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Detecting C compiler ABI info
+CMAKE SERVER: Detecting C compiler ABI info
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":65,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Detecting C compiler ABI info - done","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Detecting C compiler ABI info - done
+CMAKE SERVER: Detecting C compiler ABI info - done
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Detecting C compile features","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Detecting C compile features
+CMAKE SERVER: Detecting C compile features
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":96,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":126,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":155,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Detecting C compile features - done","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Detecting C compile features - done
+CMAKE SERVER: Detecting C compile features - done
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Check for working CXX compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Check for working CXX compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++
+CMAKE SERVER: Check for working CXX compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":184,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Check for working CXX compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -- works","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Check for working CXX compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -- works
+CMAKE SERVER: Check for working CXX compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -- works
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Detecting CXX compiler ABI info","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Detecting CXX compiler ABI info
+CMAKE SERVER: Detecting CXX compiler ABI info
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":211,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Detecting CXX compiler ABI info - done","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Detecting CXX compiler ABI info - done
+CMAKE SERVER: Detecting CXX compiler ABI info - done
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Detecting CXX compile features","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Detecting CXX compile features
+CMAKE SERVER: Detecting CXX compile features
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":237,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":262,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":287,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":311,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Detecting CXX compile features - done","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Detecting CXX compile features - done
+CMAKE SERVER: Detecting CXX compile features - done
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":1000,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Configuring done","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Configuring done
+CMAKE SERVER: Configuring done
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"type":"compute"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","progressCurrent":1000,"progressMaximum":1000,"progressMessage":"Generating","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","message":"Generating done","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Generating done
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"type":"cmakeInputs"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"buildFiles":[{"isCMake":true,"isTemporary":false,"sources":["/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystem.cmake.in","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-C.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerId.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCompilerIdDetection.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/ADSP-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/ARMCC-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/AppleClang-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-DetermineCompilerInternal.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Borland-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Bruce-C-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-DetermineCompilerInternal.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Compaq-C-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Cray-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Embarcadero-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Fujitsu-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GHS-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU-C-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/HP-C-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/IAR-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Intel-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/MIPSpro-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/MSVC-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/NVIDIA-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/PGI-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/PathScale-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/SCO-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/SDCC-C-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/SunPro-C-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/TI-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Watcom-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/XL-C-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/zOS-C-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCXXCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Determine-CXX.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android/Determine-Compiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerId.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCompilerIdDetection.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/ADSP-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/ARMCC-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/AppleClang-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-DetermineCompilerInternal.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Borland-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-DetermineCompilerInternal.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Cray-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Embarcadero-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Fujitsu-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GHS-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/HP-CXX-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/IAR-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Intel-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/MIPSpro-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/MSVC-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/NVIDIA-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/PGI-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/PathScale-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/SCO-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/TI-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Watcom-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/XL-CXX-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-FindBinUtils.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompilerABI.c","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C-FeatureTests.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompilerABI.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeDetermineCompileFeatures.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-FeatureTests.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX-TestableFeatures.cmake","/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXCompiler.cmake.in"]},{"isCMake":false,"isTemporary":false,"sources":["CMakeLists.txt","/home/tarzan/Android/Sdk/ndk/22.0.7026061/build/cmake/android.toolchain.cmake","/home/tarzan/Android/Sdk/ndk/22.0.7026061/build/cmake/platforms.cmake","/home/tarzan/Android/Sdk/ndk/22.0.7026061/build/cmake/android.toolchain.cmake"]},{"isCMake":false,"isTemporary":true,"sources":["../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeSystem.cmake","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCCompiler.cmake","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.c","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.c","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.c","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCCompiler.cmake","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/feature_tests.cxx","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"]}],"cmakeRootDirectory":"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10","cookie":"","inReplyTo":"cmakeInputs","sourceDirectory":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"type":"codemodel"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"configurations":[{"name":"Release","projects":[{"buildDirectory":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/.cxx/cmake/release/arm64-v8a","name":"Project","sourceDirectory":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp","targets":[{"artifacts":["/home/tarzan/work/android_tflite/tflite_dense_depth/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-activity.so"],"buildDirectory":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/.cxx/cmake/release/arm64-v8a","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC   -DUSE_GPU_DELEGATEV2 -DUSE_IMGUI -DIMGUI_IMPL_OPENGL_ES2 -DEGL_EGLEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES","defines":["native_activity_EXPORTS"],"includePath":[{"path":"/home/tarzan/work/android_tflite/third_party/tensorflow"},{"path":"/home/tarzan/work/android_tflite/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include"},{"path":"/home/tarzan/work/android_tflite/third_party/tensorflow/bazel-bin/../../../external/com_google_absl"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../third_party/imgui"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../third_party/imgui/examples"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../third_party"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../common"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../common/android"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../common/winsys"},{"path":"/home/tarzan/Android/Sdk/ndk/22.0.7026061/sources/android/native_app_glue"}],"isGenerated":false,"language":"C","sources":["render_dense_depth.c","touch_event.c","../../../../../common/assertgl.c","../../../../../common/assertegl.c","../../../../../common/util_egl.c","../../../../../common/util_shader.c","../../../../../common/util_matrix.c","../../../../../common/util_texture.c","../../../../../common/util_render2d.c","../../../../../common/util_render_target.c","../../../../../common/util_debugstr.c","../../../../../common/util_pmeter.c","../../../../../common/winsys/winsys_null.c"]},{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -std=gnu++11 -Wall -O2 -DNDEBUG  -fPIC   -DUSE_GPU_DELEGATEV2 -DUSE_IMGUI -DIMGUI_IMPL_OPENGL_ES2 -DEGL_EGLEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES","defines":["native_activity_EXPORTS"],"includePath":[{"path":"/home/tarzan/work/android_tflite/third_party/tensorflow"},{"path":"/home/tarzan/work/android_tflite/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include"},{"path":"/home/tarzan/work/android_tflite/third_party/tensorflow/bazel-bin/../../../external/com_google_absl"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../third_party/imgui"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../third_party/imgui/examples"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../third_party"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../common"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../common/android"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../common/winsys"},{"path":"/home/tarzan/Android/Sdk/ndk/22.0.7026061/sources/android/native_app_glue"}],"isGenerated":false,"language":"CXX","sources":["android_main.cpp","app_engine.cpp","tflite_dense_depth.cpp","render_imgui.cpp","../../../../../common/android/camera_manager.cpp","../../../../../common/android/camera_utils.cpp","../../../../../common/android/gestureDetector.cpp","../../../../../common/android/util_asset.cpp","../../../../../common/util_tflite.cpp","../../../../../third_party/imgui/imgui.cpp","../../../../../third_party/imgui/imgui_draw.cpp","../../../../../third_party/imgui/imgui_widgets.cpp","../../../../../third_party/imgui/examples/imgui_impl_opengl3.cpp"]}],"fullName":"libnative-activity.so","linkFlags":"-Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  -u ANativeActivity_onCreate","linkLibraries":"-landroid libnative_app_glue.a -lm -lcamera2ndk -lmediandk -lEGL -lGLESv2 /home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../jniLibs/arm64-v8a/libtensorflowlite.so /home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../jniLibs/arm64-v8a/libtensorflowlite_gpu_delegate.so -llog -latomic -lm","linkerLanguage":"CXX","name":"native-activity","sourceDirectory":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp","sysroot":"/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/sysroot","type":"SHARED_LIBRARY"},{"artifacts":["/home/tarzan/work/android_tflite/tflite_dense_depth/app/.cxx/cmake/release/arm64-v8a/libnative_app_glue.a"],"buildDirectory":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/.cxx/cmake/release/arm64-v8a","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -DNDEBUG  -fPIC  ","includePath":[{"path":"/home/tarzan/work/android_tflite/third_party/tensorflow"},{"path":"/home/tarzan/work/android_tflite/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include"},{"path":"/home/tarzan/work/android_tflite/third_party/tensorflow/bazel-bin/../../../external/com_google_absl"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../third_party/imgui"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../third_party/imgui/examples"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../third_party"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../common"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../common/android"},{"path":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp/../../../../../common/winsys"}],"isGenerated":false,"language":"C","sources":["/home/tarzan/Android/Sdk/ndk/22.0.7026061/sources/android/native_app_glue/android_native_app_glue.c"]}],"fullName":"libnative_app_glue.a","linkerLanguage":"C","name":"native_app_glue","sourceDirectory":"/home/tarzan/work/android_tflite/tflite_dense_depth/app/src/main/cpp","sysroot":"/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/sysroot","type":"STATIC_LIBRARY"}]}]}],"cookie":"","inReplyTo":"codemodel","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
