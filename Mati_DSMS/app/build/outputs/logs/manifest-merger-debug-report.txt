@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:3:1-29:12
-INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:3:1-29:12
-INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:3:1-29:12
-INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:3:1-29:12
+ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:3:1-29:12
+INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:3:1-29:12
+INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:3:1-29:12
+INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:3:1-29:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/2ad9bfadafd430f8dbad1412b3cf8d16/appcompat-v7-28.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/2c2719b22890890f5ae6a51c577cf1e6/support-fragment-28.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/07ec705aed5324b71d72c4292188ba58/animated-vector-drawable-28.0.0/AndroidManifest.xml:17:1-22:12
@@ -30,33 +30,33 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/tarzan/.gradle/caches/
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/tarzan/.gradle/caches/transforms-2/files-2.1/80a25cd447b6f67296c411c5c16059bb/livedata-core-1.1.1/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /home/tarzan/.gradle/caches/transforms-2/files-2.1/a9f3caa807bbac705342bf916bae7e9b/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/5e443312ff8e9912636de42e05adc2a8/interpolator-28.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:3:1-29:12
-INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:3:1-29:12
-INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:3:1-29:12
+INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:3:1-29:12
+INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:3:1-29:12
+INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:3:1-29:12
 	package
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:4:11-49
-		INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
-		INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:4:11-49
+		INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:6:11-36
-		INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
-		INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:6:11-36
+		INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:3:11-69
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:3:11-69
 	android:versionCode
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:5:11-34
-		INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
-		INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:5:11-34
+		INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
 uses-feature#android.hardware.camera
-ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:7:3-58
+ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:7:3-58
 	android:name
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:7:17-55
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:7:17-55
 uses-permission#android.permission.CAMERA
-ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:8:3-63
+ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:8:3-63
 	android:name
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:8:20-60
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:8:20-60
 application
-ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:9:3-27:17
+ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:9:3-27:17
 MERGED from [com.android.support:support-compat:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/f14724208b5bfeeef0d6bdefe649bca7/support-compat-28.0.0/AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:support-compat:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/f14724208b5bfeeef0d6bdefe649bca7/support-compat-28.0.0/AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:versionedparcelable:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/f993d148e999fdf956a4937ae88c6ee1/versionedparcelable-28.0.0/AndroidManifest.xml:22:5-23:19
@@ -64,45 +64,45 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /home/tarzan/.gradl
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/f14724208b5bfeeef0d6bdefe649bca7/support-compat-28.0.0/AndroidManifest.xml:22:18-91
 	android:label
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:13:7-39
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:13:7-39
 	android:hasCode
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:14:7-29
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:14:7-29
 	android:fullBackupContent
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:11:7-40
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:11:7-40
 	android:icon
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:12:7-41
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:12:7-41
 	android:allowBackup
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:10:7-34
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:10:7-34
 activity#com.glesapp.glesapp.GLESAppNativeActivity
-ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:16:5-26:16
+ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:16:5-26:16
 	android:screenOrientation
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:18:15-52
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:18:15-52
 	android:label
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:17:15-47
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:17:15-47
 	android:configChanges
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:19:15-65
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:19:15-65
 	android:name
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:16:15-71
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:16:15-71
 meta-data#android.app.lib_name
-ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:20:7-21:52
+ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:20:7-21:52
 	android:value
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:21:18-49
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:21:18-49
 	android:name
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:20:18-53
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:20:18-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:22:7-25:23
+ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:22:7-25:23
 action#android.intent.action.MAIN
-ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:23:9-61
+ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:23:9-61
 	android:name
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:23:17-58
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:23:17-58
 category#android.intent.category.LAUNCHER
-ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:24:9-69
+ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:24:9-69
 	android:name
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml:24:19-66
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:24:19-66
 uses-sdk
-INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
-INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
+INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
+INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
 MERGED from [com.android.support:appcompat-v7:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/2ad9bfadafd430f8dbad1412b3cf8d16/appcompat-v7-28.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/2ad9bfadafd430f8dbad1412b3cf8d16/appcompat-v7-28.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/2c2719b22890890f5ae6a51c577cf1e6/support-fragment-28.0.0/AndroidManifest.xml:20:5-44
@@ -155,13 +155,13 @@ MERGED from [android.arch.core:runtime:1.1.1] /home/tarzan/.gradle/caches/transf
 MERGED from [android.arch.core:runtime:1.1.1] /home/tarzan/.gradle/caches/transforms-2/files-2.1/a9f3caa807bbac705342bf916bae7e9b/runtime-1.1.1/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:interpolator:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/5e443312ff8e9912636de42e05adc2a8/interpolator-28.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:interpolator:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/5e443312ff8e9912636de42e05adc2a8/interpolator-28.0.0/AndroidManifest.xml:20:5-44
-INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
-INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
+INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
+INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
-		INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
-		ADDED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
-		INJECTED from /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
+		ADDED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
+		INJECTED from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
