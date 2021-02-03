@@ -18,6 +18,7 @@ cmake_minimum_required(VERSION 3.4.1)
 
 # build native_app_glue as a static lib
 set(${CMAKE_C_FLAGS}, "${CMAKE_C_FLAGS}")
+
 add_library(native_app_glue STATIC
     ${ANDROID_NDK}/sources/android/native_app_glue/android_native_app_glue.c)
 
@@ -63,6 +64,14 @@ include_directories(${tfliteDir}/
                     ${bazelgenDir}/../../../external/com_google_absl
                     )
 
+# Build our own native library
+add_library (native-lib SHARED native-lib.cpp )
+
+# Find the Oboe package
+find_package (oboe REQUIRED CONFIG)
+
+# Specify the libraries which our native library is dependent on, including Oboe
+target_link_libraries(app log oboe::oboe)
 
 # ------------------------------------------------------------
 #  for TensorFlow Lite GPU Delegate
