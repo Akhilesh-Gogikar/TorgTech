@@ -204,8 +204,8 @@ CMAKE_SYSTEM_NAME:UNINITIALIZED=Android
 //No help, variable specified on the command line.
 CMAKE_SYSTEM_VERSION:UNINITIALIZED=27
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/home/tarzan/Android/Sdk/ndk/22.0.7026061/build/cmake/android.toolchain.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/tarzan/Android/Sdk/ndk/22.0.7026061/build/cmake/android.toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -219,11 +219,14 @@ Project_BINARY_DIR:STATIC=/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/a
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp
 
-//Dependencies for the target
-native-activity_LIB_DEPENDS:STATIC=general;android;general;native_app_glue;general;m;general;camera2ndk;general;mediandk;general;EGL;general;GLESv2;general;lib_tflite;general;lib_tflite_gpu_delegate;general;log;
+//Dependencies for target
+native-lib_LIB_DEPENDS:STATIC=
 
 //Dependencies for target
 native_app_glue_LIB_DEPENDS:STATIC=
+
+//The directory containing a CMake configuration file for oboe.
+oboe_DIR:PATH=oboe_DIR-NOTFOUND
 
 
 ########################
