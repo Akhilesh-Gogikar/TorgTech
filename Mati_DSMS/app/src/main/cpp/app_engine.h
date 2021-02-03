@@ -20,6 +20,7 @@
 #include "camera_manager.h"
 #include "render_imgui.h"
 #include "tflite_blazeface.h"
+#include "tflite_facemesh.h"
 #include "gestureDetector.h"
 
 typedef struct gles_ctx {
@@ -96,7 +97,9 @@ private:
     ImageReaderHelper   m_ImgReader;
 
     gles_ctx_t          glctx;
-    std::vector<uint8_t> m_tflite_model_buf;
+    std::vector<uint8_t> m_tflite_detect_model_buf;
+    std::vector<uint8_t> m_tflite_mesh_model_buf;
+    std::vector<uint8_t> m_tflite_iris_model_buf;
 
     imgui_data_t        imgui_data;
     int                 m_camera_facing;

@@ -1,4 +1,4 @@
-# Install script for directory: /home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp
+# Install script for directory: /home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/tarzan/work/android_tflite/tflite_blazeface/app/.cxx/cmake/debug/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

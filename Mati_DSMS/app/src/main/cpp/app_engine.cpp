@@ -692,7 +692,7 @@ AppEngine::RenderFrame ()
     texture_2d_t srctex = glctx.tex_input;
     int win_w  = glctx.disp_w;
     int win_h  = glctx.disp_h;
-    static double ttime[10] = {0}, interval, invoke_ms;
+    static double ttime[10] = {0}, interval, invoke_ms0, invoke_ms1, invoke_ms2;
 
     int draw_x, draw_y, draw_w, draw_h;
     int texw = srctex.width;
@@ -723,7 +723,7 @@ AppEngine::RenderFrame ()
         /* --------------------------------------- *
          *  face detection
          * --------------------------------------- */
-        feed_face_detect_image (&captex, win_w, win_h);
+        feed_face_detect_image (&srctex, win_w, win_h);
 
         ttime[2] = pmeter_get_time_ms ();
         invoke_face_detect (&face_detect_ret);
@@ -736,7 +736,7 @@ AppEngine::RenderFrame ()
         invoke_ms1 = 0;
         for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
         {
-            feed_face_landmark_image (&captex, win_w, win_h, &face_detect_ret, face_id);
+            feed_face_landmark_image (&srctex, win_w, win_h, &face_detect_ret, face_id);
 
             ttime[4] = pmeter_get_time_ms ();
             invoke_facemesh_landmark (&face_mesh_ret[face_id]);
@@ -752,7 +752,7 @@ AppEngine::RenderFrame ()
         {
             for (int eye_id = 0; eye_id < 2; eye_id ++)
             {
-                feed_iris_landmark_image (&captex, win_w, win_h, &face_detect_ret.faces[face_id], &face_mesh_ret[face_id], eye_id);
+                feed_iris_landmark_image (&srctex, win_w, win_h, &face_detect_ret.faces[face_id], &face_mesh_ret[face_id], eye_id);
 
                 ttime[6] = pmeter_get_time_ms ();
                 invoke_irismesh_landmark (&iris_mesh_ret[face_id][eye_id]);
@@ -799,6 +799,7 @@ AppEngine::RenderFrame ()
 #endif
         egl_swap();
     }
+
     glctx.frame_count ++;
 }
 
