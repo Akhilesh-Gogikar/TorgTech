@@ -77,9 +77,6 @@ int
 init_tflite_facemeshiris (const char *face_model_buf, size_t face_model_size,
         blazeface_config_t *config, const char *mesh_model_buf, size_t mesh_model_size, const char *iris_model_buf, size_t iris_model_size)
 {
-    const char *detect_model;
-    const char *mesh_model;
-    const char *iris_model;
 
     /*
 
