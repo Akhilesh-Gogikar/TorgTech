@@ -71,7 +71,7 @@ rule C_STATIC_LIBRARY_LINKER__native_app_glue
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -H/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp -B/home/tarzan/work/android_tflite/tflite_blazeface/app/.cxx/cmake/debug/arm64-v8a
+  command = /home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -H/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp -B/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a
   description = Re-running CMake...
   generator = 1
 

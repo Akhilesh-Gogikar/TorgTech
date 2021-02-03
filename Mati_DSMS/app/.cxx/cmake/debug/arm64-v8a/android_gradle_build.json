@@ -1,153 +1,153 @@
 {
   "stringTable": {
-    "0": "/home/tarzan/work/android_tflite/tflite_blazeface/app/.cxx/cmake/debug/arm64-v8a",
-    "1": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dnative_activity_EXPORTS -I/home/tarzan/work/android_tflite/third_party/tensorflow -I/home/tarzan/work/android_tflite/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include -I/home/tarzan/work/android_tflite/third_party/tensorflow/bazel-bin/../../../external/com_google_absl -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../third_party/imgui -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../third_party/imgui/examples -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../third_party -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../common -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../common/android -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../common/winsys -I/home/tarzan/Android/Sdk/ndk/22.0.7026061/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=gnu++11 -Wall -O0 -fno-limit-debug-info -fPIC -DUSE_GPU_DELEGATEV2 -DUSE_IMGUI -DIMGUI_IMPL_OPENGL_ES2 -DEGL_EGLEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES",
-    "2": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dnative_activity_EXPORTS -I/home/tarzan/work/android_tflite/third_party/tensorflow -I/home/tarzan/work/android_tflite/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include -I/home/tarzan/work/android_tflite/third_party/tensorflow/bazel-bin/../../../external/com_google_absl -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../third_party/imgui -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../third_party/imgui/examples -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../third_party -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../common -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../common/android -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../common/winsys -I/home/tarzan/Android/Sdk/ndk/22.0.7026061/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC -DUSE_GPU_DELEGATEV2 -DUSE_IMGUI -DIMGUI_IMPL_OPENGL_ES2 -DEGL_EGLEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES",
-    "3": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/sysroot -I/home/tarzan/work/android_tflite/third_party/tensorflow -I/home/tarzan/work/android_tflite/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include -I/home/tarzan/work/android_tflite/third_party/tensorflow/bazel-bin/../../../external/com_google_absl -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../third_party/imgui -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../third_party/imgui/examples -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../third_party -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../common -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../common/android -I/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/../../../../../common/winsys -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC"
+    "0": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a",
+    "1": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dnative_activity_EXPORTS -I/home/tarzan/TorgTech/third_party/tensorflow -I/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include -I/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/com_google_absl -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui/examples -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/android -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/winsys -I/home/tarzan/Android/Sdk/ndk/22.0.7026061/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=gnu++11 -Wall -O0 -fno-limit-debug-info -fPIC -DUSE_GPU_DELEGATEV2 -DUSE_IMGUI -DIMGUI_IMPL_OPENGL_ES2 -DEGL_EGLEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES",
+    "2": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dnative_activity_EXPORTS -I/home/tarzan/TorgTech/third_party/tensorflow -I/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include -I/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/com_google_absl -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui/examples -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/android -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/winsys -I/home/tarzan/Android/Sdk/ndk/22.0.7026061/sources/android/native_app_glue -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC -DUSE_GPU_DELEGATEV2 -DUSE_IMGUI -DIMGUI_IMPL_OPENGL_ES2 -DEGL_EGLEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES",
+    "3": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/sysroot -I/home/tarzan/TorgTech/third_party/tensorflow -I/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include -I/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/com_google_absl -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui/examples -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/android -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/winsys -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC"
   },
   "buildFiles": [
     "/home/tarzan/Android/Sdk/ndk/22.0.7026061/build/cmake/platforms.cmake",
     "/home/tarzan/Android/Sdk/ndk/22.0.7026061/build/cmake/android.toolchain.cmake",
-    "/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/CMakeLists.txt"
+    "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt"
   ],
   "cleanCommands": [
-    "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/work/android_tflite/tflite_blazeface/app/.cxx/cmake/debug/arm64-v8a\" clean"
+    "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" clean"
   ],
-  "buildTargetsCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/work/android_tflite/tflite_blazeface/app/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "native-activity-Debug-arm64-v8a": {
-      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/work/android_tflite/tflite_blazeface/app/.cxx/cmake/debug/arm64-v8a\" native-activity",
+      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" native-activity",
       "buildType": "debug",
       "toolchain": "3077240786",
       "abi": "arm64-v8a",
       "artifactName": "native-activity",
       "files": [
         {
-          "src": "/home/tarzan/work/android_tflite/common/assertgl.c",
+          "src": "/home/tarzan/TorgTech/common/assertgl.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/assertegl.c",
+          "src": "/home/tarzan/TorgTech/common/assertegl.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/util_egl.c",
+          "src": "/home/tarzan/TorgTech/common/util_egl.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/util_shader.c",
+          "src": "/home/tarzan/TorgTech/common/util_shader.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/util_matrix.c",
+          "src": "/home/tarzan/TorgTech/common/util_matrix.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/util_texture.c",
+          "src": "/home/tarzan/TorgTech/common/util_texture.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/util_render2d.c",
+          "src": "/home/tarzan/TorgTech/common/util_render2d.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/util_render_target.c",
+          "src": "/home/tarzan/TorgTech/common/util_render_target.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/util_debugstr.c",
+          "src": "/home/tarzan/TorgTech/common/util_debugstr.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/util_pmeter.c",
+          "src": "/home/tarzan/TorgTech/common/util_pmeter.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/winsys/winsys_null.c",
+          "src": "/home/tarzan/TorgTech/common/winsys/winsys_null.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/android_main.cpp",
+          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/android_main.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/app_engine.cpp",
+          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/tflite_blazeface.cpp",
+          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/tflite_blazeface.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/tflite_blazeface/app/src/main/cpp/render_imgui.cpp",
+          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/render_imgui.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/android/camera_manager.cpp",
+          "src": "/home/tarzan/TorgTech/common/android/camera_manager.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/android/camera_utils.cpp",
+          "src": "/home/tarzan/TorgTech/common/android/camera_utils.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/android/gestureDetector.cpp",
+          "src": "/home/tarzan/TorgTech/common/android/gestureDetector.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/android/util_asset.cpp",
+          "src": "/home/tarzan/TorgTech/common/android/util_asset.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/common/util_tflite.cpp",
+          "src": "/home/tarzan/TorgTech/common/util_tflite.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/third_party/imgui/imgui.cpp",
+          "src": "/home/tarzan/TorgTech/third_party/imgui/imgui.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/third_party/imgui/imgui_draw.cpp",
+          "src": "/home/tarzan/TorgTech/third_party/imgui/imgui_draw.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/third_party/imgui/imgui_widgets.cpp",
+          "src": "/home/tarzan/TorgTech/third_party/imgui/imgui_widgets.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/work/android_tflite/third_party/imgui/examples/imgui_impl_opengl3.cpp",
+          "src": "/home/tarzan/TorgTech/third_party/imgui/examples/imgui_impl_opengl3.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "/home/tarzan/work/android_tflite/tflite_blazeface/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so"
+      "output": "/home/tarzan/TorgTech/Mati_DSMS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so"
     },
     "native_app_glue-Debug-arm64-v8a": {
-      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/work/android_tflite/tflite_blazeface/app/.cxx/cmake/debug/arm64-v8a\" native_app_glue",
+      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" native_app_glue",
       "buildType": "debug",
       "toolchain": "3077240786",
       "abi": "arm64-v8a",
@@ -160,7 +160,7 @@
         }
       ],
       "headers": [],
-      "output": "/home/tarzan/work/android_tflite/tflite_blazeface/app/.cxx/cmake/debug/arm64-v8a/libnative_app_glue.a"
+      "output": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/libnative_app_glue.a"
     }
   },
   "toolchains": {
