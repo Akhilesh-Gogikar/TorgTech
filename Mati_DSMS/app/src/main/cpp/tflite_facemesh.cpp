@@ -1,9 +1,9 @@
-/* ------------------------------------------------ *
- * The MIT License (MIT)
- * Copyright (c) 2020 terryky1220@gmail.com
+/* ------------------------------------------------
+ * Copyright (c) 2020 akhilesh@torgtek.com
  * ------------------------------------------------ */
 #include "util_tflite.h"
 #include "tflite_facemesh.h"
+#include "util_debug.h"
 #include <list>
 
 /* 
@@ -11,12 +11,7 @@
  * https://github.com/google/mediapipe/blob/master/mediapipe/models/face_landmark.tflite
  * https://github.com/google/mediapipe/blob/master/mediapipe/models/iris_landmark.tflite
  */
-#define FACE_DETECTL_MODEL_PATH    "./models/face_detection_front.tflite"
-#define FACE_LANDMARK_MODEL_PATH   "./models/face_landmark.tflite"
-#define IRIS_LANDMARK_MODEL_PATH   "./models/iris_landmark.tflite"
 
-#define FACE_DETECTL_QUANT_MODEL_PATH    "./models/face_detection_front_128_full_integer_quant.tflite"
-#define FACE_LANDMARK_QUANT_MODEL_PATH   "./models/face_landmark_192_full_integer_quant.tflite"
 
 static tflite_interpreter_t s_detect_interpreter;
 static tflite_tensor_t      s_detect_tensor_input;
@@ -79,11 +74,14 @@ create_blazeface_anchors(int input_w, int input_h)
  *  Create TFLite Interpreter
  * -------------------------------------------------- */
 int
-init_tflite_facemesh (int use_quantized_tflite)
+init_tflite_facemeshiris (const char *face_model_buf, size_t face_model_size,
+        blazeface_config_t *config, const char *mesh_model_buf, size_t mesh_model_size, const char *iris_model_buf, size_t iris_model_size)
 {
     const char *detect_model;
     const char *mesh_model;
     const char *iris_model;
+
+    /*
 
     if (use_quantized_tflite)
     {
@@ -98,20 +96,22 @@ init_tflite_facemesh (int use_quantized_tflite)
         iris_model   = IRIS_LANDMARK_MODEL_PATH;
     }
 
+    */
+
     /* Face detect */
-    tflite_create_interpreter_from_file (&s_detect_interpreter, detect_model);
+    tflite_create_interpreter (&s_detect_interpreter, face_model_buf, face_model_size);
     tflite_get_tensor_by_name (&s_detect_interpreter, 0, "input",          &s_detect_tensor_input);
     tflite_get_tensor_by_name (&s_detect_interpreter, 1, "regressors",     &s_detect_tensor_bboxes);
     tflite_get_tensor_by_name (&s_detect_interpreter, 1, "classificators", &s_detect_tensor_scores);
 
     /* Facemesh Landmark */
-    tflite_create_interpreter_from_file (&s_mesh_interpreter, mesh_model);
+    tflite_create_interpreter (&s_mesh_interpreter, mesh_model_buf, mesh_model_size);
     tflite_get_tensor_by_name (&s_mesh_interpreter, 0, "input_1",   &s_mesh_tensor_input);
     tflite_get_tensor_by_name (&s_mesh_interpreter, 1, "conv2d_20", &s_mesh_tensor_landmark);
     tflite_get_tensor_by_name (&s_mesh_interpreter, 1, "conv2d_30", &s_mesh_tensor_score);
 
     /* Iris Landmark */
-    tflite_create_interpreter_from_file (&s_iris_interpreter, iris_model);
+    tflite_create_interpreter (&s_iris_interpreter, iris_model_buf, iris_model_size);
     tflite_get_tensor_by_name (&s_iris_interpreter, 0, "input_1",                        &s_iris_tensor_input);
     tflite_get_tensor_by_name (&s_iris_interpreter, 1, "output_eyes_contours_and_brows", &s_iris_tensor_eye);
     tflite_get_tensor_by_name (&s_iris_interpreter, 1, "output_iris",                    &s_iris_tensor_iris);
@@ -119,6 +119,9 @@ init_tflite_facemesh (int use_quantized_tflite)
     int det_input_w = s_detect_tensor_input.dims[2];
     int det_input_h = s_detect_tensor_input.dims[1];
     create_blazeface_anchors (det_input_w, det_input_h);
+
+    config->score_thresh = 0.75f;
+    config->iou_thresh   = 0.3f;
 
     return 0;
 }

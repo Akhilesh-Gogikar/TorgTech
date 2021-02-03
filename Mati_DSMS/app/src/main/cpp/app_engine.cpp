@@ -1,6 +1,5 @@
-/* ------------------------------------------------ *
- * The MIT License (MIT)
- * Copyright (c) 2020 terryky1220@gmail.com
+/* ------------------------------------------------
+ * Copyright (c) 2020 akhilesh@torgtek.com
  * ------------------------------------------------ */
 #include <cstdio>
 #include "util_debug.h"
@@ -10,6 +9,7 @@
 #include "util_pmeter.h"
 #include "util_texture.h"
 #include "util_render2d.h"
+#include "util_matrix.h"
 #include "app_engine.h"
 #include "render_imgui.h"
 #include "assertgl.h"
@@ -617,8 +617,8 @@ flip_horizontal_iris_landmark (irismesh_result_t *irismesh)
  *                      +------+
  */
 static void
-adjust_texture (int win_w, int win_h, int texw, int texh, 
-                int *dx, int *dy, int *dw, int *dh)
+adjust_texture (int win_w, int win_h, int texw, int texh,
+                int *dx, int *dy, int *dw, int *dh, int full_zoom)
 {
     float win_aspect = (float)win_w / (float)win_h;
     float tex_aspect = (float)texw  / (float)texh;
@@ -626,7 +626,8 @@ adjust_texture (int win_w, int win_h, int texw, int texh,
     float scaled_w, scaled_h;
     float offset_x, offset_y;
 
-    if (win_aspect > tex_aspect)
+    if (((full_zoom == 0) && (win_aspect > tex_aspect)) ||
+        ((full_zoom == 1) && (win_aspect < tex_aspect)) )
     {
         scale = (float)win_h / (float)texh;
         scaled_w = scale * texw;
@@ -648,6 +649,8 @@ adjust_texture (int win_w, int win_h, int texw, int texh,
     *dw = (int)scaled_w;
     *dh = (int)scaled_h;
 }
+
+
 #if defined (USE_IMGUI)
 void
 AppEngine::mousemove_cb (int x, int y)
@@ -875,11 +878,20 @@ AppEngine::InitGLES (void)
     init_dbgstr (w, h);
 
     asset_read_file (m_app->activity->assetManager,
-                    (char *)BLAZEFACE_MODEL_PATH, m_tflite_model_buf);
+                    (char *)FACE_DETECTL_QUANT_MODEL_PATH, m_tflite_detect_model_buf);
 
-    ret = init_tflite_blazeface (
-        (const char *)m_tflite_model_buf.data(), m_tflite_model_buf.size(),
-        &imgui_data.blazeface_config);
+    asset_read_file (m_app->activity->assetManager,
+                     (char *)FACE_LANDMARK_QUANT_MODEL_PATH, m_tflite_mesh_model_buf);
+
+
+    asset_read_file (m_app->activity->assetManager,
+                     (char *)IRIS_LANDMARK_MODEL_PATH, m_tflite_iris_model_buf);
+
+
+    ret = init_tflite_facemeshiris ((const char *)m_tflite_detect_model_buf.data(), m_tflite_detect_model_buf.size(),
+            &imgui_data.blazeface_config, (const char *)m_tflite_mesh_model_buf.data(), m_tflite_mesh_model_buf.size(),
+            (const char *)m_tflite_iris_model_buf.data(), m_tflite_iris_model_buf.size());
+
 
     setup_imgui (w, h, &imgui_data);
 

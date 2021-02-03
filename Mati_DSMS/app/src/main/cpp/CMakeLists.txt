@@ -118,8 +118,8 @@ add_compile_options(-DGL_GLEXT_PROTOTYPES)
 add_library(native-activity SHARED
         ${CMAKE_CURRENT_SOURCE_DIR}/android_main.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/app_engine.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/tflite_blazeface.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/render_imgui.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/tflite_facemesh.cpp
         ${commonDir}/android/camera_manager.cpp
         ${commonDir}/android/camera_utils.cpp
         ${commonDir}/android/gestureDetector.cpp

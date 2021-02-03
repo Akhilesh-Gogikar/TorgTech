@@ -88,12 +88,12 @@
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/tflite_blazeface.cpp",
+          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/render_imgui.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/render_imgui.cpp",
+          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/tflite_facemesh.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },

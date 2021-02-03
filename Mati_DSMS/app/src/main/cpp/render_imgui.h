@@ -1,11 +1,10 @@
-/* ------------------------------------------------ *
- * The MIT License (MIT)
- * Copyright (c) 2020 terryky1220@gmail.com
+/* ------------------------------------------------
+ * Copyright (c) 2020 akhilesh@torgtek.com
  * ------------------------------------------------ */
 #ifndef UTIL_IMGUI_H_
 #define UTIL_IMGUI_H_
 
-#include "tflite_blazeface.h"
+#include "tflite_facemesh.h"
 
 #ifdef __cplusplus
 extern "C" {
