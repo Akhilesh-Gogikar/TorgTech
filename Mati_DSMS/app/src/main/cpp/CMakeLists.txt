@@ -32,7 +32,7 @@ set(CMAKE_SHARED_LINKER_FLAGS
 
 set(commonDir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../common)
 set(thirdpDir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../third_party)
-set(jnilibDir ${CMAKE_CURRENT_SOURCE_DIR}/../jniLibs)
+set(jnilibDir ${CMAKE_CURRENT_SOURCE_DIR}/../CMakeLibs)
 
 # download stb library
 if ((NOT EXISTS ${thirdpDir}/stb) OR
