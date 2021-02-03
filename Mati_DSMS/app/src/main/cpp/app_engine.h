@@ -34,18 +34,18 @@ public:
         std::lock_guard<std::mutex> lock(mLock);
         oboe::AudioStreamBuilder builder;
         // The builder set methods can be chained for convenience.
-        Result result = builder.setSharingMode(oboe::SharingMode::Exclusive)
+        oboe::Result result( builder.setSharingMode(oboe::SharingMode::Exclusive)
                 ->setPerformanceMode(oboe::PerformanceMode::LowLatency)
                 ->setChannelCount(kChannelCount)
                 ->setSampleRate(kSampleRate)
-                ->setSampleRateConversionQuality(oboe::SampleRateConversionQuality::Medium);
+                ->setSampleRateConversionQuality(oboe::SampleRateConversionQuality::Medium)
         ->setFormat(oboe::AudioFormat::Float)
                 ->setDataCallback(this)
-                ->openStream(mStream);
-        if (result != Result::OK) return (int32_t) result;
+                ->openStream(mStream));
+        if (result != oboe::Result::OK) return (int32_t) result;
 
         // Typically, start the stream after querying some stream information, as well as some input from the user
-        result = outStream->requestStart();
+        result = mStream->requestStart();
         return (int32_t) result;
     }
 
