@@ -1,7 +1,0 @@
-Executable : /home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja
-arguments : 
--C
-/home/tarzan/work/android_tflite/tflite_blazeface/app/.cxx/cmake/debug/arm64-v8a
-native-activity
-jvmArgs : 
-

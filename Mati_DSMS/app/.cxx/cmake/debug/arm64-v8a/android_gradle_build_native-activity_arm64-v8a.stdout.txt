@@ -1,4 +1,0 @@
-ninja: Entering directory `/home/tarzan/work/android_tflite/tflite_blazeface/app/.cxx/cmake/debug/arm64-v8a'
-[1/3] Building CXX object CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/util_tflite.cpp.o
-[2/3] Building CXX object CMakeFiles/native-activity.dir/tflite_blazeface.cpp.o
-[3/3] Linking CXX shared library /home/tarzan/work/android_tflite/tflite_blazeface/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so
