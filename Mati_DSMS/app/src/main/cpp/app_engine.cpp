@@ -603,6 +603,22 @@ flip_horizontal_iris_landmark (irismesh_result_t *irismesh)
 
 }
 
+void
+AppEngine::DrawTFLiteConfigInfo ()
+{
+    char strbuf[512];
+    float col_pink[]  = {1.0f, 0.0f, 1.0f, 0.5f};
+    float col_white[] = {1.0f, 1.0f, 1.0f, 1.0f};
+    float *col_bg = col_pink;
+
+#if defined (USE_GPU_DELEGATEV2)
+    sprintf (strbuf, "GPU_DELEGATEV2: ON ");
+#else
+    sprintf (strbuf, "GPU_DELEGATEV2: ---");
+#endif
+    draw_dbgstr_ex (strbuf, glctx.disp_w - 250, glctx.disp_h - 24, 1.0f, col_white, col_bg);
+
+}
 
 /* Adjust the texture size to fit the window size
  *
@@ -722,7 +738,7 @@ AppEngine::RenderFrame ()
 
         glClear (GL_COLOR_BUFFER_BIT);
 
-        ret = soundGenerator.startAudio()
+        ret = soundGenerator.startAudio();
 
         /* --------------------------------------- *
          *  face detection
@@ -782,7 +798,7 @@ AppEngine::RenderFrame ()
                                               &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
             }
 
-        soundGenerator.stopAudio()
+        soundGenerator.stopAudio();
 
         /* --------------------------------------- *
          *  post process

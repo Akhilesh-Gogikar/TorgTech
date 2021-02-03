@@ -1,0 +1,5 @@
+com/example/tflite_blazeface/BuildConfig.java
+ com.example.tflite_blazeface.BuildConfig
+com/glesapp/glesapp/GLESAppNativeActivity.java
+ com.glesapp.glesapp.GLESAppNativeActivity
+ com.glesapp.glesapp.GLESAppNativeActivity$1

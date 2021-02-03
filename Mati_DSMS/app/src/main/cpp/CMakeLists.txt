@@ -64,14 +64,8 @@ include_directories(${tfliteDir}/
                     ${bazelgenDir}/../../../external/com_google_absl
                     )
 
-# Build our own native library
-add_library (native-lib SHARED native-lib.cpp )
-
 # Find the Oboe package
 find_package (oboe REQUIRED CONFIG)
-
-# Specify the libraries which our native library is dependent on, including Oboe
-target_link_libraries(app log oboe::oboe)
 
 # ------------------------------------------------------------
 #  for TensorFlow Lite GPU Delegate
@@ -170,5 +164,6 @@ target_link_libraries(native-activity
     GLESv2
     lib_tflite
     lib_tflite_gpu_delegate
+        oboe::oboe
 #   lib_tflite_hexagon_delegate
     log)

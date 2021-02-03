@@ -1,0 +1,19 @@
+Executable : null
+arguments : 
+--build-system
+cmake
+--platform
+android
+--abi
+arm64-v8a
+--os-version
+27
+--stl
+c++_shared
+--ndk-version
+21
+--output
+/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/prefab/arm64-v8a/prefab
+/home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab
+jvmArgs : 
+
