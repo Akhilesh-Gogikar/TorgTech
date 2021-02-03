@@ -216,9 +216,10 @@ feed_iris_landmark_image(texture_2d_t *srctex, int win_w, int win_h,
 
 static void
 render_detect_region (int ofstx, int ofsty, int texw, int texh,
-                      face_detect_result_t *detection)
+                      face_detect_result_t *detection, imgui_data_t *imgui_data)
 {
-    float col_red[]   = {1.0f, 0.0f, 0.0f, 1.0f};
+    float col_white[] = {1.0f, 1.0f, 1.0f, 1.0f};
+    float *col_frame = imgui_data->frame_color;
 
     for (int i = 0; i < detection->num; i ++)
     {
@@ -227,18 +228,15 @@ render_detect_region (int ofstx, int ofsty, int texw, int texh,
         float y1 = face->topleft.y  * texh + ofsty;
         float x2 = face->btmright.x * texw + ofstx;
         float y2 = face->btmright.y * texh + ofsty;
+        float score = face->score;
 
         /* rectangle region */
-        draw_2d_rect (x1, y1, x2-x1, y2-y1, col_red, 2.0f);
-
-#if 0
-        float col_white[] = {1.0f, 1.0f, 1.0f, 1.0f};
-        float score = face->score;
+        draw_2d_rect (x1, y1, x2-x1, y2-y1, col_frame, 2.0f);
 
         /* detect score */
         char buf[512];
         sprintf (buf, "%d", (int)(score * 100));
-        draw_dbgstr_ex (buf, x1, y1, 1.0f, col_white, col_red);
+        draw_dbgstr_ex (buf, x1, y1, 1.0f, col_white, col_frame);
 
         /* key points */
         for (int j = 0; j < kFaceKeyNum; j ++)
@@ -247,11 +245,11 @@ render_detect_region (int ofstx, int ofsty, int texw, int texh,
             float y = face->keys[j].y * texh + ofsty;
 
             int r = 4;
-            draw_2d_fillrect (x - (r/2), y - (r/2), r, r, col_red);
+            draw_2d_fillrect (x - (r/2), y - (r/2), r, r, col_frame);
         }
-#endif
     }
 }
+
 
 
 
@@ -773,7 +771,7 @@ AppEngine::RenderFrame ()
 
         /* visualize the face detection results. */
         draw_2d_texture_ex (&srctex, draw_x, draw_y, draw_w, draw_h, 0);
-        render_detect_region (draw_x, draw_y, draw_w, draw_h, &face_ret, &imgui_data);
+        render_detect_region (draw_x, draw_y, draw_w, draw_h, &face_detect_ret, &imgui_data);
 
 	for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
         {
@@ -788,7 +786,7 @@ AppEngine::RenderFrame ()
 
         draw_pmeter (0, 40);
 
-        sprintf (strbuf, "Interval:%5.1f [ms]\nTFLite  :%5.1f [ms]", interval, invoke_ms);
+        sprintf (strbuf, "Interval:%5.1f [ms]\nFace TFLite  :%5.1f [ms]\nMesh TFLite  :%5.1f [ms]\nIris TFLite  :%5.1f [ms]", interval, invoke_ms0, invoke_ms1, invoke_ms2);
         draw_dbgstr (strbuf, 10, 10);
 
         /* renderer info */
