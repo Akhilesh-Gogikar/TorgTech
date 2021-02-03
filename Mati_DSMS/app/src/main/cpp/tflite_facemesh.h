@@ -1,9 +1,14 @@
-/* ------------------------------------------------ *
- * The MIT License (MIT)
- * Copyright (c) 2020 terryky1220@gmail.com
+/* ------------------------------------------------
+ * Copyright (c) 2020 akhilesh@torgtek.com
  * ------------------------------------------------ */
 #ifndef TFLITE_HAND_LANDMARK_H_
 #define TFLITE_HAND_LANDMARK_H_
+#define FACE_DETECTL_MODEL_PATH    "./models/face_detection_front.tflite"
+#define FACE_LANDMARK_MODEL_PATH   "./models/face_landmark.tflite"
+#define IRIS_LANDMARK_MODEL_PATH   "./models/iris_landmark.tflite"
+
+#define FACE_DETECTL_QUANT_MODEL_PATH    "./models/face_detection_front_128_full_integer_quant.tflite"
+#define FACE_LANDMARK_QUANT_MODEL_PATH   "./models/face_landmark_192_full_integer_quant.tflite"
 
 #ifdef __cplusplus
 extern "C" {
@@ -86,8 +91,17 @@ typedef struct _irismesh_result_t
     fvec3 iris_landmark[5];
 } irismesh_result_t;
 
+typedef struct _blazeface_config_t
+{
+    float score_thresh;
+    float iou_thresh;
+} blazeface_config_t;
 
-int  init_tflite_facemesh (int use_quantized_tflite);
+
+int
+init_tflite_facemeshiris (const char *face_model_buf, size_t face_model_size,
+                          blazeface_config_t *config, const char *mesh_model_buf, size_t mesh_model_size, const char *iris_model_buf, size_t iris_model_size);
+
 
 void *get_face_detect_input_buf (int *w, int *h);
 int  invoke_face_detect (face_detect_result_t *facedet_result);

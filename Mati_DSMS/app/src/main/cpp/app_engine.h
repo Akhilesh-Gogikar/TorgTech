@@ -1,6 +1,5 @@
-/* ------------------------------------------------ *
- * The MIT License (MIT)
- * Copyright (c) 2020 terryky1220@gmail.com
+/* ------------------------------------------------
+ * Copyright (c) 2020 akhilesh@torgtek.com
  * ------------------------------------------------ */
 #ifndef __APP_ENGINE_H__
 #define __APP_ENGINE_H__
@@ -19,7 +18,6 @@
 #include "util_render_target.h"
 #include "camera_manager.h"
 #include "render_imgui.h"
-#include "tflite_blazeface.h"
 #include "tflite_facemesh.h"
 #include "gestureDetector.h"
 
