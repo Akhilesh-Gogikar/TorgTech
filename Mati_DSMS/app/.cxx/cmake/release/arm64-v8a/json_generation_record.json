@@ -25,205 +25,7 @@
   },
   {
     "level": "INFO",
-    "message": "- command changed from previous, will remove stale json folder",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
     "message": "- a dependent build file changed",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/prefab.json",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.arm64-v8a",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.arm64-v8a/abi.json",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.arm64-v8a/liboboe.so",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.x86_64",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.x86_64/abi.json",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.x86_64/liboboe.so",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.armeabi-v7a",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.armeabi-v7a/abi.json",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.armeabi-v7a/liboboe.so",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.x86",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.x86/abi.json",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.x86/liboboe.so",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/oboe",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/oboe/AudioStreamCallback.h",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/oboe/StabilizedCallback.h",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/oboe/AudioStreamBuilder.h",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/oboe/Oboe.h",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/oboe/AudioStream.h",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/oboe/AudioStreamBase.h",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/oboe/LatencyTuner.h",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/oboe/ResultWithValue.h",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/oboe/Definitions.h",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/oboe/Version.h",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/oboe/Utilities.h",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include/.DS_Store",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "  - /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/module.json",
     "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
     "tag": "release|arm64-v8a"
   },
@@ -235,25 +37,13 @@
   },
   {
     "level": "INFO",
-    "message": "- prefab configuration has changed",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
     "message": "Executable : null\narguments : \n--build-system\ncmake\n--platform\nandroid\n--abi\narm64-v8a\n--os-version\n27\n--stl\nc++_shared\n--ndk-version\n21\n--output\n/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/prefab/arm64-v8a/prefab\n/home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab\njvmArgs : \n\n",
     "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
     "tag": "release|arm64-v8a"
   },
   {
     "level": "INFO",
-    "message": "removing stale contents from \u0027/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a\u0027",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "created folder \u0027/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a\u0027",
+    "message": "keeping json folder \u0027/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a\u0027 but regenerating project",
     "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
     "tag": "release|arm64-v8a"
   },
@@ -307,259 +97,103 @@
   },
   {
     "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Check for working C compiler: /home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "Check for working C compiler: /home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":33,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Check for working C compiler: /home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -- works\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "Check for working C compiler: /home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -- works",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting C compiler ABI info\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "Detecting C compiler ABI info",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":65,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting C compiler ABI info - done\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "Detecting C compiler ABI info - done",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting C compile features\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "Detecting C compile features",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":96,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":126,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":155,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting C compile features - done\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "Detecting C compile features - done",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Check for working CXX compiler: /home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "Check for working CXX compiler: /home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":184,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Check for working CXX compiler: /home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -- works\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "Check for working CXX compiler: /home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -- works",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting CXX compiler ABI info\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "Detecting CXX compiler ABI info",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":211,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting CXX compiler ABI info - done\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "Detecting CXX compiler ABI info - done",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting CXX compile features\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "Detecting CXX compile features",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":237,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":262,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":287,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":311,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Detecting CXX compile features - done\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "Detecting CXX compile features - done",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"CMake Error at CMakeLists.txt:74 (target_link_libraries):\\n  Cannot specify link libraries for target \\\"app\\\" which is not built by this\\n  project.\\n\\n\",\"title\":\"Error\",\"type\":\"message\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "ERROR",
-    "message": "CMake Error at /home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt:74 (target_link_libraries):\n  Cannot specify link libraries for target \"app\" which is not built by this\n  project.\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "INFO",
     "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"progressCurrent\":1000,\"progressMaximum\":1000,\"progressMessage\":\"Configuring\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
     "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
     "tag": "release|arm64-v8a"
   },
   {
     "level": "INFO",
-    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Configuring incomplete, errors occurred!\\nSee also \\\"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/CMakeOutput.log\\\".\",\"type\":\"message\"}\n",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"message\":\"Configuring done\",\"type\":\"message\"}\n",
     "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
     "tag": "release|arm64-v8a"
   },
   {
     "level": "INFO",
-    "message": "Configuring incomplete, errors occurred!\nSee also \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/CMakeOutput.log\".",
+    "message": "Configuring done",
     "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
     "tag": "release|arm64-v8a"
   },
   {
     "level": "INFO",
-    "message": "{\"cookie\":\"\",\"errorMessage\":\"Configuration failed.\",\"inReplyTo\":\"configure\",\"type\":\"error\"}\n",
-    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "tag": "release|arm64-v8a"
-  },
-  {
-    "level": "ERROR",
-    "message": "Configuration failed.",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"configure\",\"type\":\"reply\"}\n",
     "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
     "tag": "release|arm64-v8a"
   },
   {
     "level": "INFO",
-    "message": "JSON generation completed with problem. Exception: com.android.ide.common.process.ProcessException: Error configuring CMake server (/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin).\r\nCheck for working C compiler: /home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang\nCheck for working C compiler: /home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -- works\nDetecting C compiler ABI info\nDetecting C compiler ABI info - done\nDetecting C compile features\nDetecting C compile features - done\nCheck for working CXX compiler: /home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++\nCheck for working CXX compiler: /home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -- works\nDetecting CXX compiler ABI info\nDetecting CXX compiler ABI info - done\nDetecting CXX compile features\nDetecting CXX compile features - done\nCMake Error at CMakeLists.txt:74 (target_link_libraries):\n  Cannot specify link libraries for target \"app\" which is not built by this\n  project.\n\n\nConfiguring incomplete, errors occurred!\nSee also \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a/CMakeFiles/CMakeOutput.log\".\n",
+    "message": "{\"type\":\"compute\"}\n",
+    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"progressCurrent\":1000,\"progressMaximum\":1000,\"progressMessage\":\"Generating\",\"progressMinimum\":0,\"type\":\"progress\"}\n",
+    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"message\":\"Generating done\",\"type\":\"message\"}\n",
+    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "Generating done",
+    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"cookie\":\"\",\"inReplyTo\":\"compute\",\"type\":\"reply\"}\n",
+    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"type\":\"cmakeInputs\"}\n",
+    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"buildFiles\":[{\"isCMake\":true,\"isTemporary\":false,\"sources\":[\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake\",\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake\"]},{\"isCMake\":false,\"isTemporary\":false,\"sources\":[\"CMakeLists.txt\",\"/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake\",\"/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/platforms.cmake\",\"../../../.cxx/cmake/release/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/oboe/oboe-config-version.cmake\",\"../../../.cxx/cmake/release/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/oboe/oboe-config.cmake\"]},{\"isCMake\":false,\"isTemporary\":true,\"sources\":[\"../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeSystem.cmake\",\"../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCCompiler.cmake\",\"../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake\"]}],\"cmakeRootDirectory\":\"/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/share/cmake-3.10\",\"cookie\":\"\",\"inReplyTo\":\"cmakeInputs\",\"sourceDirectory\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp\",\"type\":\"reply\"}\n",
+    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"type\":\"codemodel\"}\n",
+    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "{\"configurations\":[{\"name\":\"Release\",\"projects\":[{\"buildDirectory\":\"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a\",\"name\":\"Project\",\"sourceDirectory\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp\",\"targets\":[{\"artifacts\":[\"/home/tarzan/TorgTech/Mati_DSMS/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-activity.so\"],\"buildDirectory\":\"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a\",\"fileGroups\":[{\"compileFlags\":\"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE\u003d2 -Wformat -Werror\u003dformat-security  -O2 -DNDEBUG  -fPIC   -DUSE_GPU_DELEGATEV2 -DUSE_IMGUI -DIMGUI_IMPL_OPENGL_ES2 -DEGL_EGLEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES\",\"defines\":[\"native_activity_EXPORTS\"],\"includePath\":[{\"path\":\"/home/tarzan/TorgTech/third_party/tensorflow\"},{\"path\":\"/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include\"},{\"path\":\"/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/com_google_absl\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui/examples\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/android\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/winsys\"},{\"path\":\"/home/tarzan/Android/Sdk/ndk/21.1.6352462/sources/android/native_app_glue\"},{\"isSystem\":true,\"path\":\"/home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include\"}],\"isGenerated\":false,\"language\":\"C\",\"sources\":[\"../../../../../common/assertgl.c\",\"../../../../../common/assertegl.c\",\"../../../../../common/util_egl.c\",\"../../../../../common/util_shader.c\",\"../../../../../common/util_matrix.c\",\"../../../../../common/util_texture.c\",\"../../../../../common/util_render2d.c\",\"../../../../../common/util_render_target.c\",\"../../../../../common/util_debugstr.c\",\"../../../../../common/util_pmeter.c\",\"../../../../../common/winsys/winsys_null.c\"]},{\"compileFlags\":\"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE\u003d2 -Wformat -Werror\u003dformat-security   -std\u003dgnu++11 -Wall -O2 -DNDEBUG  -fPIC   -DUSE_GPU_DELEGATEV2 -DUSE_IMGUI -DIMGUI_IMPL_OPENGL_ES2 -DEGL_EGLEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES\",\"defines\":[\"native_activity_EXPORTS\"],\"includePath\":[{\"path\":\"/home/tarzan/TorgTech/third_party/tensorflow\"},{\"path\":\"/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include\"},{\"path\":\"/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/com_google_absl\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui/examples\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/android\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/winsys\"},{\"path\":\"/home/tarzan/Android/Sdk/ndk/21.1.6352462/sources/android/native_app_glue\"},{\"isSystem\":true,\"path\":\"/home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/include\"}],\"isGenerated\":false,\"language\":\"CXX\",\"sources\":[\"android_main.cpp\",\"app_engine.cpp\",\"render_imgui.cpp\",\"tflite_facemesh.cpp\",\"../../../../../common/android/camera_manager.cpp\",\"../../../../../common/android/camera_utils.cpp\",\"../../../../../common/android/gestureDetector.cpp\",\"../../../../../common/android/util_asset.cpp\",\"../../../../../common/util_tflite.cpp\",\"../../../../../third_party/imgui/imgui.cpp\",\"../../../../../third_party/imgui/imgui_draw.cpp\",\"../../../../../third_party/imgui/imgui_widgets.cpp\",\"../../../../../third_party/imgui/examples/imgui_impl_opengl3.cpp\"]}],\"fullName\":\"libnative-activity.so\",\"linkFlags\":\"-Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  -u ANativeActivity_onCreate\",\"linkLibraries\":\"-landroid libnative_app_glue.a -lm -lcamera2ndk -lmediandk -lEGL -lGLESv2 /home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../jniLibs/arm64-v8a/libtensorflowlite.so /home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../jniLibs/arm64-v8a/libtensorflowlite_gpu_delegate.so /home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab/modules/oboe/libs/android.arm64-v8a/liboboe.so -llog -latomic -lm\",\"linkerLanguage\":\"CXX\",\"name\":\"native-activity\",\"sourceDirectory\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp\",\"sysroot\":\"/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot\",\"type\":\"SHARED_LIBRARY\"},{\"artifacts\":[\"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a/libnative_app_glue.a\"],\"buildDirectory\":\"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a\",\"fileGroups\":[{\"compileFlags\":\"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE\u003d2 -Wformat -Werror\u003dformat-security  -O2 -DNDEBUG  -fPIC  \",\"includePath\":[{\"path\":\"/home/tarzan/TorgTech/third_party/tensorflow\"},{\"path\":\"/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include\"},{\"path\":\"/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/com_google_absl\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui/examples\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/android\"},{\"path\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/winsys\"}],\"isGenerated\":false,\"language\":\"C\",\"sources\":[\"/home/tarzan/Android/Sdk/ndk/21.1.6352462/sources/android/native_app_glue/android_native_app_glue.c\"]}],\"fullName\":\"libnative_app_glue.a\",\"linkerLanguage\":\"C\",\"name\":\"native_app_glue\",\"sourceDirectory\":\"/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp\",\"sysroot\":\"/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot\",\"type\":\"STATIC_LIBRARY\"}]}]}],\"cookie\":\"\",\"inReplyTo\":\"codemodel\",\"type\":\"reply\"}\n",
+    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "done executing cmake",
+    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "write build output /home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a/build_output.txt",
+    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "write command file /home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a/build_command.txt",
+    "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|arm64-v8a"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed without problems",
     "file": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
     "tag": "release|arm64-v8a"
   }
