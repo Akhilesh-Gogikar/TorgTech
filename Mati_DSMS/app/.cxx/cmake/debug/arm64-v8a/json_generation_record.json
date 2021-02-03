@@ -17,15 +17,23 @@
   },
   {
     "level": "INFO",
-    "message": "- a dependent build file changed"
+    "message": "- expected json /home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/android_gradle_build.json file is not present, will remove stale json folder"
   },
   {
     "level": "INFO",
-    "message": "  - /home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt"
+    "message": "- missing previous command file /home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/build_command.txt, will remove stale json folder"
   },
   {
     "level": "INFO",
-    "message": "keeping json folder \u0027/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\u0027 but regenerating project"
+    "message": "- command changed from previous, will remove stale json folder"
+  },
+  {
+    "level": "INFO",
+    "message": "removing stale contents from \u0027/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\u0027"
+  },
+  {
+    "level": "INFO",
+    "message": "created folder \u0027/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\u0027"
   },
   {
     "level": "INFO",
@@ -33,18 +41,6 @@
   },
   {
     "level": "INFO",
-    "message": "done executing cmake"
-  },
-  {
-    "level": "INFO",
-    "message": "write build output /home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/build_output.txt"
-  },
-  {
-    "level": "INFO",
-    "message": "write command file /home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/build_command.txt"
-  },
-  {
-    "level": "INFO",
-    "message": "JSON generation completed without problems"
+    "message": "JSON generation completed with problem. Exception: com.android.ide.common.process.ProcessException: Error configuring CMake server (/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin).\r\nThe C compiler identification is Clang 11.0.5\nThe CXX compiler identification is Clang 11.0.5\nCheck for working C compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang\nCheck for working C compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -- works\nDetecting C compiler ABI info\nDetecting C compiler ABI info - done\nDetecting C compile features\nDetecting C compile features - done\nCheck for working CXX compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++\nCheck for working CXX compiler: /home/tarzan/Android/Sdk/ndk/22.0.7026061/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -- works\nDetecting CXX compiler ABI info\nDetecting CXX compiler ABI info - done\nDetecting CXX compile features\nDetecting CXX compile features - done\nCMake Error at CMakeLists.txt:71 (find_package):\n  Could not find a package configuration file provided by \"oboe\" with any of\n  the following names:\n\n    oboeConfig.cmake\n    oboe-config.cmake\n\n  Add the installation prefix of \"oboe\" to CMAKE_PREFIX_PATH or set\n  \"oboe_DIR\" to a directory containing one of the above files.  If \"oboe\"\n  provides a separate development package or SDK, be sure it has been\n  installed.\n\n\nConfiguring incomplete, errors occurred!\nSee also \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/CMakeOutput.log\".\n"
   }
 ]

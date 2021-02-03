@@ -710,6 +710,7 @@ AppEngine::RenderFrame ()
         face_detect_result_t    face_detect_ret = {0};
         face_landmark_result_t  face_mesh_ret[MAX_FACE_NUM] = {0};
         irismesh_result_t       iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+        int32_t ret;
         char strbuf[512];
 
         PMETER_RESET_LAP ();
@@ -720,6 +721,8 @@ AppEngine::RenderFrame ()
         ttime[0] = ttime[1];
 
         glClear (GL_COLOR_BUFFER_BIT);
+
+        ret = soundGenerator.startAudio()
 
         /* --------------------------------------- *
          *  face detection
@@ -773,11 +776,13 @@ AppEngine::RenderFrame ()
         draw_2d_texture_ex (&srctex, draw_x, draw_y, draw_w, draw_h, 0);
         render_detect_region (draw_x, draw_y, draw_w, draw_h, &face_detect_ret, &imgui_data);
 
-	for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
-        {
-            render_iris_landmark_on_main (draw_x, draw_y, draw_w, draw_h, &face_detect_ret.faces[face_id],
-                                          &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
-        }
+        for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
+            {
+                render_iris_landmark_on_main (draw_x, draw_y, draw_w, draw_h, &face_detect_ret.faces[face_id],
+                                              &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
+            }
+
+        soundGenerator.stopAudio()
 
         /* --------------------------------------- *
          *  post process
@@ -889,6 +894,7 @@ AppEngine::InitGLES (void)
     ret = init_tflite_facemeshiris ((const char *)m_tflite_detect_model_buf.data(), m_tflite_detect_model_buf.size(),
             &imgui_data.blazeface_config, (const char *)m_tflite_mesh_model_buf.data(), m_tflite_mesh_model_buf.size(),
             (const char *)m_tflite_iris_model_buf.data(), m_tflite_iris_model_buf.size());
+
 
 
     setup_imgui (w, h, &imgui_data);
