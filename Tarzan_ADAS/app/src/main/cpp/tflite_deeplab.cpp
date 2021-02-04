@@ -6,8 +6,8 @@
 #include "tflite_deeplab.h"
 #include "util_debug.h"
 
-static tflite_interpreter_t s_interpreter;
-static tflite_tensor_t      s_tensor_input;
+static tflite_interpreter_t s_segment_interpreter;
+static tflite_tensor_t      s_tensor_segment_input;
 static tflite_tensor_t      s_tensor_segment;
 
 static float s_class_color[MAX_DETECT_CLASS + 1][4];
@@ -61,13 +61,13 @@ init_class_color ()
 int
 init_tflite_deeplab(const char *model_buf, size_t model_size)
 {
-    tflite_create_interpreter (&s_interpreter, model_buf, model_size);
+    tflite_create_interpreter (&s_segment_interpreter, model_buf, model_size);
 
     /* get input tensor */
-    tflite_get_tensor_by_name (&s_interpreter, 0, "sub_7",  &s_tensor_input);
+    tflite_get_tensor_by_name (&s_segment_interpreter, 0, "sub_7",  &s_tensor_segment_input);
 
     /* get output tensor */
-    tflite_get_tensor_by_name (&s_interpreter, 1, "ResizeBilinear_3",  &s_tensor_segment);
+    tflite_get_tensor_by_name (&s_segment_interpreter, 1, "ResizeBilinear_3",  &s_tensor_segment);
 
     init_class_color ();
 
@@ -77,7 +77,7 @@ init_tflite_deeplab(const char *model_buf, size_t model_size)
 int
 get_deeplab_input_type ()
 {
-    if (s_tensor_input.type == kTfLiteUInt8)
+    if (s_tensor_segment_input.type == kTfLiteUInt8)
         return 1;
     else
         return 0;
@@ -86,9 +86,9 @@ get_deeplab_input_type ()
 void *
 get_deeplab_input_buf (int *w, int *h)
 {
-    *w = s_tensor_input.dims[2];
-    *h = s_tensor_input.dims[1];
-    return s_tensor_input.ptr;
+    *w = s_tensor_segment_input.dims[2];
+    *h = s_tensor_segment_input.dims[1];
+    return s_tensor_segment_input.ptr;
 }
 
 char *
@@ -107,7 +107,7 @@ get_deeplab_class_color (int class_idx)
 int
 invoke_deeplab (deeplab_result_t *deeplab_result)
 {
-    if (s_interpreter.interpreter->Invoke() != kTfLiteOk)
+    if (s_segment_interpreter.interpreter->Invoke() != kTfLiteOk)
     {
         DBG_LOGE ("ERR: %s(%d)\n", __FILE__, __LINE__);
         return -1;

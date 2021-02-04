@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId = 'com.example.tflite_dense_depth'
+        applicationId = 'com.example.tflite_iris_landmark'
         minSdkVersion 27
         targetSdkVersion 28
         externalNativeBuild {

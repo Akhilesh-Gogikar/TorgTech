@@ -1,5 +1,5 @@
 {
-  "ndkFolder": "/home/tarzan/Android/Sdk/ndk/22.0.7026061",
+  "ndkFolder": "/home/tarzan/Android/Sdk/ndk/21.1.6352462",
   "messages": [
     {
       "level": "INFO",
@@ -23,7 +23,11 @@
     },
     {
       "level": "INFO",
-      "message": "Considering /home/tarzan/Android/Sdk/ndk/22.0.7026061 in SDK ndk folder"
+      "message": "Considering /home/tarzan/Android/Sdk/ndk/20.0.5594570 in SDK ndk folder"
+    },
+    {
+      "level": "INFO",
+      "message": "Considering /home/tarzan/Android/Sdk/ndk/21.1.6352462 in SDK ndk folder"
     },
     {
       "level": "INFO",
@@ -31,7 +35,7 @@
     },
     {
       "level": "INFO",
-      "message": "No user requested version, choosing /home/tarzan/Android/Sdk/ndk/22.0.7026061 which is version 22.0.7026061"
+      "message": "No user requested version, choosing /home/tarzan/Android/Sdk/ndk/21.1.6352462 which is version 21.1.6352462"
     }
   ]
 }
