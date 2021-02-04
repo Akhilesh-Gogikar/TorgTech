@@ -24,7 +24,7 @@
 #include <oboe/Oboe.h>
 #include <math.h>
 
-class OboeSinePlayer: public oboe::AudioStreamDataCallback {
+class OboeSinePlayer: public oboe::AudioStreamCallback {
 public:
 
     virtual ~OboeSinePlayer() = default;
@@ -40,7 +40,7 @@ public:
                 ->setSampleRate(kSampleRate)
                 ->setSampleRateConversionQuality(oboe::SampleRateConversionQuality::Medium)
         ->setFormat(oboe::AudioFormat::Float)
-                ->setDataCallback(this)
+                ->setCallback(this)
                 ->openStream(mStream));
         if (result != oboe::Result::OK) return (int32_t) result;
 

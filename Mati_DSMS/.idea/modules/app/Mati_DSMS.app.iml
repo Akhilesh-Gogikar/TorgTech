@@ -34,9 +34,6 @@
     <output url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/debug/classes" />
     <output-test url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/debugUnitTest/classes" />
     <exclude-output />
-    <content url="file://$USER_HOME$/Android/Sdk/ndk/21.1.6352462/sources/android/native_app_glue">
-      <sourceFolder url="file://$USER_HOME$/Android/Sdk/ndk/21.1.6352462/sources/android/native_app_glue" isTestSource="false" />
-    </content>
     <content url="file://$MODULE_DIR$/../../../app">
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
@@ -52,18 +49,17 @@
     </content>
     <content url="file://$MODULE_DIR$/../../../../common">
       <sourceFolder url="file://$MODULE_DIR$/../../../../common" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../../../common/android">
-      <sourceFolder url="file://$MODULE_DIR$/../../../../common/android" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../../../common/winsys">
       <sourceFolder url="file://$MODULE_DIR$/../../../../common/winsys" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../common/android" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/../../../../third_party/imgui">
       <sourceFolder url="file://$MODULE_DIR$/../../../../third_party/imgui" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/../../../../third_party/imgui/examples">
       <sourceFolder url="file://$MODULE_DIR$/../../../../third_party/imgui/examples" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../../third_party/oboe/src">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../third_party/oboe/src" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 29 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -97,6 +93,5 @@
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:livedata-core:1.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.core:runtime:1.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:interpolator:28.0.0@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.oboe:oboe:1.5.0@aar" level="project" />
   </component>
 </module>
