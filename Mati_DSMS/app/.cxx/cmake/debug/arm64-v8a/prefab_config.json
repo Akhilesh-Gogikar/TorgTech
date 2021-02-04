@@ -1,7 +1,4 @@
 {
-  "enabled": true,
-  "prefabPath": "/home/tarzan/.gradle/caches/modules-2/files-2.1/com.google.prefab/cli/1.0.0/4a08a0e6f91e113812d57bcffb62288534a41997/cli-1.0.0-all.jar",
-  "packages": [
-    "/home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab"
-  ]
+  "enabled": false,
+  "packages": []
 }

@@ -33,6 +33,9 @@ set(CMAKE_SHARED_LINKER_FLAGS
 set(commonDir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../common)
 set(thirdpDir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../third_party)
 set(jnilibDir ${CMAKE_CURRENT_SOURCE_DIR}/../CMakeLibs)
+set(OBOE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../third_party/oboe)
+
+add_subdirectory (${OBOE_DIR} ./oboe)
 
 # download stb library
 if ((NOT EXISTS ${thirdpDir}/stb) OR
@@ -64,8 +67,7 @@ include_directories(${tfliteDir}/
                     ${bazelgenDir}/../../../external/com_google_absl
                     )
 
-# Find the Oboe package
-find_package (oboe REQUIRED CONFIG)
+
 
 # ------------------------------------------------------------
 #  for TensorFlow Lite GPU Delegate
@@ -148,7 +150,8 @@ add_library(native-activity SHARED
 include_directories(${thirdpDir}
                     ${commonDir}
                     ${commonDir}/android/
-                    ${commonDir}/winsys/)
+                    ${commonDir}/winsys/
+        ${OBOE_DIR}/include)
 
 target_include_directories(native-activity PRIVATE
     ${ANDROID_NDK}/sources/android/native_app_glue)
@@ -164,6 +167,6 @@ target_link_libraries(native-activity
     GLESv2
     lib_tflite
     lib_tflite_gpu_delegate
-        oboe::oboe
+        oboe
 #   lib_tflite_hexagon_delegate
     log)
