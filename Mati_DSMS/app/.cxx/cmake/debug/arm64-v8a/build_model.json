@@ -20,6 +20,10 @@
       "cmakeExecutable": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake",
       "variables": [
         {
+          "name": "CMAKE_FIND_ROOT_PATH",
+          "value": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/prefab/arm64-v8a/prefab"
+        },
+        {
           "name": "CMAKE_BUILD_TYPE",
           "value": "Debug"
         },
@@ -68,12 +72,8 @@
           "value": "27"
         },
         {
-          "name": "CMAKE_FIND_ROOT_PATH",
-          "value": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/prefab/arm64-v8a/prefab"
-        },
-        {
           "name": "ANDROID_STL",
-          "value": "c++_shared"
+          "value": "c++_static"
         }
       ]
     }
@@ -88,7 +88,7 @@
   "originalCxxBuildFolder": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a",
   "variant": {
     "buildSystemArgumentList": [
-      "-DANDROID_STL\u003dc++_shared"
+      "-DANDROID_STL\u003dc++_static"
     ],
     "buildTargetSet": [],
     "implicitBuildTargetSet": [],
@@ -181,7 +181,7 @@
         "isNativeCompilerSettingsCacheEnabled": false,
         "rootBuildGradleFolder": "/home/tarzan/TorgTech/Mati_DSMS",
         "sdkFolder": "/home/tarzan/Android/Sdk",
-        "isPrefabEnabled": true
+        "isPrefabEnabled": false
       },
       "splitsAbiFilterSet": [],
       "stlSharedObjectMap": {
@@ -201,11 +201,8 @@
     "validAbiList": [
       "ARM64_V8A"
     ],
-    "prefabClassPath": "/home/tarzan/.gradle/caches/modules-2/files-2.1/com.google.prefab/cli/1.0.0/4a08a0e6f91e113812d57bcffb62288534a41997/cli-1.0.0-all.jar",
     "prefabDirectory": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/prefab",
-    "prefabPackageDirectoryList": [
-      "/home/tarzan/.gradle/caches/transforms-2/files-2.1/6cafa8e34088341aecd818f197cc9c67/oboe-1.5.0/prefab"
-    ]
+    "prefabPackageDirectoryList": []
   },
   "prefabFolder": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/prefab/arm64-v8a"
 }
