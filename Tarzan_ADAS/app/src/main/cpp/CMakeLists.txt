@@ -32,6 +32,9 @@ set(CMAKE_SHARED_LINKER_FLAGS
 set(commonDir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../common)
 set(thirdpDir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../third_party)
 set(jnilibDir ${CMAKE_CURRENT_SOURCE_DIR}/../jniLibs)
+set(OBOE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../third_party/oboe)
+
+add_subdirectory (${OBOE_DIR} ./oboe)
 
 # download stb library
 if ((NOT EXISTS ${thirdpDir}/stb) OR
@@ -102,7 +105,7 @@ set_target_properties(lib_tflite_gpu_delegate PROPERTIES IMPORTED_LOCATION
 # ------------------------------------------------------------
 #  for Integer Quantized TFLite Model
 # ------------------------------------------------------------
-#add_compile_options(-DUSE_QUANT_TFLITE_MODEL)
+add_compile_options(-DUSE_QUANT_TFLITE_MODEL)
 
 # ------------------------------------------------------------
 #  for IMGUI popup dialog
@@ -118,10 +121,10 @@ add_compile_options(-DGL_GLEXT_PROTOTYPES)
 add_library(native-activity SHARED
         ${CMAKE_CURRENT_SOURCE_DIR}/android_main.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/app_engine.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/tflite_facemesh.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/render_imgui.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/tflite_dense_depth.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/render_dense_depth.c
-        ${CMAKE_CURRENT_SOURCE_DIR}/touch_event.c
-        ${CMAKE_CURRENT_SOURCE_DIR}/render_imgui.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/detect_postprocess.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/tflite_deeplab.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/tflite_detect.cpp
@@ -166,5 +169,6 @@ target_link_libraries(native-activity
     GLESv2
     lib_tflite
     lib_tflite_gpu_delegate
+        oboe
 #   lib_tflite_hexagon_delegate
     log)
