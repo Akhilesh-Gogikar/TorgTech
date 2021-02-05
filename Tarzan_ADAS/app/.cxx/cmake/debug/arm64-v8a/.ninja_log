@@ -89,3 +89,15 @@
 3148	4767	1612511670	CMakeFiles/native-activity.dir/tflite_detect.cpp.o	cb278364806c2a71
 3318	4784	1612511670	CMakeFiles/native-activity.dir/home/tarzan/TorgTech/common/util_tflite.cpp.o	ea0293e92d8209a9
 4784	5104	1612511670	/home/tarzan/TorgTech/Tarzan_ADAS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so	d1a16f364caf6992
+5	3719	1612530344	CMakeFiles/native-activity.dir/tflite_dense_depth.cpp.o	d8de811fe5ca74da
+7	3762	1612530344	CMakeFiles/native-activity.dir/tflite_deeplab.cpp.o	3fb9d828a893099f
+3	3959	1612530344	CMakeFiles/native-activity.dir/tflite_facemesh.cpp.o	c846e21820e840f6
+3763	6069	1612530346	CMakeFiles/native-activity.dir/home/tarzan/TorgTech/common/util_tflite.cpp.o	ea0293e92d8209a9
+3744	6200	1612530346	CMakeFiles/native-activity.dir/tflite_detect.cpp.o	cb278364806c2a71
+6200	6902	1612530347	/home/tarzan/TorgTech/Tarzan_ADAS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so	d1a16f364caf6992
+34	3787	1612530479	CMakeFiles/native-activity.dir/tflite_deeplab.cpp.o	3fb9d828a893099f
+32	3820	1612530479	CMakeFiles/native-activity.dir/tflite_dense_depth.cpp.o	d8de811fe5ca74da
+32	4039	1612530480	CMakeFiles/native-activity.dir/tflite_facemesh.cpp.o	c846e21820e840f6
+3820	6012	1612530482	CMakeFiles/native-activity.dir/home/tarzan/TorgTech/common/util_tflite.cpp.o	ea0293e92d8209a9
+3794	6111	1612530482	CMakeFiles/native-activity.dir/tflite_detect.cpp.o	cb278364806c2a71
+6111	6679	1612530482	/home/tarzan/TorgTech/Tarzan_ADAS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so	d1a16f364caf6992
