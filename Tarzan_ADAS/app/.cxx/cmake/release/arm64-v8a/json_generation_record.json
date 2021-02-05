@@ -13,7 +13,11 @@
   },
   {
     "level": "INFO",
-    "message": "rebuilding JSON /home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a/android_gradle_build.json due to:"
+    "message": "rebuilding JSON /home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/release/arm64-v8a/android_gradle_build.json due to:"
+  },
+  {
+    "level": "INFO",
+    "message": "- command changed from previous, will remove stale json folder"
   },
   {
     "level": "INFO",
@@ -25,11 +29,15 @@
   },
   {
     "level": "INFO",
-    "message": "keeping json folder \u0027/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a\u0027 but regenerating project"
+    "message": "removing stale contents from \u0027/home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/release/arm64-v8a\u0027"
   },
   {
     "level": "INFO",
-    "message": "executing cmake Executable : /home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake\narguments : \n-H/home/tarzan/work/android_tflite/tflite_iris_landmark/app/src/main/cpp\n-B/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a\n-DANDROID_ABI\u003darm64-v8a\n-DANDROID_PLATFORM\u003dandroid-27\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/tarzan/work/android_tflite/tflite_iris_landmark/app/build/intermediates/cmake/release/obj/arm64-v8a\n-DCMAKE_BUILD_TYPE\u003dRelease\n-DANDROID_NDK\u003d/home/tarzan/Android/Sdk/ndk/21.1.6352462\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a\n-DCMAKE_SYSTEM_VERSION\u003d27\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_ANDROID_NDK\u003d/home/tarzan/Android/Sdk/ndk/21.1.6352462\n-DCMAKE_TOOLCHAIN_FILE\u003d/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake\n-G Ninja\n-DCMAKE_MAKE_PROGRAM\u003d/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja\n-DANDROID_STL\u003dc++_static\njvmArgs : \n\n"
+    "message": "created folder \u0027/home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/release/arm64-v8a\u0027"
+  },
+  {
+    "level": "INFO",
+    "message": "executing cmake Executable : /home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake\narguments : \n-H/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp\n-B/home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/release/arm64-v8a\n-DANDROID_ABI\u003darm64-v8a\n-DANDROID_PLATFORM\u003dandroid-27\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/tarzan/TorgTech/Tarzan_ADAS/app/build/intermediates/cmake/release/obj/arm64-v8a\n-DCMAKE_BUILD_TYPE\u003dRelease\n-DANDROID_NDK\u003d/home/tarzan/Android/Sdk/ndk/21.1.6352462\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a\n-DCMAKE_SYSTEM_VERSION\u003d27\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_ANDROID_NDK\u003d/home/tarzan/Android/Sdk/ndk/21.1.6352462\n-DCMAKE_TOOLCHAIN_FILE\u003d/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake\n-G Ninja\n-DCMAKE_MAKE_PROGRAM\u003d/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja\n-DANDROID_STL\u003dc++_static\njvmArgs : \n\n"
   },
   {
     "level": "INFO",
@@ -37,11 +45,11 @@
   },
   {
     "level": "INFO",
-    "message": "write build output /home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a/build_output.txt"
+    "message": "write build output /home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/release/arm64-v8a/build_output.txt"
   },
   {
     "level": "INFO",
-    "message": "write command file /home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a/build_command.txt"
+    "message": "write command file /home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/release/arm64-v8a/build_command.txt"
   },
   {
     "level": "INFO",

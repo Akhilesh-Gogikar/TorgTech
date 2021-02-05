@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tflite_dense_depth.iml" filepath="$PROJECT_DIR$/.idea/modules/tflite_dense_depth.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/tflite_dense_depth.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/tflite_dense_depth.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tarzan_ADAS.iml" filepath="$PROJECT_DIR$/.idea/modules/Tarzan_ADAS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Tarzan_ADAS.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Tarzan_ADAS.app.iml" />
     </modules>
   </component>
 </project>

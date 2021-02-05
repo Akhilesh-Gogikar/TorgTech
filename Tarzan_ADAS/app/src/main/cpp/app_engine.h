@@ -167,9 +167,11 @@ private:
 
     bool                m_cameraGranted;
     NDKCamera           *m_camera;
+    NDKCamera           *m_camera1;
     ImageReaderHelper   m_ImgReader;
 
     gles_ctx_t          glctx;
+    gles_ctx_t          glctx1;
     std::vector<uint8_t> m_facedet_tflite_model_buf;
     std::vector<uint8_t> m_facelandmark_tflite_model_buf;
     std::vector<uint8_t> m_irislandmark_tflite_model_buf;
