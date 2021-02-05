@@ -870,6 +870,7 @@ void
 AppEngine::RenderFrame ()
 {
     texture_2d_t srctex = glctx.tex_input;
+    texture_2d_t srctex1 = glctx1.tex_input;
     int win_w  = glctx.disp_w;
     int win_h  = glctx.disp_h;
     static double ttime[15] = {0}, interval, invoke_ms0 = 0, invoke_ms1 = 0, invoke_ms2 = 0,
@@ -910,7 +911,7 @@ AppEngine::RenderFrame ()
         /* --------------------------------------- *
          *  Dense Depth
          * --------------------------------------- */
-        feed_dense_depth_image (&srctex, win_w, win_h);
+        feed_dense_depth_image (&srctex1, win_w, win_h);
 
         ttime[2] = pmeter_get_time_ms ();
         invoke_dense_depth (&dense_depth_result);
@@ -920,7 +921,7 @@ AppEngine::RenderFrame ()
         /* --------------------------------------- *
          *  semantic segmentation
          * --------------------------------------- */
-        feed_deeplab_image (&srctex, win_w, win_h);
+        feed_deeplab_image (&srctex1, win_w, win_h);
 
         ttime[4] = pmeter_get_time_ms ();
         //invoke_deeplab (&deeplab_result);
@@ -930,7 +931,7 @@ AppEngine::RenderFrame ()
         /* --------------------------------------- *
          *  object detection
          * --------------------------------------- */
-        feed_detect_image (&srctex, win_w, win_h);
+        feed_detect_image (&srctex1, win_w, win_h);
 
         ttime[6] = pmeter_get_time_ms ();
         invoke_detect (&detection);
@@ -1068,9 +1069,12 @@ AppEngine::AppEngine (android_app* app)
     : m_app(app),
       m_cameraGranted(false),
       m_camera(nullptr),
+      m_camera1(nullptr),
       m_camera_facing(0)
 {
     memset (&glctx, 0, sizeof (glctx));
+    memset (&glctx1, 0, sizeof (glctx));
+
 }
 
 AppEngine::~AppEngine()
@@ -1176,7 +1180,10 @@ AppEngine::InitGLES (void)
 
     glctx.disp_w = w;
     glctx.disp_h = h;
+    glctx1.disp_w = w;
+    glctx1.disp_h = h;
     LoadInputTexture (&glctx.tex_static, (char *)"pakutaso_sotsugyou.jpg");
+    LoadInputTexture (&glctx1.tex_static, (char *)"pakutaso_sotsugyou.jpg");
 
     /* render target for default framebuffer */
     get_render_target (&glctx.rtarget_main);
@@ -1189,6 +1196,14 @@ AppEngine::InitGLES (void)
     glctx.tex_input.format = pixfmt_fourcc('R', 'G', 'B', 'A');
 
     glctx.initdone = 1;
+
+    create_render_target (&glctx1.rtarget_crop, CAMERA_CROP_WIDTH, CAMERA_CROP_HEIGHT, RTARGET_COLOR);
+    glctx1.tex_input.texid  = glctx1.rtarget_crop.texc_id;
+    glctx1.tex_input.width  = glctx1.rtarget_crop.width;
+    glctx1.tex_input.height = glctx1.rtarget_crop.height;
+    glctx1.tex_input.format = pixfmt_fourcc('R', 'G', 'B', 'A');
+
+    glctx1.initdone = 1;
 }
 
 
@@ -1205,6 +1220,9 @@ AppEngine::UpdateFrame (void)
     if (glctx.initdone == 0)
         return;
 
+    if (glctx1.initdone == 0)
+        return;
+
     if (m_cameraGranted)
     {
         if (m_camera_facing != imgui_data.camera_facing)
@@ -1216,7 +1234,7 @@ AppEngine::UpdateFrame (void)
         UpdateCameraTexture();
     }
 
-    if (m_cameraGranted && glctx.tex_camera_valid == false)
+    if (m_cameraGranted && glctx.tex_camera_valid == false && glctx1.tex_camera_valid == false)
         return;
 
     CropCameraTexture ();
@@ -1228,8 +1246,12 @@ void
 AppEngine::CropCameraTexture (void)
 {
     texture_2d_t srctex = glctx.tex_camera;
+    texture_2d_t srctex1 = glctx1.tex_camera;
     if (!glctx.tex_camera_valid)
         srctex = glctx.tex_static;
+
+    if (!glctx1.tex_camera_valid)
+        srctex1 = glctx1.tex_static;
 
     /* render to square FBO */
     render_target_t *rtarget = &glctx.rtarget_crop;
@@ -1237,9 +1259,19 @@ AppEngine::CropCameraTexture (void)
     set_2d_projection_matrix (rtarget->width, rtarget->height);
     glClear (GL_COLOR_BUFFER_BIT);
 
+    /* render to square FBO */
+    render_target_t *rtarget1 = &glctx1.rtarget_crop;
+    set_render_target (rtarget1);
+    set_2d_projection_matrix (rtarget1->width, rtarget1->height);
+    glClear (GL_COLOR_BUFFER_BIT);
+
     int draw_x, draw_y, draw_w, draw_h;
     adjust_texture (rtarget->width, rtarget->height, srctex.width, srctex.height,
                     &draw_x, &draw_y, &draw_w, &draw_h, 1);
+
+    int draw_x1, draw_y1, draw_w1, draw_h1;
+    adjust_texture (rtarget1->width, rtarget1->height, srctex1.width, srctex1.height,
+                    &draw_x1, &draw_y1, &draw_w1, &draw_h1, 1);
 
     /* when we use inner camera, enable horizontal flip. */
     int flip = m_camera_facing ? RENDER2D_FLIP_H : 0;
@@ -1267,6 +1299,7 @@ AppEngine::InitCamera (void)
     }
 
     CreateCamera (m_camera_facing);
+
 }
 
 
@@ -1279,6 +1312,12 @@ AppEngine::DeleteCamera(void)
         m_camera = nullptr;
     }
 
+    if (m_camera1)
+    {
+        delete m_camera1;
+        m_camera1 = nullptr;
+    }
+
     m_ImgReader.ReleaseImageReader ();
     glctx.tex_camera_valid = false;
 }
@@ -1288,9 +1327,15 @@ void
 AppEngine::CreateCamera (int facing)
 {
     m_camera = new NDKCamera();
+    m_camera1 = new NDKCamera();
     ASSERT (m_camera, "Failed to Create CameraObject");
+    ASSERT (m_camera1, "Failed to Create CameraObject");
 
     m_camera->SelectCameraFacing (facing);
+
+    int facing1 = m_camera_facing ? 0 : 1;
+
+    m_camera1->SelectCameraFacing (facing1);
 
     m_ImgReader.InitImageReader (CAMERA_RESOLUTION_W, CAMERA_RESOLUTION_H);
     ANativeWindow *nativeWindow = m_ImgReader.GetNativeWindow();
@@ -1323,12 +1368,23 @@ AppEngine::UpdateCameraTexture ()
         glctx.egl_img = EGL_NO_IMAGE_KHR;
     }
 
+    /* (Re)Create EGLImage */
+    if (glctx1.egl_img != EGL_NO_IMAGE_KHR)
+    {
+        eglDestroyImageKHR (egl_get_display(), glctx1.egl_img);
+        glctx1.egl_img = EGL_NO_IMAGE_KHR;
+    }
+
     EGLint attrs[] = {EGL_IMAGE_PRESERVED_KHR, EGL_TRUE, EGL_NONE,};
     glctx.egl_img = eglCreateImageKHR (egl_get_display(), EGL_NO_CONTEXT,
                                        EGL_NATIVE_BUFFER_ANDROID, egl_buf, attrs);
 
+    glctx1.egl_img = eglCreateImageKHR (egl_get_display(), EGL_NO_CONTEXT,
+                                       EGL_NATIVE_BUFFER_ANDROID, egl_buf, attrs);
+
     /* Bind to GL_TEXTURE_EXTERNAL_OES */
     texture_2d_t *input_tex = &glctx.tex_camera;
+    texture_2d_t *input_tex1 = &glctx1.tex_camera;
     if (input_tex->texid == 0)
     {
         GLuint texid;
@@ -1344,12 +1400,32 @@ AppEngine::UpdateCameraTexture ()
         input_tex->format = pixfmt_fourcc('E', 'X', 'T', 'X');
         m_ImgReader.GetBufferDimension (&input_tex->width, &input_tex->height);
     }
+
+    if (input_tex1->texid == 0)
+    {
+        GLuint texid1;
+        glGenTextures (1, &texid1);
+        glBindTexture (GL_TEXTURE_EXTERNAL_OES, texid1);
+
+        glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+        input_tex1->texid  = texid1;
+        input_tex1->format = pixfmt_fourcc('E', 'X', 'T', 'X');
+        m_ImgReader.GetBufferDimension (&input_tex1->width, &input_tex1->height);
+    }
+
     glBindTexture (GL_TEXTURE_EXTERNAL_OES, input_tex->texid);
+    glBindTexture (GL_TEXTURE_EXTERNAL_OES, input_tex1->texid);
 
     glEGLImageTargetTexture2DOES (GL_TEXTURE_EXTERNAL_OES, glctx.egl_img);
+    glEGLImageTargetTexture2DOES (GL_TEXTURE_EXTERNAL_OES, glctx1.egl_img);
     GLASSERT ();
 
     glctx.tex_camera_valid = true;
+    glctx1.tex_camera_valid = true;
 }
 
 
