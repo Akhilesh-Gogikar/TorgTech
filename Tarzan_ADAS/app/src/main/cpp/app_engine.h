@@ -24,6 +24,8 @@
 #include "tflite_dense_depth.h"
 #include "tflite_detect.h"
 #include "tflite_deeplab.h"
+#include "tflite_laneseg.h"
+#include "klient.h"
 #include <oboe/Oboe.h>
 #include <math.h>
 
@@ -169,6 +171,8 @@ private:
     NDKCamera           *m_camera;
     NDKCamera           *m_camera1;
     ImageReaderHelper   m_ImgReader;
+    klient              client;
+    int socket;
 
     gles_ctx_t          glctx;
     gles_ctx_t          glctx1;
@@ -178,6 +182,7 @@ private:
     std::vector<uint8_t> m_tflite_depth_model_buf;
     std::vector<uint8_t> m_tflite_deeplab_model_buf;
     std::vector<uint8_t> m_tflite_detect_model_buf;
+    std::vector<uint8_t> m_tflite_laneseg_model_buf;
     std::vector<uint8_t> m_detect_label_map_buf;
 
     imgui_data_t        imgui_data;

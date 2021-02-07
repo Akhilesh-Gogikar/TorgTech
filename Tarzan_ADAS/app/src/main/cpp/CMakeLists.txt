@@ -127,7 +127,9 @@ add_library(native-activity SHARED
         ${CMAKE_CURRENT_SOURCE_DIR}/render_dense_depth.c
         ${CMAKE_CURRENT_SOURCE_DIR}/detect_postprocess.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/tflite_deeplab.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/tflite_laneseg.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/tflite_detect.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/klient.cpp
         ${commonDir}/android/camera_manager.cpp
         ${commonDir}/android/camera_utils.cpp
         ${commonDir}/android/gestureDetector.cpp

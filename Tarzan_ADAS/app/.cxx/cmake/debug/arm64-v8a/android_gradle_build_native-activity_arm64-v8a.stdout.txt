@@ -1,7 +1,8 @@
 ninja: Entering directory `/home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/debug/arm64-v8a'
-[1/6] Building CXX object CMakeFiles/native-activity.dir/tflite_deeplab.cpp.o
-[2/6] Building CXX object CMakeFiles/native-activity.dir/tflite_dense_depth.cpp.o
-[3/6] Building CXX object CMakeFiles/native-activity.dir/tflite_facemesh.cpp.o
-[4/6] Building CXX object CMakeFiles/native-activity.dir/home/tarzan/TorgTech/common/util_tflite.cpp.o
-[5/6] Building CXX object CMakeFiles/native-activity.dir/tflite_detect.cpp.o
-[6/6] Linking CXX shared library /home/tarzan/TorgTech/Tarzan_ADAS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so
+[1/7] Building CXX object CMakeFiles/native-activity.dir/tflite_dense_depth.cpp.o
+[2/7] Building CXX object CMakeFiles/native-activity.dir/tflite_deeplab.cpp.o
+[3/7] Building CXX object CMakeFiles/native-activity.dir/tflite_facemesh.cpp.o
+[4/7] Building CXX object CMakeFiles/native-activity.dir/tflite_laneseg.cpp.o
+[5/7] Building CXX object CMakeFiles/native-activity.dir/home/tarzan/TorgTech/common/util_tflite.cpp.o
+[6/7] Building CXX object CMakeFiles/native-activity.dir/tflite_detect.cpp.o
+[7/7] Linking CXX shared library /home/tarzan/TorgTech/Tarzan_ADAS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so

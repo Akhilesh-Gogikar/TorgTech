@@ -12,7 +12,7 @@ extern "C" {
 /* 
  * https://github.com/PINTO0309/PINTO_model_zoo/tree/master/064_Dense_Depth/nyu/01_float32
  */
-#define DENSEDEPTH_MODEL_PATH         "model/model.tflite"
+#define DENSEDEPTH_MODEL_PATH         "model/dense_depth_quant.tflite"
 #define DENSEDEPTH_QUANT_MODEL_PATH   "model/dense_depth_nyu_480x640_float32.tflite"
 
 typedef struct _dense_depth_result_t

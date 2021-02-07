@@ -16,17 +16,17 @@
       "abi": "arm64-v8a",
       "output": "/home/tarzan/TorgTech/Tarzan_ADAS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so"
     },
-    "oboe-Debug-arm64-v8a": {
-      "artifactName": "oboe",
-      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/debug/arm64-v8a\" oboe",
-      "abi": "arm64-v8a",
-      "output": "/home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/debug/arm64-v8a/oboe/liboboe.a"
-    },
     "native_app_glue-Debug-arm64-v8a": {
       "artifactName": "native_app_glue",
       "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/debug/arm64-v8a\" native_app_glue",
       "abi": "arm64-v8a",
       "output": "/home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/debug/arm64-v8a/libnative_app_glue.a"
+    },
+    "oboe-Debug-arm64-v8a": {
+      "artifactName": "oboe",
+      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/debug/arm64-v8a\" oboe",
+      "abi": "arm64-v8a",
+      "output": "/home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/debug/arm64-v8a/oboe/liboboe.a"
     }
   }
 }

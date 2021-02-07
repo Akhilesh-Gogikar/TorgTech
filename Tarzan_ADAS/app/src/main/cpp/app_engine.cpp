@@ -146,6 +146,43 @@ feed_deeplab_image(texture_2d_t *srctex, int win_w, int win_h) {
 
 }
 
+/* resize image to Laneseg network input size and convert to fp32. */
+void
+feed_laneseg_image(texture_2d_t *srctex, int win_w, int win_h) {
+    int x, y, w, h;
+    float *buf_fp32 = (float *) get_laneseg_input_buf(&w, &h);
+    unsigned char *buf_ui8 = NULL;
+    static unsigned char *pui8 = NULL;
+
+    if (pui8 == NULL)
+        pui8 = (unsigned char *) malloc(w * h * 4);
+
+    buf_ui8 = pui8;
+
+    draw_2d_texture_ex(srctex, 0, win_h - h, w, h, RENDER2D_FLIP_V);
+
+    glPixelStorei(GL_PACK_ALIGNMENT, 4);
+    glReadPixels(0, 0, w, h, GL_RGBA, GL_UNSIGNED_BYTE, buf_ui8);
+
+    /* convert UI8 [0, 255] ==> FP32 [ 0, 1] */
+    float mean = 0.0f;
+    float std = 255.0f;
+    for (y = 0; y < h; y++) {
+        for (x = 0; x < w; x++) {
+            int r = *buf_ui8++;
+            int g = *buf_ui8++;
+            int b = *buf_ui8++;
+            buf_ui8++;          /* skip alpha */
+            *buf_fp32++ = (float) (r - mean) / std;
+            *buf_fp32++ = (float) (g - mean) / std;
+            *buf_fp32++ = (float) (b - mean) / std;
+        }
+    }
+
+    return;
+
+}
+
 /* resize image to DNN network input size and convert to fp32. */
 void
 feed_dense_depth_image(texture_2d_t *srctex, int win_w, int win_h)
@@ -873,8 +910,8 @@ AppEngine::RenderFrame ()
     texture_2d_t srctex1 = glctx1.tex_input;
     int win_w  = glctx.disp_w;
     int win_h  = glctx.disp_h;
-    static double ttime[15] = {0}, interval, invoke_ms0 = 0, invoke_ms1 = 0, invoke_ms2 = 0,
-    depth_invoke_ms=0, deeplab_invoke_ms=0, detect_invoke_ms=0;
+    static double ttime[16] = {0}, interval, invoke_ms0 = 0, invoke_ms1 = 0, invoke_ms2 = 0,
+    depth_invoke_ms=0, deeplab_invoke_ms=0, detect_invoke_ms=0, laneseg_invoke_ms=0;
 
     int draw_x, draw_y, draw_w, draw_h;
     int texw = srctex.width;
@@ -893,6 +930,7 @@ AppEngine::RenderFrame ()
         irismesh_result_t       iris_mesh_ret[MAX_FACE_NUM][2] = {0};
         dense_depth_result_t dense_depth_result = {0};
         deeplab_result_t deeplab_result;
+        laneseg_result_t laneseg_result;
         detect_result_t detection = {};
         char strbuf[512];
 
@@ -924,9 +962,19 @@ AppEngine::RenderFrame ()
         feed_deeplab_image (&srctex1, win_w, win_h);
 
         ttime[4] = pmeter_get_time_ms ();
-        //invoke_deeplab (&deeplab_result);
+        invoke_deeplab (&deeplab_result);
         ttime[5] = pmeter_get_time_ms ();
-        deeplab_invoke_ms = ttime[3] - ttime[2];
+        deeplab_invoke_ms = ttime[5] - ttime[4];
+
+        /* --------------------------------------- *
+         *  lane segmentation
+         * --------------------------------------- */
+        feed_laneseg_image (&srctex1, win_w, win_h);
+
+        ttime[14] = pmeter_get_time_ms ();
+        invoke_laneseg (&laneseg_result);
+        ttime[15] = pmeter_get_time_ms ();
+        laneseg_invoke_ms = ttime[15] - ttime[14];
 
         /* --------------------------------------- *
          *  object detection
@@ -936,7 +984,7 @@ AppEngine::RenderFrame ()
         ttime[6] = pmeter_get_time_ms ();
         invoke_detect (&detection);
         ttime[7] = pmeter_get_time_ms ();
-        detect_invoke_ms = ttime[3] - ttime[2];
+        detect_invoke_ms = ttime[7] - ttime[6];
 
         /* --------------------------------------- *
          *  face detection
@@ -946,7 +994,7 @@ AppEngine::RenderFrame ()
         ttime[8] = pmeter_get_time_ms ();
         invoke_face_detect (&face_detect_ret);
         ttime[9] = pmeter_get_time_ms ();
-        invoke_ms0 = ttime[3] - ttime[2];
+        invoke_ms0 = ttime[9] - ttime[8];
 
         /* --------------------------------------- *
          *  face landmark
@@ -959,7 +1007,7 @@ AppEngine::RenderFrame ()
             ttime[10] = pmeter_get_time_ms ();
             invoke_facemesh_landmark (&face_mesh_ret[face_id]);
             ttime[11] = pmeter_get_time_ms ();
-            invoke_ms1 += ttime[5] - ttime[4];
+            invoke_ms1 += ttime[11] - ttime[10];
         }
 
         /* --------------------------------------- *
@@ -975,8 +1023,9 @@ AppEngine::RenderFrame ()
                 ttime[12] = pmeter_get_time_ms ();
                 invoke_irismesh_landmark (&iris_mesh_ret[face_id][eye_id]);
                 ttime[13] = pmeter_get_time_ms ();
-                invoke_ms2 += ttime[7] - ttime[6];
+                invoke_ms2 += ttime[13] - ttime[12];
             }
+
             /* need to horizontal flip for right eye */
             flip_horizontal_iris_landmark (&iris_mesh_ret[face_id][1]);
         }
@@ -1048,6 +1097,8 @@ AppEngine::RenderFrame ()
 
         sprintf (strbuf, "Interval:%5.1f [ms]\nFace :%5.1f [ms]\nMesh :%5.1f [ms]\nIris :%5.1f [ms]\nDepth  :%5.1f [ms]\nDepth  :%5.1f [ms]\nDetect  :%5.1f [ms]",
             interval, invoke_ms0, invoke_ms1, invoke_ms2, depth_invoke_ms, deeplab_invoke_ms, detect_invoke_ms);
+        DBG_LOGE("Interval:%5.1f [ms]\nFace :%5.1f [ms]\nMesh :%5.1f [ms]\nIris :%5.1f [ms]\nDepth  :%5.1f [ms]\nSeg  :%5.1f [ms]\nDetect  :%5.1f [ms]\nLaneSeg  :%5.1f [ms]",
+                  interval, invoke_ms0, invoke_ms1, invoke_ms2, depth_invoke_ms, deeplab_invoke_ms, detect_invoke_ms, laneseg_invoke_ms);
         draw_dbgstr (strbuf, 10, 10);
 
         /* renderer info */
@@ -1072,6 +1123,9 @@ AppEngine::AppEngine (android_app* app)
       m_camera1(nullptr),
       m_camera_facing(0)
 {
+    int socket;
+
+    //socket = client.connectToServer();
     memset (&glctx, 0, sizeof (glctx));
     memset (&glctx1, 0, sizeof (glctx));
 
@@ -1079,6 +1133,7 @@ AppEngine::AppEngine (android_app* app)
 
 AppEngine::~AppEngine()
 {
+    client.disconnectFromServer(socket);
     DeleteCamera();
 }
 
@@ -1125,7 +1180,7 @@ AppEngine::InitGLES (void)
 {
     int ret;
 
-    int ret_depth, ret_deeplab, ret_detect;
+    int ret_depth, ret_deeplab, ret_detect , ret_laneseg;
 
     egl_init_with_window_surface (2, m_app->window, 8, 0, 0);
 
@@ -1165,6 +1220,12 @@ AppEngine::InitGLES (void)
 
     ret_deeplab = init_tflite_deeplab (
             (const char *)m_tflite_deeplab_model_buf.data(), m_tflite_deeplab_model_buf.size());
+
+    asset_read_file (m_app->activity->assetManager,
+                     (char *)LANESEG_MODEL_PATH, m_tflite_laneseg_model_buf);
+
+    ret_laneseg = init_tflite_laneseg (
+            (const char *)m_tflite_laneseg_model_buf.data(), m_tflite_laneseg_model_buf.size());
 
     asset_read_file (m_app->activity->assetManager,
                      (char *)DETECT_MODEL_PATH, m_tflite_detect_model_buf);
