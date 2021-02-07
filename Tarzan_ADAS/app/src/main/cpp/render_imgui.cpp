@@ -100,17 +100,19 @@ render_gui (imgui_data_t *imgui_data)
     /* Show main window */
     ImGui::SetNextWindowPos (ImVec2(_X(s_win_w - win_w - 10), _Y(win_y)), ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowSize(ImVec2(_X(win_w),                _Y(win_h)), ImGuiCond_FirstUseEver);
+
     ImGui::Begin("Options");
     {
         if (ImGui::Button("Change Camera"))
         {
-            imgui_data->camera_facing = 1 - imgui_data->camera_facing;
+            //imgui_data->camera_facing = 1 - imgui_data->camera_facing;
         }
 
         s_win_pos [s_win_num] = ImGui::GetWindowPos  ();
         s_win_size[s_win_num] = ImGui::GetWindowSize ();
         s_win_num ++;
     }
+
     ImGui::End();
 }
 

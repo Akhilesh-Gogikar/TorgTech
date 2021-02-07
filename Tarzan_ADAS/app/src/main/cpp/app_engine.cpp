@@ -413,6 +413,143 @@ feed_iris_landmark_image(texture_2d_t *srctex, int win_w, int win_h,
     return;
 }
 
+static void
+render_deeplab_result (int ofstx, int ofsty, int draw_w, int draw_h,
+                       deeplab_result_t *deeplab_ret)
+{
+    float *segmap = deeplab_ret->segmentmap;
+    int segmap_w  = deeplab_ret->segmentmap_dims[0];
+    int segmap_h  = deeplab_ret->segmentmap_dims[1];
+    int segmap_c  = deeplab_ret->segmentmap_dims[2];
+    int x, y, c;
+    unsigned int imgbuf[segmap_h][segmap_w];
+
+    /* find the most confident class for each pixel. */
+    for (y = 0; y < segmap_h; y ++)
+    {
+        for (x = 0; x < segmap_w; x ++)
+        {
+            int max_id;
+            float conf_max = 0;
+            for (c = 0; c < 21; c ++)
+            {
+                float confidence = segmap[(y * segmap_w * segmap_c)+ (x * segmap_c) + c];
+                if (c == 0 || confidence > conf_max)
+                {
+                    conf_max = confidence;
+                    max_id = c;
+                }
+            }
+            float *col = get_deeplab_class_color (max_id);
+            unsigned char r = ((int)(col[0] * 255)) & 0xff;
+            unsigned char g = ((int)(col[1] * 255)) & 0xff;
+            unsigned char b = ((int)(col[2] * 255)) & 0xff;
+            unsigned char a = ((int)(col[3] * 255)) & 0xff;
+            imgbuf[y][x] = (a << 24) | (b << 16) | (g << 8) | (r);
+        }
+    }
+
+    GLuint texid;
+    glGenTextures (1, &texid );
+    glBindTexture (GL_TEXTURE_2D, texid);
+
+    glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+    glPixelStorei (GL_UNPACK_ALIGNMENT, 4);
+
+    glTexImage2D (GL_TEXTURE_2D, 0, GL_RGBA,
+                  segmap_w, segmap_h, 0, GL_RGBA,
+                  GL_UNSIGNED_BYTE, imgbuf);
+
+    draw_2d_texture (texid, ofstx, ofsty, draw_w, draw_h, 0);
+
+    /* class name */
+    for (c = 0; c < 21; c ++)
+    {
+        float col_str[] = {1.0f, 1.0f, 1.0f, 1.0f};
+        float *col = get_deeplab_class_color (c);
+        char *name = get_deeplab_class_name (c);
+        char buf[512];
+        sprintf (buf, "%2d:%s", c, name);
+        draw_dbgstr_ex (buf, ofstx, ofsty + c * 22 * 0.7, 0.7f, col_str, col);
+    }
+
+    glDeleteTextures (1, &texid);
+}
+
+void
+render_deeplab_heatmap (int ofstx, int ofsty, int draw_w, int draw_h, deeplab_result_t *deeplab_ret)
+{
+    float *segmap = deeplab_ret->segmentmap;
+    int segmap_w  = deeplab_ret->segmentmap_dims[0];
+    int segmap_h  = deeplab_ret->segmentmap_dims[1];
+    int segmap_c  = deeplab_ret->segmentmap_dims[2];
+    int x, y;
+    unsigned char imgbuf[segmap_h][segmap_w];
+    static int s_count = 0;
+    int key_id = (s_count /10)% 21;
+    s_count ++;
+    float conf_min, conf_max;
+
+
+#if 1
+    conf_min =  0.0f;
+    conf_max = 50.0f;
+#else
+    conf_min =  FLT_MAX;
+    conf_max = -FLT_MAX;
+    for (y = 0; y < segmap_h; y ++)
+    {
+        for (x = 0; x < segmap_w; x ++)
+        {
+            float confidence = segmap[(y * segmap_w * segmap_c)+ (x * segmap_c) + key_id];
+            if (confidence < conf_min) conf_min = confidence;
+            if (confidence > conf_max) conf_max = confidence;
+        }
+    }
+#endif
+
+    for (y = 0; y < segmap_h; y ++)
+    {
+        for (x = 0; x < segmap_w; x ++)
+        {
+            float confidence = segmap[(y * segmap_w * segmap_c)+ (x * segmap_c) + key_id];
+            confidence = (confidence - conf_min) / (conf_max - conf_min);
+            if (confidence < 0.0f) confidence = 0.0f;
+            if (confidence > 1.0f) confidence = 1.0f;
+            imgbuf[y][x] = confidence * 255;
+        }
+    }
+
+    GLuint texid;
+    glGenTextures (1, &texid );
+    glBindTexture (GL_TEXTURE_2D, texid);
+
+    glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+    glPixelStorei (GL_UNPACK_ALIGNMENT, 1);
+
+    glTexImage2D (GL_TEXTURE_2D, 0, GL_LUMINANCE,
+                  segmap_w, segmap_h, 0, GL_LUMINANCE,
+                  GL_UNSIGNED_BYTE, imgbuf);
+
+    draw_2d_colormap (texid, ofstx, ofsty, draw_w, draw_h, 0.8f, 0);
+
+    glDeleteTextures (1, &texid);
+
+    {
+        char strbuf[128];
+        sprintf (strbuf, "%2d (%f, %f) %s\n", key_id,
+                 conf_min, conf_max, get_deeplab_class_name (key_id));
+        draw_dbgstr (strbuf, ofstx + 5, 5);
+    }
+}
 
 static void
 render_detect_region (int ofstx, int ofsty, int texw, int texh,
@@ -924,6 +1061,9 @@ AppEngine::RenderFrame ()
      *  Render Loop
      * --------------------------------------- */
     int count = glctx.frame_count;
+
+    DBG_LOGE("Frame count:%d \n",
+             count);
     {
         face_detect_result_t    face_detect_ret = {0};
         face_landmark_result_t  face_mesh_ret[MAX_FACE_NUM] = {0};
@@ -1091,6 +1231,10 @@ AppEngine::RenderFrame ()
          * --------------------------------------- */
         DrawTFLiteConfigInfo ();
 
+        glClear (GL_COLOR_BUFFER_BIT);
+        draw_2d_texture_ex (&srctex1, draw_x, draw_y, draw_w, draw_h, 0);
+        render_deeplab_result (draw_x, draw_y, draw_w, draw_h, &deeplab_result);
+
         draw_pmeter (0, 40);
 
         soundGenerator.stopAudio();
@@ -1099,7 +1243,7 @@ AppEngine::RenderFrame ()
             interval, invoke_ms0, invoke_ms1, invoke_ms2, depth_invoke_ms, deeplab_invoke_ms, detect_invoke_ms);
         DBG_LOGE("Interval:%5.1f [ms]\nFace :%5.1f [ms]\nMesh :%5.1f [ms]\nIris :%5.1f [ms]\nDepth  :%5.1f [ms]\nSeg  :%5.1f [ms]\nDetect  :%5.1f [ms]\nLaneSeg  :%5.1f [ms]",
                   interval, invoke_ms0, invoke_ms1, invoke_ms2, depth_invoke_ms, deeplab_invoke_ms, detect_invoke_ms, laneseg_invoke_ms);
-        draw_dbgstr (strbuf, 10, 10);
+        //draw_dbgstr (strbuf, 10, 10);
 
         /* renderer info */
         int y = win_h - 22 * 3;
@@ -1111,8 +1255,11 @@ AppEngine::RenderFrame ()
         invoke_imgui (&imgui_data);
 #endif
         egl_swap();
+
     }
     glctx.frame_count ++;
+    DBG_LOGE("Rendered Frame:%d \n",
+             count);
 }
 
 
@@ -1248,6 +1395,7 @@ AppEngine::InitGLES (void)
 
     /* render target for default framebuffer */
     get_render_target (&glctx.rtarget_main);
+    get_render_target (&glctx1.rtarget_main);
 
     /* render target for camera cropping */
     create_render_target (&glctx.rtarget_crop, CAMERA_CROP_WIDTH, CAMERA_CROP_HEIGHT, RTARGET_COLOR);
@@ -1343,6 +1491,11 @@ AppEngine::CropCameraTexture (void)
     rtarget = &glctx.rtarget_main;
     set_render_target (rtarget);
     set_2d_projection_matrix (rtarget->width, rtarget->height);
+
+    /* reset to the default framebuffer */
+    rtarget1 = &glctx1.rtarget_main;
+    set_render_target (rtarget1);
+    set_2d_projection_matrix (rtarget1->width, rtarget1->height);
 }
 
 
@@ -1380,7 +1533,9 @@ AppEngine::DeleteCamera(void)
     }
 
     m_ImgReader.ReleaseImageReader ();
+    m_ImgReader1.ReleaseImageReader ();
     glctx.tex_camera_valid = false;
+    glctx1.tex_camera_valid = false;
 }
 
 
@@ -1401,8 +1556,14 @@ AppEngine::CreateCamera (int facing)
     m_ImgReader.InitImageReader (CAMERA_RESOLUTION_W, CAMERA_RESOLUTION_H);
     ANativeWindow *nativeWindow = m_ImgReader.GetNativeWindow();
 
+    m_ImgReader1.InitImageReader (CAMERA_RESOLUTION_W, CAMERA_RESOLUTION_H);
+    ANativeWindow *nativeWindow1 = m_ImgReader1.GetNativeWindow();
+
     m_camera->CreateSession (nativeWindow);
     m_camera->StartPreview (true);
+
+    m_camera1->CreateSession (nativeWindow1);
+    m_camera1->StartPreview (true);
 }
 
 void
@@ -1410,12 +1571,15 @@ AppEngine::UpdateCameraTexture ()
 {
     /* Acquire the latest AHardwareBuffer */
     AHardwareBuffer *ahw_buf = NULL;
+    AHardwareBuffer *ahw_buf1 = NULL;
     int ret = m_ImgReader.GetCurrentHWBuffer (&ahw_buf);
-    if (ret != 0)
+    int ret1 = m_ImgReader1.GetCurrentHWBuffer (&ahw_buf1);
+    if (ret != 0 && ret1 != 0)
         return;
 
     /* Get EGLClientBuffer */
     EGLClientBuffer egl_buf = eglGetNativeClientBufferANDROID (ahw_buf);
+    EGLClientBuffer egl_buf1 = eglGetNativeClientBufferANDROID (ahw_buf1);
     if (!egl_buf)
     {
         DBG_LOGE("Failed to create EGLClientBuffer");
@@ -1441,7 +1605,7 @@ AppEngine::UpdateCameraTexture ()
                                        EGL_NATIVE_BUFFER_ANDROID, egl_buf, attrs);
 
     glctx1.egl_img = eglCreateImageKHR (egl_get_display(), EGL_NO_CONTEXT,
-                                       EGL_NATIVE_BUFFER_ANDROID, egl_buf, attrs);
+                                       EGL_NATIVE_BUFFER_ANDROID, egl_buf1, attrs);
 
     /* Bind to GL_TEXTURE_EXTERNAL_OES */
     texture_2d_t *input_tex = &glctx.tex_camera;
@@ -1475,7 +1639,7 @@ AppEngine::UpdateCameraTexture ()
 
         input_tex1->texid  = texid1;
         input_tex1->format = pixfmt_fourcc('E', 'X', 'T', 'X');
-        m_ImgReader.GetBufferDimension (&input_tex1->width, &input_tex1->height);
+        m_ImgReader1.GetBufferDimension (&input_tex1->width, &input_tex1->height);
     }
 
     glBindTexture (GL_TEXTURE_EXTERNAL_OES, input_tex->texid);

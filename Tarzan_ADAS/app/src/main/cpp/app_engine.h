@@ -171,6 +171,7 @@ private:
     NDKCamera           *m_camera;
     NDKCamera           *m_camera1;
     ImageReaderHelper   m_ImgReader;
+    ImageReaderHelper   m_ImgReader1;
     klient              client;
     int socket;
 
