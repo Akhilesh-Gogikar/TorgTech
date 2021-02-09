@@ -65,23 +65,8 @@
     <content url="file://$MODULE_DIR$/../../../../third_party/imgui/examples">
       <sourceFolder url="file://$MODULE_DIR$/../../../../third_party/imgui/examples" isTestSource="false" />
     </content>
-    <content url="file://$MODULE_DIR$/../../../../third_party/oboe/src/aaudio">
-      <sourceFolder url="file://$MODULE_DIR$/../../../../third_party/oboe/src/aaudio" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../../../third_party/oboe/src/common">
-      <sourceFolder url="file://$MODULE_DIR$/../../../../third_party/oboe/src/common" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../../../third_party/oboe/src/fifo">
-      <sourceFolder url="file://$MODULE_DIR$/../../../../third_party/oboe/src/fifo" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../../../third_party/oboe/src/flowgraph">
-      <sourceFolder url="file://$MODULE_DIR$/../../../../third_party/oboe/src/flowgraph" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../../../third_party/oboe/src/flowgraph/resampler">
-      <sourceFolder url="file://$MODULE_DIR$/../../../../third_party/oboe/src/flowgraph/resampler" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../../../third_party/oboe/src/opensles">
-      <sourceFolder url="file://$MODULE_DIR$/../../../../third_party/oboe/src/opensles" isTestSource="false" />
+    <content url="file://$MODULE_DIR$/../../../../third_party/oboe/src">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../third_party/oboe/src" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 30 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

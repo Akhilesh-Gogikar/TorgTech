@@ -4,7 +4,7 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
-        applicationId = 'com.example.tflite_iris_landmark'
+        applicationId = 'org.torgtech.tarzan'
         minSdkVersion 27
         targetSdkVersion 29
         externalNativeBuild {

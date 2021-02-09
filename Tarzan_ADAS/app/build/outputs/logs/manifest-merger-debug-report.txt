@@ -34,7 +34,7 @@ INJECTED from /home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/AndroidManifest.xml
 INJECTED from /home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/AndroidManifest.xml:3:1-29:12
 INJECTED from /home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/AndroidManifest.xml:3:1-29:12
 	package
-		ADDED from /home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/AndroidManifest.xml:4:11-53
+		ADDED from /home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/AndroidManifest.xml:4:11-39
 		INJECTED from /home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/AndroidManifest.xml
 		INJECTED from /home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/AndroidManifest.xml
 	android:versionName
