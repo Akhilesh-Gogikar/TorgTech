@@ -112,6 +112,12 @@ typedef struct gles_ctx {
     texture_2d_t tex_input;
     EGLImage egl_img;
 
+    bool tex_camera1_valid;
+    texture_2d_t tex_static1;
+    texture_2d_t tex_camera1;
+    texture_2d_t tex_input1;
+    EGLImage egl_img1;
+
     render_target_t rtarget_main;
     render_target_t rtarget_crop;
 } gles_ctx_t;
@@ -119,6 +125,8 @@ typedef struct gles_ctx {
 
 class AppEngine {
 public:
+
+
     explicit AppEngine(android_app* app);
     ~AppEngine();
 
@@ -176,7 +184,6 @@ private:
     int socket;
 
     gles_ctx_t          glctx;
-    gles_ctx_t          glctx1;
     std::vector<uint8_t> m_facedet_tflite_model_buf;
     std::vector<uint8_t> m_facelandmark_tflite_model_buf;
     std::vector<uint8_t> m_irislandmark_tflite_model_buf;

@@ -130,6 +130,8 @@ add_library(native-activity SHARED
         ${CMAKE_CURRENT_SOURCE_DIR}/tflite_laneseg.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/tflite_detect.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/klient.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/utils.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/touch_event.c
         ${commonDir}/android/camera_manager.cpp
         ${commonDir}/android/camera_utils.cpp
         ${commonDir}/android/gestureDetector.cpp

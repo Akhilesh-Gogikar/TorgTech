@@ -46,6 +46,11 @@
           "workingDirectoryOrdinal": 0
         },
         {
+          "src": "/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/touch_event.c",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        },
+        {
           "src": "/home/tarzan/TorgTech/common/assertgl.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
@@ -136,7 +141,22 @@
           "workingDirectoryOrdinal": 0
         },
         {
+          "src": "/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/tflite_laneseg.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
           "src": "/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/tflite_detect.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/klient.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/utils.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },

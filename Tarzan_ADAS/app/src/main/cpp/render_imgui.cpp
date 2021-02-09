@@ -92,7 +92,7 @@ static void
 render_gui (imgui_data_t *imgui_data)
 {
     int win_w = 460;
-    int win_h = 250;
+    int win_h = 480;
     int win_y = 10;
 
     s_win_num = 0;
@@ -100,19 +100,28 @@ render_gui (imgui_data_t *imgui_data)
     /* Show main window */
     ImGui::SetNextWindowPos (ImVec2(_X(s_win_w - win_w - 10), _Y(win_y)), ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowSize(ImVec2(_X(win_w),                _Y(win_h)), ImGuiCond_FirstUseEver);
-
     ImGui::Begin("Options");
     {
         if (ImGui::Button("Change Camera"))
         {
-            //imgui_data->camera_facing = 1 - imgui_data->camera_facing;
+            imgui_data->camera_facing = 1 - imgui_data->camera_facing;
         }
+        ImGui::SliderFloat("depth_scale_x", &imgui_data->pose_scale_x,   0.0f, 1000.0f);
+        ImGui::SliderFloat("depth_scale_y", &imgui_data->pose_scale_y,   0.0f, 1000.0f);
+        ImGui::SliderFloat("depth_scale_z", &imgui_data->pose_scale_z,   0.0f, 1000.0f);
+        ImGui::SliderFloat("camera_pos_z",  &imgui_data->camera_pos_z,   0.0f, 1000.0f);
+
+        bool draw_axis   = imgui_data->draw_axis;
+        bool draw_pmeter = imgui_data->draw_pmeter;
+        ImGui::Checkbox("draw_axis",   &draw_axis);
+        ImGui::Checkbox("draw_pmeter", &draw_pmeter);
+        imgui_data->draw_axis   = draw_axis   ? 1 : 0;
+        imgui_data->draw_pmeter = draw_pmeter ? 1 : 0;
 
         s_win_pos [s_win_num] = ImGui::GetWindowPos  ();
         s_win_size[s_win_num] = ImGui::GetWindowSize ();
         s_win_num ++;
     }
-
     ImGui::End();
 }
 

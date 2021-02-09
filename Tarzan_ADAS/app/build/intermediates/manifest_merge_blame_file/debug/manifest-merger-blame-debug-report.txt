@@ -8,7 +8,7 @@
 8    <uses-sdk
 9        android:minSdkVersion="27"
 9-->/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/AndroidManifest.xml
-10        android:targetSdkVersion="28" />
+10        android:targetSdkVersion="29" />
 10-->/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/AndroidManifest.xml
 11
 12    <uses-feature android:name="android.hardware.camera" />

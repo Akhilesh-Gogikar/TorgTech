@@ -5,6 +5,8 @@
 #ifndef UTIL_IMGUI_H_
 #define UTIL_IMGUI_H_
 
+#include "tflite_dense_depth.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -12,6 +14,12 @@ extern "C" {
 typedef struct _imgui_data_t
 {
     int     camera_facing;
+    float pose_scale_x;
+    float pose_scale_y;
+    float pose_scale_z;
+    float camera_pos_z;
+    int   draw_axis;
+    int   draw_pmeter;
 } imgui_data_t;
 
 int  init_imgui (int width, int height);

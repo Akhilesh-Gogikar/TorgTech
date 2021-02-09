@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
 
     defaultConfig {
         applicationId = 'com.example.tflite_iris_landmark'
         minSdkVersion 27
-        targetSdkVersion 28
+        targetSdkVersion 29
         externalNativeBuild {
             cmake {
                 arguments '-DANDROID_STL=c++_static'
