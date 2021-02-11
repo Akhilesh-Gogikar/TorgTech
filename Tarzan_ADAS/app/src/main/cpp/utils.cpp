@@ -1075,3 +1075,46 @@ render_depth_image_3d (texture_2d_t *dsrctex, imgui_data_t s_gui_prop, int ofstx
     DBG_LOGE("s_gui_prop.camera_pos_z: %d", s_gui_prop.camera_pos_z);
 }
 
+float
+fclampf (float val)
+{
+    val = fmaxf (0.0f, val);
+    val = fminf (1.0f, val);
+    return val;
+}
+
+void
+render_depth_image (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int texh,
+                    dense_depth_result_t *dense_depth_ret)
+{
+    float *depthmap = dense_depth_ret->depthmap;
+    int depthmap_w  = dense_depth_ret->depthmap_dims[0];
+    int depthmap_h  = dense_depth_ret->depthmap_dims[1];
+    int x, y;
+    unsigned int imgbuf[depthmap_h][depthmap_w];
+
+    /* find the most confident class for each pixel. */
+    for (y = 0; y < depthmap_h; y ++)
+    {
+        for (x = 0; x < depthmap_w; x ++)
+        {
+            float d = depthmap[y * depthmap_w + x];
+            d -= 0.0;
+            d /= 1.0;
+            d = fclampf (d);
+
+            unsigned char r = d * 255;
+            unsigned char g = r;
+            unsigned char b = r;
+            unsigned char a = 255;
+
+            imgbuf[y][x] = (a << 24) | (b << 16) | (g << 8) | (r);
+        }
+    }
+
+    texture_2d_t animtex;
+    create_2d_texture_ex (&animtex, imgbuf, depthmap_w, depthmap_h, pixfmt_fourcc ('R', 'G', 'B', 'A'));
+    draw_2d_texture_ex (&animtex, ofstx, ofsty, texw, texh, 0);
+
+    glDeleteTextures (1, &animtex.texid);
+}

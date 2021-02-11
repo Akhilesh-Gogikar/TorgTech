@@ -26,8 +26,8 @@ static uint8_t  *s_active_candidate;
 #define ATTR_MAX_CLASSES_PER_DETECTION    1
 #define ATTR_DETECTIONS_PER_CLASS         100
 #define ATTR_MAX_DETECTIONS               100
-#define ATTR_NMS_SCORE_THRESHOLD          0.8
-#define ATTR_NMS_IOU_THRESHOLD            0.8
+#define ATTR_NMS_SCORE_THRESHOLD          0.3
+#define ATTR_NMS_IOU_THRESHOLD            0.3
 #define ATTR_USE_REGULAR_NMS              false
 
 /* -------------------------------------------------------------------- *

@@ -100,5 +100,10 @@ render_depth_image_3d (texture_2d_t *srctex, imgui_data_t s_gui_prop, int ofstx,
                        dense_depth_result_t *dense_depth_ret);
 
 void
+render_depth_image (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int texh,
+                    dense_depth_result_t *dense_depth_ret);
+
+void
 render_obj_detect_region (int ofstx, int ofsty, int texw, int texh,
                           detect_result_t *detection);
+

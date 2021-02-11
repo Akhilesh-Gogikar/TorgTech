@@ -282,12 +282,14 @@ AppEngine::RenderFrame ()
 
         render_obj_detect_region (draw_x, draw_y, draw_w_half, draw_h, &detection);
 
-        render_depth_image_3d (&srctex1, s_gui_prop, draw_x+draw_w_half, draw_y, draw_w_half, draw_h, &dense_depth_result);
+        render_depth_image (&srctex1, draw_x+draw_w_half, draw_y, draw_w_half, draw_h, &dense_depth_result);
 
-        float camx = 100;
-        float camy = 100;
-        float camw = 225;
-        float camh = 225;
+        //render_depth_image_3d (&srctex1, s_gui_prop, draw_x+draw_w_half, draw_y, draw_w_half, draw_h, &dense_depth_result);
+
+        float camx = 0;
+        float camy = 200;
+        float camw = 325;
+        float camh = 325;
 
 
         int dx = camx;
@@ -301,11 +303,11 @@ AppEngine::RenderFrame ()
         /* visualize the face pose estimation results. */
         render_detect_region (dx, dy, dw, dh, &face_detect_ret);
 
-        for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
+        for (int face_id = 0; face_id < 1; face_id ++)
         {
             render_iris_landmark_on_main (dx, dy, dw, dh, &face_detect_ret.faces[face_id],&face_mesh_ret[face_id], iris_mesh_ret[face_id]);
 
-            render_iris_landmark_on_face (dx, dy, dw, dh, &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
+            //render_iris_landmark_on_face (dx, dy, dw, dh, &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
         }
 
 
@@ -472,9 +474,9 @@ AppEngine::InitGLES (void)
 
     glctx.disp_w = w;
     glctx.disp_h = h;
-    LoadInputTexture (&glctx.tex_static, (char *)"pakutaso_sotsugyou.jpg");
+    LoadInputTexture (&glctx.tex_static, (char *)"car_inside.jpg");
 
-    LoadInputTexture (&glctx.tex_static1, (char *)"ride_horse.jpg");
+    LoadInputTexture (&glctx.tex_static1, (char *)"car_outside.jpg");
 
     /* render target for default framebuffer */
     get_render_target (&glctx.rtarget_main);
