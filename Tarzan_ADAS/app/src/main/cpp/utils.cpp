@@ -18,8 +18,6 @@
 #include "tflite_facemesh.h"
 #include "touch_event.h"
 
-static imgui_data_t s_gui_prop = {0};
-
 /* resize image to (300x300) for input image of MobileNet SSD */
 void
 feed_detect_image_uint8 (texture_2d_t *srctex, int win_w, int win_h)
@@ -132,12 +130,16 @@ feed_deeplab_image(texture_2d_t *srctex, int win_w, int win_h) {
             int r = *buf_ui8++;
             int g = *buf_ui8++;
             int b = *buf_ui8++;
+
             buf_ui8++;          /* skip alpha */
             *buf_fp32++ = (float) (r - mean) / std;
             *buf_fp32++ = (float) (g - mean) / std;
             *buf_fp32++ = (float) (b - mean) / std;
+            //DBG_LOGE("%d,%d : (%d, %d, %d)", x, y, r, g, b);
         }
     }
+
+
 
     return;
 
@@ -248,12 +250,19 @@ feed_face_detect_image(texture_2d_t *srctex, int win_w, int win_h)
             int r = *buf_ui8 ++;
             int g = *buf_ui8 ++;
             int b = *buf_ui8 ++;
+
+
+
             buf_ui8 ++;          /* skip alpha */
             *buf_fp32 ++ = (float)(r - mean) / std;
             *buf_fp32 ++ = (float)(g - mean) / std;
             *buf_fp32 ++ = (float)(b - mean) / std;
+
+            //DBG_LOGE("%d,%d : (%d, %d, %d)", x, y, r, g, b);
         }
     }
+
+
 
     return;
 }
@@ -308,6 +317,7 @@ feed_face_landmark_image(texture_2d_t *srctex, int win_w, int win_h, face_detect
             int r = *buf_ui8 ++;
             int g = *buf_ui8 ++;
             int b = *buf_ui8 ++;
+
             buf_ui8 ++;          /* skip alpha */
             *buf_fp32 ++ = (float)(r - mean) / std;
             *buf_fp32 ++ = (float)(g - mean) / std;
@@ -474,7 +484,7 @@ render_deeplab_result (int ofstx, int ofsty, int draw_w, int draw_h,
         draw_dbgstr_ex (buf, ofstx, ofsty + c * 22 * 0.7, 0.7f, col_str, col);
     }
 
-    //glDeleteTextures (1, &texid);
+    glDeleteTextures (1, &texid);
 }
 
 void
@@ -505,7 +515,7 @@ render_obj_detect_region (int ofstx, int ofsty, int texw, int texh,
 }
 
 void
-render_deeplab_heatmap (int ofstx, int ofsty, int draw_w, int draw_h, deeplab_result_t *deeplab_ret)
+render_deeplab_heatmap (texture_2d_t *srctex, int ofstx, int ofsty, int draw_w, int draw_h, deeplab_result_t *deeplab_ret)
 {
     float *segmap = deeplab_ret->segmentmap;
     int segmap_w  = deeplab_ret->segmentmap_dims[0];
@@ -548,9 +558,8 @@ render_deeplab_heatmap (int ofstx, int ofsty, int draw_w, int draw_h, deeplab_re
         }
     }
 
-    GLuint texid;
-    glGenTextures (1, &texid );
-    glBindTexture (GL_TEXTURE_2D, texid);
+
+    glBindTexture (GL_TEXTURE_2D, srctex->texid);
 
     glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
@@ -563,9 +572,7 @@ render_deeplab_heatmap (int ofstx, int ofsty, int draw_w, int draw_h, deeplab_re
                   segmap_w, segmap_h, 0, GL_LUMINANCE,
                   GL_UNSIGNED_BYTE, imgbuf);
 
-    draw_2d_colormap (texid, ofstx, ofsty, draw_w, draw_h, 0.8f, 0);
-
-    glDeleteTextures (1, &texid);
+    draw_2d_colormap (srctex->texid, ofstx, ofsty, draw_w, draw_h, 0.8f, 0);
 
     {
         char strbuf[128];
@@ -967,7 +974,7 @@ flip_horizontal_iris_landmark (irismesh_result_t *irismesh)
 }
 
 void
-render_depth_image_3d (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int texh,
+render_depth_image_3d (texture_2d_t *dsrctex, imgui_data_t s_gui_prop, int ofstx, int ofsty, int texw, int texh,
                        dense_depth_result_t *dense_depth_ret)
 {
     float mtxGlobal[16], mtxTouch[16];
@@ -979,6 +986,8 @@ render_depth_image_3d (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int
     matrix_translate (mtxGlobal, 0, 0, -s_gui_prop.camera_pos_z);
     matrix_mult (mtxGlobal, mtxGlobal, mtxTouch);
 
+
+
     float *depthmap = dense_depth_ret->depthmap;
     int depthmap_w  = dense_depth_ret->depthmap_dims[0];
     int depthmap_h  = dense_depth_ret->depthmap_dims[1];
@@ -989,6 +998,7 @@ render_depth_image_3d (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int
         create_mesh (&s_depth_mesh, depthmap_w - 1, depthmap_h - 1);
         s_is_first_render3d = 0;
     }
+
     float *vtx = s_depth_mesh.vtx_array;
     float *uv  = s_depth_mesh.uv_array;
 
@@ -1003,8 +1013,8 @@ render_depth_image_3d (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int
             if (1)
             {
                 d -= 0;//s_gui_prop.depth_min;
-                d /= 10;//s_gui_prop.depth_max;
-                d = (d * 2.0 - 1.0) * s_gui_prop.pose_scale_z;
+                d /= 1;//s_gui_prop.depth_max;
+                d = (d * 1.0 - 0.0) * s_gui_prop.pose_scale_z;
             }
             else
             {
@@ -1021,8 +1031,9 @@ render_depth_image_3d (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int
             uv [2 * idx + 1] = y / (float)depthmap_h;
         }
     }
+
     float colb[] = {1.0, 1.0, 1.0, 1.0};
-    draw_point_arrays (mtxGlobal, vtx, uv, depthmap_h * depthmap_w, srctex->texid, colb);
+    draw_point_arrays (mtxGlobal, vtx, uv, depthmap_h * depthmap_w, dsrctex->texid, colb);
 
     if (s_gui_prop.draw_axis)
     {
@@ -1042,6 +1053,7 @@ render_depth_image_3d (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int
                     float col_red[] = {1.0, 0.0, 0.0, 1.0};
                     float *col = (i == 0 && j == 0) ? col_red : col_base;
                     draw_line (mtxGlobal, v0, v1, col);
+                    DBG_LOGE("s_gui_prop.camera_pos_z: %d", s_gui_prop.camera_pos_z);
                 }
                 {
                     float v0[3] = {i * dx, -dy, j * dz};
@@ -1060,5 +1072,6 @@ render_depth_image_3d (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int
             }
         }
     }
+    DBG_LOGE("s_gui_prop.camera_pos_z: %d", s_gui_prop.camera_pos_z);
 }
 

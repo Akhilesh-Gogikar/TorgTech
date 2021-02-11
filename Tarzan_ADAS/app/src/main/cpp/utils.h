@@ -61,7 +61,7 @@ render_deeplab_result (int ofstx, int ofsty, int draw_w, int draw_h,
                        deeplab_result_t *deeplab_ret);
 
 void
-render_deeplab_heatmap (int ofstx, int ofsty, int draw_w, int draw_h, deeplab_result_t *deeplab_ret);
+render_deeplab_heatmap ( int ofstx, int ofsty, int draw_w, int draw_h, deeplab_result_t *deeplab_ret);
 
 void
 render_detect_region (int ofstx, int ofsty, int texw, int texh,
@@ -96,7 +96,7 @@ render_iris_landmark_on_main (int ofstx, int ofsty, int texw, int texh,
                               face_t *face, face_landmark_result_t *facemesh, irismesh_result_t *irismesh);
 
 void
-render_depth_image_3d (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int texh,
+render_depth_image_3d (texture_2d_t *srctex, imgui_data_t s_gui_prop, int ofstx, int ofsty, int texw, int texh,
                        dense_depth_result_t *dense_depth_ret);
 
 void

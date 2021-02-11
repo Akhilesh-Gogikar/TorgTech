@@ -159,7 +159,7 @@ init_cube (float aspect)
     unsigned char imgbuf[] = {255, 255, 255, 255};
     s_texid_dummy = create_2d_texture (imgbuf, 1, 1);
 
-    GLASSERT ();
+    //GLASSERT ();
     return 0;
 }
 

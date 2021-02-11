@@ -81,7 +81,9 @@ NDKCamera::CreateSession (ANativeWindow* previewWindow)
      *  |     mDevice     |    +---> OnDeviceErrorChanges()
      *  +-----------------+
      */
+
     LOGI ("open camera \"%s\"", mActiveCameraId.c_str());
+
     CALL_CAMERA (ACameraManager_openCamera (mCameraManager, mActiveCameraId.c_str(),
                                             GetDeviceListener(), &mDevice));
 
@@ -101,6 +103,7 @@ NDKCamera::CreateSession (ANativeWindow* previewWindow)
      *  |                                     mImgReaderNativeWin   |
      *  +-----------------------------------------------------------+
      */
+
     LOGI ("Create capture session");
     CALL_CAMERA (ACaptureSessionOutputContainer_create (&mOutputs));
     CALL_CAMERA (ACaptureSessionOutput_create (mImgReaderNativeWin, &mImgReaderOutput));
@@ -120,6 +123,7 @@ NDKCamera::CreateSession (ANativeWindow* previewWindow)
      *  |                          mImgReaderNativeWin  |
      *  +-----------------------------------------------+
      */
+
     LOGI ("Create capture request");
     ACameraDevice_request_template req_template = TEMPLATE_RECORD;
     CALL_CAMERA (ACameraDevice_createCaptureRequest (mDevice, req_template, &mCaptureRequest));
@@ -128,6 +132,7 @@ NDKCamera::CreateSession (ANativeWindow* previewWindow)
     CALL_CAMERA (ACaptureRequest_addTarget (mCaptureRequest, mReqImgReaderOutput));
 
     LOGI ("CreateSession() done.");
+
 }
 
 NDKCamera::~NDKCamera() {

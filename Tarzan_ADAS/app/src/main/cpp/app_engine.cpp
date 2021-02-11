@@ -136,8 +136,8 @@ AppEngine::setup_imgui (int win_w, int win_h, imgui_data_t *imgui_data)
 void 
 AppEngine::RenderFrame ()
 {
-    texture_2d_t srctex = glctx.tex_input;
-    texture_2d_t srctex1 = glctx.tex_input1;
+    texture_2d_t srctex = glctx.tex_static;//input;
+    texture_2d_t srctex1 = glctx.tex_static1;//input1;
     int win_w  = glctx.disp_w;
     int win_h  = glctx.disp_h;
     static double ttime[16] = {0}, interval, invoke_ms0 = 0, invoke_ms1 = 0, invoke_ms2 = 0,
@@ -148,7 +148,11 @@ AppEngine::RenderFrame ()
     int texh = srctex.height;
     adjust_texture (win_w, win_h, texw, texh, &draw_x, &draw_y, &draw_w, &draw_h, 0);
 
+    int draw_w_half = draw_w/2;
+
     glClearColor (0.f, 0.f, 0.f, 1.0f);
+
+    s_gui_prop = imgui_data;
 
     /* --------------------------------------- *
      *  Render Loop
@@ -174,10 +178,7 @@ AppEngine::RenderFrame ()
         interval = (count > 0) ? ttime[1] - ttime[0] : 0;
         ttime[0] = ttime[1];
 
-        glClear (GL_COLOR_BUFFER_BIT);
-        glViewport (0, 0, win_w, win_h);
-
-        soundGenerator.startAudio();
+        //soundGenerator.startAudio();
 
         /* --------------------------------------- *
          *  Dense Depth
@@ -189,6 +190,7 @@ AppEngine::RenderFrame ()
         ttime[3] = pmeter_get_time_ms ();
         depth_invoke_ms = ttime[3] - ttime[2];
 
+
         /* --------------------------------------- *
          *  semantic segmentation
          * --------------------------------------- */
@@ -198,6 +200,7 @@ AppEngine::RenderFrame ()
         invoke_deeplab (&deeplab_result);
         ttime[5] = pmeter_get_time_ms ();
         deeplab_invoke_ms = ttime[5] - ttime[4];
+
 
         /* --------------------------------------- *
          *  lane segmentation
@@ -219,6 +222,7 @@ AppEngine::RenderFrame ()
         ttime[7] = pmeter_get_time_ms ();
         detect_invoke_ms = ttime[7] - ttime[6];
 
+
         /* --------------------------------------- *
          *  face detection
          * --------------------------------------- */
@@ -228,6 +232,7 @@ AppEngine::RenderFrame ()
         invoke_face_detect (&face_detect_ret);
         ttime[9] = pmeter_get_time_ms ();
         invoke_ms0 = ttime[9] - ttime[8];
+
 
         /* --------------------------------------- *
          *  face landmark
@@ -242,6 +247,7 @@ AppEngine::RenderFrame ()
             ttime[11] = pmeter_get_time_ms ();
             invoke_ms1 += ttime[11] - ttime[10];
         }
+
 
         /* --------------------------------------- *
          *  Iris landmark
@@ -264,39 +270,40 @@ AppEngine::RenderFrame ()
         }
 
 
-
         /* --------------------------------------- *
          *  render scene
          * --------------------------------------- */
+
         glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        draw_2d_texture_ex (&srctex1, draw_x, draw_y, draw_w, draw_h, 0);
+        draw_2d_texture_ex (&srctex1, draw_x, draw_y, draw_w_half, draw_h, 0);
 
-        render_obj_detect_region (draw_x, draw_y, draw_w, draw_h, &detection);
+        render_deeplab_result (draw_x, draw_y, draw_w_half, draw_h, &deeplab_result);
 
-        render_deeplab_result (draw_x, draw_y, draw_w, draw_h, &deeplab_result);
+        render_obj_detect_region (draw_x, draw_y, draw_w_half, draw_h, &detection);
 
-        render_depth_image_3d (&srctex1, draw_x, draw_y, draw_w, draw_h, &dense_depth_result);
+        render_depth_image_3d (&srctex1, s_gui_prop, draw_x+draw_w_half, draw_y, draw_w_half, draw_h, &dense_depth_result);
 
         float camx = 100;
         float camy = 100;
-        float camw = 300;
-        float camh = 300;
-        /* visualize the hand pose estimation results. */
-        draw_2d_texture_ex (&srctex, camx, camy, camw, camh, 0);
+        float camw = 225;
+        float camh = 225;
+
 
         int dx = camx;
         int dy = camy + camh;
         int dw = camw;
         int dh = camh;
 
+        /* visualize the hand pose estimation results. */
+        draw_2d_texture_ex (&srctex, dx, dy, dw, dh, 0);
+
         /* visualize the face pose estimation results. */
         render_detect_region (dx, dy, dw, dh, &face_detect_ret);
 
         for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
         {
-            render_iris_landmark_on_main (dx, dy, dw, dh, &face_detect_ret.faces[face_id],
-                                          &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
+            render_iris_landmark_on_main (dx, dy, dw, dh, &face_detect_ret.faces[face_id],&face_mesh_ret[face_id], iris_mesh_ret[face_id]);
 
             render_iris_landmark_on_face (dx, dy, dw, dh, &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
         }
@@ -305,21 +312,22 @@ AppEngine::RenderFrame ()
         /* --------------------------------------- *
          *  post process
          * --------------------------------------- */
-        glViewport (0, 0, win_w, win_h);
+
+        //glViewport (0, 0, win_w, win_h);
 
         DrawTFLiteConfigInfo ();
 
-        glClear (GL_COLOR_BUFFER_BIT);
-
         draw_pmeter (0, 40);
 
-        soundGenerator.stopAudio();
+        //soundGenerator.stopAudio();
 
         sprintf (strbuf, "Interval:%5.1f [ms]\nFace :%5.1f [ms]\nMesh :%5.1f [ms]\nIris :%5.1f [ms]\nDepth  :%5.1f [ms]\nDepth  :%5.1f [ms]\nDetect  :%5.1f [ms]",
             interval, invoke_ms0, invoke_ms1, invoke_ms2, depth_invoke_ms, deeplab_invoke_ms, detect_invoke_ms);
-        DBG_LOGE("Interval:%5.1f [ms]\nFace :%5.1f [ms]\nMesh :%5.1f [ms]\nIris :%5.1f [ms]\nDepth  :%5.1f [ms]\nSeg  :%5.1f [ms]\nDetect  :%5.1f [ms]\nLaneSeg  :%5.1f [ms]",
-                  interval, invoke_ms0, invoke_ms1, invoke_ms2, depth_invoke_ms, deeplab_invoke_ms, detect_invoke_ms, laneseg_invoke_ms);
-        //draw_dbgstr (strbuf, 10, 10);
+
+        DBG_LOGE("Interval:%5.1f [ms]\nFace :%5.1f [ms]\nMesh :%5.1f [ms]\nIris :%5.1f [ms]\nDepth  :%5.1f [ms]\nDepth  :%5.1f [ms]\nDetect  :%5.1f [ms]\nLane Seg  :%5.1f [ms]",
+                 interval, invoke_ms0, invoke_ms1, invoke_ms2, depth_invoke_ms, deeplab_invoke_ms, detect_invoke_ms, laneseg_invoke_ms);
+
+        draw_dbgstr (strbuf, 10, 10);
 
         /* renderer info */
         int y = win_h - 22 * 3;
@@ -411,6 +419,7 @@ AppEngine::InitGLES (void)
     glctx.str_glrender   = (char *)glGetString (GL_RENDERER);
 
     int w, h;
+
     egl_get_current_surface_dimension (&w, &h);
 
     init_2d_renderer (w, h);
@@ -465,7 +474,7 @@ AppEngine::InitGLES (void)
     glctx.disp_h = h;
     LoadInputTexture (&glctx.tex_static, (char *)"pakutaso_sotsugyou.jpg");
 
-    LoadInputTexture (&glctx.tex_static1, (char *)"pexels.jpg");
+    LoadInputTexture (&glctx.tex_static1, (char *)"ride_horse.jpg");
 
     /* render target for default framebuffer */
     get_render_target (&glctx.rtarget_main);
@@ -633,7 +642,7 @@ AppEngine::UpdateCameraTexture ()
 
     /* Get EGLClientBuffer */
     EGLClientBuffer egl_buf = eglGetNativeClientBufferANDROID (ahw_buf);
-    EGLClientBuffer egl_buf1 = eglGetNativeClientBufferANDROID (ahw_buf1);
+
     if (!egl_buf)
     {
         DBG_LOGE("Failed to create EGLClientBuffer");
@@ -647,6 +656,12 @@ AppEngine::UpdateCameraTexture ()
         glctx.egl_img = EGL_NO_IMAGE_KHR;
     }
 
+    EGLint attrs[] = {EGL_IMAGE_PRESERVED_KHR, EGL_TRUE, EGL_NONE,};
+    glctx.egl_img = eglCreateImageKHR (egl_get_display(), EGL_NO_CONTEXT,
+                                       EGL_NATIVE_BUFFER_ANDROID, egl_buf, attrs);
+
+    EGLClientBuffer egl_buf1 = eglGetNativeClientBufferANDROID (ahw_buf1);
+
     /* (Re)Create EGLImage */
     if (glctx.egl_img1 != EGL_NO_IMAGE_KHR)
     {
@@ -654,9 +669,7 @@ AppEngine::UpdateCameraTexture ()
         glctx.egl_img1 = EGL_NO_IMAGE_KHR;
     }
 
-    EGLint attrs[] = {EGL_IMAGE_PRESERVED_KHR, EGL_TRUE, EGL_NONE,};
-    glctx.egl_img = eglCreateImageKHR (egl_get_display(), EGL_NO_CONTEXT,
-                                       EGL_NATIVE_BUFFER_ANDROID, egl_buf, attrs);
+
 
     glctx.egl_img1 = eglCreateImageKHR (egl_get_display(), EGL_NO_CONTEXT,
                                        EGL_NATIVE_BUFFER_ANDROID, egl_buf1, attrs);
@@ -696,10 +709,10 @@ AppEngine::UpdateCameraTexture ()
         m_ImgReader1.GetBufferDimension (&input_tex1->width, &input_tex1->height);
     }
 
-    glBindTexture (GL_TEXTURE_EXTERNAL_OES, input_tex->texid);
+    //glBindTexture (GL_TEXTURE_EXTERNAL_OES, input_tex->texid);
     glBindTexture (GL_TEXTURE_EXTERNAL_OES, input_tex1->texid);
 
-    glEGLImageTargetTexture2DOES (GL_TEXTURE_EXTERNAL_OES, glctx.egl_img);
+    //glEGLImageTargetTexture2DOES (GL_TEXTURE_EXTERNAL_OES, glctx.egl_img);
     glEGLImageTargetTexture2DOES (GL_TEXTURE_EXTERNAL_OES, glctx.egl_img1);
     GLASSERT ();
 

@@ -1,8 +1,49 @@
 ninja: Entering directory `/home/tarzan/TorgTech/Tarzan_ADAS/app/.cxx/cmake/debug/arm64-v8a'
-[1/7] Building CXX object CMakeFiles/native-activity.dir/tflite_dense_depth.cpp.o
-[2/7] Building CXX object CMakeFiles/native-activity.dir/tflite_deeplab.cpp.o
-[3/7] Building CXX object CMakeFiles/native-activity.dir/tflite_facemesh.cpp.o
-[4/7] Building CXX object CMakeFiles/native-activity.dir/tflite_laneseg.cpp.o
-[5/7] Building CXX object CMakeFiles/native-activity.dir/home/tarzan/TorgTech/common/util_tflite.cpp.o
-[6/7] Building CXX object CMakeFiles/native-activity.dir/tflite_detect.cpp.o
-[7/7] Linking CXX shared library /home/tarzan/TorgTech/Tarzan_ADAS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so
+[1/9] Building CXX object CMakeFiles/native-activity.dir/app_engine.cpp.o
+/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/app_engine.cpp:166:64: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        face_landmark_result_t  face_mesh_ret[MAX_FACE_NUM] = {0};
+                                                               ^
+                                                               {}
+/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/app_engine.cpp:167:67: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        irismesh_result_t       iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+                                                                  ^
+                                                                  {}
+/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/app_engine.cpp:167:67: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        irismesh_result_t       iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+                                                                  ^
+                                                                  {}
+/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/app_engine.cpp:167:67: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        irismesh_result_t       iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+                                                                  ^
+                                                                  {}
+/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/app_engine.cpp:167:67: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        irismesh_result_t       iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+                                                                  ^
+                                                                  {}
+/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/app_engine.cpp:357:9: warning: unused variable 'socket' [-Wunused-variable]
+    int socket;
+        ^
+6 warnings generated.
+[2/9] Building CXX object CMakeFiles/native-activity.dir/tflite_facemesh.cpp.o
+[3/9] Building CXX object CMakeFiles/native-activity.dir/tflite_dense_depth.cpp.o
+[4/9] Building CXX object CMakeFiles/native-activity.dir/tflite_deeplab.cpp.o
+[5/9] Building CXX object CMakeFiles/native-activity.dir/tflite_laneseg.cpp.o
+[6/9] Building CXX object CMakeFiles/native-activity.dir/utils.cpp.o
+/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/utils.cpp:1056:61: warning: format specifies type 'int' but the argument has type 'float' [-Wformat]
+                    DBG_LOGE("s_gui_prop.camera_pos_z: %d", s_gui_prop.camera_pos_z);
+                                                       ~~   ^~~~~~~~~~~~~~~~~~~~~~~
+                                                       %f
+/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/../../../../../common/util_debug.h:14:71: note: expanded from macro 'DBG_LOGE'
+#define DBG_LOGE(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
+                                                                      ^~~~~~~~~~~
+/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/utils.cpp:1075:45: warning: format specifies type 'int' but the argument has type 'float' [-Wformat]
+    DBG_LOGE("s_gui_prop.camera_pos_z: %d", s_gui_prop.camera_pos_z);
+                                       ~~   ^~~~~~~~~~~~~~~~~~~~~~~
+                                       %f
+/home/tarzan/TorgTech/Tarzan_ADAS/app/src/main/cpp/../../../../../common/util_debug.h:14:71: note: expanded from macro 'DBG_LOGE'
+#define DBG_LOGE(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
+                                                                      ^~~~~~~~~~~
+2 warnings generated.
+[7/9] Building CXX object CMakeFiles/native-activity.dir/tflite_detect.cpp.o
+[8/9] Building CXX object CMakeFiles/native-activity.dir/home/tarzan/TorgTech/common/util_tflite.cpp.o
+[9/9] Linking CXX shared library /home/tarzan/TorgTech/Tarzan_ADAS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so
