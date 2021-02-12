@@ -112,6 +112,10 @@ typedef struct gles_ctx {
     texture_2d_t tex_input;
     EGLImage egl_img;
 
+    texture_2d_t app_logo;
+
+    texture_2d_t company_logo;
+
     bool tex_camera1_valid;
     texture_2d_t tex_static1;
     texture_2d_t tex_camera1;
@@ -120,6 +124,9 @@ typedef struct gles_ctx {
 
     render_target_t rtarget_main;
     render_target_t rtarget_crop;
+
+    render_target_t rtarget_main1;
+    render_target_t rtarget_crop1;
 } gles_ctx_t;
 
 

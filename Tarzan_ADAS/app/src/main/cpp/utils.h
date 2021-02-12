@@ -104,6 +104,10 @@ render_depth_image (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int te
                     dense_depth_result_t *dense_depth_ret);
 
 void
+render_laneseg_result (int ofstx, int ofsty, int draw_w, int draw_h,
+                       laneseg_result_t *laneseg_ret);
+
+void
 render_obj_detect_region (int ofstx, int ofsty, int texw, int texh,
                           detect_result_t *detection);
 

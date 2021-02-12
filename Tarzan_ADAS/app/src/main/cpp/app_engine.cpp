@@ -136,8 +136,10 @@ AppEngine::setup_imgui (int win_w, int win_h, imgui_data_t *imgui_data)
 void 
 AppEngine::RenderFrame ()
 {
-    texture_2d_t srctex = glctx.tex_static;//input;
-    texture_2d_t srctex1 = glctx.tex_static1;//input1;
+    texture_2d_t srctex = glctx.tex_input;
+    texture_2d_t srctex1 = glctx.tex_input1;
+    texture_2d_t app_logo = glctx.app_logo;
+    texture_2d_t company_logo = glctx.company_logo;
     int win_w  = glctx.disp_w;
     int win_h  = glctx.disp_h;
     static double ttime[16] = {0}, interval, invoke_ms0 = 0, invoke_ms1 = 0, invoke_ms2 = 0,
@@ -149,6 +151,8 @@ AppEngine::RenderFrame ()
     adjust_texture (win_w, win_h, texw, texh, &draw_x, &draw_y, &draw_w, &draw_h, 0);
 
     int draw_w_half = draw_w/2;
+
+    int draw_w_qtr = draw_w_half/2;
 
     glClearColor (0.f, 0.f, 0.f, 1.0f);
 
@@ -278,11 +282,17 @@ AppEngine::RenderFrame ()
 
         draw_2d_texture_ex (&srctex1, draw_x, draw_y, draw_w_half, draw_h, 0);
 
-        render_deeplab_result (draw_x, draw_y, draw_w_half, draw_h, &deeplab_result);
+        //render_deeplab_result (draw_x, draw_y, draw_w_half, draw_h, &deeplab_result);
+
+        render_laneseg_result (draw_x, draw_y, draw_w_half, draw_h, &laneseg_result);
 
         render_obj_detect_region (draw_x, draw_y, draw_w_half, draw_h, &detection);
 
         render_depth_image (&srctex1, draw_x+draw_w_half, draw_y, draw_w_half, draw_h, &dense_depth_result);
+
+        int logo_h = draw_h/10;
+
+        draw_2d_texture_ex (&app_logo, draw_x+draw_w_qtr, draw_y, draw_w_half, logo_h, 0);
 
         //render_depth_image_3d (&srctex1, s_gui_prop, draw_x+draw_w_half, draw_y, draw_w_half, draw_h, &dense_depth_result);
 
@@ -298,7 +308,9 @@ AppEngine::RenderFrame ()
         int dh = camh;
 
         /* visualize the hand pose estimation results. */
-        draw_2d_texture_ex (&srctex, dx, dy, dw, dh, 0);
+        draw_2d_texture_ex (&srctex, dx, dy-100, dw, dh, 0);
+
+        draw_2d_texture_ex (&company_logo, dx+50, dy+dh, dw-100, dh-100, 0);
 
         /* visualize the face pose estimation results. */
         render_detect_region (dx, dy, dw, dh, &face_detect_ret);
@@ -323,10 +335,10 @@ AppEngine::RenderFrame ()
 
         //soundGenerator.stopAudio();
 
-        sprintf (strbuf, "Interval:%5.1f [ms]\nFace :%5.1f [ms]\nMesh :%5.1f [ms]\nIris :%5.1f [ms]\nDepth  :%5.1f [ms]\nDepth  :%5.1f [ms]\nDetect  :%5.1f [ms]",
-            interval, invoke_ms0, invoke_ms1, invoke_ms2, depth_invoke_ms, deeplab_invoke_ms, detect_invoke_ms);
+        sprintf (strbuf, "Interval:%5.1f [ms]\nFace :%5.1f [ms]\nMesh :%5.1f [ms]\nIris :%5.1f [ms]\nDepth  :%5.1f [ms]\nSegmentation  :%5.1f [ms]\nDetect  :%5.1f [ms]\nLane Seg  :%5.1f [ms]",
+            interval, invoke_ms0, invoke_ms1, invoke_ms2, depth_invoke_ms, deeplab_invoke_ms, detect_invoke_ms, laneseg_invoke_ms);
 
-        DBG_LOGE("Interval:%5.1f [ms]\nFace :%5.1f [ms]\nMesh :%5.1f [ms]\nIris :%5.1f [ms]\nDepth  :%5.1f [ms]\nDepth  :%5.1f [ms]\nDetect  :%5.1f [ms]\nLane Seg  :%5.1f [ms]",
+        DBG_LOGE("Interval:%5.1f [ms]\nFace :%5.1f [ms]\nMesh :%5.1f [ms]\nIris :%5.1f [ms]\nDepth  :%5.1f [ms]\nSegmentation  :%5.1f [ms]\nDetect  :%5.1f [ms]\nLane Seg  :%5.1f [ms]",
                  interval, invoke_ms0, invoke_ms1, invoke_ms2, depth_invoke_ms, deeplab_invoke_ms, detect_invoke_ms, laneseg_invoke_ms);
 
         draw_dbgstr (strbuf, 10, 10);
@@ -478,6 +490,10 @@ AppEngine::InitGLES (void)
 
     LoadInputTexture (&glctx.tex_static1, (char *)"car_outside.jpg");
 
+    LoadInputTexture (&glctx.app_logo, (char *)"Adas_app_logo.jpg");
+
+    LoadInputTexture (&glctx.company_logo, (char *)"Torg_Tech_logo.jpg");
+
     /* render target for default framebuffer */
     get_render_target (&glctx.rtarget_main);
 
@@ -487,6 +503,16 @@ AppEngine::InitGLES (void)
     glctx.tex_input.width  = glctx.rtarget_crop.width;
     glctx.tex_input.height = glctx.rtarget_crop.height;
     glctx.tex_input.format = pixfmt_fourcc('R', 'G', 'B', 'A');
+
+    /* render target for default framebuffer */
+    get_render_target (&glctx.rtarget_main1);
+
+    /* render target for camera cropping */
+    create_render_target (&glctx.rtarget_crop1, CAMERA_CROP_WIDTH, CAMERA_CROP_HEIGHT, RTARGET_COLOR);
+    glctx.tex_input1.texid  = glctx.rtarget_crop1.texc_id;
+    glctx.tex_input1.width  = glctx.rtarget_crop1.width;
+    glctx.tex_input1.height = glctx.rtarget_crop1.height;
+    glctx.tex_input1.format = pixfmt_fourcc('R', 'G', 'B', 'A');
 
     glctx.initdone = 1;
 
@@ -541,12 +567,21 @@ AppEngine::CropCameraTexture (void)
     render_target_t *rtarget = &glctx.rtarget_crop;
     set_render_target (rtarget);
     set_2d_projection_matrix (rtarget->width, rtarget->height);
+
+    render_target_t *rtarget1 = &glctx.rtarget_crop1;
+    set_render_target (rtarget1);
+    set_2d_projection_matrix (rtarget1->width, rtarget1->height);
     glClear (GL_COLOR_BUFFER_BIT);
 
 
     int draw_x, draw_y, draw_w, draw_h;
     adjust_texture (rtarget->width, rtarget->height, srctex.width, srctex.height,
                     &draw_x, &draw_y, &draw_w, &draw_h, 1);
+
+    int draw_x1, draw_y1, draw_w1, draw_h1;
+    adjust_texture (rtarget1->width, rtarget1->height, srctex1.width, srctex1.height,
+                    &draw_x1, &draw_y1, &draw_w1, &draw_h1, 1);
+
 
 
     /* when we use inner camera, enable horizontal flip. */
@@ -558,6 +593,13 @@ AppEngine::CropCameraTexture (void)
     rtarget = &glctx.rtarget_main;
     set_render_target (rtarget);
     set_2d_projection_matrix (rtarget->width, rtarget->height);
+
+    draw_2d_texture_ex (&srctex1, draw_x1, draw_y1, draw_w1, draw_h1, flip);
+
+    /* reset to the default framebuffer */
+    rtarget = &glctx.rtarget_main1;
+    set_render_target (rtarget1);
+    set_2d_projection_matrix (rtarget1->width, rtarget1->height);
 
 }
 
@@ -636,10 +678,9 @@ AppEngine::UpdateCameraTexture ()
 {
     /* Acquire the latest AHardwareBuffer */
     AHardwareBuffer *ahw_buf = NULL;
-    AHardwareBuffer *ahw_buf1 = NULL;
+
     int ret = m_ImgReader.GetCurrentHWBuffer (&ahw_buf);
-    int ret1 = m_ImgReader1.GetCurrentHWBuffer (&ahw_buf1);
-    if (ret != 0 && ret1 != 0)
+    if (ret != 0)
         return;
 
     /* Get EGLClientBuffer */
@@ -662,23 +703,8 @@ AppEngine::UpdateCameraTexture ()
     glctx.egl_img = eglCreateImageKHR (egl_get_display(), EGL_NO_CONTEXT,
                                        EGL_NATIVE_BUFFER_ANDROID, egl_buf, attrs);
 
-    EGLClientBuffer egl_buf1 = eglGetNativeClientBufferANDROID (ahw_buf1);
-
-    /* (Re)Create EGLImage */
-    if (glctx.egl_img1 != EGL_NO_IMAGE_KHR)
-    {
-        eglDestroyImageKHR (egl_get_display(), glctx.egl_img1);
-        glctx.egl_img1 = EGL_NO_IMAGE_KHR;
-    }
-
-
-
-    glctx.egl_img1 = eglCreateImageKHR (egl_get_display(), EGL_NO_CONTEXT,
-                                       EGL_NATIVE_BUFFER_ANDROID, egl_buf1, attrs);
-
     /* Bind to GL_TEXTURE_EXTERNAL_OES */
     texture_2d_t *input_tex = &glctx.tex_camera;
-    texture_2d_t *input_tex1 = &glctx.tex_camera1;
     if (input_tex->texid == 0)
     {
         GLuint texid;
@@ -694,6 +720,39 @@ AppEngine::UpdateCameraTexture ()
         input_tex->format = pixfmt_fourcc('E', 'X', 'T', 'X');
         m_ImgReader.GetBufferDimension (&input_tex->width, &input_tex->height);
     }
+
+    glctx.tex_camera_valid = true;
+
+    AHardwareBuffer *ahw_buf1 = NULL;
+
+    int ret1 = m_ImgReader1.GetCurrentHWBuffer (&ahw_buf1);
+
+    if (ret1 != 0)
+        return;
+
+    EGLClientBuffer egl_buf1 = eglGetNativeClientBufferANDROID (ahw_buf1);
+
+    if (!egl_buf1)
+    {
+        DBG_LOGE("Failed to create EGLClientBuffer");
+        return;
+    }
+
+    /* (Re)Create EGLImage */
+    if (glctx.egl_img1 != EGL_NO_IMAGE_KHR)
+    {
+        eglDestroyImageKHR (egl_get_display(), glctx.egl_img1);
+        glctx.egl_img1 = EGL_NO_IMAGE_KHR;
+    }
+
+
+
+    glctx.egl_img1 = eglCreateImageKHR (egl_get_display(), EGL_NO_CONTEXT,
+                                        EGL_NATIVE_BUFFER_ANDROID, egl_buf1, attrs);
+
+
+    texture_2d_t *input_tex1 = &glctx.tex_camera1;
+
 
     if (input_tex1->texid == 0)
     {
@@ -718,7 +777,7 @@ AppEngine::UpdateCameraTexture ()
     glEGLImageTargetTexture2DOES (GL_TEXTURE_EXTERNAL_OES, glctx.egl_img1);
     GLASSERT ();
 
-    glctx.tex_camera_valid = true;
+
     glctx.tex_camera1_valid = true;
 }
 

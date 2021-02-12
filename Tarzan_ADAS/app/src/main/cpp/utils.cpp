@@ -437,7 +437,7 @@ render_deeplab_result (int ofstx, int ofsty, int draw_w, int draw_h,
         for (x = 0; x < segmap_w; x ++)
         {
             int max_id;
-            float conf_max = 0;
+            float conf_max = 0.0;
             for (c = 0; c < 21; c ++)
             {
                 float confidence = segmap[(y * segmap_w * segmap_c)+ (x * segmap_c) + c];
@@ -479,6 +479,74 @@ render_deeplab_result (int ofstx, int ofsty, int draw_w, int draw_h,
         float col_str[] = {1.0f, 1.0f, 1.0f, 1.0f};
         float *col = get_deeplab_class_color (c);
         char *name = get_deeplab_class_name (c);
+        char buf[512];
+        sprintf (buf, "%2d:%s", c, name);
+        draw_dbgstr_ex (buf, ofstx, ofsty + c * 22 * 0.7, 0.7f, col_str, col);
+    }
+
+    glDeleteTextures (1, &texid);
+}
+
+void
+render_laneseg_result (int ofstx, int ofsty, int draw_w, int draw_h,
+                       laneseg_result_t *laneseg_ret)
+{
+    float *segmap = laneseg_ret->lanemap;
+    float *binmap = laneseg_ret->bin_lanemap;
+    int segmap_w  = laneseg_ret->segmentmap_dims[0];
+    int segmap_h  = laneseg_ret->segmentmap_dims[1];
+    int segmap_c  = laneseg_ret->segmentmap_dims[2];
+    int x, y, c;
+    unsigned int imgbuf[segmap_h][segmap_w];
+
+    /* find the most confident class for each pixel. */
+    for (y = 0; y < segmap_h; y ++)
+    {
+        for (x = 0; x < segmap_w; x ++)
+        {
+            int max_id;
+            for (c = 0; c < 5; c ++)
+            {
+                float presence = binmap[(y * segmap_w)+x];
+                //DBG_LOGE("%5.1f", presence);
+                float confidence = segmap[(y * segmap_w * segmap_c)+ (x * segmap_c) + c];
+                if (c == 0 || presence > 0.9 && confidence > 0)
+                {
+                    max_id = c;
+                }
+            }
+            float *col = get_laneseg_class_color (max_id);
+            unsigned char r = ((int)(col[0] * 255)) & 0xff;
+            unsigned char g = ((int)(col[1] * 255)) & 0xff;
+            unsigned char b = ((int)(col[2] * 255)) & 0xff;
+            unsigned char a = ((int)(col[3] * 255)) & 0xff;
+            imgbuf[y][x] = (a << 24) | (b << 16) | (g << 8) | (r);
+        }
+    }
+
+    GLuint texid;
+    glGenTextures (1, &texid );
+    glBindTexture (GL_TEXTURE_2D, texid);
+
+    glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameterf (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+    glPixelStorei (GL_UNPACK_ALIGNMENT, 4);
+
+    glTexImage2D (GL_TEXTURE_2D, 0, GL_RGBA,
+                  segmap_w, segmap_h, 0, GL_RGBA,
+                  GL_UNSIGNED_BYTE, imgbuf);
+
+    draw_2d_texture (texid, ofstx, ofsty, draw_w, draw_h, 0);
+
+    /* class name */
+    for (c = 0; c < 5; c ++)
+    {
+        float col_str[] = {1.0f, 1.0f, 1.0f, 1.0f};
+        float *col = get_laneseg_class_color (c);
+        char *name = get_laneseg_class_name (c);
         char buf[512];
         sprintf (buf, "%2d:%s", c, name);
         draw_dbgstr_ex (buf, ofstx, ofsty + c * 22 * 0.7, 0.7f, col_str, col);
