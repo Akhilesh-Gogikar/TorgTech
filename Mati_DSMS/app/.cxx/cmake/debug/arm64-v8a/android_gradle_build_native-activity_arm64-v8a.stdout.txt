@@ -1,4 +1,35 @@
-ninja: Entering directory `/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/debug/arm64-v8a'
-[1/3] Building CXX object CMakeFiles/native-activity.dir/home/tarzan/work/android_tflite/common/util_tflite.cpp.o
-[2/3] Building CXX object CMakeFiles/native-activity.dir/tflite_facemesh.cpp.o
-[3/3] Linking CXX shared library /home/tarzan/work/android_tflite/tflite_iris_landmark/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so
+ninja: Entering directory `/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a'
+[1/4] Building CXX object CMakeFiles/native-activity.dir/app_engine.cpp.o
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:796:64: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        face_landmark_result_t  face_mesh_ret[MAX_FACE_NUM] = {0};
+                                                               ^
+                                                               {}
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:797:67: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        irismesh_result_t       iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+                                                                  ^
+                                                                  {}
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:797:67: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        irismesh_result_t       iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+                                                                  ^
+                                                                  {}
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:797:67: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        irismesh_result_t       iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+                                                                  ^
+                                                                  {}
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:797:67: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        irismesh_result_t       iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+                                                                  ^
+                                                                  {}
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:1004:7: warning: field 'm_camera_facing' will be initialized after field 'blinks' [-Wreorder]
+      m_camera_facing(1),
+      ^
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:1013:7: warning: field 'avg_Dev' will be initialized after field 'avg_EAR' [-Wreorder]
+      avg_Dev(0.0),
+      ^
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:1014:7: warning: field 'avg_EAR' will be initialized after field 'sound_started' [-Wreorder]
+      avg_EAR(0.0),
+      ^
+8 warnings generated.
+[2/4] Building CXX object CMakeFiles/native-activity.dir/home/tarzan/TorgTech/common/util_tflite.cpp.o
+[3/4] Building CXX object CMakeFiles/native-activity.dir/tflite_facemesh.cpp.o
+[4/4] Linking CXX shared library /home/tarzan/TorgTech/Mati_DSMS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so

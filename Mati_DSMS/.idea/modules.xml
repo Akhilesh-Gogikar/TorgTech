@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tflite_iris_landmark.iml" filepath="$PROJECT_DIR$/.idea/modules/tflite_iris_landmark.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/tflite_iris_landmark.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/tflite_iris_landmark.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mati_DSMS.iml" filepath="$PROJECT_DIR$/.idea/modules/Mati_DSMS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Mati_DSMS.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Mati_DSMS.app.iml" />
     </modules>
   </component>
 </project>

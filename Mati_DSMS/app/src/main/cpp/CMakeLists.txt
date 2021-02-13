@@ -32,6 +32,9 @@ set(CMAKE_SHARED_LINKER_FLAGS
 set(commonDir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../common)
 set(thirdpDir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../third_party)
 set(jnilibDir ${CMAKE_CURRENT_SOURCE_DIR}/../jniLibs)
+set(OBOE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../third_party/oboe)
+
+add_subdirectory (${OBOE_DIR} ./oboe)
 
 # download stb library
 if ((NOT EXISTS ${thirdpDir}/stb) OR
@@ -161,5 +164,6 @@ target_link_libraries(native-activity
     GLESv2
     lib_tflite
     lib_tflite_gpu_delegate
+        oboe
 #   lib_tflite_hexagon_delegate
     log)

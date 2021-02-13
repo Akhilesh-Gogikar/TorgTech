@@ -85,6 +85,11 @@ typedef struct _face_landmark_result_t
 
     eye_region_t    eye_rgn[2];
     fvec2           eye_pos[2][4];
+
+    float MAR;
+
+    float dev;
+
 } face_landmark_result_t;
 
 
@@ -92,6 +97,9 @@ typedef struct _irismesh_result_t
 {
     fvec3 eye_landmark[71];
     fvec3 iris_landmark[5];
+
+    float EAR;
+
 } irismesh_result_t;
 
 

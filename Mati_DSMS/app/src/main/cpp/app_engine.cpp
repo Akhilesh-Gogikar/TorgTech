@@ -3,6 +3,7 @@
  * Copyright (c) 2020 terryky1220@gmail.com
  * ------------------------------------------------ */
 #include <cstdio>
+#include <cmath>
 #include "util_debug.h"
 #include "util_asset.h"
 #include "util_egl.h"
@@ -15,6 +16,7 @@
 #include "assertgl.h"
 #include "util_matrix.h"
 #include "tflite_facemesh.h"
+
 
 #define UNUSED(x) (void)(x)
 
@@ -281,6 +283,70 @@ render_cropped_face_image (texture_2d_t *srctex, int ofstx, int ofsty, int texw,
     texcoord[6] = x2;   texcoord[7] = y2;
 
     draw_2d_texture_ex_texcoord (srctex, ofstx, ofsty, texw, texh, texcoord);
+}
+
+float GetDepth(float x0, float y0, float x1, float y1) {
+    return std::sqrt((x0 - x1) * (x0 - x1) + (y0 - y1) * (y0 - y1));
+}
+
+float GetLandmarkDepth(fvec3 ld0,
+                       fvec3 ld1,
+                       int tex_w, int tex_h) {
+    return GetDepth(ld0.x * tex_w, ld0.y * tex_h,
+                    ld1.x * tex_w, ld1.y * tex_h);
+}
+
+void CalculateEAR(irismesh_result_t *irismesh, int tex_w, int tex_h) {
+
+    float length = GetLandmarkDepth(irismesh->eye_landmark[0],
+                                          irismesh->eye_landmark[8], tex_w, tex_h);
+    float breadth1 = GetLandmarkDepth(irismesh->eye_landmark[12],
+    irismesh->eye_landmark[3], tex_w, tex_h);
+    float breadth2 = GetLandmarkDepth(irismesh->eye_landmark[12],
+    irismesh->eye_landmark[4], tex_w, tex_h);
+
+    auto EAR = (breadth1 + breadth2) / (2 * length);
+
+    irismesh->EAR = EAR;
+}
+
+void CalculateMAR(face_landmark_result_t *facemesh, int tex_w, int tex_h){
+
+    float length = GetLandmarkDepth(facemesh->joint[78],
+                                          facemesh->joint[308], tex_w, tex_h);
+    float breadth1 = GetLandmarkDepth(facemesh->joint[82],
+                                            facemesh->joint[87], tex_w, tex_h);
+    float breadth2 = GetLandmarkDepth(facemesh->joint[312],
+                                            facemesh->joint[317], tex_w, tex_h);
+
+    auto MAR = (breadth1 + breadth2) / (2 * length);
+
+    facemesh->MAR = MAR;
+
+}
+
+void CalculateDev(face_landmark_result_t *facemesh, int tex_w, int tex_h){
+
+    float x_face_cntr = 0.5;//(facemesh->joint[234].x +
+                          //                facemesh->joint[10].x + facemesh->joint[152].x +
+                            //                                       facemesh->joint[454].x)/4;
+    float y_face_cntr = 0.5;//(facemesh->joint[234].y +
+                         //facemesh->joint[10].y + facemesh->joint[152].y +
+                         //facemesh->joint[454].y)/4;
+    float z_face_cntr = 0.0;//(facemesh->joint[234].z +
+                         //facemesh->joint[10].z + facemesh->joint[152].z +
+                         //facemesh->joint[454].z)/4;
+
+    float xymag =  GetDepth(facemesh->joint[1].x*tex_w,facemesh->joint[1].y*tex_h, x_face_cntr*tex_w, y_face_cntr*tex_h);
+
+    float zmag = facemesh->joint[1].z-z_face_cntr;
+
+    DBG_LOGE("%5.1f, %5.1f", zmag, xymag);
+
+    auto dev = abs(atan2(zmag, xymag))*180/3.1415926535897932384626433;
+
+    facemesh->dev = dev;
+
 }
 
 static void
@@ -723,6 +789,7 @@ AppEngine::RenderFrame ()
     /* --------------------------------------- *
      *  Render Loop
      * --------------------------------------- */
+
     int count = glctx.frame_count;
     {
         face_detect_result_t    face_detect_ret = {0};
@@ -839,6 +906,68 @@ AppEngine::RenderFrame ()
         }
 
 
+        for (int eye_id = 0; eye_id < 2; eye_id ++)
+        {
+            CalculateEAR(&iris_mesh_ret[0][eye_id], draw_w, draw_h);
+        }
+
+        float EAR = (iris_mesh_ret[0][0].EAR + iris_mesh_ret[0][1].EAR)/2;
+
+        CalculateMAR(&face_mesh_ret[0], draw_w, draw_h);
+
+        CalculateDev(&face_mesh_ret[0], draw_w, draw_h);
+
+        if (EAR <= 0.25 || EAR <= avg_EAR){
+            blink_streak += 1;
+            blinks +=1;
+        } else{
+            blink_streak=0;
+            avg_EAR = (avg_EAR*glctx.frame_count + EAR)/(glctx.frame_count+1);
+        }
+
+        if (face_mesh_ret[0].MAR >= 0.20 || face_mesh_ret[0].MAR <= avg_EAR){
+            yawn_streak += 1;
+            yawns+=1;
+        } else{
+            yawn_streak=0;
+            avg_MAR = (avg_MAR*glctx.frame_count + face_mesh_ret[0].MAR)/(glctx.frame_count+1);
+        }
+
+        if (face_mesh_ret[0].dev >= 30 || (abs(face_mesh_ret[0].dev - avg_Dev) >= 2.0 && glctx.frame_count>=2000)){
+            distracted_streak += 1;
+            distracted += 1;
+        } else{
+            distracted_streak=0;
+            avg_Dev = (avg_MAR*glctx.frame_count + face_mesh_ret[0].dev)/(glctx.frame_count+1);
+        }
+
+        if (distracted_streak >50 || yawn_streak>50 || blink_streak >50){
+            if (sound_started != 1) {
+                soundGenerator.startAudio();
+                sound_started = 1;
+            }
+        }
+
+        if (sound_started==1){
+            sound_streak += 1;
+        }
+
+        if(sound_started==1 && sound_streak >= 100 && distracted_streak == 0 && yawn_streak==0 && blink_streak==0){
+            soundGenerator.stopAudio();
+            sound_started = 0;
+            sound_streak = 0;
+        }
+
+        if (sound_streak >= 200){
+            soundGenerator.stopAudio();
+            sound_started = 0;
+            sound_streak = 0;
+        }
+
+        DBG_LOGE ("Sound: %d \nSleep : %d \nDrowsy: %d \nDistracted : %d",
+                  sound_streak, sleep, drowsy, distracted);
+
+
         /* --------------------------------------- *
          *  post process
          * --------------------------------------- */
@@ -872,7 +1001,19 @@ AppEngine::AppEngine (android_app* app)
     : m_app(app),
       m_cameraGranted(false),
       m_camera(nullptr),
-      m_camera_facing(0)
+      m_camera_facing(1),
+      blinks(0),
+      sleep(0),
+      drowsy(0),
+      yawns(0),
+      distracted(0),
+      yawn_streak(0),
+      blink_streak(0),
+      avg_MAR(0.0),
+      avg_Dev(0.0),
+      avg_EAR(0.0),
+      sound_started(0),
+      sound_streak(0)
 {
     memset (&glctx, 0, sizeof (glctx));
 }
