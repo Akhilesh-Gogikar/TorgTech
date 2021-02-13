@@ -1,16 +1,11 @@
-/* ------------------------------------------------
- * Copyright (c) 2020 akhilesh@torgtek.com
+/* ------------------------------------------------ *
+ * The MIT License (MIT)
+ * Copyright (c) 2020 terryky1220@gmail.com
  * ------------------------------------------------ */
 #include "util_tflite.h"
 #include "tflite_facemesh.h"
 #include "util_debug.h"
 #include <list>
-
-/* 
- * https://github.com/google/mediapipe/tree/master/mediapipe/models/face_detection_front.tflite
- * https://github.com/google/mediapipe/blob/master/mediapipe/models/face_landmark.tflite
- * https://github.com/google/mediapipe/blob/master/mediapipe/models/iris_landmark.tflite
- */
 
 
 static tflite_interpreter_t s_detect_interpreter;
@@ -74,41 +69,24 @@ create_blazeface_anchors(int input_w, int input_h)
  *  Create TFLite Interpreter
  * -------------------------------------------------- */
 int
-init_tflite_facemeshiris (const char *face_model_buf, size_t face_model_size,
-        blazeface_config_t *config, const char *mesh_model_buf, size_t mesh_model_size, const char *iris_model_buf, size_t iris_model_size)
+init_tflite_facemesh (const char *face_detect_model_buf, size_t face_detect_model_size,
+                           const char *face_landmark_model_buf, size_t face_landmark_model_size,
+                           const char *iris_landmark_model_buf, size_t iris_landmark_model_size)
 {
-
-    /*
-
-    if (use_quantized_tflite)
-    {
-        detect_model = FACE_DETECTL_QUANT_MODEL_PATH;
-        mesh_model   = FACE_LANDMARK_QUANT_MODEL_PATH;
-        iris_model   = IRIS_LANDMARK_MODEL_PATH;
-    }
-    else
-    {
-        detect_model = FACE_DETECTL_MODEL_PATH;
-        mesh_model   = FACE_LANDMARK_MODEL_PATH;
-        iris_model   = IRIS_LANDMARK_MODEL_PATH;
-    }
-
-    */
-
     /* Face detect */
-    tflite_create_interpreter (&s_detect_interpreter, face_model_buf, face_model_size);
+    tflite_create_interpreter (&s_detect_interpreter, face_detect_model_buf, face_detect_model_size);
     tflite_get_tensor_by_name (&s_detect_interpreter, 0, "input",          &s_detect_tensor_input);
     tflite_get_tensor_by_name (&s_detect_interpreter, 1, "regressors",     &s_detect_tensor_bboxes);
     tflite_get_tensor_by_name (&s_detect_interpreter, 1, "classificators", &s_detect_tensor_scores);
 
     /* Facemesh Landmark */
-    tflite_create_interpreter (&s_mesh_interpreter, mesh_model_buf, mesh_model_size);
+    tflite_create_interpreter (&s_mesh_interpreter, face_landmark_model_buf, face_landmark_model_size);
     tflite_get_tensor_by_name (&s_mesh_interpreter, 0, "input_1",   &s_mesh_tensor_input);
     tflite_get_tensor_by_name (&s_mesh_interpreter, 1, "conv2d_20", &s_mesh_tensor_landmark);
     tflite_get_tensor_by_name (&s_mesh_interpreter, 1, "conv2d_30", &s_mesh_tensor_score);
 
     /* Iris Landmark */
-    tflite_create_interpreter (&s_iris_interpreter, iris_model_buf, iris_model_size);
+    tflite_create_interpreter (&s_iris_interpreter, iris_landmark_model_buf, iris_landmark_model_size);
     tflite_get_tensor_by_name (&s_iris_interpreter, 0, "input_1",                        &s_iris_tensor_input);
     tflite_get_tensor_by_name (&s_iris_interpreter, 1, "output_eyes_contours_and_brows", &s_iris_tensor_eye);
     tflite_get_tensor_by_name (&s_iris_interpreter, 1, "output_iris",                    &s_iris_tensor_iris);
@@ -116,9 +94,6 @@ init_tflite_facemeshiris (const char *face_model_buf, size_t face_model_size,
     int det_input_w = s_detect_tensor_input.dims[2];
     int det_input_h = s_detect_tensor_input.dims[1];
     create_blazeface_anchors (det_input_w, det_input_h);
-
-    config->score_thresh = 0.75f;
-    config->iou_thresh   = 0.3f;
 
     return 0;
 }
@@ -147,39 +122,6 @@ get_irismesh_landmark_input_buf (int *w, int *h)
     return s_iris_tensor_input.ptr;
 }
 
-int
-capture_to_img (char *lpFName, int nW, int nH, float *lpBuf)
-{
-    FILE *fp;
-    char strFName[ 128 ];
-    static int s_ncnt = 0;
-    unsigned char *lpbuf8;
-    
-    sprintf (strFName, "%s_%05d_RGB888_SIZE%dx%d.img", lpFName, s_ncnt, nW, nH);
-    s_ncnt ++;
-
-    fp = fopen (strFName, "wb");
-    if (fp == NULL)
-    {
-        fprintf (stderr, "FATAL ERROR at %s(%d)\n", __FILE__, __LINE__);
-        return -1;
-    }
-
-    lpbuf8 = (unsigned char *)malloc (nW * nH * 3);
-    for (int y = 0; y < nH * nW; y ++)
-    {
-        lpbuf8[y * 3 + 0] = lpBuf[y * 3 + 0] * 255;
-        lpbuf8[y * 3 + 1] = lpBuf[y * 3 + 1] * 255;
-        lpbuf8[y * 3 + 2] = lpBuf[y * 3 + 2] * 255;
-    }
-    
-    fwrite (lpbuf8, 3, nW * nH, fp);
-
-    free (lpbuf8);
-    fclose (fp);
-    
-    return 0;
-}
 
 /* -------------------------------------------------- *
  * Invoke TensorFlow Lite (Face detection)
@@ -198,7 +140,7 @@ decode_bounds (std::list<face_t> &face_list, float score_thresh, int input_img_w
 {
     face_t face_item;
     float  *scores_ptr = (float *)s_detect_tensor_scores.ptr;
-    
+
     int i = 0;
     for (auto itr = s_anchors.begin(); itr != s_anchors.end(); i ++, itr ++)
     {
@@ -462,10 +404,9 @@ pack_face_result (face_detect_result_t *facedet_result, std::list<face_t> &face_
 int
 invoke_face_detect (face_detect_result_t *facedet_result)
 {
-    //capture_to_img ("detect", s_detect_tensor_input.dims[2], s_detect_tensor_input.dims[1], (float *)s_detect_tensor_input.ptr);
     if (s_detect_interpreter.interpreter->Invoke() != kTfLiteOk)
     {
-        fprintf (stderr, "ERR: %s(%d)\n", __FILE__, __LINE__);
+        DBG_LOGE ("ERR: %s(%d)\n", __FILE__, __LINE__);
         return -1;
     }
 
@@ -553,7 +494,6 @@ compute_eye_roi (face_landmark_result_t *facemesh_result)
 int
 invoke_facemesh_landmark (face_landmark_result_t *facemesh_result)
 {
-    //capture_to_img ("mesh", s_mesh_tensor_input.dims[2], s_mesh_tensor_input.dims[1], (float *)s_mesh_tensor_input.ptr);
     if (s_mesh_interpreter.interpreter->Invoke() != kTfLiteOk)
     {
         fprintf (stderr, "ERR: %s(%d)\n", __FILE__, __LINE__);
@@ -591,12 +531,9 @@ invoke_facemesh_landmark (face_landmark_result_t *facemesh_result)
 int
 invoke_irismesh_landmark (irismesh_result_t *irismesh_result)
 {
-    //capture_to_img ("iris", 64, 64, (float *)s_iris_tensor_input.ptr);
-    //fprintf (stderr, "DUMP: %p\n", s_iris_tensor_input.ptr);
-    
     if (s_iris_interpreter.interpreter->Invoke() != kTfLiteOk)
     {
-        fprintf (stderr, "ERR: %s(%d)\n", __FILE__, __LINE__);
+        DBG_LOGE ("ERR: %s(%d)\n", __FILE__, __LINE__);
         return -1;
     }
 

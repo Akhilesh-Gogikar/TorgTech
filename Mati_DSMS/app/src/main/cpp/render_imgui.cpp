@@ -107,20 +107,6 @@ render_gui (imgui_data_t *imgui_data)
             imgui_data->camera_facing = 1 - imgui_data->camera_facing;
         }
 
-        ImGui::SliderFloat("Score thresh", &imgui_data->blazeface_config.score_thresh, 0.0f, 1.0f);
-        ImGui::SliderFloat("IOU   thresh", &imgui_data->blazeface_config.iou_thresh,   0.0f, 1.0f);
-
-        ImVec4 frame_color;
-        frame_color.x = imgui_data->frame_color[0];
-        frame_color.y = imgui_data->frame_color[1];
-        frame_color.z = imgui_data->frame_color[2];
-        frame_color.w = imgui_data->frame_color[3];
-        ImGui::ColorEdit3("Frame color", (float*)&frame_color);
-        imgui_data->frame_color[0] = frame_color.x;
-        imgui_data->frame_color[1] = frame_color.y;
-        imgui_data->frame_color[2] = frame_color.z;
-        imgui_data->frame_color[3] = frame_color.w;
-
         s_win_pos [s_win_num] = ImGui::GetWindowPos  ();
         s_win_size[s_win_num] = ImGui::GetWindowSize ();
         s_win_num ++;

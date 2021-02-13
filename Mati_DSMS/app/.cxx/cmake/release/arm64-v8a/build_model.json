@@ -1,207 +1,69 @@
 {
-  "abi": "ARM64_V8A",
-  "abiPlatformVersion": 27,
-  "buildSettings": {
-    "environmentVariables": []
-  },
-  "cmake": {
-    "cmakeArtifactsBaseFolder": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a",
-    "cmakeServerLogFile": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a/cmake_server_log.txt",
-    "cmakeWrappingBaseFolder": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cxx/release/arm64-v8a",
-    "effectiveConfiguration": {
-      "name": "traditional-android-studio-cmake-environment",
-      "description": "Composite reified CMakeSettings configuration",
-      "generator": "Ninja",
-      "inheritEnvironments": [
-        "ndk"
-      ],
-      "buildRoot": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a",
-      "cmakeToolchain": "/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
-      "cmakeExecutable": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake",
-      "variables": [
-        {
-          "name": "CMAKE_FIND_ROOT_PATH",
-          "value": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/prefab/arm64-v8a/prefab"
-        },
-        {
-          "name": "CMAKE_BUILD_TYPE",
-          "value": "Release"
-        },
-        {
-          "name": "CMAKE_TOOLCHAIN_FILE",
-          "value": "/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake"
-        },
-        {
-          "name": "ANDROID_ABI",
-          "value": "arm64-v8a"
-        },
-        {
-          "name": "ANDROID_NDK",
-          "value": "/home/tarzan/Android/Sdk/ndk/21.1.6352462"
-        },
-        {
-          "name": "ANDROID_PLATFORM",
-          "value": "android-27"
-        },
-        {
-          "name": "CMAKE_ANDROID_ARCH_ABI",
-          "value": "arm64-v8a"
-        },
-        {
-          "name": "CMAKE_ANDROID_NDK",
-          "value": "/home/tarzan/Android/Sdk/ndk/21.1.6352462"
-        },
-        {
-          "name": "CMAKE_EXPORT_COMPILE_COMMANDS",
-          "value": "ON"
-        },
-        {
-          "name": "CMAKE_LIBRARY_OUTPUT_DIRECTORY",
-          "value": "/home/tarzan/TorgTech/Mati_DSMS/app/build/intermediates/cmake/release/obj/arm64-v8a"
-        },
-        {
-          "name": "CMAKE_MAKE_PROGRAM",
-          "value": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja"
-        },
-        {
-          "name": "CMAKE_SYSTEM_NAME",
-          "value": "Android"
-        },
-        {
-          "name": "CMAKE_SYSTEM_VERSION",
-          "value": "27"
-        },
-        {
-          "name": "ANDROID_STL",
-          "value": "c++_static"
-        }
-      ]
-    }
-  },
-  "cxxBuildFolder": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a",
-  "info": {
-    "abi": "ARM64_V8A",
-    "bitness": 64,
-    "deprecated": false,
-    "default": true
-  },
-  "originalCxxBuildFolder": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a",
   "variant": {
-    "buildSystemArgumentList": [
-      "-DANDROID_STL\u003dc++_static"
-    ],
-    "buildTargetSet": [],
-    "implicitBuildTargetSet": [],
-    "cFlagsList": [],
-    "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
-    "cppFlagsList": [],
-    "isDebuggableEnabled": false,
     "module": {
-      "buildSystem": "CMAKE",
-      "cmake": {
-        "cmakeExe": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake",
-        "minimumCmakeVersion": "3.10.2",
-        "ninjaExe": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja"
-      },
-      "cmakeToolchainFile": "/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
-      "cxxFolder": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx",
+      "rootBuildGradleFolder": "/home/tarzan/work/android_tflite/tflite_iris_landmark",
+      "sdkFolder": "/home/tarzan/Android/Sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/build/intermediates",
       "gradleModulePathName": ":app",
-      "intermediatesFolder": "/home/tarzan/TorgTech/Mati_DSMS/app/build/intermediates",
-      "makeFile": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-      "moduleBuildFile": "/home/tarzan/TorgTech/Mati_DSMS/app/build.gradle",
-      "moduleRootFolder": "/home/tarzan/TorgTech/Mati_DSMS/app",
-      "ndkDefaultAbiList": [
-        "ARMEABI_V7A",
-        "ARM64_V8A",
-        "X86",
-        "X86_64"
-      ],
+      "moduleRootFolder": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app",
+      "makeFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/src/main/cpp/CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "/home/tarzan/work/android_tflite/tflite_iris_landmark/.cxx",
+      "cxxFolder": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx",
       "ndkFolder": "/home/tarzan/Android/Sdk/ndk/21.1.6352462",
-      "ndkMetaAbiList": [
-        {
-          "abi": "ARMEABI_V7A",
-          "bitness": 32,
-          "deprecated": false,
-          "default": true
-        },
-        {
-          "abi": "ARM64_V8A",
-          "bitness": 64,
-          "deprecated": false,
-          "default": true
-        },
-        {
-          "abi": "X86",
-          "bitness": 32,
-          "deprecated": false,
-          "default": true
-        },
-        {
-          "abi": "X86_64",
-          "bitness": 64,
-          "deprecated": false,
-          "default": true
-        }
-      ],
-      "ndkMetaPlatforms": {
-        "min": 16,
-        "max": 29,
-        "aliases": {
-          "20": 19,
-          "25": 24,
-          "J": 16,
-          "J-MR1": 17,
-          "J-MR2": 18,
-          "K": 19,
-          "L": 21,
-          "L-MR1": 22,
-          "M": 23,
-          "N": 24,
-          "N-MR1": 24,
-          "O": 26,
-          "O-MR1": 27,
-          "P": 28,
-          "Q": 29
-        }
-      },
+      "ndkVersion": "21.1.6352462",
       "ndkSupportedAbiList": [
         "ARMEABI_V7A",
         "ARM64_V8A",
         "X86",
         "X86_64"
       ],
-      "ndkDefaultStl": "LIBCXX_STATIC",
-      "ndkVersion": "21.1.6352462",
-      "project": {
-        "compilerSettingsCacheFolder": "/home/tarzan/TorgTech/Mati_DSMS/.cxx",
-        "cxxFolder": "/home/tarzan/TorgTech/Mati_DSMS/.cxx",
-        "isBuildOnlyTargetAbiEnabled": true,
-        "isCmakeBuildCohabitationEnabled": false,
-        "isNativeCompilerSettingsCacheEnabled": false,
-        "rootBuildGradleFolder": "/home/tarzan/TorgTech/Mati_DSMS",
-        "sdkFolder": "/home/tarzan/Android/Sdk",
-        "isPrefabEnabled": false
-      },
-      "splitsAbiFilterSet": [],
-      "stlSharedObjectMap": {
-        "LIBCXX_SHARED": {
-          "ARMEABI_V7A": "/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/libc++_shared.so",
-          "ARM64_V8A": "/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so",
-          "X86": "/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/i686-linux-android/libc++_shared.so",
-          "X86_64": "/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/x86_64-linux-android/libc++_shared.so"
-        },
-        "LIBCXX_STATIC": {},
-        "NONE": {},
-        "SYSTEM": {}
-      }
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
     },
-    "objFolder": "/home/tarzan/TorgTech/Mati_DSMS/app/build/intermediates/cmake/release/obj",
+    "buildSystemArgumentList": [
+      "-DANDROID_STL\u003dc++_static"
+    ],
+    "cFlagList": [],
+    "cppFlagsList": [],
     "variantName": "release",
+    "soFolder": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/build/intermediates/cmake/release/lib",
+    "objFolder": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/build/intermediates/cmake/release/obj",
+    "jsonFolder": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release",
+    "gradleBuildOutputFolder": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cxx/release",
+    "isDebuggableEnabled": false,
     "validAbiList": [
       "ARM64_V8A"
     ],
-    "prefabDirectory": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/prefab",
-    "prefabPackageDirectoryList": []
+    "buildTargetSet": []
   },
-  "prefabFolder": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/prefab/arm64-v8a"
+  "abi": "ARM64_V8A",
+  "abiPlatformVersion": 27,
+  "cxxBuildFolder": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a",
+  "jsonFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a/android_gradle_build.json",
+  "gradleBuildOutputFolder": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cxx/release/arm64-v8a",
+  "objFolder": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/build/intermediates/cmake/release/obj/arm64-v8a",
+  "buildCommandFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a/build_command.txt",
+  "buildOutputFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a/build_output.txt",
+  "modelOutputFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a/build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cxx/release/arm64-v8a/CMakeLists.txt",
+    "toolchainWrapperFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cxx/release/arm64-v8a/android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cxx/release/arm64-v8a/build_generation_state.json",
+    "cacheKeyFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cxx/release/arm64-v8a/compiler_cache_key.json",
+    "compilerCacheUseFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cxx/release/arm64-v8a/compiler_cache_use.json",
+    "compilerCacheWriteFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cxx/release/arm64-v8a/compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cxx/release/arm64-v8a/compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a/json_generation_record.json",
+  "compileCommandsJsonFile": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a/compile_commands.json"
 }

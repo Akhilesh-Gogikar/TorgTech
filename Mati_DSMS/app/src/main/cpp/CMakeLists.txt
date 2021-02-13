@@ -18,7 +18,6 @@ cmake_minimum_required(VERSION 3.4.1)
 
 # build native_app_glue as a static lib
 set(${CMAKE_C_FLAGS}, "${CMAKE_C_FLAGS}")
-
 add_library(native_app_glue STATIC
     ${ANDROID_NDK}/sources/android/native_app_glue/android_native_app_glue.c)
 
@@ -32,10 +31,7 @@ set(CMAKE_SHARED_LINKER_FLAGS
 
 set(commonDir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../common)
 set(thirdpDir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../third_party)
-set(jnilibDir ${CMAKE_CURRENT_SOURCE_DIR}/../CMakeLibs)
-set(OBOE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../third_party/oboe)
-
-add_subdirectory (${OBOE_DIR} ./oboe)
+set(jnilibDir ${CMAKE_CURRENT_SOURCE_DIR}/../jniLibs)
 
 # download stb library
 if ((NOT EXISTS ${thirdpDir}/stb) OR
@@ -66,7 +62,6 @@ include_directories(${tfliteDir}/
                     ${bazelgenDir}/../../../external/flatbuffers/include
                     ${bazelgenDir}/../../../external/com_google_absl
                     )
-
 
 
 # ------------------------------------------------------------
@@ -123,8 +118,8 @@ add_compile_options(-DGL_GLEXT_PROTOTYPES)
 add_library(native-activity SHARED
         ${CMAKE_CURRENT_SOURCE_DIR}/android_main.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/app_engine.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/render_imgui.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/tflite_facemesh.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/render_imgui.cpp
         ${commonDir}/android/camera_manager.cpp
         ${commonDir}/android/camera_utils.cpp
         ${commonDir}/android/gestureDetector.cpp
@@ -150,8 +145,7 @@ add_library(native-activity SHARED
 include_directories(${thirdpDir}
                     ${commonDir}
                     ${commonDir}/android/
-                    ${commonDir}/winsys/
-        ${OBOE_DIR}/include)
+                    ${commonDir}/winsys/)
 
 target_include_directories(native-activity PRIVATE
     ${ANDROID_NDK}/sources/android/native_app_glue)
@@ -167,6 +161,5 @@ target_link_libraries(native-activity
     GLESv2
     lib_tflite
     lib_tflite_gpu_delegate
-        oboe
 #   lib_tflite_hexagon_delegate
     log)

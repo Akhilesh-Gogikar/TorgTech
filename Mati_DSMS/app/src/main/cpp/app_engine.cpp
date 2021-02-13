@@ -1,5 +1,6 @@
-/* ------------------------------------------------
- * Copyright (c) 2020 akhilesh@torgtek.com
+/* ------------------------------------------------ *
+ * The MIT License (MIT)
+ * Copyright (c) 2020 terryky1220@gmail.com
  * ------------------------------------------------ */
 #include <cstdio>
 #include "util_debug.h"
@@ -9,10 +10,11 @@
 #include "util_pmeter.h"
 #include "util_texture.h"
 #include "util_render2d.h"
-#include "util_matrix.h"
 #include "app_engine.h"
 #include "render_imgui.h"
 #include "assertgl.h"
+#include "util_matrix.h"
+#include "tflite_facemesh.h"
 
 #define UNUSED(x) (void)(x)
 
@@ -36,7 +38,7 @@ feed_face_detect_image(texture_2d_t *srctex, int win_w, int win_h)
 
     buf_ui8 = pui8;
 
-    draw_2d_texture_ex (srctex, 0, win_h - h, w, h, 1);
+    draw_2d_texture_ex (srctex, 0, win_h - h, w, h, RENDER2D_FLIP_V);
 
     glPixelStorei (GL_PACK_ALIGNMENT, 4);
     glReadPixels (0, 0, w, h, GL_RGBA, GL_UNSIGNED_BYTE, buf_ui8);
@@ -216,10 +218,9 @@ feed_iris_landmark_image(texture_2d_t *srctex, int win_w, int win_h,
 
 static void
 render_detect_region (int ofstx, int ofsty, int texw, int texh,
-                      face_detect_result_t *detection, imgui_data_t *imgui_data)
+                      face_detect_result_t *detection)
 {
-    float col_white[] = {1.0f, 1.0f, 1.0f, 1.0f};
-    float *col_frame = imgui_data->frame_color;
+    float col_red[]   = {1.0f, 0.0f, 0.0f, 1.0f};
 
     for (int i = 0; i < detection->num; i ++)
     {
@@ -228,15 +229,18 @@ render_detect_region (int ofstx, int ofsty, int texw, int texh,
         float y1 = face->topleft.y  * texh + ofsty;
         float x2 = face->btmright.x * texw + ofstx;
         float y2 = face->btmright.y * texh + ofsty;
-        float score = face->score;
 
         /* rectangle region */
-        draw_2d_rect (x1, y1, x2-x1, y2-y1, col_frame, 2.0f);
+        draw_2d_rect (x1, y1, x2-x1, y2-y1, col_red, 2.0f);
+
+#if 0
+        float col_white[] = {1.0f, 1.0f, 1.0f, 1.0f};
+        float score = face->score;
 
         /* detect score */
         char buf[512];
         sprintf (buf, "%d", (int)(score * 100));
-        draw_dbgstr_ex (buf, x1, y1, 1.0f, col_white, col_frame);
+        draw_dbgstr_ex (buf, x1, y1, 1.0f, col_white, col_red);
 
         /* key points */
         for (int j = 0; j < kFaceKeyNum; j ++)
@@ -245,11 +249,11 @@ render_detect_region (int ofstx, int ofsty, int texw, int texh,
             float y = face->keys[j].y * texh + ofsty;
 
             int r = 4;
-            draw_2d_fillrect (x - (r/2), y - (r/2), r, r, col_frame);
+            draw_2d_fillrect (x - (r/2), y - (r/2), r, r, col_red);
         }
+#endif
     }
 }
-
 
 
 
@@ -603,6 +607,7 @@ flip_horizontal_iris_landmark (irismesh_result_t *irismesh)
 
 }
 
+
 void
 AppEngine::DrawTFLiteConfigInfo ()
 {
@@ -619,6 +624,7 @@ AppEngine::DrawTFLiteConfigInfo ()
     draw_dbgstr_ex (strbuf, glctx.disp_w - 250, glctx.disp_h - 24, 1.0f, col_white, col_bg);
 
 }
+
 
 /* Adjust the texture size to fit the window size
  *
@@ -696,10 +702,6 @@ AppEngine::setup_imgui (int win_w, int win_h, imgui_data_t *imgui_data)
 #endif
 
     imgui_data->camera_facing  = m_camera_facing;
-    imgui_data->frame_color[0] = 1.0f;
-    imgui_data->frame_color[1] = 0.0f;
-    imgui_data->frame_color[2] = 0.0f;
-    imgui_data->frame_color[3] = 1.0f;
 }
 
 
@@ -709,7 +711,7 @@ AppEngine::RenderFrame ()
     texture_2d_t srctex = glctx.tex_input;
     int win_w  = glctx.disp_w;
     int win_h  = glctx.disp_h;
-    static double ttime[10] = {0}, interval, invoke_ms0, invoke_ms1, invoke_ms2;
+    static double ttime[10] = {0}, interval, invoke_ms0 = 0, invoke_ms1 = 0, invoke_ms2 = 0;
 
     int draw_x, draw_y, draw_w, draw_h;
     int texw = srctex.width;
@@ -726,7 +728,6 @@ AppEngine::RenderFrame ()
         face_detect_result_t    face_detect_ret = {0};
         face_landmark_result_t  face_mesh_ret[MAX_FACE_NUM] = {0};
         irismesh_result_t       iris_mesh_ret[MAX_FACE_NUM][2] = {0};
-        int32_t ret;
         char strbuf[512];
 
         PMETER_RESET_LAP ();
@@ -737,8 +738,7 @@ AppEngine::RenderFrame ()
         ttime[0] = ttime[1];
 
         glClear (GL_COLOR_BUFFER_BIT);
-
-        ret = soundGenerator.startAudio();
+        glViewport (0, 0, win_w, win_h);
 
         /* --------------------------------------- *
          *  face detection
@@ -783,22 +783,61 @@ AppEngine::RenderFrame ()
             flip_horizontal_iris_landmark (&iris_mesh_ret[face_id][1]);
         }
 
-        /* --------------------------------------- *
-         *  render scene
-         * --------------------------------------- */
-        glClear (GL_COLOR_BUFFER_BIT);
 
-        /* visualize the face detection results. */
+        /* --------------------------------------- *
+         *  render scene (left half)
+         * --------------------------------------- */
+        glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        /* visualize the face pose estimation results. */
         draw_2d_texture_ex (&srctex, draw_x, draw_y, draw_w, draw_h, 0);
-        render_detect_region (draw_x, draw_y, draw_w, draw_h, &face_detect_ret, &imgui_data);
+        render_detect_region (draw_x, draw_y, draw_w, draw_h, &face_detect_ret);
 
         for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
-            {
-                render_iris_landmark_on_main (draw_x, draw_y, draw_w, draw_h, &face_detect_ret.faces[face_id],
-                                              &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
-            }
+        {
+            render_iris_landmark_on_main (draw_x, draw_y, draw_w, draw_h, &face_detect_ret.faces[face_id],
+                                          &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
+        }
 
-        soundGenerator.stopAudio();
+        /* --------------------------------------- *
+         *  render scene  (right half)
+         * --------------------------------------- */
+        glViewport (win_w, 0, win_w, win_h);
+
+        /* draw cropped image of the face area */
+        for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
+        {
+            float w = 300;
+            float h = 300;
+            float x = 0;
+            float y = h * face_id;
+            float col_white[] = {1.0f, 1.0f, 1.0f, 1.0f};
+
+            render_cropped_face_image (&srctex, x, y, w, h, &face_detect_ret, face_id);
+            render_iris_landmark_on_face (x, y, w, h, &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
+            draw_2d_rect (x, y, w, h, col_white, 2.0f);
+        }
+
+        
+        /* draw cropped image of the eye area */
+        for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
+        {
+            float w = 300;
+            float h = 300;
+            float x = 300;
+            float y = h * face_id;
+            float col_white[] = {1.0f, 1.0f, 1.0f, 1.0f};
+
+            render_cropped_eye_image (&srctex, x, y, w, h, &face_detect_ret.faces[face_id], &face_mesh_ret[face_id], 0);
+            render_iris_landmark (x, y, w, h, &iris_mesh_ret[face_id][0]);
+            draw_2d_rect (x, y, w, h, col_white, 2.0f);
+
+            x += w;
+            render_cropped_eye_image (&srctex, x, y, w, h, &face_detect_ret.faces[face_id], &face_mesh_ret[face_id], 1);
+            render_iris_landmark (x, y, w, h, &iris_mesh_ret[face_id][1]);
+            draw_2d_rect (x, y, w, h, col_white, 2.0f);
+        }
+
 
         /* --------------------------------------- *
          *  post process
@@ -807,7 +846,11 @@ AppEngine::RenderFrame ()
 
         draw_pmeter (0, 40);
 
-        sprintf (strbuf, "Interval:%5.1f [ms]\nFace TFLite  :%5.1f [ms]\nMesh TFLite  :%5.1f [ms]\nIris TFLite  :%5.1f [ms]", interval, invoke_ms0, invoke_ms1, invoke_ms2);
+        sprintf (strbuf, "Interval:%5.1f [ms]\nTFLite0 :%5.1f [ms]\nTFLite1 :%5.1f [ms]\nTFLite2 :%5.1f [ms]",
+            interval, invoke_ms0, invoke_ms1, invoke_ms2);
+
+        DBG_LOGE ("Interval:%5.1f [ms]\nTFLite0 :%5.1f [ms]\nTFLite1 :%5.1f [ms]\nTFLite2 :%5.1f [ms]",
+                  interval, invoke_ms0, invoke_ms1, invoke_ms2);
         draw_dbgstr (strbuf, 10, 10);
 
         /* renderer info */
@@ -821,7 +864,6 @@ AppEngine::RenderFrame ()
 #endif
         egl_swap();
     }
-
     glctx.frame_count ++;
 }
 
@@ -897,21 +939,18 @@ AppEngine::InitGLES (void)
     init_dbgstr (w, h);
 
     asset_read_file (m_app->activity->assetManager,
-                    (char *)FACE_DETECTL_QUANT_MODEL_PATH, m_tflite_detect_model_buf);
+                    (char *)FACE_DETECT_MODEL_PATH, m_facedet_tflite_model_buf);
 
     asset_read_file (m_app->activity->assetManager,
-                     (char *)FACE_LANDMARK_QUANT_MODEL_PATH, m_tflite_mesh_model_buf);
-
+                    (char *)FACE_LANDMARK_MODEL_PATH, m_facelandmark_tflite_model_buf);
 
     asset_read_file (m_app->activity->assetManager,
-                     (char *)IRIS_LANDMARK_MODEL_PATH, m_tflite_iris_model_buf);
+                    (char *)IRIS_LANDMARK_MODEL_PATH, m_irislandmark_tflite_model_buf);
 
-
-    ret = init_tflite_facemeshiris ((const char *)m_tflite_detect_model_buf.data(), m_tflite_detect_model_buf.size(),
-            &imgui_data.blazeface_config, (const char *)m_tflite_mesh_model_buf.data(), m_tflite_mesh_model_buf.size(),
-            (const char *)m_tflite_iris_model_buf.data(), m_tflite_iris_model_buf.size());
-
-
+    ret = init_tflite_facemesh (
+        (const char *)m_facedet_tflite_model_buf.data(), m_facedet_tflite_model_buf.size(),
+        (const char *)m_facelandmark_tflite_model_buf.data(), m_facelandmark_tflite_model_buf.size(),
+        (const char *)m_irislandmark_tflite_model_buf.data(), m_irislandmark_tflite_model_buf.size());
 
     setup_imgui (w, h, &imgui_data);
 

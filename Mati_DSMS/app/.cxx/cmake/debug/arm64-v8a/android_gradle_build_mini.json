@@ -1,38 +1,25 @@
 {
   "buildFiles": [
-    "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
+    "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/src/main/cpp/CMakeLists.txt",
     "/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
-    "/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/platforms.cmake",
-    "/home/tarzan/TorgTech/third_party/oboe/CMakeLists.txt"
+    "/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
   ],
   "cleanCommands": [
-    "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" clean"
+    "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/debug/arm64-v8a\" clean"
   ],
-  "buildTargetsCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "native-activity-Debug-arm64-v8a": {
       "artifactName": "native-activity",
-      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" native-activity",
+      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/debug/arm64-v8a\" native-activity",
       "abi": "arm64-v8a",
-      "output": "/home/tarzan/TorgTech/Mati_DSMS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so",
-      "runtimeFiles": [
-        "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/CMakeLibs/arm64-v8a/libtensorflowlite.so",
-        "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/CMakeLibs/arm64-v8a/libtensorflowlite_gpu_delegate.so"
-      ]
-    },
-    "oboe-Debug-arm64-v8a": {
-      "artifactName": "oboe",
-      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" oboe",
-      "abi": "arm64-v8a",
-      "output": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/oboe/liboboe.a",
-      "runtimeFiles": []
+      "output": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so"
     },
     "native_app_glue-Debug-arm64-v8a": {
       "artifactName": "native_app_glue",
-      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" native_app_glue",
+      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/debug/arm64-v8a\" native_app_glue",
       "abi": "arm64-v8a",
-      "output": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/libnative_app_glue.a",
-      "runtimeFiles": []
+      "output": "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/debug/arm64-v8a/libnative_app_glue.a"
     }
   }
 }

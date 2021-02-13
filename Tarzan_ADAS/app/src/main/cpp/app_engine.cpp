@@ -582,12 +582,10 @@ AppEngine::CropCameraTexture (void)
     adjust_texture (rtarget1->width, rtarget1->height, srctex1.width, srctex1.height,
                     &draw_x1, &draw_y1, &draw_w1, &draw_h1, 1);
 
-
-
     /* when we use inner camera, enable horizontal flip. */
     int flip = m_camera_facing ? RENDER2D_FLIP_H : 0;
     flip |= RENDER2D_FLIP_V;
-    draw_2d_texture_ex (&srctex, draw_x, draw_y, draw_w, draw_h, flip);
+    draw_2d_texture_ex (&srctex1, draw_x, draw_y, draw_w, draw_h, flip);
 
     /* reset to the default framebuffer */
     rtarget = &glctx.rtarget_main;
@@ -597,7 +595,7 @@ AppEngine::CropCameraTexture (void)
     draw_2d_texture_ex (&srctex1, draw_x1, draw_y1, draw_w1, draw_h1, flip);
 
     /* reset to the default framebuffer */
-    rtarget = &glctx.rtarget_main1;
+    rtarget1 = &glctx.rtarget_main1;
     set_render_target (rtarget1);
     set_2d_projection_matrix (rtarget1->width, rtarget1->height);
 
@@ -666,11 +664,12 @@ AppEngine::CreateCamera (int facing)
     m_ImgReader1.InitImageReader (CAMERA_RESOLUTION_W, CAMERA_RESOLUTION_H);
     ANativeWindow *nativeWindow1 = m_ImgReader1.GetNativeWindow();
 
+    m_camera1->CreateSession (nativeWindow1);
+    m_camera1->StartPreview (true);
+
     m_camera->CreateSession (nativeWindow);
     m_camera->StartPreview (true);
 
-    m_camera1->CreateSession (nativeWindow1);
-    m_camera1->StartPreview (true);
 }
 
 void

@@ -1,4 +1,4 @@
-# Install script for directory: /home/tarzan/TorgTech/third_party/oboe
+# Install script for directory: /home/tarzan/work/android_tflite/third_party/oboe
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,10 +38,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/arm64-v8a" TYPE STATIC_LIBRARY FILES "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/oboe/liboboe.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/arm64-v8a" TYPE STATIC_LIBRARY FILES "/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/debug/arm64-v8a/oboe/liboboe.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/tarzan/TorgTech/third_party/oboe/include/oboe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/tarzan/work/android_tflite/third_party/oboe/include/oboe")
 endif()
 

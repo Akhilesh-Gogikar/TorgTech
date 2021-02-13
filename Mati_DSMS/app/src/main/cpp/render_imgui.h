@@ -1,10 +1,9 @@
-/* ------------------------------------------------
- * Copyright (c) 2020 akhilesh@torgtek.com
+/* ------------------------------------------------ *
+ * The MIT License (MIT)
+ * Copyright (c) 2020 terryky1220@gmail.com
  * ------------------------------------------------ */
 #ifndef UTIL_IMGUI_H_
 #define UTIL_IMGUI_H_
-
-#include "tflite_facemesh.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -12,9 +11,7 @@ extern "C" {
 
 typedef struct _imgui_data_t
 {
-    blazeface_config_t blazeface_config;
     int     camera_facing;
-    float   frame_color[4];
 } imgui_data_t;
 
 int  init_imgui (int width, int height);

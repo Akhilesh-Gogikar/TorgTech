@@ -1,22 +1,20 @@
-                Executable : /home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake
+Executable : /home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/cmake
 arguments : 
--H/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp
--DCMAKE_FIND_ROOT_PATH=/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/prefab/arm64-v8a/prefab
--DCMAKE_BUILD_TYPE=Release
--DCMAKE_TOOLCHAIN_FILE=/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake
+-H/home/tarzan/work/android_tflite/tflite_iris_landmark/app/src/main/cpp
+-B/home/tarzan/work/android_tflite/tflite_iris_landmark/app/.cxx/cmake/release/arm64-v8a
 -DANDROID_ABI=arm64-v8a
--DANDROID_NDK=/home/tarzan/Android/Sdk/ndk/21.1.6352462
 -DANDROID_PLATFORM=android-27
--DCMAKE_ANDROID_ARCH_ABI=arm64-v8a
--DCMAKE_ANDROID_NDK=/home/tarzan/Android/Sdk/ndk/21.1.6352462
--DCMAKE_EXPORT_COMPILE_COMMANDS=ON
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/tarzan/TorgTech/Mati_DSMS/app/build/intermediates/cmake/release/obj/arm64-v8a
--DCMAKE_MAKE_PROGRAM=/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/tarzan/work/android_tflite/tflite_iris_landmark/app/build/intermediates/cmake/release/obj/arm64-v8a
+-DCMAKE_BUILD_TYPE=Release
+-DANDROID_NDK=/home/tarzan/Android/Sdk/ndk/21.1.6352462
 -DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_ANDROID_ARCH_ABI=arm64-v8a
 -DCMAKE_SYSTEM_VERSION=27
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_ANDROID_NDK=/home/tarzan/Android/Sdk/ndk/21.1.6352462
+-DCMAKE_TOOLCHAIN_FILE=/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake
+-G Ninja
+-DCMAKE_MAKE_PROGRAM=/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja
 -DANDROID_STL=c++_static
--B/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a
--GNinja
 jvmArgs : 
 
-Build command args:
