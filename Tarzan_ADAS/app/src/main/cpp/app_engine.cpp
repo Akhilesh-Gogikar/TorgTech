@@ -331,6 +331,7 @@ AppEngine::RenderFrame ()
 
         DrawTFLiteConfigInfo ();
 
+
         draw_pmeter (0, 40);
 
         //soundGenerator.stopAudio();

@@ -775,6 +775,8 @@ void
 AppEngine::RenderFrame ()
 {
     texture_2d_t srctex = glctx.tex_input;
+    texture_2d_t app_logo = glctx.app_logo;
+    texture_2d_t company_logo = glctx.company_logo;
     int win_w  = glctx.disp_w;
     int win_h  = glctx.disp_h;
     static double ttime[10] = {0}, interval, invoke_ms0 = 0, invoke_ms1 = 0, invoke_ms2 = 0;
@@ -805,7 +807,7 @@ AppEngine::RenderFrame ()
         ttime[0] = ttime[1];
 
         glClear (GL_COLOR_BUFFER_BIT);
-        glViewport (0, 0, win_w, win_h);
+        //glViewport (0, 0, win_w, win_h);
 
         /* --------------------------------------- *
          *  face detection
@@ -869,15 +871,15 @@ AppEngine::RenderFrame ()
         /* --------------------------------------- *
          *  render scene  (right half)
          * --------------------------------------- */
-        glViewport (win_w, 0, win_w, win_h);
+        //glViewport (win_w, 0, win_w, win_h);
 
         /* draw cropped image of the face area */
-        for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
+        for (int face_id = 0; face_id < 1/*face_detect_ret.num*/; face_id ++)
         {
-            float w = 300;
-            float h = 300;
-            float x = 0;
-            float y = h * face_id;
+            float w = 160;
+            float h = 160;
+            float x = 112;
+            float y = 120 + h * face_id;
             float col_white[] = {1.0f, 1.0f, 1.0f, 1.0f};
 
             render_cropped_face_image (&srctex, x, y, w, h, &face_detect_ret, face_id);
@@ -887,12 +889,12 @@ AppEngine::RenderFrame ()
 
         
         /* draw cropped image of the eye area */
-        for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
+        for (int face_id = 0; face_id < 1/*face_detect_ret.num*/; face_id ++)
         {
-            float w = 300;
-            float h = 300;
-            float x = 300;
-            float y = h * face_id;
+            float w = 160;
+            float h = 160;
+            float x = 272;
+            float y = 120 + h * face_id;
             float col_white[] = {1.0f, 1.0f, 1.0f, 1.0f};
 
             render_cropped_eye_image (&srctex, x, y, w, h, &face_detect_ret.faces[face_id], &face_mesh_ret[face_id], 0);
@@ -904,6 +906,22 @@ AppEngine::RenderFrame ()
             render_iris_landmark (x, y, w, h, &iris_mesh_ret[face_id][1]);
             draw_2d_rect (x, y, w, h, col_white, 2.0f);
         }
+
+
+        float camx = 225;
+        float camy = 350 ;
+        float camw = 300;
+        float camh = 300;
+
+        draw_2d_texture_ex (&app_logo, camx, camy, camw, camh, 0);
+
+        int dx = camx + 50;
+        int dy = camy + camh + 70;
+        int dw = camw - 100;
+        int dh = camh - 100;
+
+
+        draw_2d_texture_ex (&company_logo, dx, dy+25, dw, dh, 0);
 
 
         for (int eye_id = 0; eye_id < 2; eye_id ++)
@@ -1098,6 +1116,10 @@ AppEngine::InitGLES (void)
     glctx.disp_w = w;
     glctx.disp_h = h;
     LoadInputTexture (&glctx.tex_static, (char *)"pakutaso_sotsugyou.jpg");
+
+    LoadInputTexture (&glctx.app_logo, (char *)"mati.jpg");
+
+    LoadInputTexture (&glctx.company_logo, (char *)"Torg_Tech_logo.jpg");
 
     /* render target for default framebuffer */
     get_render_target (&glctx.rtarget_main);

@@ -120,7 +120,7 @@ invoke_imgui (imgui_data_t *imgui_data)
     ImGui_ImplOpenGL3_NewFrame();
     ImGui::NewFrame();
 
-    render_gui (imgui_data);
+    //render_gui (imgui_data);
 
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

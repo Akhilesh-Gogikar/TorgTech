@@ -103,6 +103,8 @@ typedef struct gles_ctx {
 
     bool tex_camera_valid;
     texture_2d_t tex_static;
+    texture_2d_t app_logo;
+    texture_2d_t company_logo;
     texture_2d_t tex_camera;
     texture_2d_t tex_input;
     EGLImage egl_img;
