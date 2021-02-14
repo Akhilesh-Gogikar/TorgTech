@@ -132,5 +132,9 @@ void android_main(struct android_app* state)
         }
 
         engine.UpdateFrame ();
+
+        char strbuf[512];
+
+        engine.StatusString(strbuf);
     }
 }

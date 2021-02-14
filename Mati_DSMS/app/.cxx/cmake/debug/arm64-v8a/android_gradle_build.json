@@ -100,6 +100,11 @@
           "workingDirectoryOrdinal": 0
         },
         {
+          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/sense.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
           "src": "/home/tarzan/TorgTech/common/android/camera_manager.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0

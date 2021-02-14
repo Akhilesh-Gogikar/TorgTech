@@ -16,7 +16,7 @@
 #include "assertgl.h"
 #include "util_matrix.h"
 #include "tflite_facemesh.h"
-
+#include "sense.h"
 
 #define UNUSED(x) (void)(x)
 
@@ -25,6 +25,7 @@
 #define CAMERA_CROP_WIDTH       480 /* make a src image square */
 #define CAMERA_CROP_HEIGHT      480 /* make a src image square */
 
+float sensordata[5];
 
 /* resize image to DNN network input size and convert to fp32. */
 void
@@ -908,6 +909,11 @@ AppEngine::RenderFrame ()
             draw_2d_rect(x, y, w, h, col_white, 2.0f);
         }
 
+        time += interval;
+        p_time = interval;
+
+        sensor_ret(sensordata);
+
         int fps = (int) round(1000 / interval);
 
         for (int eye_id = 0; eye_id < 2; eye_id++) {
@@ -1061,7 +1067,15 @@ AppEngine::AppEngine (android_app* app)
       avg_Dev(0.0),
       avg_EAR(0.0),
       sound_started(0),
-      sound_streak(0)
+      sound_streak(0),
+      speed(0.0),
+      distance(0.0),
+      a_x(0.0),
+      a_y(0.0),
+      a_z(0.0),
+      alarms(0),
+      p_time(0.0),
+      time(0.0)
 {
     memset (&glctx, 0, sizeof (glctx));
 }
@@ -1362,6 +1376,20 @@ AppEngine::OnCameraPermission (jboolean granted)
     }
 }
 
+void
+AppEngine::StatusString (char* strbuf)
+{
+    //char strbuf[512];
+
+
+
+    sprintf (strbuf, "Frames:%d; Sleepy: %d, Drowsy: %d, Distracted: %d, Alarms: %d, Interval: %.2f, "
+                     "Avg. EAR: %.2f, Avg. MAR: %.2f, Avg. Pose: %.2f, Speed: %0.2f, Distance: %.2f"
+                     "Acc_X: %0.2f, Acc_Y: %0.2f, Acc_Z: %0.2f\n",
+             glctx.frame_count, blinks, yawns, distracted, alarms, p_time, avg_EAR, avg_MAR, avg_Dev, speed, distance, a_x, a_y, a_z);
+
+    return;
+}
 
 extern "C" JNIEXPORT void JNICALL
 Java_com_glesapp_glesapp_GLESAppNativeActivity_notifyCameraPermission (
@@ -1370,4 +1398,3 @@ Java_com_glesapp_glesapp_GLESAppNativeActivity_notifyCameraPermission (
     std::thread permissionHandler (&AppEngine::OnCameraPermission, GetAppEngine(), permission);
     permissionHandler.detach();
 }
-

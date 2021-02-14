@@ -144,6 +144,8 @@ public:
     void UpdateFrame (void);
     void RenderFrame (void);
 
+    void StatusString (char* strbuf);
+
     void DrawTFLiteConfigInfo ();
 
     // IMGUI
@@ -173,6 +175,16 @@ private:
     int yawn_streak;
     int blink_streak;
     int distracted_streak;
+
+    int alarms;
+    double p_time;
+    double time;
+
+    float speed;
+    float distance;
+    float a_x;
+    float a_y;
+    float a_z;
 
     int sound_started;
     int sound_streak;
