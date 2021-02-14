@@ -794,42 +794,41 @@ AppEngine::RenderFrame ()
 
     int count = glctx.frame_count;
     {
-        face_detect_result_t    face_detect_ret = {0};
-        face_landmark_result_t  face_mesh_ret[MAX_FACE_NUM] = {0};
-        irismesh_result_t       iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+        face_detect_result_t face_detect_ret = {0};
+        face_landmark_result_t face_mesh_ret[MAX_FACE_NUM] = {0};
+        irismesh_result_t iris_mesh_ret[MAX_FACE_NUM][2] = {0};
         char strbuf[512];
 
         PMETER_RESET_LAP ();
         PMETER_SET_LAP ();
 
-        ttime[1] = pmeter_get_time_ms ();
+        ttime[1] = pmeter_get_time_ms();
         interval = (count > 0) ? ttime[1] - ttime[0] : 0;
         ttime[0] = ttime[1];
 
-        glClear (GL_COLOR_BUFFER_BIT);
+        //glClear (GL_COLOR_BUFFER_BIT);
         //glViewport (0, 0, win_w, win_h);
 
         /* --------------------------------------- *
          *  face detection
          * --------------------------------------- */
-        feed_face_detect_image (&srctex, win_w, win_h);
+        feed_face_detect_image(&srctex, win_w, win_h);
 
-        ttime[2] = pmeter_get_time_ms ();
-        invoke_face_detect (&face_detect_ret);
-        ttime[3] = pmeter_get_time_ms ();
+        ttime[2] = pmeter_get_time_ms();
+        invoke_face_detect(&face_detect_ret);
+        ttime[3] = pmeter_get_time_ms();
         invoke_ms0 = ttime[3] - ttime[2];
 
         /* --------------------------------------- *
          *  face landmark
          * --------------------------------------- */
         invoke_ms1 = 0;
-        for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
-        {
-            feed_face_landmark_image (&srctex, win_w, win_h, &face_detect_ret, face_id);
+        for (int face_id = 0; face_id < face_detect_ret.num; face_id++) {
+            feed_face_landmark_image(&srctex, win_w, win_h, &face_detect_ret, face_id);
 
-            ttime[4] = pmeter_get_time_ms ();
-            invoke_facemesh_landmark (&face_mesh_ret[face_id]);
-            ttime[5] = pmeter_get_time_ms ();
+            ttime[4] = pmeter_get_time_ms();
+            invoke_facemesh_landmark(&face_mesh_ret[face_id]);
+            ttime[5] = pmeter_get_time_ms();
             invoke_ms1 += ttime[5] - ttime[4];
         }
 
@@ -837,35 +836,36 @@ AppEngine::RenderFrame ()
          *  Iris landmark
          * --------------------------------------- */
         invoke_ms2 = 0;
-        for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
-        {
-            for (int eye_id = 0; eye_id < 2; eye_id ++)
-            {
-                feed_iris_landmark_image (&srctex, win_w, win_h, &face_detect_ret.faces[face_id], &face_mesh_ret[face_id], eye_id);
+        for (int face_id = 0; face_id < face_detect_ret.num; face_id++) {
+            for (int eye_id = 0; eye_id < 2; eye_id++) {
+                feed_iris_landmark_image(&srctex, win_w, win_h, &face_detect_ret.faces[face_id],
+                                         &face_mesh_ret[face_id], eye_id);
 
-                ttime[6] = pmeter_get_time_ms ();
-                invoke_irismesh_landmark (&iris_mesh_ret[face_id][eye_id]);
-                ttime[7] = pmeter_get_time_ms ();
+                ttime[6] = pmeter_get_time_ms();
+                invoke_irismesh_landmark(&iris_mesh_ret[face_id][eye_id]);
+                ttime[7] = pmeter_get_time_ms();
                 invoke_ms2 += ttime[7] - ttime[6];
             }
             /* need to horizontal flip for right eye */
-            flip_horizontal_iris_landmark (&iris_mesh_ret[face_id][1]);
+            flip_horizontal_iris_landmark(&iris_mesh_ret[face_id][1]);
         }
 
 
         /* --------------------------------------- *
          *  render scene (left half)
          * --------------------------------------- */
-        glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         /* visualize the face pose estimation results. */
-        draw_2d_texture_ex (&srctex, draw_x, draw_y, draw_w, draw_h, 0);
-        render_detect_region (draw_x, draw_y, draw_w, draw_h, &face_detect_ret);
+        draw_2d_texture_ex(&srctex, draw_x, draw_y, draw_w, draw_h, 0);
+        render_detect_region(draw_x, draw_y, draw_w, draw_h, &face_detect_ret);
 
-        for (int face_id = 0; face_id < face_detect_ret.num; face_id ++)
-        {
-            render_iris_landmark_on_main (draw_x, draw_y, draw_w, draw_h, &face_detect_ret.faces[face_id],
-                                          &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
+        //DBG_LOGE("X: %d, Y: %d, W: %d, H: %d",draw_x, draw_y, draw_w, draw_h);
+
+        for (int face_id = 0; face_id < face_detect_ret.num; face_id++) {
+            render_iris_landmark_on_main(draw_x, draw_y, draw_w, draw_h,
+                                         &face_detect_ret.faces[face_id],
+                                         &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
         }
 
         /* --------------------------------------- *
@@ -874,95 +874,92 @@ AppEngine::RenderFrame ()
         //glViewport (win_w, 0, win_w, win_h);
 
         /* draw cropped image of the face area */
-        for (int face_id = 0; face_id < 1/*face_detect_ret.num*/; face_id ++)
-        {
+        for (int face_id = 0; face_id < 1/*face_detect_ret.num*/; face_id++) {
             float w = 160;
             float h = 160;
             float x = 112;
             float y = 120 + h * face_id;
             float col_white[] = {1.0f, 1.0f, 1.0f, 1.0f};
 
-            render_cropped_face_image (&srctex, x, y, w, h, &face_detect_ret, face_id);
-            render_iris_landmark_on_face (x, y, w, h, &face_mesh_ret[face_id], iris_mesh_ret[face_id]);
-            draw_2d_rect (x, y, w, h, col_white, 2.0f);
+            render_cropped_face_image(&srctex, x, y, w, h, &face_detect_ret, face_id);
+            render_iris_landmark_on_face(x, y, w, h, &face_mesh_ret[face_id],
+                                         iris_mesh_ret[face_id]);
+            draw_2d_rect(x, y, w, h, col_white, 2.0f);
         }
 
-        
+
         /* draw cropped image of the eye area */
-        for (int face_id = 0; face_id < 1/*face_detect_ret.num*/; face_id ++)
-        {
+        for (int face_id = 0; face_id < 1/*face_detect_ret.num*/; face_id++) {
             float w = 160;
             float h = 160;
             float x = 272;
             float y = 120 + h * face_id;
             float col_white[] = {1.0f, 1.0f, 1.0f, 1.0f};
 
-            render_cropped_eye_image (&srctex, x, y, w, h, &face_detect_ret.faces[face_id], &face_mesh_ret[face_id], 0);
-            render_iris_landmark (x, y, w, h, &iris_mesh_ret[face_id][0]);
-            draw_2d_rect (x, y, w, h, col_white, 2.0f);
+            render_cropped_eye_image(&srctex, x, y, w, h, &face_detect_ret.faces[face_id],
+                                     &face_mesh_ret[face_id], 0);
+            render_iris_landmark(x, y, w, h, &iris_mesh_ret[face_id][0]);
+            draw_2d_rect(x, y, w, h, col_white, 2.0f);
 
             x += w;
-            render_cropped_eye_image (&srctex, x, y, w, h, &face_detect_ret.faces[face_id], &face_mesh_ret[face_id], 1);
-            render_iris_landmark (x, y, w, h, &iris_mesh_ret[face_id][1]);
-            draw_2d_rect (x, y, w, h, col_white, 2.0f);
+            render_cropped_eye_image(&srctex, x, y, w, h, &face_detect_ret.faces[face_id],
+                                     &face_mesh_ret[face_id], 1);
+            render_iris_landmark(x, y, w, h, &iris_mesh_ret[face_id][1]);
+            draw_2d_rect(x, y, w, h, col_white, 2.0f);
         }
 
+        int fps = (int) round(1000 / interval);
 
-        float camx = 225;
-        float camy = 350 ;
-        float camw = 300;
-        float camh = 300;
-
-        draw_2d_texture_ex (&app_logo, camx, camy, camw, camh, 0);
-
-        int dx = camx + 50;
-        int dy = camy + camh + 70;
-        int dw = camw - 100;
-        int dh = camh - 100;
-
-
-        draw_2d_texture_ex (&company_logo, dx, dy+25, dw, dh, 0);
-
-
-        for (int eye_id = 0; eye_id < 2; eye_id ++)
-        {
+        for (int eye_id = 0; eye_id < 2; eye_id++) {
             CalculateEAR(&iris_mesh_ret[0][eye_id], draw_w, draw_h);
         }
 
-        float EAR = (iris_mesh_ret[0][0].EAR + iris_mesh_ret[0][1].EAR)/2;
+        float EAR = (iris_mesh_ret[0][0].EAR + iris_mesh_ret[0][1].EAR) / 2;
 
         CalculateMAR(&face_mesh_ret[0], draw_w, draw_h);
 
         CalculateDev(&face_mesh_ret[0], draw_w, draw_h);
 
-        if (EAR <= 0.25 || EAR <= avg_EAR){
+        if (isnan(EAR) != 1) {
+            avg_EAR = (avg_EAR * glctx.frame_count + EAR) / (glctx.frame_count + 1);
+        }
+
+        if (isnan(face_mesh_ret[0].MAR) != 1) {
+            avg_MAR =
+                    (avg_MAR * glctx.frame_count + face_mesh_ret[0].MAR) / (glctx.frame_count + 1);
+        }
+
+        if (isnan(face_mesh_ret[0].dev) != 1){
+        avg_Dev = (avg_Dev * glctx.frame_count + face_mesh_ret[0].dev) / (glctx.frame_count + 1);
+        }
+
+        if (abs(EAR -avg_EAR)/avg_EAR >= 0.3 && glctx.frame_count>=60*fps){
             blink_streak += 1;
             blinks +=1;
         } else{
             blink_streak=0;
-            avg_EAR = (avg_EAR*glctx.frame_count + EAR)/(glctx.frame_count+1);
         }
 
-        if (face_mesh_ret[0].MAR >= 0.20 || face_mesh_ret[0].MAR <= avg_EAR){
+        if ((face_mesh_ret[0].MAR - avg_MAR)/avg_MAR >= 0.5 && glctx.frame_count>=60*fps){
             yawn_streak += 1;
             yawns+=1;
         } else{
             yawn_streak=0;
-            avg_MAR = (avg_MAR*glctx.frame_count + face_mesh_ret[0].MAR)/(glctx.frame_count+1);
         }
 
-        if (face_mesh_ret[0].dev >= 30 || (abs(face_mesh_ret[0].dev - avg_Dev) >= 2.0 && glctx.frame_count>=2000)){
+        if (abs((face_mesh_ret[0].dev - avg_Dev)/avg_Dev) >= 0.4 && glctx.frame_count>=60*fps){
             distracted_streak += 1;
             distracted += 1;
         } else{
             distracted_streak=0;
-            avg_Dev = (avg_MAR*glctx.frame_count + face_mesh_ret[0].dev)/(glctx.frame_count+1);
         }
 
-        if (distracted_streak >50 || yawn_streak>50 || blink_streak >50){
-            if (sound_started != 1) {
-                soundGenerator.startAudio();
-                sound_started = 1;
+        if(glctx.frame_count>=60*fps) {
+            if (distracted_streak > fps || yawn_streak > fps || blink_streak > fps) {
+                if (sound_started != 1) {
+                    soundGenerator.startAudio();
+                    sound_started = 1;
+                }
             }
         }
 
@@ -970,46 +967,79 @@ AppEngine::RenderFrame ()
             sound_streak += 1;
         }
 
-        if(sound_started==1 && sound_streak >= 100 && distracted_streak == 0 && yawn_streak==0 && blink_streak==0){
+        if(sound_started==1 && sound_streak >= 3*fps && distracted_streak == 0 && yawn_streak==0 && blink_streak==0){
             soundGenerator.stopAudio();
             sound_started = 0;
             sound_streak = 0;
         }
 
-        if (sound_streak >= 200){
+        if (sound_streak >= 5*fps){
             soundGenerator.stopAudio();
             sound_started = 0;
             sound_streak = 0;
         }
+
 
         DBG_LOGE ("Sound: %d \nSleep : %d \nDrowsy: %d \nDistracted : %d",
-                  sound_streak, sleep, drowsy, distracted);
+                  sound_streak, blink_streak, yawn_streak, distracted_streak);
 
 
         /* --------------------------------------- *
          *  post process
          * --------------------------------------- */
-        DrawTFLiteConfigInfo ();
+        if (fps >= 10 || glctx.frame_count % 2 == 0) {
+            DrawTFLiteConfigInfo();
 
-        draw_pmeter (0, 40);
+            draw_pmeter(0, 40);
 
-        sprintf (strbuf, "Interval:%5.1f [ms]\nTFLite0 :%5.1f [ms]\nTFLite1 :%5.1f [ms]\nTFLite2 :%5.1f [ms]",
-            interval, invoke_ms0, invoke_ms1, invoke_ms2);
+            float camx = 225;
+            float camy = 350;
+            float camw = 300;
+            float camh = 300;
 
-        DBG_LOGE ("Interval:%5.1f [ms]\nTFLite0 :%5.1f [ms]\nTFLite1 :%5.1f [ms]\nTFLite2 :%5.1f [ms]",
-                  interval, invoke_ms0, invoke_ms1, invoke_ms2);
-        draw_dbgstr (strbuf, 10, 10);
+            draw_2d_texture_ex(&app_logo, camx, camy, camw, camh, 0);
 
-        /* renderer info */
-        int y = win_h - 22 * 3;
-        draw_dbgstr (glctx.str_glverstion, 10, y); y += 22;
-        draw_dbgstr (glctx.str_glvendor,   10, y); y += 22;
-        draw_dbgstr (glctx.str_glrender,   10, y); y += 22;
+            int dx = camx + 50;
+            int dy = camy + camh + 70;
+            int dw = camw - 100;
+            int dh = camh - 100;
 
+
+            draw_2d_texture_ex(&company_logo, dx, dy + 25, dw, dh, 0);
+
+            if(glctx.frame_count <= 60*fps) {
+                sprintf(strbuf,
+                        "CALIBRATING! \nFPS: %d\nEAR :%5.1f , Avg. EAR:%5.1f\nMAR :%5.1f, Avg. MAR:%5.1f\nPose:%5.1f , Avg. Pose:%5.1f",
+                        fps, EAR, avg_EAR, face_mesh_ret[0].MAR, avg_MAR, face_mesh_ret[0].dev, avg_Dev);
+
+
+            } else{
+                sprintf(strbuf,
+                        "FPS: %d\nEAR :%5.1f , Avg. EAR:%5.1f\nMAR :%5.1f, Avg. MAR:%5.1f\nPose:%5.1f , Avg. Pose:%5.1f",
+                        fps, EAR, avg_EAR, face_mesh_ret[0].MAR, avg_MAR, face_mesh_ret[0].dev, avg_Dev);
+            }
+
+
+
+            //DBG_LOGE (
+                    //"Interval:%5.1f [ms]\nTFLite0 :%5.1f [ms]\nTFLite1 :%5.1f [ms]\nTFLite2 :%5.1f [ms]",
+                    //interval, invoke_ms0, invoke_ms1, invoke_ms2);
+            draw_dbgstr(strbuf, 20, 10);
+
+            /* renderer info */
+            int y = win_h - 22 * 3;
+            draw_dbgstr(glctx.str_glverstion, 10, y);
+            y += 22;
+            draw_dbgstr(glctx.str_glvendor, 10, y);
+            y += 22;
+            draw_dbgstr(glctx.str_glrender, 10, y);
+            y += 22;
+        }
 #if defined (USE_IMGUI)
         invoke_imgui (&imgui_data);
 #endif
         egl_swap();
+
     }
     glctx.frame_count ++;
 }
