@@ -45,10 +45,12 @@ int sensor_ret ( float sense[]) {
              *     itself.
              */
             { ASENSOR_TYPE_SIGNIFICANT_MOTION, "significant motion sensor" },
+
+            { ASENSOR_TYPE_GRAVITY, "gravity" },
     };
     const int kNumSamples = 1;
     const int kNumEvents = 1;
-    const int kTimeoutMilliSecs = 10;
+    const int kTimeoutMilliSecs = 50;
     const int kWaitTimeSecs = 1;
     for (auto& sensor_type : kSensorSamples) {
         const ASensor* sensor = ASensorManager_getDefaultSensor(sensor_manager,
@@ -69,16 +71,24 @@ int sensor_ret ( float sense[]) {
                             sense[0]=data.acceleration.x;
                             sense[1]=data.acceleration.y;
                             sense[2]=data.acceleration.z;
-                        } else if (sensor_type.first == ASENSOR_TYPE_PROXIMITY) {
+                        } else if (sensor_type.first == ASENSOR_TYPE_GRAVITY) {
+                            printf("Acceleration: x = %f, y = %f, z = %f\n",
+                                   data.acceleration.x, data.acceleration.y,
+                                   data.acceleration.z);
+                            sense[5]=data.acceleration.x;
+                            sense[6]=data.acceleration.y;
+                            sense[7]=data.acceleration.z;
+                        }
+                        else if (sensor_type.first == ASENSOR_TYPE_PROXIMITY) {
                             printf("Proximity distance: %f\n", data.distance);
-                            sense[2]=data.distance;
+                            sense[3]=data.distance;
                         } else if (sensor_type.first == ASENSOR_TYPE_SIGNIFICANT_MOTION) {
                             if (data.data[0] == 1) {
                                 printf("Significant motion detected\n");
-                                sense[2]=1.0;
+                                sense[4]=1.0;
                                 break;
                             }else{
-                                sense[2]=0.0;
+                                sense[4]=0.0;
                             }
                         }
                     }

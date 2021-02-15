@@ -25,7 +25,7 @@
 #define CAMERA_CROP_WIDTH       480 /* make a src image square */
 #define CAMERA_CROP_HEIGHT      480 /* make a src image square */
 
-float sensordata[5];
+
 
 /* resize image to DNN network input size and convert to fp32. */
 void
@@ -785,6 +785,7 @@ AppEngine::RenderFrame ()
     int draw_x, draw_y, draw_w, draw_h;
     int texw = srctex.width;
     int texh = srctex.height;
+    float sensordata[8];
     adjust_texture (win_w, win_h, texw, texh, &draw_x, &draw_y, &draw_w, &draw_h, 0);
 
     glClearColor (0.f, 0.f, 0.f, 1.0f);
@@ -913,6 +914,14 @@ AppEngine::RenderFrame ()
         p_time = interval;
 
         sensor_ret(sensordata);
+
+        auto kx=sensordata[5];
+        auto ky=sensordata[6];
+        auto kz=sensordata[7];
+
+        DBG_LOGE (
+        "Acc_X:%5.1f\nAcc_Y :%5.1f\nAcc_Z :%5.1f\nGra_X :%5.1f\nGra_Y :%5.1f\nGra_Z :%5.1f",
+        sensordata[0], sensordata[1], sensordata[2], sensordata[5], sensordata[6], sensordata[7]);
 
         int fps = (int) round(1000 / interval);
 
@@ -1357,6 +1366,7 @@ AppEngine::RequestCameraPermission()
     activity->vm->AttachCurrentThread (&env, NULL);
 
     jobject activityObj = env->NewGlobalRef (activity->clazz);
+
     jclass clz = env->GetObjectClass (activityObj);
 
     env->CallVoidMethod (activityObj, env->GetMethodID (clz, "RequestCamera", "()V"));
@@ -1383,10 +1393,12 @@ AppEngine::StatusString (char* strbuf)
 
 
 
-    sprintf (strbuf, "Frames:%d; Sleepy: %d, Drowsy: %d, Distracted: %d, Alarms: %d, Interval: %.2f, "
-                     "Avg. EAR: %.2f, Avg. MAR: %.2f, Avg. Pose: %.2f, Speed: %0.2f, Distance: %.2f"
+    sprintf (strbuf, "Frames:%d, Sleepy: %d, Drowsy: %d, Distracted: %d, Alarms: %d, Interval: %.2f, "
+                     "Avg. EAR: %.2f, Avg. MAR: %.2f, Avg. Pose: %.2f, Speed: %0.2f, Distance: %.2f, "
                      "Acc_X: %0.2f, Acc_Y: %0.2f, Acc_Z: %0.2f\n",
              glctx.frame_count, blinks, yawns, distracted, alarms, p_time, avg_EAR, avg_MAR, avg_Dev, speed, distance, a_x, a_y, a_z);
+
+    //DBG_LOGE("%s", strbuf);
 
     return;
 }
