@@ -136,19 +136,15 @@ void android_main(struct android_app* state)
     sqlite3 *db;
     char *zErrMsg = 0;
     int rc;
-    char *sql;
+    char sql[1024];
 
-    rc = sqlite3_open("dsms.db", &db);
+    rc = sqlite3_open("/data/data/com.example.tflite_iris_landmark/databases/dsms.db", &db);
 
-    bool check = exists_test1("dsms.db");
-
-    if (check){
-
-    }
+    bool check = exists_test1("/data/data/com.example.tflite_iris_landmark/databases/dsms.db");
 
     if( rc ) {
         fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
-        return;
+
     } else {
         fprintf(stderr, "Opened database successfully\n");
     }
@@ -160,25 +156,26 @@ void android_main(struct android_app* state)
     std::time(&rawtime);
     timeinfo = std::localtime(&rawtime);
 
-    std::strftime(buffer,80,"%Y-%m-%d-%H-%M-%S",timeinfo);
+    std::strftime(buffer,80,"%Y%m%d%H%M%S",timeinfo);
 
     /* Create SQL statement */
-    sprintf(sql ,"CREATE TABLE %s("  \
-      "FRAME INT PRIMARY KEY     NOT NULL," \
+
+    sprintf(sql ,"CREATE TABLE M%s ("  \
+      "FRAME    INT    PRIMARY KEY     NOT NULL," \
       "SLEEPY           INT    NOT NULL," \
       "DROWSY            INT     NOT NULL," \
       "DISTRACTED        INT    NOT NULL," \
       "ALARMS        INT    NOT NULL," \
       "INTERVAL        REAL    NOT NULL," \
-      "Avg. EAR        REAL    NOT NULL," \
-      "Avg. MAR        REAL   NOT NULL," \
-      "Avg. Dev        REAL    NOT NULL," \
-      "speed        REAL    NOT NULL," \
-      "distance        REAL    NOT NULL," \
-      "a_x        REAL    NOT NULL," \
-      "a_y        REAL    NOT NULL," \
-      "a_z        REAL    NOT NULL," \
-      "ts         TIMESTAMP      NOT NULL);", buffer);
+      "AVGEAR        REAL    NOT NULL," \
+      "AVGMAR        REAL   NOT NULL," \
+      "AVGDEV        REAL    NOT NULL," \
+      "SPEED        REAL    NOT NULL," \
+      "DIST        REAL    NOT NULL," \
+      "AX        REAL    NOT NULL," \
+      "AY        REAL    NOT NULL," \
+      "AZ        REAL    NOT NULL," \
+      "TS         TIMESTAMP      NOT NULL);", buffer);
 
     /* Execute SQL statement */
     rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
@@ -219,8 +216,8 @@ void android_main(struct android_app* state)
         std::time_t result = std::time(nullptr);
 
         /* Create SQL statement */
-        sprintf(sql, "INSERT INTO %s (FRAME,SLEEPY,DROWSY,DISTRACTED,ALARMS,INTERVAL,AVGEAR,AVGMAR,AVGDEV,SPEED,DIST,AX,AY,AZ,TS)"  \
-         "VALUES (%s,%ld);", buffer, result);
+        sprintf(strbuf, "INSERT INTO M%s (FRAME,SLEEPY,DROWSY,DISTRACTED,ALARMS,INTERVAL,AVGEAR,AVGMAR,AVGDEV,SPEED,DIST,AX,AY,AZ,TS)"  \
+         "VALUES (%s,%ld);", buffer, strbuf, result);
 
         /* Execute SQL statement */
         rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
