@@ -1,4 +1,61 @@
 ninja: Entering directory `/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a'
-[1/3] Building CXX object CMakeFiles/native-activity.dir/home/tarzan/TorgTech/common/util_tflite.cpp.o
-[2/3] Building CXX object CMakeFiles/native-activity.dir/tflite_facemesh.cpp.o
-[3/3] Linking CXX shared library /home/tarzan/TorgTech/Mati_DSMS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so
+[1/4] Building CXX object CMakeFiles/native-activity.dir/app_engine.cpp.o
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:804:63: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        face_landmark_result_t face_mesh_ret[MAX_FACE_NUM] = {0};
+                                                              ^
+                                                              {}
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:805:61: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        irismesh_result_t iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+                                                            ^
+                                                            {}
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:805:61: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        irismesh_result_t iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+                                                            ^
+                                                            {}
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:805:61: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        irismesh_result_t iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+                                                            ^
+                                                            {}
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:805:61: warning: suggest braces around initialization of subobject [-Wmissing-braces]
+        irismesh_result_t iris_mesh_ret[MAX_FACE_NUM][2] = {0};
+                                                            ^
+                                                            {}
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:1078:43: warning: '&&' within '||' [-Wlogical-op-parentheses]
+            } else if (sound_started == 1 && blink_streak > yawn_streak || distracted_streak > blink_streak){
+                       ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:1078:43: note: place parentheses around the '&&' expression to silence this warning
+            } else if (sound_started == 1 && blink_streak > yawn_streak || distracted_streak > blink_streak){
+                                          ^
+                       (                                               )
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:1140:7: warning: field 'm_camera_facing' will be initialized after field 'blinks' [-Wreorder]
+      m_camera_facing(1),
+      ^
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:1149:7: warning: field 'avg_Dev' will be initialized after field 'avg_EAR' [-Wreorder]
+      avg_Dev(0.0),
+      ^
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:1150:7: warning: field 'avg_EAR' will be initialized after field 'sound_started' [-Wreorder]
+      avg_EAR(0.0),
+      ^
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:1152:7: warning: field 'sound_streak' will be initialized after field 'speed' [-Wreorder]
+      sound_streak(0),
+      ^
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:1157:7: warning: field 'a_z' will be initialized after field 'alarms' [-Wreorder]
+      a_z(0.0),
+      ^
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:1163:7: warning: field 'g_z' will be initialized after field 'v_x' [-Wreorder]
+      g_z(0.0),
+      ^
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:1166:7: warning: field 'v_z' will be initialized after field 'X' [-Wreorder]
+      v_z(0.0),
+      ^
+In file included from /home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp:14:
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.h:173:9: warning: private field 'sleep' is not used [-Wunused-private-field]
+    int sleep;
+        ^
+/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.h:174:9: warning: private field 'drowsy' is not used [-Wunused-private-field]
+    int drowsy;
+        ^
+15 warnings generated.
+[2/4] Building CXX object CMakeFiles/native-activity.dir/home/tarzan/TorgTech/common/util_tflite.cpp.o
+[3/4] Building CXX object CMakeFiles/native-activity.dir/tflite_facemesh.cpp.o
+[4/4] Linking CXX shared library /home/tarzan/TorgTech/Mati_DSMS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so

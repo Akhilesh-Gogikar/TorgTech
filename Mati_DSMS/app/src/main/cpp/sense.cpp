@@ -37,16 +37,7 @@ int sensor_ret ( float sense[]) {
              *   Reporting mode: on-change. Events are generated only when proximity
              *     value has changed.
              */
-            { ASENSOR_TYPE_PROXIMITY, "proximity sensor" },
-            /*
-             * Significant motion sensor:
-             *   Reporting mode: one-shot. An event is generated when significant
-             *     motion is detected. After that, the sensor will be disabled by
-             *     itself.
-             */
-            { ASENSOR_TYPE_SIGNIFICANT_MOTION, "significant motion sensor" },
 
-            { ASENSOR_TYPE_GRAVITY, "gravity" },
     };
     const int kNumSamples = 1;
     const int kNumEvents = 1;
@@ -71,25 +62,6 @@ int sensor_ret ( float sense[]) {
                             sense[0]=data.acceleration.x;
                             sense[1]=data.acceleration.y;
                             sense[2]=data.acceleration.z;
-                        } else if (sensor_type.first == ASENSOR_TYPE_GRAVITY) {
-                            printf("Acceleration: x = %f, y = %f, z = %f\n",
-                                   data.acceleration.x, data.acceleration.y,
-                                   data.acceleration.z);
-                            sense[5]=data.acceleration.x;
-                            sense[6]=data.acceleration.y;
-                            sense[7]=data.acceleration.z;
-                        }
-                        else if (sensor_type.first == ASENSOR_TYPE_PROXIMITY) {
-                            printf("Proximity distance: %f\n", data.distance);
-                            sense[3]=data.distance;
-                        } else if (sensor_type.first == ASENSOR_TYPE_SIGNIFICANT_MOTION) {
-                            if (data.data[0] == 1) {
-                                printf("Significant motion detected\n");
-                                sense[4]=1.0;
-                                break;
-                            }else{
-                                sense[4]=0.0;
-                            }
                         }
                     }
                 }

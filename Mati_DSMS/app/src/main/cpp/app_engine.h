@@ -105,6 +105,9 @@ typedef struct gles_ctx {
     texture_2d_t tex_static;
     texture_2d_t app_logo;
     texture_2d_t company_logo;
+    texture_2d_t safe_drive;
+    texture_2d_t drowsy;
+    texture_2d_t alert;
     texture_2d_t tex_camera;
     texture_2d_t tex_input;
     EGLImage egl_img;
@@ -182,9 +185,22 @@ private:
 
     float speed;
     float distance;
+
+    float X;
+    float Y;
+    float Z;
+
+    float v_x;
+    float v_y;
+    float v_z;
+
     float a_x;
     float a_y;
     float a_z;
+
+    float g_x;
+    float g_y;
+    float g_z;
 
     int sound_started;
     int sound_streak;

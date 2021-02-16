@@ -688,7 +688,7 @@ AppEngine::DrawTFLiteConfigInfo ()
 #else
     sprintf (strbuf, "GPU_DELEGATEV2: ---");
 #endif
-    draw_dbgstr_ex (strbuf, glctx.disp_w - 250, glctx.disp_h - 24, 1.0f, col_white, col_bg);
+    draw_dbgstr_ex (strbuf, glctx.disp_w - 300, glctx.disp_h - 50, 1.0f, col_white, col_bg);
 
 }
 
@@ -778,6 +778,10 @@ AppEngine::RenderFrame ()
     texture_2d_t srctex = glctx.tex_input;
     texture_2d_t app_logo = glctx.app_logo;
     texture_2d_t company_logo = glctx.company_logo;
+    texture_2d_t drive = glctx.safe_drive;
+    texture_2d_t drowsy = glctx.drowsy;
+    texture_2d_t alert = glctx.alert;
+
     int win_w  = glctx.disp_w;
     int win_h  = glctx.disp_h;
     static double ttime[10] = {0}, interval, invoke_ms0 = 0, invoke_ms1 = 0, invoke_ms2 = 0;
@@ -915,13 +919,57 @@ AppEngine::RenderFrame ()
 
         sensor_ret(sensordata);
 
-        auto kx=sensordata[5];
-        auto ky=sensordata[6];
-        auto kz=sensordata[7];
+        if (g_x <= 1.0 || g_y <= 1.0 || g_z <= 1.0){
+            g_x = sensordata[0];
+            g_y = sensordata[1];
+            g_z = sensordata[2];
+        } else {
+            g_x = 0.1*sensordata[0] + 0.9*g_x;
+            g_y = 0.1*sensordata[1] + 0.9*g_y;
+            g_z = 0.1*sensordata[2] + 0.9*g_z;
+        }
+
+        if (glctx.frame_count == 0){
+            a_x=sensordata[0] - g_x;
+            a_y=sensordata[1] - g_y;
+            a_z=sensordata[2] - g_z;
+
+        } else {
+            a_x = 1.0*(sensordata[0] -g_x);
+            a_y = 1.0*(sensordata[1] -g_y);
+            a_z = 1.0*(sensordata[2] -g_z);
+
+        }
+
+        X = X + interval*v_x/1000 + 0.5*a_x*interval*interval/1000000;
+        Y = Y + interval*v_y/1000 + 0.5*a_y*interval*interval/1000000;
+        Z = Z + interval*v_z/1000 + 0.5*a_z*interval*interval/1000000;
+
+        distance = std::sqrt(X*X + Y*Y + Z*Z)/1000;
+
+        if (a_x > 0.05){
+            v_x = v_x + interval*a_x/1000;
+        } else if (abs(v_x) > 0.0){
+            v_x = 0.8*v_x + interval*a_x/1000;
+        }
+
+        if (a_y > 0.05){
+            v_y = v_y + interval*a_y/1000;
+        } else if (abs(v_y) > 0.0){
+            v_y = 0.8*v_y + interval*a_y/1000;
+        }
+
+        if (a_z > 0.05){
+            v_z = v_z + interval*a_z/1000;
+        } else if (abs(v_z) > 0.0){
+            v_z = 0.8*v_z + interval*a_z/1000;
+        }
+
+        speed = 5*std::sqrt(v_x*v_x + v_y*v_y + v_z*v_z)/18;
 
         DBG_LOGE (
-        "Acc_X:%5.1f\nAcc_Y :%5.1f\nAcc_Z :%5.1f\nGra_X :%5.1f\nGra_Y :%5.1f\nGra_Z :%5.1f",
-        sensordata[0], sensordata[1], sensordata[2], sensordata[5], sensordata[6], sensordata[7]);
+        "Acc_X:%5.1f\nAcc_Y :%5.1f\nAcc_Z :%5.1f\nA_X :%5.1f\nA_Y :%5.1f\nA_Z :%5.1f",
+        sensordata[0], sensordata[1], sensordata[2], a_x, a_y, a_z);
 
         int fps = (int) round(1000 / interval);
 
@@ -965,6 +1013,7 @@ AppEngine::RenderFrame ()
         if (abs((face_mesh_ret[0].dev - avg_Dev)/avg_Dev) >= 0.4 && glctx.frame_count>=60*fps){
             distracted_streak += 1;
             distracted += 1;
+
         } else{
             distracted_streak=0;
         }
@@ -1007,20 +1056,36 @@ AppEngine::RenderFrame ()
 
             draw_pmeter(0, 40);
 
-            float camx = 225;
+            float camx = 200;
             float camy = 350;
             float camw = 300;
             float camh = 300;
 
             draw_2d_texture_ex(&app_logo, camx, camy, camw, camh, 0);
 
-            int dx = camx + 50;
+            int dx = camx + 25;
             int dy = camy + camh + 70;
-            int dw = camw - 100;
-            int dh = camh - 100;
+            int dw = camw - 75;
+            int dh = camh - 75;
 
 
             draw_2d_texture_ex(&company_logo, dx, dy + 25, dw, dh, 0);
+
+            if (sound_started == 1 && blink_streak < yawn_streak){
+
+                draw_2d_texture_ex(&drowsy, glctx.disp_w + 75 - camx - camw, camy- 200, camw, camh, 0);
+
+            } else if (sound_started == 1 && blink_streak > yawn_streak || distracted_streak > blink_streak){
+
+                draw_2d_texture_ex(&alert, glctx.disp_w + 75 - camx - camw, camy- 200, camw, camh, 0);
+
+            } else {
+
+                draw_2d_texture_ex(&drive, glctx.disp_w + 75 - camx - camw, camy- 200, camw, camh, 0);
+
+            }
+
+
 
             if(glctx.frame_count <= 60*fps) {
                 sprintf(strbuf,
@@ -1030,11 +1095,9 @@ AppEngine::RenderFrame ()
 
             } else{
                 sprintf(strbuf,
-                        "FPS: %d\nEAR :%5.1f , Avg. EAR:%5.1f\nMAR :%5.1f, Avg. MAR:%5.1f\nPose:%5.1f , Avg. Pose:%5.1f",
+                        "FPS: %d\nEAR :%5.2f , Avg. EAR:%5.2f\nMAR :%5.2f, Avg. MAR:%5.2f\nPose:%5.2f , Avg. Pose:%5.2f",
                         fps, EAR, avg_EAR, face_mesh_ret[0].MAR, avg_MAR, face_mesh_ret[0].dev, avg_Dev);
             }
-
-
 
             //DBG_LOGE (
                     //"Interval:%5.1f [ms]\nTFLite0 :%5.1f [ms]\nTFLite1 :%5.1f [ms]\nTFLite2 :%5.1f [ms]",
@@ -1042,13 +1105,23 @@ AppEngine::RenderFrame ()
             draw_dbgstr(strbuf, 20, 10);
 
             /* renderer info */
-            int y = win_h - 22 * 3;
-            draw_dbgstr(glctx.str_glverstion, 10, y);
+            int y = win_h - 22 * 5;
+            //draw_dbgstr(glctx.str_glverstion, 10, y);
+            //y += 22;
+            draw_dbgstr(glctx.str_glvendor, 125, y);
             y += 22;
-            draw_dbgstr(glctx.str_glvendor, 10, y);
+            draw_dbgstr(glctx.str_glrender, 125, y);
             y += 22;
-            draw_dbgstr(glctx.str_glrender, 10, y);
-            y += 22;
+
+            char state[512];
+
+            sprintf(state, "Speed: %3.2f kmph\nDistance: %2.2f km\nAcc_x: %8.2f\nAcc_y: %8.2f\nAcc_z: %8.2f", speed, distance, a_x, a_y, a_z);
+
+            float col_pink[]  = {1.0f, 0.0f, 0.5f, 0.0f};
+            float col_white[] = {1.0f, 1.0f, 1.0f, 1.0f};
+            float *col_bg = col_pink;
+
+            draw_dbgstr_ex(state, glctx.disp_w - 550, glctx.disp_h - 450, 2.5f, col_white, col_bg);
         }
 #if defined (USE_IMGUI)
         invoke_imgui (&imgui_data);
@@ -1084,7 +1157,17 @@ AppEngine::AppEngine (android_app* app)
       a_z(0.0),
       alarms(0),
       p_time(0.0),
-      time(0.0)
+      time(0.0),
+      g_x(0.0),
+      g_y(0.0),
+      g_z(0.0),
+      v_x(0.0),
+      v_y(0.0),
+      v_z(0.0),
+      X(0.0),
+      Y(0.0),
+      Z(0.0)
+
 {
     memset (&glctx, 0, sizeof (glctx));
 }
@@ -1173,6 +1256,12 @@ AppEngine::InitGLES (void)
     LoadInputTexture (&glctx.app_logo, (char *)"mati.jpg");
 
     LoadInputTexture (&glctx.company_logo, (char *)"Torg_Tech_logo.jpg");
+
+    LoadInputTexture (&glctx.drowsy, (char *)"drowsy.jpg");
+
+    LoadInputTexture (&glctx.safe_drive, (char *)"safe_Drive.jpg");
+
+    LoadInputTexture (&glctx.alert, (char *)"alert.jpg");
 
     /* render target for default framebuffer */
     get_render_target (&glctx.rtarget_main);
@@ -1390,8 +1479,6 @@ void
 AppEngine::StatusString (char* strbuf)
 {
     //char strbuf[512];
-
-
 
     sprintf (strbuf, "Frames:%d, Sleepy: %d, Drowsy: %d, Distracted: %d, Alarms: %d, Interval: %.2f, "
                      "Avg. EAR: %.2f, Avg. MAR: %.2f, Avg. Pose: %.2f, Speed: %0.2f, Distance: %.2f, "
