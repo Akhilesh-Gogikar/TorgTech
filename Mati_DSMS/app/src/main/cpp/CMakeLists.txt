@@ -124,6 +124,7 @@ add_library(native-activity SHARED
         ${CMAKE_CURRENT_SOURCE_DIR}/tflite_facemesh.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/render_imgui.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/sense.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/sqlite3.c
         ${commonDir}/android/camera_manager.cpp
         ${commonDir}/android/camera_utils.cpp
         ${commonDir}/android/gestureDetector.cpp

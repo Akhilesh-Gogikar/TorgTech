@@ -41,7 +41,7 @@ int sensor_ret ( float sense[]) {
     };
     const int kNumSamples = 1;
     const int kNumEvents = 1;
-    const int kTimeoutMilliSecs = 50;
+    const int kTimeoutMilliSecs = 25;
     const int kWaitTimeSecs = 1;
     for (auto& sensor_type : kSensorSamples) {
         const ASensor* sensor = ASensorManager_getDefaultSensor(sensor_manager,

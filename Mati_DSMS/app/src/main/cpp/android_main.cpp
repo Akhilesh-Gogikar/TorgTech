@@ -8,6 +8,10 @@
 #include <android_native_app_glue.h>
 #include "app_engine.h"
 #include "gestureDetector.h"
+#include "sqlite3.h"
+#include <chrono>
+#include <cstdio>
+#include <ctime>
 
 
 static AppEngine *s_pEngineObj = nullptr;
@@ -99,6 +103,23 @@ ProcessAndroidCmd (struct android_app* app, int32_t cmd)
     }
 }
 
+inline bool exists_test1 (const std::string& name) {
+    if (FILE *file = fopen(name.c_str(), "r")) {
+        fclose(file);
+        return true;
+    } else {
+        return false;
+    }
+}
+
+static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
+    int i;
+    for(i = 0; i<argc; i++) {
+        printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+    }
+    printf("\n");
+    return 0;
+}
 
 /*--------------------------------------------------------------------------- *
  *      M A I N    F U N C T I O N
@@ -111,6 +132,64 @@ void android_main(struct android_app* state)
     state->onInputEvent = engine_handle_input;
 
     s_pEngineObj = &engine;
+
+    sqlite3 *db;
+    char *zErrMsg = 0;
+    int rc;
+    char *sql;
+
+    rc = sqlite3_open("dsms.db", &db);
+
+    bool check = exists_test1("dsms.db");
+
+    if (check){
+
+    }
+
+    if( rc ) {
+        fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
+        return;
+    } else {
+        fprintf(stderr, "Opened database successfully\n");
+    }
+
+    std::time_t rawtime;
+    std::tm* timeinfo;
+    char buffer [80];
+
+    std::time(&rawtime);
+    timeinfo = std::localtime(&rawtime);
+
+    std::strftime(buffer,80,"%Y-%m-%d-%H-%M-%S",timeinfo);
+
+    /* Create SQL statement */
+    sprintf(sql ,"CREATE TABLE %s("  \
+      "FRAME INT PRIMARY KEY     NOT NULL," \
+      "SLEEPY           INT    NOT NULL," \
+      "DROWSY            INT     NOT NULL," \
+      "DISTRACTED        INT    NOT NULL," \
+      "ALARMS        INT    NOT NULL," \
+      "INTERVAL        REAL    NOT NULL," \
+      "Avg. EAR        REAL    NOT NULL," \
+      "Avg. MAR        REAL   NOT NULL," \
+      "Avg. Dev        REAL    NOT NULL," \
+      "speed        REAL    NOT NULL," \
+      "distance        REAL    NOT NULL," \
+      "a_x        REAL    NOT NULL," \
+      "a_y        REAL    NOT NULL," \
+      "a_z        REAL    NOT NULL," \
+      "ts         TIMESTAMP      NOT NULL);", buffer);
+
+    /* Execute SQL statement */
+    rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
+
+    if( rc != SQLITE_OK ){
+        fprintf(stderr, "SQL error: %s\n", zErrMsg);
+        sqlite3_free(zErrMsg);
+    } else {
+        fprintf(stdout, "Table created successfully\n");
+    }
+
 
     while (1)
     {
@@ -136,5 +215,23 @@ void android_main(struct android_app* state)
         char strbuf[512];
 
         engine.StatusString(strbuf);
+
+        std::time_t result = std::time(nullptr);
+
+        /* Create SQL statement */
+        sprintf(sql, "INSERT INTO %s (FRAME,SLEEPY,DROWSY,DISTRACTED,ALARMS,INTERVAL,AVGEAR,AVGMAR,AVGDEV,SPEED,DIST,AX,AY,AZ,TS)"  \
+         "VALUES (%s,%ld);", buffer, result);
+
+        /* Execute SQL statement */
+        rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
+
+        if( rc != SQLITE_OK ){
+            fprintf(stderr, "SQL error: %s\n", zErrMsg);
+            sqlite3_free(zErrMsg);
+        } else {
+            fprintf(stdout, "Records created successfully\n");
+        }
     }
+
+    sqlite3_close(db);
 }

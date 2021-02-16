@@ -919,53 +919,56 @@ AppEngine::RenderFrame ()
 
         sensor_ret(sensordata);
 
-        if (g_x <= 1.0 || g_y <= 1.0 || g_z <= 1.0){
-            g_x = sensordata[0];
-            g_y = sensordata[1];
-            g_z = sensordata[2];
-        } else {
-            g_x = 0.1*sensordata[0] + 0.9*g_x;
-            g_y = 0.1*sensordata[1] + 0.9*g_y;
-            g_z = 0.1*sensordata[2] + 0.9*g_z;
+        if (abs(sensordata[0]) < 20.0 && abs(sensordata[1]) < 20.0 && abs(sensordata[2]) < 20.0) {
+
+            if (g_x <= 1.0 || g_y <= 1.0 || g_z <= 1.0) {
+                g_x = sensordata[0];
+                g_y = sensordata[1];
+                g_z = sensordata[2];
+            } else {
+                g_x = 0.1 * sensordata[0] + 0.9 * g_x;
+                g_y = 0.1 * sensordata[1] + 0.9 * g_y;
+                g_z = 0.1 * sensordata[2] + 0.9 * g_z;
+            }
+
+            if (glctx.frame_count == 0) {
+                a_x = sensordata[0] - g_x;
+                a_y = sensordata[1] - g_y;
+                a_z = sensordata[2] - g_z;
+
+            } else {
+                a_x = 1.0 * (sensordata[0] - g_x);
+                a_y = 1.0 * (sensordata[1] - g_y);
+                a_z = 1.0 * (sensordata[2] - g_z);
+
+            }
+
+            X = X + interval * v_x / 1000 + 0.5 * a_x * interval * interval / 1000000;
+            Y = Y + interval * v_y / 1000 + 0.5 * a_y * interval * interval / 1000000;
+            Z = Z + interval * v_z / 1000 + 0.5 * a_z * interval * interval / 1000000;
+
+            distance = std::sqrt(X * X + Y * Y + Z * Z) / 1000;
+
+            if (a_x > 0.05) {
+                v_x = v_x + interval * a_x / 1000;
+            } else if (abs(v_x) > 0.0) {
+                v_x = 0.8 * v_x + interval * a_x / 1000;
+            }
+
+            if (a_y > 0.05) {
+                v_y = v_y + interval * a_y / 1000;
+            } else if (abs(v_y) > 0.0) {
+                v_y = 0.8 * v_y + interval * a_y / 1000;
+            }
+
+            if (a_z > 0.05) {
+                v_z = v_z + interval * a_z / 1000;
+            } else if (abs(v_z) > 0.0) {
+                v_z = 0.8 * v_z + interval * a_z / 1000;
+            }
+
+            speed = 5 * std::sqrt(v_x * v_x + v_y * v_y + v_z * v_z) / 18;
         }
-
-        if (glctx.frame_count == 0){
-            a_x=sensordata[0] - g_x;
-            a_y=sensordata[1] - g_y;
-            a_z=sensordata[2] - g_z;
-
-        } else {
-            a_x = 1.0*(sensordata[0] -g_x);
-            a_y = 1.0*(sensordata[1] -g_y);
-            a_z = 1.0*(sensordata[2] -g_z);
-
-        }
-
-        X = X + interval*v_x/1000 + 0.5*a_x*interval*interval/1000000;
-        Y = Y + interval*v_y/1000 + 0.5*a_y*interval*interval/1000000;
-        Z = Z + interval*v_z/1000 + 0.5*a_z*interval*interval/1000000;
-
-        distance = std::sqrt(X*X + Y*Y + Z*Z)/1000;
-
-        if (a_x > 0.05){
-            v_x = v_x + interval*a_x/1000;
-        } else if (abs(v_x) > 0.0){
-            v_x = 0.8*v_x + interval*a_x/1000;
-        }
-
-        if (a_y > 0.05){
-            v_y = v_y + interval*a_y/1000;
-        } else if (abs(v_y) > 0.0){
-            v_y = 0.8*v_y + interval*a_y/1000;
-        }
-
-        if (a_z > 0.05){
-            v_z = v_z + interval*a_z/1000;
-        } else if (abs(v_z) > 0.0){
-            v_z = 0.8*v_z + interval*a_z/1000;
-        }
-
-        speed = 5*std::sqrt(v_x*v_x + v_y*v_y + v_z*v_z)/18;
 
         DBG_LOGE (
         "Acc_X:%5.1f\nAcc_Y :%5.1f\nAcc_Z :%5.1f\nA_X :%5.1f\nA_Y :%5.1f\nA_Z :%5.1f",
@@ -1102,7 +1105,7 @@ AppEngine::RenderFrame ()
             //DBG_LOGE (
                     //"Interval:%5.1f [ms]\nTFLite0 :%5.1f [ms]\nTFLite1 :%5.1f [ms]\nTFLite2 :%5.1f [ms]",
                     //interval, invoke_ms0, invoke_ms1, invoke_ms2);
-            draw_dbgstr(strbuf, 20, 10);
+            draw_dbgstr(strbuf, 120, 10);
 
             /* renderer info */
             int y = win_h - 22 * 5;
@@ -1480,12 +1483,8 @@ AppEngine::StatusString (char* strbuf)
 {
     //char strbuf[512];
 
-    sprintf (strbuf, "Frames:%d, Sleepy: %d, Drowsy: %d, Distracted: %d, Alarms: %d, Interval: %.2f, "
-                     "Avg. EAR: %.2f, Avg. MAR: %.2f, Avg. Pose: %.2f, Speed: %0.2f, Distance: %.2f, "
-                     "Acc_X: %0.2f, Acc_Y: %0.2f, Acc_Z: %0.2f\n",
+    sprintf (strbuf, "%d, %d, %d, %d, %d, %.2f, %.2f, %.2f, %.2f, %0.2f, %.2f, %0.2f, %0.2f, %0.2f",
              glctx.frame_count, blinks, yawns, distracted, alarms, p_time, avg_EAR, avg_MAR, avg_Dev, speed, distance, a_x, a_y, a_z);
-
-    //DBG_LOGE("%s", strbuf);
 
     return;
 }

@@ -25,6 +25,11 @@
       "artifactName": "native-activity",
       "files": [
         {
+          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/sqlite3.c",
+          "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        },
+        {
           "src": "/home/tarzan/TorgTech/common/assertgl.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
