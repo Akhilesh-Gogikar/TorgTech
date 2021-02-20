@@ -1,68 +1,148 @@
 1<?xml version="1.0" encoding="utf-8"?>
-2<!-- BEGIN_INCLUDE(manifest) -->
-3<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-4    package="com.example.tflite_iris_landmark"
-5    android:versionCode="1"
-6    android:versionName="1.0" >
-7
-8    <uses-sdk
-9        android:minSdkVersion="27"
-9-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
-10        android:targetSdkVersion="28" />
-10-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml
-11
-12    <uses-feature android:name="android.hardware.camera" />
-12-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:7:3-58
-12-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:7:17-55
-13
-14    <uses-permission android:name="android.permission.CAMERA" />
-14-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:8:3-63
-14-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:8:20-60
-15
-16    <application
-16-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:9:3-27:17
-17        android:allowBackup="false"
-17-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:10:7-34
-18        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
-18-->[com.android.support:support-compat:28.0.0] /home/tarzan/.gradle/caches/transforms-2/files-2.1/f14724208b5bfeeef0d6bdefe649bca7/support-compat-28.0.0/AndroidManifest.xml:22:18-91
-19        android:debuggable="true"
-20        android:fullBackupContent="false"
-20-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:11:7-40
-21        android:hasCode="true"
-21-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:14:7-29
-22        android:icon="@mipmap/ic_launcher"
-22-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:12:7-41
-23        android:label="@string/app_name"
-23-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:13:7-39
-24        android:testOnly="true" >
-25        <activity
-25-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:16:5-26:16
-26            android:name="com.glesapp.glesapp.GLESAppNativeActivity"
-26-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:16:15-71
-27            android:configChanges="orientation|keyboardHidden"
-27-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:19:15-65
-28            android:label="@string/app_name"
-28-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:17:15-47
-29            android:screenOrientation="landscape" >
-29-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:18:15-52
-30            <meta-data
-30-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:20:7-21:52
-31                android:name="android.app.lib_name"
-31-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:20:18-53
-32                android:value="native-activity" />
-32-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:21:18-49
-33
-34            <intent-filter>
-34-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:22:7-25:23
-35                <action android:name="android.intent.action.MAIN" />
-35-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:23:9-61
-35-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:23:17-58
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:24:9-69
-37-->/home/tarzan/TorgTech/Mati_DSMS/app/src/main/AndroidManifest.xml:24:19-66
-38            </intent-filter>
-39        </activity>
-40    </application>
-41
-42</manifest>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.torgtek.matidsms"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="27"
+8-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml
+10
+11    <uses-feature android:name="android.hardware.camera" />
+11-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:7:5-60
+11-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:7:19-57
+12
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:9:5-65
+13-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:9:22-62
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:10:5-81
+14-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:10:22-78
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:11:5-79
+15-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:11:22-76
+16
+17    <application
+17-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:13:5-46:19
+18        android:allowBackup="false"
+18-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:14:9-36
+19        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+19-->[com.android.support:support-compat:28.0.0] /home/aki/.gradle/caches/transforms-2/files-2.1/f14724208b5bfeeef0d6bdefe649bca7/support-compat-28.0.0/AndroidManifest.xml:22:18-91
+20        android:debuggable="true"
+21        android:fullBackupContent="false"
+21-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:15:9-42
+22        android:hasCode="true"
+22-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:16:9-31
+23        android:icon="@mipmap/ic_launcher"
+23-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:17:9-43
+24        android:label="@string/app_name"
+24-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:18:9-41
+25        android:testOnly="true"
+26        android:theme="@style/Theme.AppCompat.Light" >
+26-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:19:9-53
+27        <service
+27-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:20:9-24:19
+28            android:name="com.torgtek.matidsms.BackgroundService"
+28-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:21:13-46
+29            android:exported="false" >
+29-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:22:13-37
+30        </service>
+31
+32        <activity android:name="com.torgtek.matidsms.MainActivity" />
+32-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:26:9-50
+32-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:26:19-47
+33        <activity
+33-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:27:9-36:20
+34            android:name="com.torgtek.matidsms.ui.login.LoginActivity"
+34-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:28:13-51
+35            android:label="@string/title_activity_login"
+35-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:29:13-57
+36            android:theme="@style/Theme.AppCompat.Light" >
+36-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:30:13-57
+37            <intent-filter>
+37-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:31:13-35:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:32:17-69
+38-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:32:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:34:17-77
+40-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:34:27-74
+41            </intent-filter>
+42        </activity>
+43        <activity
+43-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:37:9-45:20
+44            android:name="com.glesapp.glesapp.GLESAppNativeActivity"
+44-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:38:13-69
+45            android:configChanges="orientation|keyboardHidden"
+45-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:39:13-63
+46            android:label="@string/app_name"
+46-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:40:13-45
+47            android:screenOrientation="landscape" >
+47-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:41:13-50
+48            <meta-data
+48-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:42:13-44:51
+49                android:name="android.app.lib_name"
+49-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:43:17-52
+50                android:value="native-activity" />
+50-->/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/AndroidManifest.xml:44:17-48
+51        </activity>
+52        <activity
+52-->[pub.devrel:easypermissions:2.0.1] /home/aki/.gradle/caches/transforms-2/files-2.1/ff808269d785d750cefdaf17e82ad589/easypermissions-2.0.1/AndroidManifest.xml:12:9-16:66
+53            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
+53-->[pub.devrel:easypermissions:2.0.1] /home/aki/.gradle/caches/transforms-2/files-2.1/ff808269d785d750cefdaf17e82ad589/easypermissions-2.0.1/AndroidManifest.xml:13:13-86
+54            android:exported="false"
+54-->[pub.devrel:easypermissions:2.0.1] /home/aki/.gradle/caches/transforms-2/files-2.1/ff808269d785d750cefdaf17e82ad589/easypermissions-2.0.1/AndroidManifest.xml:14:13-37
+55            android:label=""
+55-->[pub.devrel:easypermissions:2.0.1] /home/aki/.gradle/caches/transforms-2/files-2.1/ff808269d785d750cefdaf17e82ad589/easypermissions-2.0.1/AndroidManifest.xml:15:13-29
+56            android:theme="@style/EasyPermissions.Transparent" />
+56-->[pub.devrel:easypermissions:2.0.1] /home/aki/.gradle/caches/transforms-2/files-2.1/ff808269d785d750cefdaf17e82ad589/easypermissions-2.0.1/AndroidManifest.xml:16:13-63
+57        <activity
+57-->[com.google.android.gms:play-services-auth:16.0.0] /home/aki/.gradle/caches/transforms-2/files-2.1/418ffe544bfe2a4e46c152a6ab208ba7/play-services-auth-16.0.0/AndroidManifest.xml:23:9-27:75
+58            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+58-->[com.google.android.gms:play-services-auth:16.0.0] /home/aki/.gradle/caches/transforms-2/files-2.1/418ffe544bfe2a4e46c152a6ab208ba7/play-services-auth-16.0.0/AndroidManifest.xml:24:13-93
+59            android:excludeFromRecents="true"
+59-->[com.google.android.gms:play-services-auth:16.0.0] /home/aki/.gradle/caches/transforms-2/files-2.1/418ffe544bfe2a4e46c152a6ab208ba7/play-services-auth-16.0.0/AndroidManifest.xml:25:13-46
+60            android:exported="false"
+60-->[com.google.android.gms:play-services-auth:16.0.0] /home/aki/.gradle/caches/transforms-2/files-2.1/418ffe544bfe2a4e46c152a6ab208ba7/play-services-auth-16.0.0/AndroidManifest.xml:26:13-37
+61            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+61-->[com.google.android.gms:play-services-auth:16.0.0] /home/aki/.gradle/caches/transforms-2/files-2.1/418ffe544bfe2a4e46c152a6ab208ba7/play-services-auth-16.0.0/AndroidManifest.xml:27:13-72
+62        <!--
+63            Service handling Google Sign-In user revocation. For apps that do not integrate with
+64            Google Sign-In, this service will never be started.
+65        -->
+66        <service
+66-->[com.google.android.gms:play-services-auth:16.0.0] /home/aki/.gradle/caches/transforms-2/files-2.1/418ffe544bfe2a4e46c152a6ab208ba7/play-services-auth-16.0.0/AndroidManifest.xml:33:9-36:110
+67            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+67-->[com.google.android.gms:play-services-auth:16.0.0] /home/aki/.gradle/caches/transforms-2/files-2.1/418ffe544bfe2a4e46c152a6ab208ba7/play-services-auth-16.0.0/AndroidManifest.xml:34:13-89
+68            android:exported="true"
+68-->[com.google.android.gms:play-services-auth:16.0.0] /home/aki/.gradle/caches/transforms-2/files-2.1/418ffe544bfe2a4e46c152a6ab208ba7/play-services-auth-16.0.0/AndroidManifest.xml:35:13-36
+69            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+69-->[com.google.android.gms:play-services-auth:16.0.0] /home/aki/.gradle/caches/transforms-2/files-2.1/418ffe544bfe2a4e46c152a6ab208ba7/play-services-auth-16.0.0/AndroidManifest.xml:36:13-107
+70
+71        <activity
+71-->[com.google.android.gms:play-services-base:15.0.1] /home/aki/.gradle/caches/transforms-2/files-2.1/8a238751f281a7df6433d71cb1e51553/play-services-base-15.0.1/AndroidManifest.xml:23:9-26:75
+72            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+72-->[com.google.android.gms:play-services-base:15.0.1] /home/aki/.gradle/caches/transforms-2/files-2.1/8a238751f281a7df6433d71cb1e51553/play-services-base-15.0.1/AndroidManifest.xml:24:13-79
+73            android:exported="false"
+73-->[com.google.android.gms:play-services-base:15.0.1] /home/aki/.gradle/caches/transforms-2/files-2.1/8a238751f281a7df6433d71cb1e51553/play-services-base-15.0.1/AndroidManifest.xml:25:13-37
+74            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+74-->[com.google.android.gms:play-services-base:15.0.1] /home/aki/.gradle/caches/transforms-2/files-2.1/8a238751f281a7df6433d71cb1e51553/play-services-base-15.0.1/AndroidManifest.xml:26:13-72
+75
+76        <meta-data
+76-->[com.google.android.gms:play-services-basement:15.0.1] /home/aki/.gradle/caches/transforms-2/files-2.1/7e9712b97e48a8df88241daaac2516ad/play-services-basement-15.0.1/AndroidManifest.xml:23:9-25:69
+77            android:name="com.google.android.gms.version"
+77-->[com.google.android.gms:play-services-basement:15.0.1] /home/aki/.gradle/caches/transforms-2/files-2.1/7e9712b97e48a8df88241daaac2516ad/play-services-basement-15.0.1/AndroidManifest.xml:24:13-58
+78            android:value="@integer/google_play_services_version" />
+78-->[com.google.android.gms:play-services-basement:15.0.1] /home/aki/.gradle/caches/transforms-2/files-2.1/7e9712b97e48a8df88241daaac2516ad/play-services-basement-15.0.1/AndroidManifest.xml:25:13-66
+79        <meta-data
+79-->[com.android.support:support-v4:26.1.0] /home/aki/.gradle/caches/transforms-2/files-2.1/551bc97023610b3a2a13198864385efa/support-v4-26.1.0/AndroidManifest.xml:26:9-28:38
+80            android:name="android.support.VERSION"
+80-->[com.android.support:support-v4:26.1.0] /home/aki/.gradle/caches/transforms-2/files-2.1/551bc97023610b3a2a13198864385efa/support-v4-26.1.0/AndroidManifest.xml:27:13-51
+81            android:value="26.1.0" />
+81-->[com.android.support:support-v4:26.1.0] /home/aki/.gradle/caches/transforms-2/files-2.1/551bc97023610b3a2a13198864385efa/support-v4-26.1.0/AndroidManifest.xml:28:13-35
+82    </application>
+83
+84</manifest>

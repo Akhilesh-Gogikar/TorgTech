@@ -1,440 +1,450 @@
 {
   "stringTable": {
-    "0": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a",
-    "1": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DOBOE_ENABLE_LOGGING=1 -Dnative_activity_EXPORTS -I/home/tarzan/TorgTech/third_party/tensorflow -I/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include -I/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/com_google_absl -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui/examples -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/android -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/winsys -I/home/tarzan/Android/Sdk/ndk/21.1.6352462/sources/android/native_app_glue -I/home/tarzan/TorgTech/third_party/oboe/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=gnu++11 -Wall -O0 -fno-limit-debug-info -fPIC -DUSE_GPU_DELEGATEV2 -DUSE_IMGUI -DIMGUI_IMPL_OPENGL_ES2 -DEGL_EGLEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES",
-    "2": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DOBOE_ENABLE_LOGGING=1 -Dnative_activity_EXPORTS -I/home/tarzan/TorgTech/third_party/tensorflow -I/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include -I/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/com_google_absl -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui/examples -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/android -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/winsys -I/home/tarzan/Android/Sdk/ndk/21.1.6352462/sources/android/native_app_glue -I/home/tarzan/TorgTech/third_party/oboe/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC -DUSE_GPU_DELEGATEV2 -DUSE_IMGUI -DIMGUI_IMPL_OPENGL_ES2 -DEGL_EGLEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES",
-    "3": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot -I/home/tarzan/TorgTech/third_party/tensorflow -I/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include -I/home/tarzan/TorgTech/third_party/tensorflow/bazel-bin/../../../external/com_google_absl -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui/examples -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../third_party -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/android -I/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/../../../../../common/winsys -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC",
-    "4": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DOBOE_ENABLE_LOGGING=1 -I/home/tarzan/TorgTech/third_party/oboe/src -I/home/tarzan/TorgTech/third_party/oboe/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=gnu++11 -Wall -O0 -fno-limit-debug-info -fPIC -std=c++14 -Wall -Wextra-semi -Wshadow -Wshadow-field -Ofast -Werror"
+    "0": "/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a",
+    "1": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/aki/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/aki/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DOBOE_ENABLE_LOGGING=1 -Dnative_activity_EXPORTS -I/home/aki/StudioProjects/TorgTech2/third_party/tensorflow -I/home/aki/StudioProjects/TorgTech2/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include -I/home/aki/StudioProjects/TorgTech2/third_party/tensorflow/bazel-bin/../../../external/com_google_absl -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui/examples -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../third_party -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../common -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../common/android -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../common/winsys -I/home/aki/Android/Sdk/ndk/21.1.6352462/sources/android/native_app_glue -I/home/aki/StudioProjects/TorgTech2/third_party/oboe/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=gnu++11 -Wall -O0 -fno-limit-debug-info -fPIC -DUSE_GPU_DELEGATEV2 -DUSE_IMGUI -DIMGUI_IMPL_OPENGL_ES2 -DEGL_EGLEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES",
+    "2": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/aki/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/aki/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DOBOE_ENABLE_LOGGING=1 -Dnative_activity_EXPORTS -I/home/aki/StudioProjects/TorgTech2/third_party/tensorflow -I/home/aki/StudioProjects/TorgTech2/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include -I/home/aki/StudioProjects/TorgTech2/third_party/tensorflow/bazel-bin/../../../external/com_google_absl -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui/examples -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../third_party -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../common -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../common/android -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../common/winsys -I/home/aki/Android/Sdk/ndk/21.1.6352462/sources/android/native_app_glue -I/home/aki/StudioProjects/TorgTech2/third_party/oboe/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC -DUSE_GPU_DELEGATEV2 -DUSE_IMGUI -DIMGUI_IMPL_OPENGL_ES2 -DEGL_EGLEXT_PROTOTYPES -DGL_GLEXT_PROTOTYPES",
+    "3": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/aki/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/aki/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot -I/home/aki/StudioProjects/TorgTech2/third_party/tensorflow -I/home/aki/StudioProjects/TorgTech2/third_party/tensorflow/bazel-bin/../../../external/flatbuffers/include -I/home/aki/StudioProjects/TorgTech2/third_party/tensorflow/bazel-bin/../../../external/com_google_absl -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../third_party/imgui/examples -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../third_party -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../common -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../common/android -I/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/../../../../../common/winsys -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC",
+    "4": "--target=aarch64-none-linux-android27 --gcc-toolchain=/home/aki/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/aki/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DOBOE_ENABLE_LOGGING=1 -I/home/aki/StudioProjects/TorgTech2/third_party/oboe/src -I/home/aki/StudioProjects/TorgTech2/third_party/oboe/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=gnu++11 -Wall -O0 -fno-limit-debug-info -fPIC -std=c++14 -Wall -Wextra-semi -Wshadow -Wshadow-field -Ofast -Werror"
   },
   "buildFiles": [
-    "/home/tarzan/TorgTech/third_party/oboe/CMakeLists.txt",
-    "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/CMakeLists.txt",
-    "/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
-    "/home/tarzan/Android/Sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
+    "/home/aki/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/home/aki/Android/Sdk/ndk/21.1.6352462/build/cmake/platforms.cmake",
+    "/home/aki/StudioProjects/TorgTech2/third_party/oboe/CMakeLists.txt",
+    "/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/CMakeLists.txt"
   ],
   "cleanCommands": [
-    "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" clean"
+    "/home/aki/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" clean"
   ],
-  "buildTargetsCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "/home/aki/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "native-activity-Debug-arm64-v8a": {
-      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" native-activity",
+      "buildCommand": "/home/aki/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" native-activity",
       "buildType": "debug",
-      "toolchain": "3477997986",
+      "toolchain": "2114204544",
       "abi": "arm64-v8a",
       "artifactName": "native-activity",
       "files": [
         {
-          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/sqlite3.c",
+          "src": "/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/sqlite3.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/assertgl.c",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/assertgl.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/assertegl.c",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/assertegl.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/util_egl.c",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/util_egl.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/util_shader.c",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/util_shader.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/util_matrix.c",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/util_matrix.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/util_texture.c",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/util_texture.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/util_render2d.c",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/util_render2d.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/util_render_target.c",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/util_render_target.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/util_debugstr.c",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/util_debugstr.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/util_pmeter.c",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/util_pmeter.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/winsys/winsys_null.c",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/winsys/winsys_null.c",
           "flagsOrdinal": 2,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/android_main.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/android_main.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/app_engine.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/app_engine.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/tflite_facemesh.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/tflite_facemesh.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/render_imgui.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/render_imgui.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/Mati_DSMS/app/src/main/cpp/sense.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/sense.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/android/camera_manager.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/android/camera_manager.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/android/camera_utils.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/android/camera_utils.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/android/gestureDetector.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/android/gestureDetector.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/android/util_asset.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/android/util_asset.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/common/util_tflite.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/common/util_tflite.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/imgui/imgui.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/imgui/imgui.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/imgui/imgui_draw.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/imgui/imgui_draw.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/imgui/imgui_widgets.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/imgui/imgui_widgets.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/imgui/examples/imgui_impl_opengl3.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/imgui/examples/imgui_impl_opengl3.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "/home/tarzan/TorgTech/Mati_DSMS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so"
+      "output": "/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-activity.so"
     },
     "native_app_glue-Debug-arm64-v8a": {
-      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" native_app_glue",
+      "buildCommand": "/home/aki/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" native_app_glue",
       "buildType": "debug",
-      "toolchain": "3477997986",
+      "toolchain": "2114204544",
       "abi": "arm64-v8a",
       "artifactName": "native_app_glue",
       "files": [
         {
-          "src": "/home/tarzan/Android/Sdk/ndk/21.1.6352462/sources/android/native_app_glue/android_native_app_glue.c",
+          "src": "/home/aki/Android/Sdk/ndk/21.1.6352462/sources/android/native_app_glue/android_native_app_glue.c",
           "flagsOrdinal": 3,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/libnative_app_glue.a"
+      "output": "/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/libnative_app_glue.a"
     },
     "oboe-Debug-arm64-v8a": {
-      "buildCommand": "/home/tarzan/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" oboe",
+      "buildCommand": "/home/aki/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a\" oboe",
       "buildType": "debug",
-      "toolchain": "3477997986",
+      "toolchain": "2114204544",
       "abi": "arm64-v8a",
       "artifactName": "oboe",
       "files": [
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/aaudio/AAudioLoader.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/aaudio/AAudioLoader.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/aaudio/AudioStreamAAudio.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/aaudio/AudioStreamAAudio.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/AudioSourceCaller.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/AudioSourceCaller.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/AudioStream.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/AudioStream.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/AudioStreamBuilder.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/AudioStreamBuilder.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/DataConversionFlowGraph.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/DataConversionFlowGraph.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/FilterAudioStream.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/FilterAudioStream.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/FixedBlockAdapter.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/FixedBlockAdapter.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/FixedBlockReader.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/FixedBlockReader.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/FixedBlockWriter.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/FixedBlockWriter.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/LatencyTuner.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/LatencyTuner.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/SourceFloatCaller.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/SourceFloatCaller.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/SourceI16Caller.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/SourceI16Caller.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/Utilities.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/Utilities.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/QuirksManager.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/QuirksManager.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/fifo/FifoBuffer.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/fifo/FifoBuffer.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/fifo/FifoController.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/fifo/FifoController.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/fifo/FifoControllerBase.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/fifo/FifoControllerBase.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/fifo/FifoControllerIndirect.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/fifo/FifoControllerIndirect.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/FlowGraphNode.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/FlowGraphNode.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/ClipToRange.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/ChannelCountConverter.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/ManyToMultiConverter.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/ClipToRange.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/MonoToMultiConverter.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/ManyToMultiConverter.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/RampLinear.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/MonoToMultiConverter.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/SampleRateConverter.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/MultiToMonoConverter.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/SinkFloat.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/RampLinear.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/SinkI16.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/SampleRateConverter.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/SinkI24.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/SinkFloat.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/SourceFloat.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/SinkI16.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/SourceI16.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/SinkI24.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/SourceI24.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/SourceFloat.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/resampler/IntegerRatio.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/SourceI16.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/resampler/LinearResampler.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/SourceI24.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/resampler/MultiChannelResampler.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/resampler/IntegerRatio.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/resampler/PolyphaseResampler.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/resampler/LinearResampler.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/resampler/PolyphaseResamplerMono.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/resampler/MultiChannelResampler.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/resampler/PolyphaseResamplerStereo.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/resampler/PolyphaseResampler.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/resampler/SincResampler.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/resampler/PolyphaseResamplerMono.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/flowgraph/resampler/SincResamplerStereo.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/resampler/PolyphaseResamplerStereo.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/opensles/AudioInputStreamOpenSLES.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/resampler/SincResampler.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/opensles/AudioOutputStreamOpenSLES.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/flowgraph/resampler/SincResamplerStereo.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/opensles/AudioStreamBuffered.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/opensles/AudioInputStreamOpenSLES.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/opensles/AudioStreamOpenSLES.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/opensles/AudioOutputStreamOpenSLES.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/opensles/EngineOpenSLES.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/opensles/AudioStreamBuffered.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/opensles/OpenSLESUtilities.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/opensles/AudioStreamOpenSLES.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/opensles/OutputMixerOpenSLES.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/opensles/EngineOpenSLES.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/StabilizedCallback.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/opensles/OpenSLESUtilities.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/Trace.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/opensles/OutputMixerOpenSLES.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/home/tarzan/TorgTech/third_party/oboe/src/common/Version.cpp",
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/StabilizedCallback.cpp",
+          "flagsOrdinal": 4,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/Trace.cpp",
+          "flagsOrdinal": 4,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/home/aki/StudioProjects/TorgTech2/third_party/oboe/src/common/Version.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "/home/tarzan/TorgTech/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/oboe/liboboe.a"
+      "output": "/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/.cxx/cmake/debug/arm64-v8a/oboe/liboboe.a"
     }
   },
   "toolchains": {
-    "3477997986": {
-      "cCompilerExecutable": "/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
-      "cppCompilerExecutable": "/home/tarzan/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+    "2114204544": {
+      "cCompilerExecutable": "/home/aki/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang",
+      "cppCompilerExecutable": "/home/aki/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
     }
   },
   "cFileExtensions": [

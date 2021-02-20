@@ -138,9 +138,9 @@ void android_main(struct android_app* state)
     int rc;
     char sql[1024];
 
-    rc = sqlite3_open("/data/data/com.example.tflite_iris_landmark/databases/dsms.db", &db);
+    rc = sqlite3_open("/data/data/com.torgtek.matidsms/databases/dsms.db", &db);
 
-    bool check = exists_test1("/data/data/com.example.tflite_iris_landmark/databases/dsms.db");
+    bool check = exists_test1("/data/data/com.torgtek.matidsms/databases/dsms.db");
 
     if( rc ) {
         fprintf(stderr, "Can't open database: %s\n", sqlite3_errmsg(db));
@@ -160,7 +160,7 @@ void android_main(struct android_app* state)
 
     /* Create SQL statement */
 
-    sprintf(sql ,"CREATE TABLE M%s ("  \
+    sprintf(sql ,"CREATE TABLE LOGS ("  \
       "FRAME    INT    PRIMARY KEY     NOT NULL," \
       "SLEEPY           INT    NOT NULL," \
       "DROWSY            INT     NOT NULL," \
@@ -216,11 +216,11 @@ void android_main(struct android_app* state)
         std::time_t result = std::time(nullptr);
 
         /* Create SQL statement */
-        sprintf(strbuf, "INSERT INTO M%s (FRAME,SLEEPY,DROWSY,DISTRACTED,ALARMS,INTERVAL,AVGEAR,AVGMAR,AVGDEV,SPEED,DIST,AX,AY,AZ,TS)"  \
+        sprintf(strbuf, "INSERT INTO LOGS (FRAME,SLEEPY,DROWSY,DISTRACTED,ALARMS,INTERVAL,AVGEAR,AVGMAR,AVGDEV,SPEED,DIST,AX,AY,AZ,TS)"  \
          "VALUES (%s,%ld);", buffer, strbuf, result);
 
         /* Execute SQL statement */
-        rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
+        rc = sqlite3_exec(db, strbuf, callback, 0, &zErrMsg);
 
         if( rc != SQLITE_OK ){
             fprintf(stderr, "SQL error: %s\n", zErrMsg);
