@@ -91,8 +91,8 @@ imgui_is_anywindow_hovered ()
 static void
 render_gui (imgui_data_t *imgui_data)
 {
-    int win_w = 460;
-    int win_h = 250;
+    int win_w = 400;
+    int win_h = 100;
     int win_y = 10;
 
     s_win_num = 0;
@@ -100,9 +100,10 @@ render_gui (imgui_data_t *imgui_data)
     /* Show main window */
     ImGui::SetNextWindowPos (ImVec2(_X(s_win_w - win_w - 10), _Y(win_y)), ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowSize(ImVec2(_X(win_w),                _Y(win_h)), ImGuiCond_FirstUseEver);
+
     ImGui::Begin("Options");
     {
-        if (ImGui::Button("Change Camera"))
+        if (ImGui::Button("End Trip"))
         {
             imgui_data->camera_facing = 1 - imgui_data->camera_facing;
         }
@@ -120,7 +121,7 @@ invoke_imgui (imgui_data_t *imgui_data)
     ImGui_ImplOpenGL3_NewFrame();
     ImGui::NewFrame();
 
-    //render_gui (imgui_data);
+    render_gui (imgui_data);
 
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

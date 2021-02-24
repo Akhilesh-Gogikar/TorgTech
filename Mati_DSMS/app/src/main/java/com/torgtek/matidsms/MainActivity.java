@@ -19,10 +19,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.torgtek.matidsms.R;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 import pub.devrel.easypermissions.EasyPermissions;
 
 
@@ -36,8 +47,9 @@ public class MainActivity extends AppCompatActivity  {
     private static final int PERMISSION_REQUEST_CODE = 12;
     private static final int PERMISSION_REQUEST_CODE_GPS = 13;
     private static final int PERMISSION_REQUEST_CODE_STORAGE = 14;
+    private static final int PERMISSION_REQUEST_CODE_INTERNET = 15;
     private int requestCode;
-    private List<String> perms;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,23 +73,9 @@ public class MainActivity extends AppCompatActivity  {
                 if (checkPermission()) {
                     startbutton.setEnabled(false);
                     startbutton.setText("Starting....");
-                    SQLiteDatabase mydatabase = openOrCreateDatabase("/data/data/com.torgtek.matidsms/databases/dsms.db",MODE_PRIVATE,null);
 
-                    SQLiteDatabase checkDB = null;
-                    try {
-                        checkDB = SQLiteDatabase.openDatabase("/data/data/com.torgtek.matidsms/databases/dsms.db", null,
-                                SQLiteDatabase.OPEN_READONLY);
 
-                    } catch (SQLiteException e) {
-                        // database doesn't exist yet.
-                        Object a="";
-                    }
-                    Cursor resultSet = mydatabase.rawQuery("Select * from LOGS",null);
-                    while (resultSet.moveToNext()) {
-                        Object k=resultSet.getString(0);
-                    }
-                    checkDB.close();
-                    mydatabase.close();
+
 
                     startService(new Intent(MainActivity.this,BackgroundService.class));
                     Intent ax=new Intent(MainActivity.this,com.glesapp.glesapp.GLESAppNativeActivity.class);
@@ -101,6 +99,7 @@ public class MainActivity extends AppCompatActivity  {
         boolean location=true;
         boolean camera=true;
         boolean storage=true;
+        boolean internet=true;
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED)  {
             // Permission is not granted
@@ -116,7 +115,12 @@ public class MainActivity extends AppCompatActivity  {
             // Permission is not granted
             storage=false;
         }
-        if (camera & location &storage){
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET)
+                != PackageManager.PERMISSION_GRANTED)  {
+            // Permission is not granted
+            internet=false;
+        }
+        if (camera & location &storage & internet){
 
             return true;
 
@@ -127,7 +131,9 @@ public class MainActivity extends AppCompatActivity  {
     private void requestPermission() {
 
         ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.CAMERA,Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                new String[]{Manifest.permission.CAMERA,Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.INTERNET
+                },
                 PERMISSION_REQUEST_CODE);
     }
 
@@ -190,6 +196,29 @@ public class MainActivity extends AppCompatActivity  {
                     Toast.makeText(getApplicationContext(), "Permission Denied", Toast.LENGTH_SHORT).show();
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                                != PackageManager.PERMISSION_GRANTED) {
+                            showMessageOKCancel("You need to allow access permissions",
+                                    new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                                                requestPermission();
+                                            }
+                                        }
+                                    });
+                        }
+                    }
+                }
+                break;
+            case PERMISSION_REQUEST_CODE_INTERNET:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(getApplicationContext(), "Permission Granted", Toast.LENGTH_SHORT).show();
+
+                    // main logic
+                } else {
+                    Toast.makeText(getApplicationContext(), "Permission Denied", Toast.LENGTH_SHORT).show();
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        if (ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET)
                                 != PackageManager.PERMISSION_GRANTED) {
                             showMessageOKCancel("You need to allow access permissions",
                                     new DialogInterface.OnClickListener() {

@@ -26,6 +26,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+import com.torgtek.matidsms.BackgroundService;
 import com.torgtek.matidsms.MainActivity;
 import com.torgtek.matidsms.R;
 
@@ -161,12 +162,12 @@ public class LoginActivity extends AppCompatActivity {
             // Signed in successfully, show authenticated UI.
             GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
             if (acct != null) {
-                String personName = acct.getDisplayName();
-                String personGivenName = acct.getGivenName();
-                String personFamilyName = acct.getFamilyName();
-                String personEmail = acct.getEmail();
-                String personId = acct.getId();
-                Uri personPhoto = acct.getPhotoUrl();
+                BackgroundService.personName = acct.getDisplayName();
+                BackgroundService.personGivenName = acct.getGivenName();
+                BackgroundService.personFamilyName = acct.getFamilyName();
+                BackgroundService.personEmail = acct.getEmail();
+                BackgroundService.personId = acct.getId();
+                BackgroundService.personPhoto = acct.getPhotoUrl();
                 Intent ax=new Intent(LoginActivity.this,
                         MainActivity.class);
                 startActivity(ax);

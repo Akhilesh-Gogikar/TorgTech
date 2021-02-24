@@ -36,33 +36,33 @@ handle_imgui_input (AppEngine *engine, AInputEvent *event)
     float y = AMotionEvent_getY (event, index);
 
     switch (flags) {
-    case AMOTION_EVENT_ACTION_DOWN:
-        engine->button_cb (index, 1, x, y);
-        engine->mousemove_cb (x, y);
-        break;
+        case AMOTION_EVENT_ACTION_DOWN:
+            engine->button_cb (index, 1, x, y);
+            engine->mousemove_cb (x, y);
+            break;
 
-    case AMOTION_EVENT_ACTION_POINTER_DOWN:
-        break;
+        case AMOTION_EVENT_ACTION_POINTER_DOWN:
+            break;
 
-    case AMOTION_EVENT_ACTION_UP:
-        engine->button_cb (index, 0, x, y);
-        break;
+        case AMOTION_EVENT_ACTION_UP:
+            engine->button_cb (index, 0, x, y);
+            break;
 
-    case AMOTION_EVENT_ACTION_POINTER_UP:
-        released_pointer_id = AMotionEvent_getPointerId (event, index);
-        x = AMotionEvent_getX (event, released_pointer_id);
-        y = AMotionEvent_getY (event, released_pointer_id);
-        break;
+        case AMOTION_EVENT_ACTION_POINTER_UP:
+            released_pointer_id = AMotionEvent_getPointerId (event, index);
+            x = AMotionEvent_getX (event, released_pointer_id);
+            y = AMotionEvent_getY (event, released_pointer_id);
+            break;
 
-    case AMOTION_EVENT_ACTION_MOVE:
-        engine->mousemove_cb (x, y);
-        break;
+        case AMOTION_EVENT_ACTION_MOVE:
+            engine->mousemove_cb (x, y);
+            break;
 
-    case AMOTION_EVENT_ACTION_CANCEL:
-        break;
+        case AMOTION_EVENT_ACTION_CANCEL:
+            break;
 
-    default:
-        break;
+        default:
+            break;
     }
 }
 
@@ -83,23 +83,23 @@ engine_handle_input (struct android_app *app, AInputEvent *event)
 }
 
 static void
-ProcessAndroidCmd (struct android_app* app, int32_t cmd) 
+ProcessAndroidCmd (struct android_app* app, int32_t cmd)
 {
     AppEngine* engine = reinterpret_cast<AppEngine*>(app->userData);
 
     switch (cmd) {
-    // The window is being shown, get it ready.
-    case APP_CMD_INIT_WINDOW: 
-        if (engine->AndroidApp()->window != NULL) 
-        {
-            engine->OnAppInitWindow();
-        }
-        break;
+        // The window is being shown, get it ready.
+        case APP_CMD_INIT_WINDOW:
+            if (engine->AndroidApp()->window != NULL)
+            {
+                engine->OnAppInitWindow();
+            }
+            break;
 
-    // The window is being hidden or closed, clean it up.
-    case APP_CMD_TERM_WINDOW: 
-        engine->OnAppTermWindow();
-        break;
+            // The window is being hidden or closed, clean it up.
+        case APP_CMD_TERM_WINDOW:
+            engine->OnAppTermWindow();
+            break;
     }
 }
 
@@ -124,7 +124,7 @@ static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
 /*--------------------------------------------------------------------------- *
  *      M A I N    F U N C T I O N
  *--------------------------------------------------------------------------- */
-void android_main(struct android_app* state) 
+void android_main(struct android_app* state)
 {
     AppEngine engine(state);
     state->userData = reinterpret_cast<void*>(&engine);
@@ -175,7 +175,8 @@ void android_main(struct android_app* state)
       "AX        REAL    NOT NULL," \
       "AY        REAL    NOT NULL," \
       "AZ        REAL    NOT NULL," \
-      "TS         TIMESTAMP      NOT NULL);", buffer);
+      "PROCESSED        INT    NOT NULL," \
+      "TS         DATETIME      NOT NULL);");
 
     /* Execute SQL statement */
     rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
@@ -199,10 +200,18 @@ void android_main(struct android_app* state)
                 source->process(state, source);
             }
 
+            DBG_LOGE("Engine state: %d", engine.state);
+
+
+            if (engine.state == 1){
+                state->destroyRequested = 1;
+            }
+
             // Check if we are exiting.
             if (state->destroyRequested != 0) {
                 engine.DeleteCamera();
                 s_pEngineObj = nullptr;
+                sqlite3_close(db);
                 return;
             }
         }
@@ -215,12 +224,15 @@ void android_main(struct android_app* state)
 
         std::time_t result = std::time(nullptr);
 
+        char insert_buf[512];
+        char insert_buf_sql[512];
+
         /* Create SQL statement */
-        sprintf(strbuf, "INSERT INTO LOGS (FRAME,SLEEPY,DROWSY,DISTRACTED,ALARMS,INTERVAL,AVGEAR,AVGMAR,AVGDEV,SPEED,DIST,AX,AY,AZ,TS)"  \
-         "VALUES (%s,%ld);", buffer, strbuf, result);
+        sprintf(insert_buf_sql, "INSERT INTO `LOGS`(`FRAME`,`SLEEPY`,`DROWSY`,`DISTRACTED`,`ALARMS`,`INTERVAL`,`AVGEAR`,`AVGMAR`,`AVGDEV`,`SPEED`,`DIST`,`AX`,`AY`,`AZ`,`PROCESSED`,`TS`)"  \
+         " VALUES (%s,0,%ld);", strbuf, result);
 
         /* Execute SQL statement */
-        rc = sqlite3_exec(db, strbuf, callback, 0, &zErrMsg);
+        rc = sqlite3_exec(db, insert_buf_sql, callback, 0, &zErrMsg);
 
         if( rc != SQLITE_OK ){
             fprintf(stderr, "SQL error: %s\n", zErrMsg);
@@ -228,7 +240,20 @@ void android_main(struct android_app* state)
         } else {
             fprintf(stdout, "Records created successfully\n");
         }
-    }
 
+        if (engine.state == 1){
+            state->destroyRequested = 1;
+        }
+
+        // Check if we are exiting.
+        if (state->destroyRequested != 0) {
+            engine.OnAppTermWindow();
+            s_pEngineObj = nullptr;
+            break;
+        }
+
+    }
     sqlite3_close(db);
+    ANativeActivity_finish(state->activity);
+    exit(0);
 }

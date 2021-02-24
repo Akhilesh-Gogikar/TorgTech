@@ -139,7 +139,7 @@ public:
     // OpenGLES Render
     void InitGLES (void);
     void TerminateGLES (void);
-    
+
     void LoadInputTexture (texture_2d_t *tex, char *fname);
     void UpdateCameraTexture ();
     void CropCameraTexture ();
@@ -153,6 +153,8 @@ public:
 
     // IMGUI
     void setup_imgui (int win_w, int win_h, imgui_data_t *imgui_data);
+
+    void UpdateState (void);
 
     /* for touch gesture */
     ndk_helper::TapDetector        tap_detector_;
@@ -223,6 +225,7 @@ private:
     int                 m_camera_facing;
 
 public:
+    int state;
 };
 
 AppEngine *GetAppEngine (void);

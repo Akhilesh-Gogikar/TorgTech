@@ -128,7 +128,7 @@ feed_face_landmark_image(texture_2d_t *srctex, int win_w, int win_h, face_detect
 
 
 void
-feed_iris_landmark_image(texture_2d_t *srctex, int win_w, int win_h, 
+feed_iris_landmark_image(texture_2d_t *srctex, int win_w, int win_h,
                          face_t *face, face_landmark_result_t *facemesh, int eye_id)
 {
     int x, y, w, h;
@@ -148,7 +148,7 @@ feed_iris_landmark_image(texture_2d_t *srctex, int win_w, int win_h,
     float pivot_x = face->face_cx;
     float pivot_y = face->face_cy;
     float rotation= face->rotation;
-    
+
     float x0 = facemesh->eye_pos[eye_id][0].x;
     float y0 = facemesh->eye_pos[eye_id][0].y;
     float x1 = facemesh->eye_pos[eye_id][1].x; //    0--------1
@@ -161,7 +161,7 @@ feed_iris_landmark_image(texture_2d_t *srctex, int win_w, int win_h,
     float mat[16];
     float vec[4][2] = {{x0, y0}, {x1, y1}, {x2, y2}, {x3, y3}};
     matrix_identity (mat);
-    
+
     matrix_translate (mat, pivot_x, pivot_y, 0);
     matrix_rotate (mat, RAD_TO_DEG(rotation), 0, 0, 1);
     matrix_scale (mat, scale_x, scale_y, 1.0f);
@@ -300,11 +300,11 @@ float GetLandmarkDepth(fvec3 ld0,
 void CalculateEAR(irismesh_result_t *irismesh, int tex_w, int tex_h) {
 
     float length = GetLandmarkDepth(irismesh->eye_landmark[0],
-                                          irismesh->eye_landmark[8], tex_w, tex_h);
+                                    irismesh->eye_landmark[8], tex_w, tex_h);
     float breadth1 = GetLandmarkDepth(irismesh->eye_landmark[12],
-    irismesh->eye_landmark[3], tex_w, tex_h);
+                                      irismesh->eye_landmark[3], tex_w, tex_h);
     float breadth2 = GetLandmarkDepth(irismesh->eye_landmark[12],
-    irismesh->eye_landmark[4], tex_w, tex_h);
+                                      irismesh->eye_landmark[4], tex_w, tex_h);
 
     auto EAR = (breadth1 + breadth2) / (2 * length);
 
@@ -314,11 +314,11 @@ void CalculateEAR(irismesh_result_t *irismesh, int tex_w, int tex_h) {
 void CalculateMAR(face_landmark_result_t *facemesh, int tex_w, int tex_h){
 
     float length = GetLandmarkDepth(facemesh->joint[78],
-                                          facemesh->joint[308], tex_w, tex_h);
+                                    facemesh->joint[308], tex_w, tex_h);
     float breadth1 = GetLandmarkDepth(facemesh->joint[82],
-                                            facemesh->joint[87], tex_w, tex_h);
+                                      facemesh->joint[87], tex_w, tex_h);
     float breadth2 = GetLandmarkDepth(facemesh->joint[312],
-                                            facemesh->joint[317], tex_w, tex_h);
+                                      facemesh->joint[317], tex_w, tex_h);
 
     auto MAR = (breadth1 + breadth2) / (2 * length);
 
@@ -329,14 +329,14 @@ void CalculateMAR(face_landmark_result_t *facemesh, int tex_w, int tex_h){
 void CalculateDev(face_landmark_result_t *facemesh, int tex_w, int tex_h){
 
     float x_face_cntr = 0.5;//(facemesh->joint[234].x +
-                          //                facemesh->joint[10].x + facemesh->joint[152].x +
-                            //                                       facemesh->joint[454].x)/4;
+    //                facemesh->joint[10].x + facemesh->joint[152].x +
+    //                                       facemesh->joint[454].x)/4;
     float y_face_cntr = 0.5;//(facemesh->joint[234].y +
-                         //facemesh->joint[10].y + facemesh->joint[152].y +
-                         //facemesh->joint[454].y)/4;
+    //facemesh->joint[10].y + facemesh->joint[152].y +
+    //facemesh->joint[454].y)/4;
     float z_face_cntr = 0.0;//(facemesh->joint[234].z +
-                         //facemesh->joint[10].z + facemesh->joint[152].z +
-                         //facemesh->joint[454].z)/4;
+    //facemesh->joint[10].z + facemesh->joint[152].z +
+    //facemesh->joint[454].z)/4;
 
     float xymag =  GetDepth(facemesh->joint[1].x*tex_w,facemesh->joint[1].y*tex_h, x_face_cntr*tex_w, y_face_cntr*tex_h);
 
@@ -352,7 +352,7 @@ void CalculateDev(face_landmark_result_t *facemesh, int tex_w, int tex_h){
 
 static void
 render_cropped_eye_image (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int texh,
-                           face_t *face, face_landmark_result_t *facemesh, int eye_id)
+                          face_t *face, face_landmark_result_t *facemesh, int eye_id)
 {
     float texcoord[8];
 
@@ -361,7 +361,7 @@ render_cropped_eye_image (texture_2d_t *srctex, int ofstx, int ofsty, int texw, 
     float pivot_x = face->face_cx;
     float pivot_y = face->face_cy;
     float rotation= face->rotation;
-    
+
     float x0 = facemesh->eye_pos[eye_id][0].x;
     float y0 = facemesh->eye_pos[eye_id][0].y;
     float x1 = facemesh->eye_pos[eye_id][1].x; //    0--------1
@@ -374,7 +374,7 @@ render_cropped_eye_image (texture_2d_t *srctex, int ofstx, int ofsty, int texw, 
     float mat[16];
     float vec[4][2] = {{x0, y0}, {x1, y1}, {x2, y2}, {x3, y3}};
     matrix_identity (mat);
-    
+
     matrix_translate (mat, pivot_x, pivot_y, 0);
     matrix_rotate (mat, RAD_TO_DEG(rotation), 0, 0, 1);
     matrix_scale (mat, scale_x, scale_y, 1.0f);
@@ -464,7 +464,7 @@ render_iris_landmark (int ofstx, int ofsty, int texw, int texh, irismesh_result_
 }
 
 static void
-render_iris_landmark_on_face (int ofstx, int ofsty, int texw, int texh, 
+render_iris_landmark_on_face (int ofstx, int ofsty, int texw, int texh,
                               face_landmark_result_t *facemesh, irismesh_result_t *irismesh)
 {
     float col_green[] = {0.0f, 1.0f, 0.0f, 1.0f};
@@ -553,7 +553,7 @@ render_facemesh_keypoint (int ofstx, int ofsty, int texw, int texh, float *mat, 
 }
 
 static void
-render_iris_landmark_on_main (int ofstx, int ofsty, int texw, int texh, 
+render_iris_landmark_on_main (int ofstx, int ofsty, int texw, int texh,
                               face_t *face, face_landmark_result_t *facemesh, irismesh_result_t *irismesh)
 {
     float col_green[] = {0.0f, 1.0f, 0.0f, 1.0f};
@@ -772,7 +772,7 @@ AppEngine::setup_imgui (int win_w, int win_h, imgui_data_t *imgui_data)
 }
 
 
-void 
+void
 AppEngine::RenderFrame ()
 {
     texture_2d_t srctex = glctx.tex_input;
@@ -971,8 +971,8 @@ AppEngine::RenderFrame ()
         }
 
         DBG_LOGE (
-        "Acc_X:%5.1f\nAcc_Y :%5.1f\nAcc_Z :%5.1f\nA_X :%5.1f\nA_Y :%5.1f\nA_Z :%5.1f",
-        sensordata[0], sensordata[1], sensordata[2], a_x, a_y, a_z);
+                "Acc_X:%5.1f\nAcc_Y :%5.1f\nAcc_Z :%5.1f\nA_X :%5.1f\nA_Y :%5.1f\nA_Z :%5.1f",
+                sensordata[0], sensordata[1], sensordata[2], a_x, a_y, a_z);
 
         int fps = (int) round(1000 / interval);
 
@@ -996,7 +996,7 @@ AppEngine::RenderFrame ()
         }
 
         if (isnan(face_mesh_ret[0].dev) != 1){
-        avg_Dev = (avg_Dev * glctx.frame_count + face_mesh_ret[0].dev) / (glctx.frame_count + 1);
+            avg_Dev = (avg_Dev * glctx.frame_count + face_mesh_ret[0].dev) / (glctx.frame_count + 1);
         }
 
         if (abs(EAR -avg_EAR)/avg_EAR >= 0.3 && glctx.frame_count>=60*fps){
@@ -1103,8 +1103,8 @@ AppEngine::RenderFrame ()
             }
 
             //DBG_LOGE (
-                    //"Interval:%5.1f [ms]\nTFLite0 :%5.1f [ms]\nTFLite1 :%5.1f [ms]\nTFLite2 :%5.1f [ms]",
-                    //interval, invoke_ms0, invoke_ms1, invoke_ms2);
+            //"Interval:%5.1f [ms]\nTFLite0 :%5.1f [ms]\nTFLite1 :%5.1f [ms]\nTFLite2 :%5.1f [ms]",
+            //interval, invoke_ms0, invoke_ms1, invoke_ms2);
             draw_dbgstr(strbuf, 120, 10);
 
             /* renderer info */
@@ -1137,39 +1137,40 @@ AppEngine::RenderFrame ()
 
 
 AppEngine::AppEngine (android_app* app)
-    : m_app(app),
-      m_cameraGranted(false),
-      m_camera(nullptr),
-      m_camera_facing(1),
-      blinks(0),
-      sleep(0),
-      drowsy(0),
-      yawns(0),
-      distracted(0),
-      yawn_streak(0),
-      blink_streak(0),
-      avg_MAR(0.0),
-      avg_Dev(0.0),
-      avg_EAR(0.0),
-      sound_started(0),
-      sound_streak(0),
-      speed(0.0),
-      distance(0.0),
-      a_x(0.0),
-      a_y(0.0),
-      a_z(0.0),
-      alarms(0),
-      p_time(0.0),
-      time(0.0),
-      g_x(0.0),
-      g_y(0.0),
-      g_z(0.0),
-      v_x(0.0),
-      v_y(0.0),
-      v_z(0.0),
-      X(0.0),
-      Y(0.0),
-      Z(0.0)
+        : m_app(app),
+          m_cameraGranted(false),
+          m_camera(nullptr),
+          m_camera_facing(1),
+          blinks(0),
+          sleep(0),
+          drowsy(0),
+          yawns(0),
+          distracted(0),
+          yawn_streak(0),
+          blink_streak(0),
+          avg_MAR(0.0),
+          avg_Dev(0.0),
+          avg_EAR(0.0),
+          sound_started(0),
+          sound_streak(0),
+          speed(0.0),
+          distance(0.0),
+          a_x(0.0),
+          a_y(0.0),
+          a_z(0.0),
+          alarms(0),
+          p_time(0.0),
+          time(0.0),
+          g_x(0.0),
+          g_y(0.0),
+          g_z(0.0),
+          v_x(0.0),
+          v_y(0.0),
+          v_z(0.0),
+          X(0.0),
+          Y(0.0),
+          Z(0.0),
+          state(0)
 
 {
     memset (&glctx, 0, sizeof (glctx));
@@ -1218,7 +1219,7 @@ AppEngine::LoadInputTexture (texture_2d_t *tex, char *fname)
     asset_free_image (img_buf);
 }
 
-void 
+void
 AppEngine::InitGLES (void)
 {
     int ret;
@@ -1237,18 +1238,18 @@ AppEngine::InitGLES (void)
     init_dbgstr (w, h);
 
     asset_read_file (m_app->activity->assetManager,
-                    (char *)FACE_DETECT_MODEL_PATH, m_facedet_tflite_model_buf);
+                     (char *)FACE_DETECT_MODEL_PATH, m_facedet_tflite_model_buf);
 
     asset_read_file (m_app->activity->assetManager,
-                    (char *)FACE_LANDMARK_MODEL_PATH, m_facelandmark_tflite_model_buf);
+                     (char *)FACE_LANDMARK_MODEL_PATH, m_facelandmark_tflite_model_buf);
 
     asset_read_file (m_app->activity->assetManager,
-                    (char *)IRIS_LANDMARK_MODEL_PATH, m_irislandmark_tflite_model_buf);
+                     (char *)IRIS_LANDMARK_MODEL_PATH, m_irislandmark_tflite_model_buf);
 
     ret = init_tflite_facemesh (
-        (const char *)m_facedet_tflite_model_buf.data(), m_facedet_tflite_model_buf.size(),
-        (const char *)m_facelandmark_tflite_model_buf.data(), m_facelandmark_tflite_model_buf.size(),
-        (const char *)m_irislandmark_tflite_model_buf.data(), m_irislandmark_tflite_model_buf.size());
+            (const char *)m_facedet_tflite_model_buf.data(), m_facedet_tflite_model_buf.size(),
+            (const char *)m_facelandmark_tflite_model_buf.data(), m_facelandmark_tflite_model_buf.size(),
+            (const char *)m_irislandmark_tflite_model_buf.data(), m_irislandmark_tflite_model_buf.size());
 
     setup_imgui (w, h, &imgui_data);
 
@@ -1286,10 +1287,16 @@ AppEngine::TerminateGLES (void)
     egl_terminate ();
 }
 
+void
+AppEngine::UpdateState (void)
+{
+    state = 1;
+}
 
 void
 AppEngine::UpdateFrame (void)
 {
+    DBG_LOGE("%d,%d", m_camera_facing, imgui_data.camera_facing);
     if (glctx.initdone == 0)
         return;
 
@@ -1297,9 +1304,7 @@ AppEngine::UpdateFrame (void)
     {
         if (m_camera_facing != imgui_data.camera_facing)
         {
-            m_camera_facing = imgui_data.camera_facing;
-            DeleteCamera ();
-            CreateCamera (m_camera_facing);
+            UpdateState();
         }
         UpdateCameraTexture();
     }
@@ -1344,7 +1349,7 @@ AppEngine::CropCameraTexture (void)
 /* ---------------------------------------------------------------------------- *
  *  Manage NDKCamera Functions
  * ---------------------------------------------------------------------------- */
-void 
+void
 AppEngine::InitCamera (void)
 {
     // Not permitted to use camera yet, ask(again) and defer other events
@@ -1372,11 +1377,11 @@ AppEngine::DeleteCamera(void)
 }
 
 
-void 
+void
 AppEngine::CreateCamera (int facing)
 {
     m_camera = new NDKCamera();
-    ASSERT (m_camera, "Failed to Create CameraObject");
+            ASSERT (m_camera, "Failed to Create CameraObject");
 
     m_camera->SelectCameraFacing (facing);
 
@@ -1491,7 +1496,7 @@ AppEngine::StatusString (char* strbuf)
 
 extern "C" JNIEXPORT void JNICALL
 Java_com_glesapp_glesapp_GLESAppNativeActivity_notifyCameraPermission (
-                            JNIEnv *env, jclass type, jboolean permission)
+        JNIEnv *env, jclass type, jboolean permission)
 {
     std::thread permissionHandler (&AppEngine::OnCameraPermission, GetAppEngine(), permission);
     permissionHandler.detach();
