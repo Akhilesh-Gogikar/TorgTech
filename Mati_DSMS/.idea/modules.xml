@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mati_DSMS.iml" filepath="$PROJECT_DIR$/.idea/modules/Mati_DSMS.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Mati_DSMS.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Mati_DSMS.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-899878184/third_party.firebase_cpp_sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/-899878184/third_party.firebase_cpp_sdk.iml" />
     </modules>
   </component>
 </project>

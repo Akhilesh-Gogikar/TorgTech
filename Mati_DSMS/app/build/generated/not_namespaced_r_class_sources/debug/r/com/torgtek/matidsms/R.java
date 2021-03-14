@@ -319,24 +319,39 @@ public final class R {
      */
     public static final int activityChooserViewStyle=0x7f020021;
     /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int adSize=0x7f020022;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int adSizes=0x7f020023;
+    /**
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int adUnitId=0x7f020024;
+    /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int alertDialogButtonGroupStyle=0x7f020022;
+    public static final int alertDialogButtonGroupStyle=0x7f020025;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int alertDialogCenterButtons=0x7f020023;
+    public static final int alertDialogCenterButtons=0x7f020026;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int alertDialogStyle=0x7f020024;
+    public static final int alertDialogStyle=0x7f020027;
     /**
      * Theme to use for alert dialogs spawned from this theme.
      * <p>May be a reference to another resource, in the form
@@ -344,19 +359,19 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int alertDialogTheme=0x7f020025;
+    public static final int alertDialogTheme=0x7f020028;
     /**
      * Whether to automatically stack the buttons when there is not
      * enough space to lay them out side-by-side.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int allowStacking=0x7f020026;
+    public static final int allowStacking=0x7f020029;
     /**
      * Alpha multiplier applied to the base color.
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int alpha=0x7f020027;
+    public static final int alpha=0x7f02002a;
     /**
      * The alphabetic modifier key. This is the modifier when using a keyboard
      * with alphabetic keys. The values should be kept in sync with KeyEvent
@@ -374,39 +389,7 @@ public final class R {
      * <tr><td>SYM</td><td>4</td><td></td></tr>
      * </table>
      */
-    public static final int alphabeticModifiers=0x7f020028;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int altSrc=0x7f020029;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int animate_relativeTo=0x7f02002a;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int applyMotionScene=0x7f02002b;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>flip</td><td>2</td><td></td></tr>
-     * <tr><td>startHorizontal</td><td>1</td><td></td></tr>
-     * <tr><td>startVertical</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int arcMode=0x7f02002c;
+    public static final int alphabeticModifiers=0x7f02002b;
     /**
      * The length of the arrow head when formed to make an arrow
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -415,7 +398,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int arrowHeadLength=0x7f02002d;
+    public static final int arrowHeadLength=0x7f02002c;
     /**
      * The length of the shaft when formed to make an arrow
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -424,12 +407,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int arrowShaftLength=0x7f02002e;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int attributeName=0x7f02002f;
+    public static final int arrowShaftLength=0x7f02002d;
     /**
      * Default AutoCompleteTextView style.
      * <p>May be a reference to another resource, in the form
@@ -437,7 +415,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int autoCompleteTextViewStyle=0x7f020030;
+    public static final int autoCompleteTextViewStyle=0x7f02002e;
     /**
      * The maximum text size constraint to be used when auto-sizing text.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -446,7 +424,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int autoSizeMaxTextSize=0x7f020031;
+    public static final int autoSizeMaxTextSize=0x7f02002f;
     /**
      * The minimum text size constraint to be used when auto-sizing text.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -455,7 +433,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int autoSizeMinTextSize=0x7f020032;
+    public static final int autoSizeMinTextSize=0x7f020030;
     /**
      * Resource array of dimensions to be used in conjunction with
      * <code>autoSizeTextType</code> set to <code>uniform</code>. Overrides
@@ -465,7 +443,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int autoSizePresetSizes=0x7f020033;
+    public static final int autoSizePresetSizes=0x7f020031;
     /**
      * Specify the auto-size step size if <code>autoSizeTextType</code> is set to
      * <code>uniform</code>. The default is 1px. Overwrites
@@ -476,7 +454,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int autoSizeStepGranularity=0x7f020034;
+    public static final int autoSizeStepGranularity=0x7f020032;
     /**
      * Specify the type of auto-size. Note that this feature is not supported by EditText,
      * works only for TextView.
@@ -491,22 +469,7 @@ public final class R {
      * container.</td></tr>
      * </table>
      */
-    public static final int autoSizeTextType=0x7f020035;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>animateToEnd</td><td>4</td><td></td></tr>
-     * <tr><td>animateToStart</td><td>3</td><td></td></tr>
-     * <tr><td>jumpToEnd</td><td>2</td><td></td></tr>
-     * <tr><td>jumpToStart</td><td>1</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int autoTransition=0x7f020036;
+    public static final int autoSizeTextType=0x7f020033;
     /**
      * Specifies a background drawable for the action bar.
      * <p>May be a reference to another resource, in the form
@@ -514,7 +477,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int background=0x7f020037;
+    public static final int background=0x7f020034;
     /**
      * Specifies a background drawable for the bottom component of a split action bar.
      * <p>May be a reference to another resource, in the form
@@ -525,7 +488,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int backgroundSplit=0x7f020038;
+    public static final int backgroundSplit=0x7f020035;
     /**
      * Specifies a background drawable for a second stacked row of the action bar.
      * <p>May be a reference to another resource, in the form
@@ -536,14 +499,14 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int backgroundStacked=0x7f020039;
+    public static final int backgroundStacked=0x7f020036;
     /**
      * Tint to apply to the background.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int backgroundTint=0x7f02003a;
+    public static final int backgroundTint=0x7f020037;
     /**
      * Blending mode used to apply the background tint.
      * <p>Must be one of the following constant values.</p>
@@ -565,7 +528,7 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int backgroundTintMode=0x7f02003b;
+    public static final int backgroundTintMode=0x7f020038;
     /**
      * The length of the bars when they are parallel to each other
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -574,12 +537,12 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int barLength=0x7f02003c;
+    public static final int barLength=0x7f020039;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int barrierAllowsGoneWidgets=0x7f02003d;
+    public static final int barrierAllowsGoneWidgets=0x7f02003a;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -595,15 +558,7 @@ public final class R {
      * <tr><td>top</td><td>2</td><td></td></tr>
      * </table>
      */
-    public static final int barrierDirection=0x7f02003e;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int barrierMargin=0x7f02003f;
+    public static final int barrierDirection=0x7f02003b;
     /**
      * Style for buttons without an explicit border, often used in groups.
      * <p>May be a reference to another resource, in the form
@@ -611,11 +566,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int borderlessButtonStyle=0x7f020040;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int brightness=0x7f020041;
+    public static final int borderlessButtonStyle=0x7f02003c;
     /**
      * Style for buttons within button bars
      * <p>May be a reference to another resource, in the form
@@ -623,7 +574,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int buttonBarButtonStyle=0x7f020042;
+    public static final int buttonBarButtonStyle=0x7f02003d;
     /**
      * Style for the "negative" buttons within button bars
      * <p>May be a reference to another resource, in the form
@@ -631,7 +582,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int buttonBarNegativeButtonStyle=0x7f020043;
+    public static final int buttonBarNegativeButtonStyle=0x7f02003e;
     /**
      * Style for the "neutral" buttons within button bars
      * <p>May be a reference to another resource, in the form
@@ -639,7 +590,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int buttonBarNeutralButtonStyle=0x7f020044;
+    public static final int buttonBarNeutralButtonStyle=0x7f02003f;
     /**
      * Style for the "positive" buttons within button bars
      * <p>May be a reference to another resource, in the form
@@ -647,7 +598,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int buttonBarPositiveButtonStyle=0x7f020045;
+    public static final int buttonBarPositiveButtonStyle=0x7f020040;
     /**
      * Style for button bars
      * <p>May be a reference to another resource, in the form
@@ -655,7 +606,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int buttonBarStyle=0x7f020046;
+    public static final int buttonBarStyle=0x7f020041;
     /**
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -667,7 +618,7 @@ public final class R {
      * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      */
-    public static final int buttonGravity=0x7f020047;
+    public static final int buttonGravity=0x7f020042;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -675,14 +626,14 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int buttonIconDimen=0x7f020048;
+    public static final int buttonIconDimen=0x7f020043;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int buttonPanelSideLayout=0x7f020049;
+    public static final int buttonPanelSideLayout=0x7f020044;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -699,7 +650,7 @@ public final class R {
      * <tr><td>wide</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int buttonSize=0x7f02004a;
+    public static final int buttonSize=0x7f020045;
     /**
      * Normal Button style.
      * <p>May be a reference to another resource, in the form
@@ -707,7 +658,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int buttonStyle=0x7f02004b;
+    public static final int buttonStyle=0x7f020046;
     /**
      * Small Button style.
      * <p>May be a reference to another resource, in the form
@@ -715,14 +666,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int buttonStyleSmall=0x7f02004c;
+    public static final int buttonStyleSmall=0x7f020047;
     /**
      * Tint to apply to the button drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int buttonTint=0x7f02004d;
+    public static final int buttonTint=0x7f020048;
     /**
      * Blending mode used to apply the button tint.
      * <p>Must be one of the following constant values.</p>
@@ -744,12 +695,12 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int buttonTintMode=0x7f02004e;
+    public static final int buttonTintMode=0x7f020049;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int chainUseRtl=0x7f02004f;
+    public static final int chainUseRtl=0x7f02004a;
     /**
      * Default Checkbox style.
      * <p>May be a reference to another resource, in the form
@@ -757,7 +708,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int checkboxStyle=0x7f020050;
+    public static final int checkboxStyle=0x7f02004b;
     /**
      * Default CheckedTextView style.
      * <p>May be a reference to another resource, in the form
@@ -765,35 +716,12 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int checkedTextViewStyle=0x7f020051;
+    public static final int checkedTextViewStyle=0x7f02004c;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int circleCrop=0x7f020052;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int circleRadius=0x7f020053;
-    /**
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>jumpToEnd</td><td>100</td><td></td></tr>
-     * <tr><td>jumpToStart</td><td>1000</td><td></td></tr>
-     * <tr><td>toggle</td><td>11</td><td></td></tr>
-     * <tr><td>transitionToEnd</td><td>1</td><td></td></tr>
-     * <tr><td>transitionToStart</td><td>10</td><td></td></tr>
-     * </table>
-     */
-    public static final int clickAction=0x7f020054;
+    public static final int circleCrop=0x7f02004d;
     /**
      * Close button icon
      * <p>May be a reference to another resource, in the form
@@ -801,7 +729,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int closeIcon=0x7f020055;
+    public static final int closeIcon=0x7f02004e;
     /**
      * Specifies a layout to use for the "close" item at the starting edge.
      * <p>May be a reference to another resource, in the form
@@ -809,13 +737,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int closeItemLayout=0x7f020056;
+    public static final int closeItemLayout=0x7f02004f;
     /**
      * Text to set as the content description for the collapse button.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int collapseContentDescription=0x7f020057;
+    public static final int collapseContentDescription=0x7f020050;
     /**
      * Icon drawable to use for the collapse button.
      * <p>May be a reference to another resource, in the form
@@ -823,14 +751,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int collapseIcon=0x7f020058;
+    public static final int collapseIcon=0x7f020051;
     /**
      * The drawing color for the bars
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int color=0x7f020059;
+    public static final int color=0x7f020052;
     /**
      * Bright complement to the primary branding color. By default, this is the color applied
      * to framework controls (via colorControlActivated).
@@ -838,42 +766,42 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorAccent=0x7f02005a;
+    public static final int colorAccent=0x7f020053;
     /**
      * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorBackgroundFloating=0x7f02005b;
+    public static final int colorBackgroundFloating=0x7f020054;
     /**
      * The color applied to framework buttons in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorButtonNormal=0x7f02005c;
+    public static final int colorButtonNormal=0x7f020055;
     /**
      * The color applied to framework controls in their activated (ex. checked) state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorControlActivated=0x7f02005d;
+    public static final int colorControlActivated=0x7f020056;
     /**
      * The color applied to framework control highlights (ex. ripples, list selectors).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorControlHighlight=0x7f02005e;
+    public static final int colorControlHighlight=0x7f020057;
     /**
      * The color applied to framework controls in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorControlNormal=0x7f02005f;
+    public static final int colorControlNormal=0x7f020058;
     /**
      * Color used for error states and things that need to be drawn to
      * the user's attention.
@@ -885,7 +813,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorError=0x7f020060;
+    public static final int colorError=0x7f020059;
     /**
      * The primary branding color for the app. By default, this is the color applied to the
      * action bar background.
@@ -893,7 +821,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorPrimary=0x7f020061;
+    public static final int colorPrimary=0x7f02005a;
     /**
      * Dark variant of the primary branding color. By default, this is the color applied to
      * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
@@ -901,7 +829,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorPrimaryDark=0x7f020062;
+    public static final int colorPrimaryDark=0x7f02005b;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -918,14 +846,14 @@ public final class R {
      * <tr><td>light</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int colorScheme=0x7f020063;
+    public static final int colorScheme=0x7f02005c;
     /**
      * The color applied to framework switch thumbs in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int colorSwitchThumbNormal=0x7f020064;
+    public static final int colorSwitchThumbNormal=0x7f02005d;
     /**
      * Commit icon shown in the query suggestion row
      * <p>May be a reference to another resource, in the form
@@ -933,58 +861,32 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int commitIcon=0x7f020065;
+    public static final int commitIcon=0x7f02005e;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int constraintSet=0x7f020066;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int constraintSetEnd=0x7f020067;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int constraintSetStart=0x7f020068;
+    public static final int constraintSet=0x7f02005f;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int constraint_referenced_ids=0x7f020069;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int constraint_referenced_tags=0x7f02006a;
+    public static final int constraint_referenced_ids=0x7f020060;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int constraints=0x7f02006b;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int content=0x7f02006c;
+    public static final int content=0x7f020061;
     /**
      * The content description associated with the item.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int contentDescription=0x7f02006d;
+    public static final int contentDescription=0x7f020062;
     /**
      * Minimum inset for content views within a bar. Navigation buttons and
      * menu views are excepted. Only valid for some themes and configurations.
@@ -994,7 +896,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int contentInsetEnd=0x7f02006e;
+    public static final int contentInsetEnd=0x7f020063;
     /**
      * Minimum inset for content views within a bar when actions from a menu
      * are present. Only valid for some themes and configurations.
@@ -1004,7 +906,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int contentInsetEndWithActions=0x7f02006f;
+    public static final int contentInsetEndWithActions=0x7f020064;
     /**
      * Minimum inset for content views within a bar. Navigation buttons and
      * menu views are excepted. Only valid for some themes and configurations.
@@ -1014,7 +916,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int contentInsetLeft=0x7f020070;
+    public static final int contentInsetLeft=0x7f020065;
     /**
      * Minimum inset for content views within a bar. Navigation buttons and
      * menu views are excepted. Only valid for some themes and configurations.
@@ -1024,7 +926,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int contentInsetRight=0x7f020071;
+    public static final int contentInsetRight=0x7f020066;
     /**
      * Minimum inset for content views within a bar. Navigation buttons and
      * menu views are excepted. Only valid for some themes and configurations.
@@ -1034,7 +936,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int contentInsetStart=0x7f020072;
+    public static final int contentInsetStart=0x7f020067;
     /**
      * Minimum inset for content views within a bar when a navigation button
      * is present, such as the Up button. Only valid for some themes and configurations.
@@ -1044,11 +946,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int contentInsetStartWithNavigation=0x7f020073;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int contrast=0x7f020074;
+    public static final int contentInsetStartWithNavigation=0x7f020068;
     /**
      * The background used by framework controls.
      * <p>May be a reference to another resource, in the form
@@ -1056,70 +954,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int controlBackground=0x7f020075;
+    public static final int controlBackground=0x7f020069;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int coordinatorLayoutStyle=0x7f020076;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int crossfade=0x7f020077;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int currentState=0x7f020078;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>linear</td><td>1</td><td></td></tr>
-     * <tr><td>spline</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int curveFit=0x7f020079;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int customBoolean=0x7f02007a;
-    /**
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     */
-    public static final int customColorDrawableValue=0x7f02007b;
-    /**
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     */
-    public static final int customColorValue=0x7f02007c;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int customDimension=0x7f02007d;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int customFloatValue=0x7f02007e;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int customIntegerValue=0x7f02007f;
+    public static final int coordinatorLayoutStyle=0x7f02006a;
     /**
      * Specifies a layout for custom navigation. Overrides navigationMode.
      * <p>May be a reference to another resource, in the form
@@ -1127,53 +969,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int customNavigationLayout=0x7f020080;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int customPixelDimension=0x7f020081;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int customStringValue=0x7f020082;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int defaultDuration=0x7f020083;
+    public static final int customNavigationLayout=0x7f02006b;
     /**
      * Default query hint used when {@code queryHint} is undefined and
      * the search view's {@code SearchableInfo} does not provide a hint.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int defaultQueryHint=0x7f020084;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int defaultState=0x7f020085;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int deltaPolarAngle=0x7f020086;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int deltaPolarRadius=0x7f020087;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int deriveConstraintsFrom=0x7f020088;
+    public static final int defaultQueryHint=0x7f02006c;
     /**
      * Preferred corner radius of dialogs.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1182,7 +985,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int dialogCornerRadius=0x7f020089;
+    public static final int dialogCornerRadius=0x7f02006d;
     /**
      * Preferred padding for dialog content.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1191,7 +994,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int dialogPreferredPadding=0x7f02008a;
+    public static final int dialogPreferredPadding=0x7f02006e;
     /**
      * Theme to use for dialogs spawned from this theme.
      * <p>May be a reference to another resource, in the form
@@ -1199,7 +1002,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int dialogTheme=0x7f02008b;
+    public static final int dialogTheme=0x7f02006f;
     /**
      * Options affecting how the action bar is displayed.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -1217,7 +1020,7 @@ public final class R {
      * <tr><td>useLogo</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int displayOptions=0x7f02008c;
+    public static final int displayOptions=0x7f020070;
     /**
      * Specifies the drawable used for item dividers.
      * <p>May be a reference to another resource, in the form
@@ -1225,7 +1028,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int divider=0x7f02008d;
+    public static final int divider=0x7f020071;
     /**
      * A drawable that may be used as a horizontal divider between visual elements.
      * <p>May be a reference to another resource, in the form
@@ -1233,7 +1036,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int dividerHorizontal=0x7f02008e;
+    public static final int dividerHorizontal=0x7f020072;
     /**
      * Size of padding on either end of a divider.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1242,7 +1045,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int dividerPadding=0x7f02008f;
+    public static final int dividerPadding=0x7f020073;
     /**
      * A drawable that may be used as a vertical divider between visual elements.
      * <p>May be a reference to another resource, in the form
@@ -1250,47 +1053,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int dividerVertical=0x7f020090;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>dragDown</td><td>1</td><td></td></tr>
-     * <tr><td>dragEnd</td><td>5</td><td></td></tr>
-     * <tr><td>dragLeft</td><td>2</td><td></td></tr>
-     * <tr><td>dragRight</td><td>3</td><td></td></tr>
-     * <tr><td>dragStart</td><td>4</td><td></td></tr>
-     * <tr><td>dragUp</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int dragDirection=0x7f020091;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int dragScale=0x7f020092;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int dragThreshold=0x7f020093;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>asConfigured</td><td>4</td><td></td></tr>
-     * <tr><td>deltaRelative</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>path</td><td>1</td><td></td></tr>
-     * <tr><td>pathRelative</td><td>2</td><td></td></tr>
-     * <tr><td>rectangles</td><td>5</td><td></td></tr>
-     * </table>
-     */
-    public static final int drawPath=0x7f020094;
+    public static final int dividerVertical=0x7f020074;
     /**
      * The total size of the drawable
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1299,14 +1062,14 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int drawableSize=0x7f020095;
+    public static final int drawableSize=0x7f020075;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int drawerArrowStyle=0x7f020096;
+    public static final int drawerArrowStyle=0x7f020076;
     /**
      * ListPopupWindow compatibility
      * <p>May be a reference to another resource, in the form
@@ -1314,7 +1077,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int dropDownListViewStyle=0x7f020097;
+    public static final int dropDownListViewStyle=0x7f020077;
     /**
      * The preferred item height for dropdown lists.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1323,11 +1086,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int dropdownListPreferredItemHeight=0x7f020098;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int duration=0x7f020099;
+    public static final int dropdownListPreferredItemHeight=0x7f020078;
     /**
      * EditText background drawable.
      * <p>May be a reference to another resource, in the form
@@ -1335,7 +1094,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int editTextBackground=0x7f02009a;
+    public static final int editTextBackground=0x7f020079;
     /**
      * EditText text foreground color.
      * <p>May be a reference to another resource, in the form
@@ -1346,7 +1105,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int editTextColor=0x7f02009b;
+    public static final int editTextColor=0x7f02007a;
     /**
      * Default EditText style.
      * <p>May be a reference to another resource, in the form
@@ -1354,7 +1113,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int editTextStyle=0x7f02009c;
+    public static final int editTextStyle=0x7f02007b;
     /**
      * Elevation for the action bar itself
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1363,7 +1122,19 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int elevation=0x7f02009d;
+    public static final int elevation=0x7f02007c;
+    /**
+     * <p>Must be one of the following constant values.</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+     * <tr><td>gone</td><td>0</td><td></td></tr>
+     * <tr><td>invisible</td><td>1</td><td></td></tr>
+     * </table>
+     */
+    public static final int emptyVisibility=0x7f02007d;
     /**
      * The drawable to show in the button for expanding the activities overflow popup.
      * <strong>Note:</strong> Clients would like to set this drawable
@@ -1375,7 +1146,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int expandActivityOverflowButtonDrawable=0x7f02009e;
+    public static final int expandActivityOverflowButtonDrawable=0x7f02007e;
     /**
      * Distance from the top of the TextView to the first text baseline. If set, this
      * overrides the value set for paddingTop.
@@ -1385,177 +1156,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int firstBaselineToTopHeight=0x7f02009f;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int flow_firstHorizontalBias=0x7f0200a0;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     */
-    public static final int flow_firstHorizontalStyle=0x7f0200a1;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int flow_firstVerticalBias=0x7f0200a2;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     */
-    public static final int flow_firstVerticalStyle=0x7f0200a3;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>center</td><td>2</td><td></td></tr>
-     * <tr><td>end</td><td>1</td><td></td></tr>
-     * <tr><td>start</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int flow_horizontalAlign=0x7f0200a4;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int flow_horizontalBias=0x7f0200a5;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int flow_horizontalGap=0x7f0200a6;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     */
-    public static final int flow_horizontalStyle=0x7f0200a7;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int flow_lastHorizontalBias=0x7f0200a8;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     */
-    public static final int flow_lastHorizontalStyle=0x7f0200a9;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int flow_lastVerticalBias=0x7f0200aa;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     */
-    public static final int flow_lastVerticalStyle=0x7f0200ab;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int flow_maxElementsWrap=0x7f0200ac;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int flow_padding=0x7f0200ad;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>baseline</td><td>3</td><td></td></tr>
-     * <tr><td>bottom</td><td>1</td><td></td></tr>
-     * <tr><td>center</td><td>2</td><td></td></tr>
-     * <tr><td>top</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int flow_verticalAlign=0x7f0200ae;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int flow_verticalBias=0x7f0200af;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int flow_verticalGap=0x7f0200b0;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     */
-    public static final int flow_verticalStyle=0x7f0200b1;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>aligned</td><td>2</td><td></td></tr>
-     * <tr><td>chain</td><td>1</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int flow_wrapMode=0x7f0200b2;
+    public static final int firstBaselineToTopHeight=0x7f02007f;
     /**
      * The reference to the font file to be used. This should be a file in the res/font folder
      * and should therefore have an R reference value. E.g. @font/myfont
@@ -1564,19 +1165,19 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int font=0x7f0200b3;
+    public static final int font=0x7f020080;
     /**
      * The attribute for the font family.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontFamily=0x7f0200b4;
+    public static final int fontFamily=0x7f020081;
     /**
      * The authority of the Font Provider to be used for the request.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderAuthority=0x7f0200b5;
+    public static final int fontProviderAuthority=0x7f020082;
     /**
      * The sets of hashes for the certificates the provider should be signed with. This is
      * used to verify the identity of the provider, and is only required if the provider is not
@@ -1588,7 +1189,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int fontProviderCerts=0x7f0200b6;
+    public static final int fontProviderCerts=0x7f020083;
     /**
      * The strategy to be used when fetching font data from a font provider in XML layouts.
      * This attribute is ignored when the resource is loaded from code, as it is equivalent to the
@@ -1615,7 +1216,7 @@ public final class R {
      * default typeface will be used instead.</td></tr>
      * </table>
      */
-    public static final int fontProviderFetchStrategy=0x7f0200b7;
+    public static final int fontProviderFetchStrategy=0x7f020084;
     /**
      * The length of the timeout during fetching.
      * <p>May be an integer value, such as "<code>100</code>".
@@ -1629,21 +1230,30 @@ public final class R {
      * timeout and wait until a reply is received from the font provider.</td></tr>
      * </table>
      */
-    public static final int fontProviderFetchTimeout=0x7f0200b8;
+    public static final int fontProviderFetchTimeout=0x7f020085;
     /**
      * The package for the Font Provider to be used for the request. This is used to verify
      * the identity of the provider.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderPackage=0x7f0200b9;
+    public static final int fontProviderPackage=0x7f020086;
     /**
      * The query to be sent over to the provider. Refer to your font provider's documentation
      * on the format of this string.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontProviderQuery=0x7f0200ba;
+    public static final int fontProviderQuery=0x7f020087;
+    /**
+     * Provides the system font family name to check before downloading the font. For
+     * example if the fontProviderQuery asked for "Sans Serif", it is possible to define
+     * fontProviderSystemFontFamily as "sans-serif" to tell the system to use "sans-serif" font
+     * family if it exists on the system.
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int fontProviderSystemFontFamily=0x7f020088;
     /**
      * The style of the given font file. This will be used when the font is being loaded into
      * the font stack and will override any style information in the font's header tables. If
@@ -1658,7 +1268,7 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int fontStyle=0x7f0200bb;
+    public static final int fontStyle=0x7f020089;
     /**
      * The variation settings to be applied to the font. The string should be in the following
      * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
@@ -1667,7 +1277,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontVariationSettings=0x7f0200bc;
+    public static final int fontVariationSettings=0x7f02008a;
     /**
      * The weight of the given font file. This will be used when the font is being loaded into
      * the font stack and will override any weight information in the font's header tables. Must
@@ -1676,11 +1286,7 @@ public final class R {
      * in the font's header tables will be used.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int fontWeight=0x7f0200bd;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int framePosition=0x7f0200be;
+    public static final int fontWeight=0x7f02008b;
     /**
      * The max gap between the bars when they are parallel to each other
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -1689,7 +1295,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int gapBetweenBars=0x7f0200bf;
+    public static final int gapBetweenBars=0x7f02008c;
     /**
      * Go button icon
      * <p>May be a reference to another resource, in the form
@@ -1697,7 +1303,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int goIcon=0x7f0200c0;
+    public static final int goIcon=0x7f02008d;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -1705,13 +1311,13 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int height=0x7f0200c1;
+    public static final int height=0x7f02008e;
     /**
      * Set true to hide the action bar on a vertical nested scroll of content.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int hideOnContentScroll=0x7f0200c2;
+    public static final int hideOnContentScroll=0x7f02008f;
     /**
      * Specifies a drawable to use for the 'home as up' indicator.
      * <p>May be a reference to another resource, in the form
@@ -1719,7 +1325,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int homeAsUpIndicator=0x7f0200c3;
+    public static final int homeAsUpIndicator=0x7f020090;
     /**
      * Specifies a layout to use for the "home" section of the action bar.
      * <p>May be a reference to another resource, in the form
@@ -1727,7 +1333,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int homeLayout=0x7f0200c4;
+    public static final int homeLayout=0x7f020091;
     /**
      * Specifies the drawable used for the application icon.
      * <p>May be a reference to another resource, in the form
@@ -1735,14 +1341,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int icon=0x7f0200c5;
+    public static final int icon=0x7f020092;
     /**
      * Tint to apply to the icon.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int iconTint=0x7f0200c6;
+    public static final int iconTint=0x7f020093;
     /**
      * Blending mode used to apply the icon tint.
      * <p>Must be one of the following constant values.</p>
@@ -1764,18 +1370,18 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int iconTintMode=0x7f0200c7;
+    public static final int iconTintMode=0x7f020094;
     /**
      * The default state of the SearchView. If true, it will be iconified when not in
      * use and expanded when clicked.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int iconifiedByDefault=0x7f0200c8;
+    public static final int iconifiedByDefault=0x7f020095;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int imageAspectRatio=0x7f0200c9;
+    public static final int imageAspectRatio=0x7f020096;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -1788,7 +1394,7 @@ public final class R {
      * <tr><td>none</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int imageAspectRatioAdjust=0x7f0200ca;
+    public static final int imageAspectRatioAdjust=0x7f020097;
     /**
      * ImageButton background drawable.
      * <p>May be a reference to another resource, in the form
@@ -1796,7 +1402,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int imageButtonStyle=0x7f0200cb;
+    public static final int imageButtonStyle=0x7f020098;
     /**
      * Specifies a style resource to use for an indeterminate progress spinner.
      * <p>May be a reference to another resource, in the form
@@ -1804,18 +1410,18 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int indeterminateProgressStyle=0x7f0200cc;
+    public static final int indeterminateProgressStyle=0x7f020099;
     /**
      * The maximal number of items initially shown in the activity list.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int initialActivityCount=0x7f0200cd;
+    public static final int initialActivityCount=0x7f02009a;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int isLightTheme=0x7f0200ce;
+    public static final int isLightTheme=0x7f02009b;
     /**
      * Specifies padding that should be applied to the left and right sides of
      * system-provided items in the bar.
@@ -1825,20 +1431,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int itemPadding=0x7f0200cf;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>deltaRelative</td><td>0</td><td></td></tr>
-     * <tr><td>parentRelative</td><td>2</td><td></td></tr>
-     * <tr><td>pathRelative</td><td>1</td><td></td></tr>
-     * </table>
-     */
-    public static final int keyPositionType=0x7f0200d0;
+    public static final int itemPadding=0x7f02009c;
     /**
      * A reference to an array of integers representing the
      * locations of horizontal keylines in dp from the starting edge.
@@ -1850,7 +1443,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int keylines=0x7f0200d1;
+    public static final int keylines=0x7f02009d;
     /**
      * Distance from the bottom of the TextView to the last text baseline. If set, this
      * overrides the value set for paddingBottom.
@@ -1860,7 +1453,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int lastBaselineToBottomHeight=0x7f0200d2;
+    public static final int lastBaselineToBottomHeight=0x7f02009e;
     /**
      * The layout to use for the search view.
      * <p>May be a reference to another resource, in the form
@@ -1868,26 +1461,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int layout=0x7f0200d3;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int layoutDescription=0x7f0200d4;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>honorRequest</td><td>1</td><td></td></tr>
-     * <tr><td>ignoreRequest</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int layoutDuringTransition=0x7f0200d5;
+    public static final int layout=0x7f02009f;
     /**
      * The id of an anchor view that this view should position relative to.
      * <p>May be a reference to another resource, in the form
@@ -1895,7 +1469,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int layout_anchor=0x7f0200d6;
+    public static final int layout_anchor=0x7f0200a0;
     /**
      * Specifies how an object should position relative to an anchor, on both the X and Y axes,
      * within its parent's bounds.
@@ -1927,28 +1501,28 @@ public final class R {
      * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      */
-    public static final int layout_anchorGravity=0x7f0200d7;
+    public static final int layout_anchorGravity=0x7f0200a1;
     /**
      * The class name of a Behavior class defining special runtime behavior
      * for this child view.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int layout_behavior=0x7f0200d8;
+    public static final int layout_behavior=0x7f0200a2;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int layout_constrainedHeight=0x7f0200d9;
+    public static final int layout_constrainedHeight=0x7f0200a3;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int layout_constrainedWidth=0x7f0200da;
+    public static final int layout_constrainedWidth=0x7f0200a4;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_constraintBaseline_creator=0x7f0200db;
+    public static final int layout_constraintBaseline_creator=0x7f0200a5;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -1963,11 +1537,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintBaseline_toBaselineOf=0x7f0200dc;
+    public static final int layout_constraintBaseline_toBaselineOf=0x7f0200a6;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_constraintBottom_creator=0x7f0200dd;
+    public static final int layout_constraintBottom_creator=0x7f0200a7;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -1982,7 +1556,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintBottom_toBottomOf=0x7f0200de;
+    public static final int layout_constraintBottom_toBottomOf=0x7f0200a8;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -1997,18 +1571,18 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintBottom_toTopOf=0x7f0200df;
+    public static final int layout_constraintBottom_toTopOf=0x7f0200a9;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int layout_constraintCircle=0x7f0200e0;
+    public static final int layout_constraintCircle=0x7f0200aa;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_constraintCircleAngle=0x7f0200e1;
+    public static final int layout_constraintCircleAngle=0x7f0200ab;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2016,12 +1590,12 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_constraintCircleRadius=0x7f0200e2;
+    public static final int layout_constraintCircleRadius=0x7f0200ac;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int layout_constraintDimensionRatio=0x7f0200e3;
+    public static final int layout_constraintDimensionRatio=0x7f0200ad;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -2036,7 +1610,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintEnd_toEndOf=0x7f0200e4;
+    public static final int layout_constraintEnd_toEndOf=0x7f0200ae;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -2051,7 +1625,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintEnd_toStartOf=0x7f0200e5;
+    public static final int layout_constraintEnd_toStartOf=0x7f0200af;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2059,7 +1633,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_constraintGuide_begin=0x7f0200e6;
+    public static final int layout_constraintGuide_begin=0x7f0200b0;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2067,11 +1641,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_constraintGuide_end=0x7f0200e7;
+    public static final int layout_constraintGuide_end=0x7f0200b1;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintGuide_percent=0x7f0200e8;
+    public static final int layout_constraintGuide_percent=0x7f0200b2;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -2084,7 +1658,7 @@ public final class R {
      * <tr><td>wrap</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintHeight_default=0x7f0200e9;
+    public static final int layout_constraintHeight_default=0x7f0200b3;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2100,7 +1674,7 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintHeight_max=0x7f0200ea;
+    public static final int layout_constraintHeight_max=0x7f0200b4;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2116,15 +1690,15 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintHeight_min=0x7f0200eb;
+    public static final int layout_constraintHeight_min=0x7f0200b5;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintHeight_percent=0x7f0200ec;
+    public static final int layout_constraintHeight_percent=0x7f0200b6;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintHorizontal_bias=0x7f0200ed;
+    public static final int layout_constraintHorizontal_bias=0x7f0200b7;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -2137,15 +1711,15 @@ public final class R {
      * <tr><td>spread_inside</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintHorizontal_chainStyle=0x7f0200ee;
+    public static final int layout_constraintHorizontal_chainStyle=0x7f0200b8;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintHorizontal_weight=0x7f0200ef;
+    public static final int layout_constraintHorizontal_weight=0x7f0200b9;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_constraintLeft_creator=0x7f0200f0;
+    public static final int layout_constraintLeft_creator=0x7f0200ba;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -2160,7 +1734,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintLeft_toLeftOf=0x7f0200f1;
+    public static final int layout_constraintLeft_toLeftOf=0x7f0200bb;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -2175,11 +1749,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintLeft_toRightOf=0x7f0200f2;
+    public static final int layout_constraintLeft_toRightOf=0x7f0200bc;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_constraintRight_creator=0x7f0200f3;
+    public static final int layout_constraintRight_creator=0x7f0200bd;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -2194,7 +1768,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintRight_toLeftOf=0x7f0200f4;
+    public static final int layout_constraintRight_toLeftOf=0x7f0200be;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -2209,7 +1783,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintRight_toRightOf=0x7f0200f5;
+    public static final int layout_constraintRight_toRightOf=0x7f0200bf;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -2224,7 +1798,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintStart_toEndOf=0x7f0200f6;
+    public static final int layout_constraintStart_toEndOf=0x7f0200c0;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -2239,16 +1813,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintStart_toStartOf=0x7f0200f7;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int layout_constraintTag=0x7f0200f8;
+    public static final int layout_constraintStart_toStartOf=0x7f0200c1;
     /**
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_constraintTop_creator=0x7f0200f9;
+    public static final int layout_constraintTop_creator=0x7f0200c2;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -2263,7 +1832,7 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintTop_toBottomOf=0x7f0200fa;
+    public static final int layout_constraintTop_toBottomOf=0x7f0200c3;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -2278,11 +1847,11 @@ public final class R {
      * <tr><td>parent</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintTop_toTopOf=0x7f0200fb;
+    public static final int layout_constraintTop_toTopOf=0x7f0200c4;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintVertical_bias=0x7f0200fc;
+    public static final int layout_constraintVertical_bias=0x7f0200c5;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -2295,11 +1864,11 @@ public final class R {
      * <tr><td>spread_inside</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintVertical_chainStyle=0x7f0200fd;
+    public static final int layout_constraintVertical_chainStyle=0x7f0200c6;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintVertical_weight=0x7f0200fe;
+    public static final int layout_constraintVertical_weight=0x7f0200c7;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -2312,7 +1881,7 @@ public final class R {
      * <tr><td>wrap</td><td>1</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintWidth_default=0x7f0200ff;
+    public static final int layout_constraintWidth_default=0x7f0200c8;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2328,7 +1897,7 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintWidth_max=0x7f020100;
+    public static final int layout_constraintWidth_max=0x7f0200c9;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2344,11 +1913,11 @@ public final class R {
      * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
      * </table>
      */
-    public static final int layout_constraintWidth_min=0x7f020101;
+    public static final int layout_constraintWidth_min=0x7f0200ca;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int layout_constraintWidth_percent=0x7f020102;
+    public static final int layout_constraintWidth_percent=0x7f0200cb;
     /**
      * Specifies how this view dodges the inset edges of the CoordinatorLayout.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -2367,7 +1936,7 @@ public final class R {
      * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
      * </table>
      */
-    public static final int layout_dodgeInsetEdges=0x7f020103;
+    public static final int layout_dodgeInsetEdges=0x7f0200cc;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2375,7 +1944,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_editor_absoluteX=0x7f020104;
+    public static final int layout_editor_absoluteX=0x7f0200cd;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2383,7 +1952,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_editor_absoluteY=0x7f020105;
+    public static final int layout_editor_absoluteY=0x7f0200ce;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2391,7 +1960,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_goneMarginBottom=0x7f020106;
+    public static final int layout_goneMarginBottom=0x7f0200cf;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2399,7 +1968,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_goneMarginEnd=0x7f020107;
+    public static final int layout_goneMarginEnd=0x7f0200d0;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2407,7 +1976,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_goneMarginLeft=0x7f020108;
+    public static final int layout_goneMarginLeft=0x7f0200d1;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2415,7 +1984,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_goneMarginRight=0x7f020109;
+    public static final int layout_goneMarginRight=0x7f0200d2;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2423,7 +1992,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_goneMarginStart=0x7f02010a;
+    public static final int layout_goneMarginStart=0x7f0200d3;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2431,7 +2000,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int layout_goneMarginTop=0x7f02010b;
+    public static final int layout_goneMarginTop=0x7f0200d4;
     /**
      * Specifies how this view insets the CoordinatorLayout and make some other views
      * dodge it.
@@ -2450,14 +2019,14 @@ public final class R {
      * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
      * </table>
      */
-    public static final int layout_insetEdge=0x7f02010c;
+    public static final int layout_insetEdge=0x7f0200d5;
     /**
      * The index of a keyline this view should position relative to.
      * android:layout_gravity will affect how the view aligns to the
      * specified keyline.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_keyline=0x7f02010d;
+    public static final int layout_keyline=0x7f0200d6;
     /**
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -2466,28 +2035,15 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
      * <tr><td>barrier</td><td>2</td><td></td></tr>
-     * <tr><td>cache_measures</td><td>100</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
-     * <tr><td>dependency_ordering</td><td>200</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, measure caches</td></tr>
-     * <tr><td>graph</td><td>40</td><td></td></tr>
-     * <tr><td>graph_wrap</td><td>80</td><td></td></tr>
-     * <tr><td>grouping</td><td>400</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>ratio</td><td>10</td><td></td></tr>
-     * <tr><td>standard</td><td>101</td><td></td></tr>
+     * <tr><td>standard</td><td>7</td><td></td></tr>
      * </table>
      */
-    public static final int layout_optimizationLevel=0x7f02010e;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int limitBoundsTo=0x7f02010f;
+    public static final int layout_optimizationLevel=0x7f0200d7;
     /**
      * Explicit height between lines of text. If set, this will override the values set
      * for lineSpacingExtra and lineSpacingMultiplier.
@@ -2497,7 +2053,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int lineHeight=0x7f020110;
+    public static final int lineHeight=0x7f0200d8;
     /**
      * Drawable used as a background for selected list items.
      * <p>May be a reference to another resource, in the form
@@ -2505,7 +2061,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listChoiceBackgroundIndicator=0x7f020111;
+    public static final int listChoiceBackgroundIndicator=0x7f0200d9;
     /**
      * The list divider used in alert dialogs.
      * <p>May be a reference to another resource, in the form
@@ -2513,21 +2069,21 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listDividerAlertDialog=0x7f020112;
+    public static final int listDividerAlertDialog=0x7f0200da;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listItemLayout=0x7f020113;
+    public static final int listItemLayout=0x7f0200db;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listLayout=0x7f020114;
+    public static final int listLayout=0x7f0200dc;
     /**
      * Default menu-style ListView style.
      * <p>May be a reference to another resource, in the form
@@ -2535,14 +2091,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listMenuViewStyle=0x7f020115;
+    public static final int listMenuViewStyle=0x7f0200dd;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int listPopupWindowStyle=0x7f020116;
+    public static final int listPopupWindowStyle=0x7f0200de;
     /**
      * The preferred list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2551,7 +2107,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int listPreferredItemHeight=0x7f020117;
+    public static final int listPreferredItemHeight=0x7f0200df;
     /**
      * A larger, more robust list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2560,7 +2116,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int listPreferredItemHeightLarge=0x7f020118;
+    public static final int listPreferredItemHeightLarge=0x7f0200e0;
     /**
      * A smaller, sleeker list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2569,7 +2125,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int listPreferredItemHeightSmall=0x7f020119;
+    public static final int listPreferredItemHeightSmall=0x7f0200e1;
     /**
      * The preferred padding along the left edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2578,7 +2134,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int listPreferredItemPaddingLeft=0x7f02011a;
+    public static final int listPreferredItemPaddingLeft=0x7f0200e2;
     /**
      * The preferred padding along the right edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2587,7 +2143,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int listPreferredItemPaddingRight=0x7f02011b;
+    public static final int listPreferredItemPaddingRight=0x7f0200e3;
     /**
      * Specifies the drawable used for the application logo.
      * <p>May be a reference to another resource, in the form
@@ -2595,18 +2151,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int logo=0x7f02011c;
+    public static final int logo=0x7f0200e4;
     /**
      * A content description string to describe the appearance of the
      * associated logo image.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int logoDescription=0x7f02011d;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int maxAcceleration=0x7f02011e;
+    public static final int logoDescription=0x7f0200e5;
     /**
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -2614,27 +2166,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int maxButtonHeight=0x7f02011f;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int maxHeight=0x7f020120;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int maxVelocity=0x7f020121;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int maxWidth=0x7f020122;
+    public static final int maxButtonHeight=0x7f0200e6;
     /**
      * When set to true, all children with a weight will be considered having
      * the minimum size of the largest child. If false, all children are
@@ -2642,143 +2174,21 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int measureWithLargestChild=0x7f020123;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int minHeight=0x7f020124;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int minWidth=0x7f020125;
-    /**
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     */
-    public static final int mock_diagonalsColor=0x7f020126;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int mock_label=0x7f020127;
-    /**
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     */
-    public static final int mock_labelBackgroundColor=0x7f020128;
-    /**
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     */
-    public static final int mock_labelColor=0x7f020129;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int mock_showDiagonals=0x7f02012a;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int mock_showLabel=0x7f02012b;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>NO_DEBUG</td><td>0</td><td></td></tr>
-     * <tr><td>SHOW_ALL</td><td>3</td><td></td></tr>
-     * <tr><td>SHOW_PATH</td><td>2</td><td></td></tr>
-     * <tr><td>SHOW_PROGRESS</td><td>1</td><td></td></tr>
-     * </table>
-     */
-    public static final int motionDebug=0x7f02012c;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bounce</td><td>5</td><td></td></tr>
-     * <tr><td>easeIn</td><td>1</td><td></td></tr>
-     * <tr><td>easeInOut</td><td>0</td><td></td></tr>
-     * <tr><td>easeOut</td><td>2</td><td></td></tr>
-     * <tr><td>linear</td><td>3</td><td></td></tr>
-     * </table>
-     */
-    public static final int motionInterpolator=0x7f02012d;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int motionPathRotate=0x7f02012e;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int motionProgress=0x7f02012f;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int motionStagger=0x7f020130;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int motionTarget=0x7f020131;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int motion_postLayoutCollision=0x7f020132;
+    public static final int measureWithLargestChild=0x7f0200e7;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int motion_triggerOnCollision=0x7f020133;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int moveWhenScrollAtTop=0x7f020134;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int multiChoiceItemLayout=0x7f020135;
+    public static final int multiChoiceItemLayout=0x7f0200e8;
     /**
      * Text to set as the content description for the navigation button
      * located at the start of the toolbar.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int navigationContentDescription=0x7f020136;
+    public static final int navigationContentDescription=0x7f0200e9;
     /**
      * Icon drawable to use for the navigation button located at
      * the start of the toolbar.
@@ -2787,7 +2197,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int navigationIcon=0x7f020137;
+    public static final int navigationIcon=0x7f0200ea;
     /**
      * The type of navigation to use.
      * <p>Must be one of the following constant values.</p>
@@ -2801,20 +2211,7 @@ public final class R {
      * <tr><td>tabMode</td><td>2</td><td>The action bar will use a series of horizontal tabs for navigation.</td></tr>
      * </table>
      */
-    public static final int navigationMode=0x7f020138;
-    /**
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>disablePostScroll</td><td>1</td><td></td></tr>
-     * <tr><td>disableScroll</td><td>2</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int nestedScrollFlags=0x7f020139;
+    public static final int navigationMode=0x7f0200eb;
     /**
      * The numeric modifier key. This is the modifier when using a numeric (e.g., 12-key)
      * keyboard. The values should be kept in sync with KeyEvent
@@ -2832,59 +2229,13 @@ public final class R {
      * <tr><td>SYM</td><td>4</td><td></td></tr>
      * </table>
      */
-    public static final int numericModifiers=0x7f02013a;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int onCross=0x7f02013b;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int onHide=0x7f02013c;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int onNegativeCross=0x7f02013d;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     */
-    public static final int onPositiveCross=0x7f02013e;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int onShow=0x7f02013f;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>autoComplete</td><td>0</td><td></td></tr>
-     * <tr><td>autoCompleteToEnd</td><td>2</td><td></td></tr>
-     * <tr><td>autoCompleteToStart</td><td>1</td><td></td></tr>
-     * <tr><td>decelerate</td><td>4</td><td></td></tr>
-     * <tr><td>decelerateAndComplete</td><td>5</td><td></td></tr>
-     * <tr><td>stop</td><td>3</td><td></td></tr>
-     * </table>
-     */
-    public static final int onTouchUp=0x7f020140;
+    public static final int numericModifiers=0x7f0200ec;
     /**
      * Whether the popup window should overlap its anchor view.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int overlapAnchor=0x7f020141;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int overlay=0x7f020142;
+    public static final int overlapAnchor=0x7f0200ed;
     /**
      * Bottom padding to use when no buttons are present.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2893,7 +2244,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingBottomNoButtons=0x7f020143;
+    public static final int paddingBottomNoButtons=0x7f0200ee;
     /**
      * Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2902,7 +2253,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingEnd=0x7f020144;
+    public static final int paddingEnd=0x7f0200ef;
     /**
      * Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2911,7 +2262,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingStart=0x7f020145;
+    public static final int paddingStart=0x7f0200f0;
     /**
      * Top padding to use when no title is present.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2920,7 +2271,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int paddingTopNoTitle=0x7f020146;
+    public static final int paddingTopNoTitle=0x7f0200f1;
     /**
      * The background of a panel when it is inset from the left and right edges of the screen.
      * <p>May be a reference to another resource, in the form
@@ -2928,7 +2279,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int panelBackground=0x7f020147;
+    public static final int panelBackground=0x7f0200f2;
     /**
      * Default Panel Menu style.
      * <p>May be a reference to another resource, in the form
@@ -2936,7 +2287,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int panelMenuListTheme=0x7f020148;
+    public static final int panelMenuListTheme=0x7f0200f3;
     /**
      * Default Panel Menu width.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -2945,73 +2296,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int panelMenuListWidth=0x7f020149;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>flip</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>startHorizontal</td><td>2</td><td></td></tr>
-     * <tr><td>startVertical</td><td>1</td><td></td></tr>
-     * </table>
-     */
-    public static final int pathMotionArc=0x7f02014a;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int path_percent=0x7f02014b;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int percentHeight=0x7f02014c;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int percentWidth=0x7f02014d;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int percentX=0x7f02014e;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int percentY=0x7f02014f;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int perpendicularPath_percent=0x7f020150;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int pivotAnchor=0x7f020151;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>gone</td><td>8</td><td></td></tr>
-     * <tr><td>invisible</td><td>4</td><td></td></tr>
-     * <tr><td>visible</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int placeholder_emptyVisibility=0x7f020152;
+    public static final int panelMenuListWidth=0x7f0200f4;
     /**
      * Default PopupMenu style.
      * <p>May be a reference to another resource, in the form
@@ -3019,7 +2304,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int popupMenuStyle=0x7f020153;
+    public static final int popupMenuStyle=0x7f0200f5;
     /**
      * Reference to a theme that should be used to inflate popups
      * shown by widgets in the action bar.
@@ -3028,7 +2313,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int popupTheme=0x7f020154;
+    public static final int popupTheme=0x7f0200f6;
     /**
      * Default PopupWindow style.
      * <p>May be a reference to another resource, in the form
@@ -3036,13 +2321,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int popupWindowStyle=0x7f020155;
+    public static final int popupWindowStyle=0x7f0200f7;
     /**
      * Whether space should be reserved in layout when an icon is missing.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int preserveIconSpacing=0x7f020156;
+    public static final int preserveIconSpacing=0x7f0200f8;
     /**
      * Specifies the horizontal padding on either end for an embedded progress bar.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3051,7 +2336,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int progressBarPadding=0x7f020157;
+    public static final int progressBarPadding=0x7f0200f9;
     /**
      * Specifies a style resource to use for an embedded progress bar.
      * <p>May be a reference to another resource, in the form
@@ -3059,7 +2344,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int progressBarStyle=0x7f020158;
+    public static final int progressBarStyle=0x7f0200fa;
     /**
      * Background for the section containing the search query
      * <p>May be a reference to another resource, in the form
@@ -3067,13 +2352,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int queryBackground=0x7f020159;
+    public static final int queryBackground=0x7f0200fb;
     /**
      * An optional user-defined query hint string to be displayed in the empty query field.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int queryHint=0x7f02015a;
+    public static final int queryHint=0x7f0200fc;
     /**
      * Default RadioButton style.
      * <p>May be a reference to another resource, in the form
@@ -3081,7 +2366,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int radioButtonStyle=0x7f02015b;
+    public static final int radioButtonStyle=0x7f0200fd;
     /**
      * Default RatingBar style.
      * <p>May be a reference to another resource, in the form
@@ -3089,7 +2374,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int ratingBarStyle=0x7f02015c;
+    public static final int ratingBarStyle=0x7f0200fe;
     /**
      * Indicator RatingBar style.
      * <p>May be a reference to another resource, in the form
@@ -3097,7 +2382,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int ratingBarStyleIndicator=0x7f02015d;
+    public static final int ratingBarStyleIndicator=0x7f0200ff;
     /**
      * Small indicator RatingBar style.
      * <p>May be a reference to another resource, in the form
@@ -3105,55 +2390,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int ratingBarStyleSmall=0x7f02015e;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int region_heightLessThan=0x7f02015f;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int region_heightMoreThan=0x7f020160;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int region_widthLessThan=0x7f020161;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int region_widthMoreThan=0x7f020162;
-    /**
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int round=0x7f020163;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int roundPercent=0x7f020164;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int saturation=0x7f020165;
+    public static final int ratingBarStyleSmall=0x7f020100;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -3162,7 +2399,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int scopeUris=0x7f020166;
+    public static final int scopeUris=0x7f020101;
     /**
      * Search icon displayed as a text field hint
      * <p>May be a reference to another resource, in the form
@@ -3170,7 +2407,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int searchHintIcon=0x7f020167;
+    public static final int searchHintIcon=0x7f020102;
     /**
      * Search icon
      * <p>May be a reference to another resource, in the form
@@ -3178,7 +2415,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int searchIcon=0x7f020168;
+    public static final int searchIcon=0x7f020103;
     /**
      * Style for the search query widget.
      * <p>May be a reference to another resource, in the form
@@ -3186,7 +2423,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int searchViewStyle=0x7f020169;
+    public static final int searchViewStyle=0x7f020104;
     /**
      * Default SeekBar style.
      * <p>May be a reference to another resource, in the form
@@ -3194,7 +2431,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int seekBarStyle=0x7f02016a;
+    public static final int seekBarStyle=0x7f020105;
     /**
      * A style that may be applied to buttons or other selectable items
      * that should react to pressed and focus states, but that do not
@@ -3204,7 +2441,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int selectableItemBackground=0x7f02016b;
+    public static final int selectableItemBackground=0x7f020106;
     /**
      * Background drawable for borderless standalone items that need focus/pressed states.
      * <p>May be a reference to another resource, in the form
@@ -3212,7 +2449,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int selectableItemBackgroundBorderless=0x7f02016c;
+    public static final int selectableItemBackgroundBorderless=0x7f020107;
     /**
      * How this item should display in the Action Bar, if present.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -3237,7 +2474,7 @@ public final class R {
      * label with it even if it has an icon representation.</td></tr>
      * </table>
      */
-    public static final int showAsAction=0x7f02016d;
+    public static final int showAsAction=0x7f020108;
     /**
      * Setting for which dividers to show.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -3252,40 +2489,31 @@ public final class R {
      * <tr><td>none</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int showDividers=0x7f02016e;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int showPaths=0x7f02016f;
+    public static final int showDividers=0x7f020109;
     /**
      * Whether to draw on/off text.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int showText=0x7f020170;
+    public static final int showText=0x7f02010a;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int showTitle=0x7f020171;
+    public static final int showTitle=0x7f02010b;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int singleChoiceItemLayout=0x7f020172;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int sizePercent=0x7f020173;
+    public static final int singleChoiceItemLayout=0x7f02010c;
     /**
      * Whether bars should rotate or not during transition
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int spinBars=0x7f020174;
+    public static final int spinBars=0x7f02010d;
     /**
      * Default Spinner style.
      * <p>May be a reference to another resource, in the form
@@ -3293,7 +2521,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int spinnerDropDownItemStyle=0x7f020175;
+    public static final int spinnerDropDownItemStyle=0x7f02010e;
     /**
      * Default Spinner style.
      * <p>May be a reference to another resource, in the form
@@ -3301,13 +2529,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int spinnerStyle=0x7f020176;
+    public static final int spinnerStyle=0x7f02010f;
     /**
      * Whether to split the track and leave a gap for the thumb drawable.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int splitTrack=0x7f020177;
+    public static final int splitTrack=0x7f020110;
     /**
      * Sets a drawable as the content of this ImageView. Allows the use of vector drawable
      * when running on older versions of the platform.
@@ -3316,17 +2544,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int srcCompat=0x7f020178;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int staggered=0x7f020179;
+    public static final int srcCompat=0x7f020111;
     /**
      * State identifier indicating the popup will be above the anchor.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int state_above_anchor=0x7f02017a;
+    public static final int state_above_anchor=0x7f020112;
     /**
      * Drawable to display behind the status bar when the view is set to draw behind it.
      * <p>May be a reference to another resource, in the form
@@ -3337,7 +2561,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int statusBarBackground=0x7f02017b;
+    public static final int statusBarBackground=0x7f020113;
     /**
      * Drawable for the arrow icon indicating a particular item is a submenu.
      * <p>May be a reference to another resource, in the form
@@ -3345,7 +2569,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int subMenuArrow=0x7f02017c;
+    public static final int subMenuArrow=0x7f020114;
     /**
      * Background for the section containing the action (e.g. voice search)
      * <p>May be a reference to another resource, in the form
@@ -3353,27 +2577,27 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int submitBackground=0x7f02017d;
+    public static final int submitBackground=0x7f020115;
     /**
      * Specifies subtitle text used for navigationMode="normal"
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int subtitle=0x7f02017e;
+    public static final int subtitle=0x7f020116;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int subtitleTextAppearance=0x7f02017f;
+    public static final int subtitleTextAppearance=0x7f020117;
     /**
      * A color to apply to the subtitle string.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int subtitleTextColor=0x7f020180;
+    public static final int subtitleTextColor=0x7f020118;
     /**
      * Specifies a style to use for subtitle text.
      * <p>May be a reference to another resource, in the form
@@ -3381,7 +2605,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int subtitleTextStyle=0x7f020181;
+    public static final int subtitleTextStyle=0x7f020119;
     /**
      * Layout for query suggestion rows
      * <p>May be a reference to another resource, in the form
@@ -3389,7 +2613,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int suggestionRowLayout=0x7f020182;
+    public static final int suggestionRowLayout=0x7f02011a;
     /**
      * Minimum width for the switch component
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3398,7 +2622,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int switchMinWidth=0x7f020183;
+    public static final int switchMinWidth=0x7f02011b;
     /**
      * Minimum space between the switch and caption text
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3407,7 +2631,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int switchPadding=0x7f020184;
+    public static final int switchPadding=0x7f02011c;
     /**
      * Default style for the Switch widget.
      * <p>May be a reference to another resource, in the form
@@ -3415,7 +2639,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int switchStyle=0x7f020185;
+    public static final int switchStyle=0x7f02011d;
     /**
      * TextAppearance style for text displayed on the switch thumb.
      * <p>May be a reference to another resource, in the form
@@ -3423,38 +2647,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int switchTextAppearance=0x7f020186;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int targetId=0x7f020187;
-    /**
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     */
-    public static final int telltales_tailColor=0x7f020188;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int telltales_tailScale=0x7f020189;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>layout</td><td>0</td><td></td></tr>
-     * <tr><td>postLayout</td><td>1</td><td></td></tr>
-     * <tr><td>staticLayout</td><td>3</td><td></td></tr>
-     * <tr><td>staticPostLayout</td><td>2</td><td></td></tr>
-     * </table>
-     */
-    public static final int telltales_velocityMode=0x7f02018a;
+    public static final int switchTextAppearance=0x7f02011e;
     /**
      * Present the text in ALL CAPS. This may use a small-caps form when available.
      * <p>May be a reference to another resource, in the form
@@ -3464,7 +2657,7 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int textAllCaps=0x7f02018b;
+    public static final int textAllCaps=0x7f02011f;
     /**
      * Text color, typeface, size, and style for the text inside of a popup menu.
      * <p>May be a reference to another resource, in the form
@@ -3472,7 +2665,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceLargePopupMenu=0x7f02018c;
+    public static final int textAppearanceLargePopupMenu=0x7f020120;
     /**
      * The preferred TextAppearance for the primary text of list items.
      * <p>May be a reference to another resource, in the form
@@ -3480,7 +2673,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceListItem=0x7f02018d;
+    public static final int textAppearanceListItem=0x7f020121;
     /**
      * The preferred TextAppearance for the secondary text of list items.
      * <p>May be a reference to another resource, in the form
@@ -3488,7 +2681,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceListItemSecondary=0x7f02018e;
+    public static final int textAppearanceListItemSecondary=0x7f020122;
     /**
      * The preferred TextAppearance for the primary text of small list items.
      * <p>May be a reference to another resource, in the form
@@ -3496,7 +2689,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceListItemSmall=0x7f02018f;
+    public static final int textAppearanceListItemSmall=0x7f020123;
     /**
      * Text color, typeface, size, and style for header text inside of a popup menu.
      * <p>May be a reference to another resource, in the form
@@ -3504,7 +2697,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearancePopupMenuHeader=0x7f020190;
+    public static final int textAppearancePopupMenuHeader=0x7f020124;
     /**
      * Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color.
      * <p>May be a reference to another resource, in the form
@@ -3512,7 +2705,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceSearchResultSubtitle=0x7f020191;
+    public static final int textAppearanceSearchResultSubtitle=0x7f020125;
     /**
      * Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color.
      * <p>May be a reference to another resource, in the form
@@ -3520,7 +2713,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceSearchResultTitle=0x7f020192;
+    public static final int textAppearanceSearchResultTitle=0x7f020126;
     /**
      * Text color, typeface, size, and style for small text inside of a popup menu.
      * <p>May be a reference to another resource, in the form
@@ -3528,7 +2721,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int textAppearanceSmallPopupMenu=0x7f020193;
+    public static final int textAppearanceSmallPopupMenu=0x7f020127;
     /**
      * Color of list item text in alert dialogs.
      * <p>May be a reference to another resource, in the form
@@ -3539,7 +2732,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int textColorAlertDialogListItem=0x7f020194;
+    public static final int textColorAlertDialogListItem=0x7f020128;
     /**
      * Text color for urls in search suggestions, used by things like global search
      * <p>May be a reference to another resource, in the form
@@ -3550,7 +2743,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int textColorSearchUrl=0x7f020195;
+    public static final int textColorSearchUrl=0x7f020129;
     /**
      * Deprecated.
      * <p>May be a reference to another resource, in the form
@@ -3558,7 +2751,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int theme=0x7f020196;
+    public static final int theme=0x7f02012a;
     /**
      * The thickness (stroke size) for the bar paint
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3567,7 +2760,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int thickness=0x7f020197;
+    public static final int thickness=0x7f02012b;
     /**
      * Amount of padding on either side of text within the switch thumb.
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3576,14 +2769,14 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int thumbTextPadding=0x7f020198;
+    public static final int thumbTextPadding=0x7f02012c;
     /**
      * Tint to apply to the thumb drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int thumbTint=0x7f020199;
+    public static final int thumbTint=0x7f02012d;
     /**
      * Blending mode used to apply the thumb tint.
      * <p>Must be one of the following constant values.</p>
@@ -3605,7 +2798,7 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int thumbTintMode=0x7f02019a;
+    public static final int thumbTintMode=0x7f02012e;
     /**
      * Drawable displayed at each progress position on a seekbar.
      * <p>May be a reference to another resource, in the form
@@ -3613,14 +2806,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tickMark=0x7f02019b;
+    public static final int tickMark=0x7f02012f;
     /**
      * Tint to apply to the tick mark drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tickMarkTint=0x7f02019c;
+    public static final int tickMarkTint=0x7f020130;
     /**
      * Blending mode used to apply the tick mark tint.
      * <p>Must be one of the following constant values.</p>
@@ -3642,14 +2835,14 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int tickMarkTintMode=0x7f02019d;
+    public static final int tickMarkTintMode=0x7f020131;
     /**
      * Tint to apply to the image source.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tint=0x7f02019e;
+    public static final int tint=0x7f020132;
     /**
      * Blending mode used to apply the image source tint.
      * <p>Must be one of the following constant values.</p>
@@ -3671,12 +2864,12 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int tintMode=0x7f02019f;
+    public static final int tintMode=0x7f020133;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int title=0x7f0201a0;
+    public static final int title=0x7f020134;
     /**
      * Specifies extra space on the left, start, right and end sides
      * of the toolbar's title. Margin values should be positive.
@@ -3686,7 +2879,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMargin=0x7f0201a1;
+    public static final int titleMargin=0x7f020135;
     /**
      * Specifies extra space on the bottom side of the toolbar's title.
      * If both this attribute and titleMargin are specified, then this
@@ -3697,7 +2890,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginBottom=0x7f0201a2;
+    public static final int titleMarginBottom=0x7f020136;
     /**
      * Specifies extra space on the end side of the toolbar's title.
      * If both this attribute and titleMargin are specified, then this
@@ -3708,7 +2901,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginEnd=0x7f0201a3;
+    public static final int titleMarginEnd=0x7f020137;
     /**
      * Specifies extra space on the start side of the toolbar's title.
      * If both this attribute and titleMargin are specified, then this
@@ -3719,7 +2912,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginStart=0x7f0201a4;
+    public static final int titleMarginStart=0x7f020138;
     /**
      * Specifies extra space on the top side of the toolbar's title.
      * If both this attribute and titleMargin are specified, then this
@@ -3730,7 +2923,7 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    public static final int titleMarginTop=0x7f0201a5;
+    public static final int titleMarginTop=0x7f020139;
     /**
      * {@deprecated Use titleMargin}
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -3740,21 +2933,21 @@ public final class R {
      * mm (millimeters).
      */
     @Deprecated
-    public static final int titleMargins=0x7f0201a6;
+    public static final int titleMargins=0x7f02013a;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int titleTextAppearance=0x7f0201a7;
+    public static final int titleTextAppearance=0x7f02013b;
     /**
      * A color to apply to the title string.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int titleTextColor=0x7f0201a8;
+    public static final int titleTextColor=0x7f02013c;
     /**
      * Specifies a style to use for title text.
      * <p>May be a reference to another resource, in the form
@@ -3762,7 +2955,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int titleTextStyle=0x7f0201a9;
+    public static final int titleTextStyle=0x7f02013d;
     /**
      * Default Toolar NavigationButtonStyle
      * <p>May be a reference to another resource, in the form
@@ -3770,7 +2963,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int toolbarNavigationButtonStyle=0x7f0201aa;
+    public static final int toolbarNavigationButtonStyle=0x7f02013e;
     /**
      * Default Toolbar style.
      * <p>May be a reference to another resource, in the form
@@ -3778,7 +2971,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int toolbarStyle=0x7f0201ab;
+    public static final int toolbarStyle=0x7f02013f;
     /**
      * Foreground color to use for tooltips
      * <p>May be a reference to another resource, in the form
@@ -3789,7 +2982,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int tooltipForegroundColor=0x7f0201ac;
+    public static final int tooltipForegroundColor=0x7f020140;
     /**
      * Background to use for tooltips
      * <p>May be a reference to another resource, in the form
@@ -3797,44 +2990,13 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int tooltipFrameBackground=0x7f0201ad;
+    public static final int tooltipFrameBackground=0x7f020141;
     /**
      * The tooltip text associated with the item.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int tooltipText=0x7f0201ae;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int touchAnchorId=0x7f0201af;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>3</td><td></td></tr>
-     * <tr><td>end</td><td>6</td><td></td></tr>
-     * <tr><td>left</td><td>1</td><td></td></tr>
-     * <tr><td>middle</td><td>4</td><td></td></tr>
-     * <tr><td>right</td><td>2</td><td></td></tr>
-     * <tr><td>start</td><td>5</td><td></td></tr>
-     * <tr><td>top</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int touchAnchorSide=0x7f0201b0;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int touchRegionId=0x7f0201b1;
+    public static final int tooltipText=0x7f020142;
     /**
      * Drawable to use as the "track" that the switch thumb slides within.
      * <p>May be a reference to another resource, in the form
@@ -3842,14 +3004,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int track=0x7f0201b2;
+    public static final int track=0x7f020143;
     /**
      * Tint to apply to the track.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int trackTint=0x7f0201b3;
+    public static final int trackTint=0x7f020144;
     /**
      * Blending mode used to apply the track tint.
      * <p>Must be one of the following constant values.</p>
@@ -3871,85 +3033,18 @@ public final class R {
      * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
      * </table>
      */
-    public static final int trackTintMode=0x7f0201b4;
-    /**
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     */
-    public static final int transitionDisable=0x7f0201b5;
-    /**
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>accelerate</td><td>1</td><td></td></tr>
-     * <tr><td>decelerate</td><td>2</td><td></td></tr>
-     * <tr><td>linear</td><td>3</td><td></td></tr>
-     * <tr><td>standard</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int transitionEasing=0x7f0201b6;
-    /**
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>beginOnFirstDraw</td><td>1</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int transitionFlags=0x7f0201b7;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int transitionPathRotate=0x7f0201b8;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int triggerId=0x7f0201b9;
-    /**
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     */
-    public static final int triggerReceiver=0x7f0201ba;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int triggerSlack=0x7f0201bb;
+    public static final int trackTintMode=0x7f020145;
     /**
      * The index of the font in the tcc font file. If the font file referenced is not in the
      * tcc format, this attribute needs not be specified.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int ttcIndex=0x7f0201bc;
+    public static final int ttcIndex=0x7f020146;
     /**
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int viewInflaterClass=0x7f0201bd;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>ignore</td><td>1</td><td></td></tr>
-     * <tr><td>normal</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int visibilityMode=0x7f0201be;
+    public static final int viewInflaterClass=0x7f020147;
     /**
      * Voice button icon
      * <p>May be a reference to another resource, in the form
@@ -3957,64 +3052,14 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int voiceIcon=0x7f0201bf;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int warmth=0x7f0201c0;
-    /**
-     * <p>May be an integer value, such as "<code>100</code>".
-     */
-    public static final int waveDecay=0x7f0201c1;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     */
-    public static final int waveOffset=0x7f0201c2;
-    /**
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     */
-    public static final int wavePeriod=0x7f0201c3;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bounce</td><td>6</td><td></td></tr>
-     * <tr><td>cos</td><td>5</td><td></td></tr>
-     * <tr><td>reverseSawtooth</td><td>4</td><td></td></tr>
-     * <tr><td>sawtooth</td><td>3</td><td></td></tr>
-     * <tr><td>sin</td><td>0</td><td></td></tr>
-     * <tr><td>square</td><td>1</td><td></td></tr>
-     * <tr><td>triangle</td><td>2</td><td></td></tr>
-     * </table>
-     */
-    public static final int waveShape=0x7f0201c4;
-    /**
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>path</td><td>1</td><td></td></tr>
-     * <tr><td>position</td><td>0</td><td></td></tr>
-     * </table>
-     */
-    public static final int waveVariesBy=0x7f0201c5;
+    public static final int voiceIcon=0x7f020148;
     /**
      * Flag indicating whether this window should have an Action Bar
      * in place of the usual title bar.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionBar=0x7f0201c6;
+    public static final int windowActionBar=0x7f020149;
     /**
      * Flag indicating whether this window's Action Bar should overlay
      * application content. Does nothing if the window would not
@@ -4022,14 +3067,14 @@ public final class R {
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionBarOverlay=0x7f0201c7;
+    public static final int windowActionBarOverlay=0x7f02014a;
     /**
      * Flag indicating whether action modes should overlay window content
      * when there is not reserved space for their UI (such as an Action Bar).
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowActionModeOverlay=0x7f0201c8;
+    public static final int windowActionModeOverlay=0x7f02014b;
     /**
      * A fixed height for the window along the major axis of the screen,
      * that is, when in portrait. Can be either an absolute dimension
@@ -4044,7 +3089,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedHeightMajor=0x7f0201c9;
+    public static final int windowFixedHeightMajor=0x7f02014c;
     /**
      * A fixed height for the window along the minor axis of the screen,
      * that is, when in landscape. Can be either an absolute dimension
@@ -4059,7 +3104,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedHeightMinor=0x7f0201ca;
+    public static final int windowFixedHeightMinor=0x7f02014d;
     /**
      * A fixed width for the window along the major axis of the screen,
      * that is, when in landscape. Can be either an absolute dimension
@@ -4074,7 +3119,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedWidthMajor=0x7f0201cb;
+    public static final int windowFixedWidthMajor=0x7f02014e;
     /**
      * A fixed width for the window along the minor axis of the screen,
      * that is, when in portrait. Can be either an absolute dimension
@@ -4089,7 +3134,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowFixedWidthMinor=0x7f0201cc;
+    public static final int windowFixedWidthMinor=0x7f02014f;
     /**
      * The minimum width the window is allowed to be, along the major
      * axis of the screen.  That is, when in landscape.  Can be either
@@ -4105,7 +3150,7 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowMinWidthMajor=0x7f0201cd;
+    public static final int windowMinWidthMajor=0x7f020150;
     /**
      * The minimum width the window is allowed to be, along the minor
      * axis of the screen.  That is, when in portrait.  Can be either
@@ -4121,18 +3166,21 @@ public final class R {
      * The % suffix always means a percentage of the base size;
      * the optional %p suffix provides a size relative to some parent container.
      */
-    public static final int windowMinWidthMinor=0x7f0201ce;
+    public static final int windowMinWidthMinor=0x7f020151;
     /**
      * Flag indicating whether there should be no title on this window.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int windowNoTitle=0x7f0201cf;
+    public static final int windowNoTitle=0x7f020152;
   }
   public static final class bool {
     public static final int abc_action_bar_embed_tabs=0x7f030000;
     public static final int abc_allow_stacked_button_bar=0x7f030001;
     public static final int abc_config_actionMenuItemAllCaps=0x7f030002;
+    public static final int enable_system_alarm_service_default=0x7f030003;
+    public static final int enable_system_job_service_default=0x7f030004;
+    public static final int workmanager_test_configuration=0x7f030005;
   }
   public static final class color {
     public static final int abc_background_cache_hint_selector_material_dark=0x7f040000;
@@ -4161,79 +3209,84 @@ public final class R {
     public static final int abc_tint_switch_track=0x7f040017;
     public static final int accent_material_dark=0x7f040018;
     public static final int accent_material_light=0x7f040019;
-    public static final int background_floating_material_dark=0x7f04001a;
-    public static final int background_floating_material_light=0x7f04001b;
-    public static final int background_material_dark=0x7f04001c;
-    public static final int background_material_light=0x7f04001d;
-    public static final int bright_foreground_disabled_material_dark=0x7f04001e;
-    public static final int bright_foreground_disabled_material_light=0x7f04001f;
-    public static final int bright_foreground_inverse_material_dark=0x7f040020;
-    public static final int bright_foreground_inverse_material_light=0x7f040021;
-    public static final int bright_foreground_material_dark=0x7f040022;
-    public static final int bright_foreground_material_light=0x7f040023;
-    public static final int button_material_dark=0x7f040024;
-    public static final int button_material_light=0x7f040025;
-    public static final int colorAccent=0x7f040026;
-    public static final int colorPrimary=0x7f040027;
-    public static final int colorPrimaryDark=0x7f040028;
-    public static final int common_google_signin_btn_text_dark=0x7f040029;
-    public static final int common_google_signin_btn_text_dark_default=0x7f04002a;
-    public static final int common_google_signin_btn_text_dark_disabled=0x7f04002b;
-    public static final int common_google_signin_btn_text_dark_focused=0x7f04002c;
-    public static final int common_google_signin_btn_text_dark_pressed=0x7f04002d;
-    public static final int common_google_signin_btn_text_light=0x7f04002e;
-    public static final int common_google_signin_btn_text_light_default=0x7f04002f;
-    public static final int common_google_signin_btn_text_light_disabled=0x7f040030;
-    public static final int common_google_signin_btn_text_light_focused=0x7f040031;
-    public static final int common_google_signin_btn_text_light_pressed=0x7f040032;
-    public static final int common_google_signin_btn_tint=0x7f040033;
-    public static final int dim_foreground_disabled_material_dark=0x7f040034;
-    public static final int dim_foreground_disabled_material_light=0x7f040035;
-    public static final int dim_foreground_material_dark=0x7f040036;
-    public static final int dim_foreground_material_light=0x7f040037;
-    public static final int error_color_material_dark=0x7f040038;
-    public static final int error_color_material_light=0x7f040039;
-    public static final int foreground_material_dark=0x7f04003a;
-    public static final int foreground_material_light=0x7f04003b;
-    public static final int highlighted_text_material_dark=0x7f04003c;
-    public static final int highlighted_text_material_light=0x7f04003d;
-    public static final int material_blue_grey_800=0x7f04003e;
-    public static final int material_blue_grey_900=0x7f04003f;
-    public static final int material_blue_grey_950=0x7f040040;
-    public static final int material_deep_teal_200=0x7f040041;
-    public static final int material_deep_teal_500=0x7f040042;
-    public static final int material_grey_100=0x7f040043;
-    public static final int material_grey_300=0x7f040044;
-    public static final int material_grey_50=0x7f040045;
-    public static final int material_grey_600=0x7f040046;
-    public static final int material_grey_800=0x7f040047;
-    public static final int material_grey_850=0x7f040048;
-    public static final int material_grey_900=0x7f040049;
-    public static final int notification_action_color_filter=0x7f04004a;
-    public static final int notification_icon_bg_color=0x7f04004b;
-    public static final int notification_material_background_media_default_color=0x7f04004c;
-    public static final int primary_dark_material_dark=0x7f04004d;
-    public static final int primary_dark_material_light=0x7f04004e;
-    public static final int primary_material_dark=0x7f04004f;
-    public static final int primary_material_light=0x7f040050;
-    public static final int primary_text_default_material_dark=0x7f040051;
-    public static final int primary_text_default_material_light=0x7f040052;
-    public static final int primary_text_disabled_material_dark=0x7f040053;
-    public static final int primary_text_disabled_material_light=0x7f040054;
-    public static final int ripple_material_dark=0x7f040055;
-    public static final int ripple_material_light=0x7f040056;
-    public static final int secondary_text_default_material_dark=0x7f040057;
-    public static final int secondary_text_default_material_light=0x7f040058;
-    public static final int secondary_text_disabled_material_dark=0x7f040059;
-    public static final int secondary_text_disabled_material_light=0x7f04005a;
-    public static final int switch_thumb_disabled_material_dark=0x7f04005b;
-    public static final int switch_thumb_disabled_material_light=0x7f04005c;
-    public static final int switch_thumb_material_dark=0x7f04005d;
-    public static final int switch_thumb_material_light=0x7f04005e;
-    public static final int switch_thumb_normal_material_dark=0x7f04005f;
-    public static final int switch_thumb_normal_material_light=0x7f040060;
-    public static final int tooltip_background_dark=0x7f040061;
-    public static final int tooltip_background_light=0x7f040062;
+    public static final int androidx_core_ripple_material_light=0x7f04001a;
+    public static final int androidx_core_secondary_text_default_material_light=0x7f04001b;
+    public static final int background_floating_material_dark=0x7f04001c;
+    public static final int background_floating_material_light=0x7f04001d;
+    public static final int background_material_dark=0x7f04001e;
+    public static final int background_material_light=0x7f04001f;
+    public static final int bright_foreground_disabled_material_dark=0x7f040020;
+    public static final int bright_foreground_disabled_material_light=0x7f040021;
+    public static final int bright_foreground_inverse_material_dark=0x7f040022;
+    public static final int bright_foreground_inverse_material_light=0x7f040023;
+    public static final int bright_foreground_material_dark=0x7f040024;
+    public static final int bright_foreground_material_light=0x7f040025;
+    public static final int browser_actions_bg_grey=0x7f040026;
+    public static final int browser_actions_divider_color=0x7f040027;
+    public static final int browser_actions_text_color=0x7f040028;
+    public static final int browser_actions_title_color=0x7f040029;
+    public static final int button_material_dark=0x7f04002a;
+    public static final int button_material_light=0x7f04002b;
+    public static final int colorAccent=0x7f04002c;
+    public static final int colorPrimary=0x7f04002d;
+    public static final int colorPrimaryDark=0x7f04002e;
+    public static final int common_google_signin_btn_text_dark=0x7f04002f;
+    public static final int common_google_signin_btn_text_dark_default=0x7f040030;
+    public static final int common_google_signin_btn_text_dark_disabled=0x7f040031;
+    public static final int common_google_signin_btn_text_dark_focused=0x7f040032;
+    public static final int common_google_signin_btn_text_dark_pressed=0x7f040033;
+    public static final int common_google_signin_btn_text_light=0x7f040034;
+    public static final int common_google_signin_btn_text_light_default=0x7f040035;
+    public static final int common_google_signin_btn_text_light_disabled=0x7f040036;
+    public static final int common_google_signin_btn_text_light_focused=0x7f040037;
+    public static final int common_google_signin_btn_text_light_pressed=0x7f040038;
+    public static final int common_google_signin_btn_tint=0x7f040039;
+    public static final int dim_foreground_disabled_material_dark=0x7f04003a;
+    public static final int dim_foreground_disabled_material_light=0x7f04003b;
+    public static final int dim_foreground_material_dark=0x7f04003c;
+    public static final int dim_foreground_material_light=0x7f04003d;
+    public static final int error_color_material_dark=0x7f04003e;
+    public static final int error_color_material_light=0x7f04003f;
+    public static final int foreground_material_dark=0x7f040040;
+    public static final int foreground_material_light=0x7f040041;
+    public static final int highlighted_text_material_dark=0x7f040042;
+    public static final int highlighted_text_material_light=0x7f040043;
+    public static final int material_blue_grey_800=0x7f040044;
+    public static final int material_blue_grey_900=0x7f040045;
+    public static final int material_blue_grey_950=0x7f040046;
+    public static final int material_deep_teal_200=0x7f040047;
+    public static final int material_deep_teal_500=0x7f040048;
+    public static final int material_grey_100=0x7f040049;
+    public static final int material_grey_300=0x7f04004a;
+    public static final int material_grey_50=0x7f04004b;
+    public static final int material_grey_600=0x7f04004c;
+    public static final int material_grey_800=0x7f04004d;
+    public static final int material_grey_850=0x7f04004e;
+    public static final int material_grey_900=0x7f04004f;
+    public static final int notification_action_color_filter=0x7f040050;
+    public static final int notification_icon_bg_color=0x7f040051;
+    public static final int primary_dark_material_dark=0x7f040052;
+    public static final int primary_dark_material_light=0x7f040053;
+    public static final int primary_material_dark=0x7f040054;
+    public static final int primary_material_light=0x7f040055;
+    public static final int primary_text_default_material_dark=0x7f040056;
+    public static final int primary_text_default_material_light=0x7f040057;
+    public static final int primary_text_disabled_material_dark=0x7f040058;
+    public static final int primary_text_disabled_material_light=0x7f040059;
+    public static final int ripple_material_dark=0x7f04005a;
+    public static final int ripple_material_light=0x7f04005b;
+    public static final int secondary_text_default_material_dark=0x7f04005c;
+    public static final int secondary_text_default_material_light=0x7f04005d;
+    public static final int secondary_text_disabled_material_dark=0x7f04005e;
+    public static final int secondary_text_disabled_material_light=0x7f04005f;
+    public static final int switch_thumb_disabled_material_dark=0x7f040060;
+    public static final int switch_thumb_disabled_material_light=0x7f040061;
+    public static final int switch_thumb_material_dark=0x7f040062;
+    public static final int switch_thumb_material_light=0x7f040063;
+    public static final int switch_thumb_normal_material_dark=0x7f040064;
+    public static final int switch_thumb_normal_material_light=0x7f040065;
+    public static final int tooltip_background_dark=0x7f040066;
+    public static final int tooltip_background_light=0x7f040067;
   }
   public static final class dimen {
     public static final int abc_action_bar_content_inset_material=0x7f050000;
@@ -4313,45 +3366,47 @@ public final class R {
     public static final int abc_text_size_title_material_toolbar=0x7f05004a;
     public static final int activity_horizontal_margin=0x7f05004b;
     public static final int activity_vertical_margin=0x7f05004c;
-    public static final int compat_button_inset_horizontal_material=0x7f05004d;
-    public static final int compat_button_inset_vertical_material=0x7f05004e;
-    public static final int compat_button_padding_horizontal_material=0x7f05004f;
-    public static final int compat_button_padding_vertical_material=0x7f050050;
-    public static final int compat_control_corner_material=0x7f050051;
-    public static final int compat_notification_large_icon_max_height=0x7f050052;
-    public static final int compat_notification_large_icon_max_width=0x7f050053;
-    public static final int disabled_alpha_material_dark=0x7f050054;
-    public static final int disabled_alpha_material_light=0x7f050055;
-    public static final int highlight_alpha_material_colored=0x7f050056;
-    public static final int highlight_alpha_material_dark=0x7f050057;
-    public static final int highlight_alpha_material_light=0x7f050058;
-    public static final int hint_alpha_material_dark=0x7f050059;
-    public static final int hint_alpha_material_light=0x7f05005a;
-    public static final int hint_pressed_alpha_material_dark=0x7f05005b;
-    public static final int hint_pressed_alpha_material_light=0x7f05005c;
-    public static final int notification_action_icon_size=0x7f05005d;
-    public static final int notification_action_text_size=0x7f05005e;
-    public static final int notification_big_circle_margin=0x7f05005f;
-    public static final int notification_content_margin_start=0x7f050060;
-    public static final int notification_large_icon_height=0x7f050061;
-    public static final int notification_large_icon_width=0x7f050062;
-    public static final int notification_main_column_padding_top=0x7f050063;
-    public static final int notification_media_narrow_margin=0x7f050064;
-    public static final int notification_right_icon_size=0x7f050065;
-    public static final int notification_right_side_padding_top=0x7f050066;
-    public static final int notification_small_icon_background_padding=0x7f050067;
-    public static final int notification_small_icon_size_as_large=0x7f050068;
-    public static final int notification_subtext_size=0x7f050069;
-    public static final int notification_top_pad=0x7f05006a;
-    public static final int notification_top_pad_large_text=0x7f05006b;
-    public static final int tooltip_corner_radius=0x7f05006c;
-    public static final int tooltip_horizontal_padding=0x7f05006d;
-    public static final int tooltip_margin=0x7f05006e;
-    public static final int tooltip_precise_anchor_extra_offset=0x7f05006f;
-    public static final int tooltip_precise_anchor_threshold=0x7f050070;
-    public static final int tooltip_vertical_padding=0x7f050071;
-    public static final int tooltip_y_offset_non_touch=0x7f050072;
-    public static final int tooltip_y_offset_touch=0x7f050073;
+    public static final int browser_actions_context_menu_max_width=0x7f05004d;
+    public static final int browser_actions_context_menu_min_padding=0x7f05004e;
+    public static final int compat_button_inset_horizontal_material=0x7f05004f;
+    public static final int compat_button_inset_vertical_material=0x7f050050;
+    public static final int compat_button_padding_horizontal_material=0x7f050051;
+    public static final int compat_button_padding_vertical_material=0x7f050052;
+    public static final int compat_control_corner_material=0x7f050053;
+    public static final int compat_notification_large_icon_max_height=0x7f050054;
+    public static final int compat_notification_large_icon_max_width=0x7f050055;
+    public static final int disabled_alpha_material_dark=0x7f050056;
+    public static final int disabled_alpha_material_light=0x7f050057;
+    public static final int highlight_alpha_material_colored=0x7f050058;
+    public static final int highlight_alpha_material_dark=0x7f050059;
+    public static final int highlight_alpha_material_light=0x7f05005a;
+    public static final int hint_alpha_material_dark=0x7f05005b;
+    public static final int hint_alpha_material_light=0x7f05005c;
+    public static final int hint_pressed_alpha_material_dark=0x7f05005d;
+    public static final int hint_pressed_alpha_material_light=0x7f05005e;
+    public static final int notification_action_icon_size=0x7f05005f;
+    public static final int notification_action_text_size=0x7f050060;
+    public static final int notification_big_circle_margin=0x7f050061;
+    public static final int notification_content_margin_start=0x7f050062;
+    public static final int notification_large_icon_height=0x7f050063;
+    public static final int notification_large_icon_width=0x7f050064;
+    public static final int notification_main_column_padding_top=0x7f050065;
+    public static final int notification_media_narrow_margin=0x7f050066;
+    public static final int notification_right_icon_size=0x7f050067;
+    public static final int notification_right_side_padding_top=0x7f050068;
+    public static final int notification_small_icon_background_padding=0x7f050069;
+    public static final int notification_small_icon_size_as_large=0x7f05006a;
+    public static final int notification_subtext_size=0x7f05006b;
+    public static final int notification_top_pad=0x7f05006c;
+    public static final int notification_top_pad_large_text=0x7f05006d;
+    public static final int tooltip_corner_radius=0x7f05006e;
+    public static final int tooltip_horizontal_padding=0x7f05006f;
+    public static final int tooltip_margin=0x7f050070;
+    public static final int tooltip_precise_anchor_extra_offset=0x7f050071;
+    public static final int tooltip_precise_anchor_threshold=0x7f050072;
+    public static final int tooltip_vertical_padding=0x7f050073;
+    public static final int tooltip_y_offset_non_touch=0x7f050074;
+    public static final int tooltip_y_offset_touch=0x7f050075;
   }
   public static final class drawable {
     public static final int abc_ab_share_pack_mtrl_alpha=0x7f060000;
@@ -4471,243 +3526,223 @@ public final class R {
     public static final int notification_template_icon_low_bg=0x7f060072;
     public static final int notification_tile_bg=0x7f060073;
     public static final int notify_panel_notification_icon_bg=0x7f060074;
-    public static final int tooltip_frame_dark=0x7f060075;
-    public static final int tooltip_frame_light=0x7f060076;
+    public static final int straw=0x7f060075;
+    public static final int tooltip_frame_dark=0x7f060076;
+    public static final int tooltip_frame_light=0x7f060077;
   }
   public static final class id {
     public static final int ALT=0x7f070000;
     public static final int CTRL=0x7f070001;
     public static final int FUNCTION=0x7f070002;
     public static final int META=0x7f070003;
-    public static final int NO_DEBUG=0x7f070004;
-    public static final int SHIFT=0x7f070005;
-    public static final int SHOW_ALL=0x7f070006;
-    public static final int SHOW_PATH=0x7f070007;
-    public static final int SHOW_PROGRESS=0x7f070008;
-    public static final int SYM=0x7f070009;
-    public static final int accelerate=0x7f07000a;
-    public static final int action0=0x7f07000b;
-    public static final int action_bar=0x7f07000c;
-    public static final int action_bar_activity_content=0x7f07000d;
-    public static final int action_bar_container=0x7f07000e;
-    public static final int action_bar_root=0x7f07000f;
-    public static final int action_bar_spinner=0x7f070010;
-    public static final int action_bar_subtitle=0x7f070011;
-    public static final int action_bar_title=0x7f070012;
-    public static final int action_container=0x7f070013;
-    public static final int action_context_bar=0x7f070014;
-    public static final int action_divider=0x7f070015;
-    public static final int action_image=0x7f070016;
-    public static final int action_menu_divider=0x7f070017;
-    public static final int action_menu_presenter=0x7f070018;
-    public static final int action_mode_bar=0x7f070019;
-    public static final int action_mode_bar_stub=0x7f07001a;
-    public static final int action_mode_close_button=0x7f07001b;
-    public static final int action_text=0x7f07001c;
-    public static final int actions=0x7f07001d;
-    public static final int activity_chooser_view_content=0x7f07001e;
-    public static final int add=0x7f07001f;
-    public static final int adjust_height=0x7f070020;
-    public static final int adjust_width=0x7f070021;
-    public static final int alertTitle=0x7f070022;
-    public static final int aligned=0x7f070023;
-    public static final int all=0x7f070024;
-    public static final int always=0x7f070025;
-    public static final int animateToEnd=0x7f070026;
-    public static final int animateToStart=0x7f070027;
-    public static final int asConfigured=0x7f070028;
-    public static final int async=0x7f070029;
-    public static final int auto=0x7f07002a;
-    public static final int autoComplete=0x7f07002b;
-    public static final int autoCompleteToEnd=0x7f07002c;
-    public static final int autoCompleteToStart=0x7f07002d;
-    public static final int barrier=0x7f07002e;
-    public static final int baseline=0x7f07002f;
-    public static final int beginOnFirstDraw=0x7f070030;
-    public static final int beginning=0x7f070031;
-    public static final int blocking=0x7f070032;
-    public static final int bottom=0x7f070033;
-    public static final int bounce=0x7f070034;
-    public static final int buttonPanel=0x7f070035;
-    public static final int cache_measures=0x7f070036;
-    public static final int cancel_action=0x7f070037;
-    public static final int center=0x7f070038;
-    public static final int center_horizontal=0x7f070039;
-    public static final int center_vertical=0x7f07003a;
-    public static final int chain=0x7f07003b;
-    public static final int chains=0x7f07003c;
-    public static final int checkbox=0x7f07003d;
-    public static final int chronometer=0x7f07003e;
-    public static final int clip_horizontal=0x7f07003f;
-    public static final int clip_vertical=0x7f070040;
-    public static final int collapseActionView=0x7f070041;
-    public static final int container=0x7f070042;
-    public static final int content=0x7f070043;
-    public static final int contentPanel=0x7f070044;
-    public static final int cos=0x7f070045;
-    public static final int custom=0x7f070046;
-    public static final int customPanel=0x7f070047;
-    public static final int dark=0x7f070048;
-    public static final int decelerate=0x7f070049;
-    public static final int decelerateAndComplete=0x7f07004a;
-    public static final int decor_content_parent=0x7f07004b;
-    public static final int default_activity_button=0x7f07004c;
-    public static final int deltaRelative=0x7f07004d;
-    public static final int dependency_ordering=0x7f07004e;
-    public static final int dimensions=0x7f07004f;
-    public static final int direct=0x7f070050;
-    public static final int disableHome=0x7f070051;
-    public static final int disablePostScroll=0x7f070052;
-    public static final int disableScroll=0x7f070053;
-    public static final int dragDown=0x7f070054;
-    public static final int dragEnd=0x7f070055;
-    public static final int dragLeft=0x7f070056;
-    public static final int dragRight=0x7f070057;
-    public static final int dragStart=0x7f070058;
-    public static final int dragUp=0x7f070059;
-    public static final int easeIn=0x7f07005a;
-    public static final int easeInOut=0x7f07005b;
-    public static final int easeOut=0x7f07005c;
-    public static final int edit_query=0x7f07005d;
-    public static final int end=0x7f07005e;
-    public static final int end_padder=0x7f07005f;
-    public static final int expand_activities_button=0x7f070060;
-    public static final int expanded_menu=0x7f070061;
-    public static final int fill=0x7f070062;
-    public static final int fill_horizontal=0x7f070063;
-    public static final int fill_vertical=0x7f070064;
-    public static final int flip=0x7f070065;
-    public static final int forever=0x7f070066;
-    public static final int gone=0x7f070067;
-    public static final int google_login=0x7f070068;
-    public static final int graph=0x7f070069;
-    public static final int graph_wrap=0x7f07006a;
-    public static final int group_divider=0x7f07006b;
-    public static final int grouping=0x7f07006c;
+    public static final int SHIFT=0x7f070004;
+    public static final int SYM=0x7f070005;
+    public static final int accessibility_action_clickable_span=0x7f070006;
+    public static final int accessibility_custom_action_0=0x7f070007;
+    public static final int accessibility_custom_action_1=0x7f070008;
+    public static final int accessibility_custom_action_10=0x7f070009;
+    public static final int accessibility_custom_action_11=0x7f07000a;
+    public static final int accessibility_custom_action_12=0x7f07000b;
+    public static final int accessibility_custom_action_13=0x7f07000c;
+    public static final int accessibility_custom_action_14=0x7f07000d;
+    public static final int accessibility_custom_action_15=0x7f07000e;
+    public static final int accessibility_custom_action_16=0x7f07000f;
+    public static final int accessibility_custom_action_17=0x7f070010;
+    public static final int accessibility_custom_action_18=0x7f070011;
+    public static final int accessibility_custom_action_19=0x7f070012;
+    public static final int accessibility_custom_action_2=0x7f070013;
+    public static final int accessibility_custom_action_20=0x7f070014;
+    public static final int accessibility_custom_action_21=0x7f070015;
+    public static final int accessibility_custom_action_22=0x7f070016;
+    public static final int accessibility_custom_action_23=0x7f070017;
+    public static final int accessibility_custom_action_24=0x7f070018;
+    public static final int accessibility_custom_action_25=0x7f070019;
+    public static final int accessibility_custom_action_26=0x7f07001a;
+    public static final int accessibility_custom_action_27=0x7f07001b;
+    public static final int accessibility_custom_action_28=0x7f07001c;
+    public static final int accessibility_custom_action_29=0x7f07001d;
+    public static final int accessibility_custom_action_3=0x7f07001e;
+    public static final int accessibility_custom_action_30=0x7f07001f;
+    public static final int accessibility_custom_action_31=0x7f070020;
+    public static final int accessibility_custom_action_4=0x7f070021;
+    public static final int accessibility_custom_action_5=0x7f070022;
+    public static final int accessibility_custom_action_6=0x7f070023;
+    public static final int accessibility_custom_action_7=0x7f070024;
+    public static final int accessibility_custom_action_8=0x7f070025;
+    public static final int accessibility_custom_action_9=0x7f070026;
+    public static final int action_bar=0x7f070027;
+    public static final int action_bar_activity_content=0x7f070028;
+    public static final int action_bar_container=0x7f070029;
+    public static final int action_bar_root=0x7f07002a;
+    public static final int action_bar_spinner=0x7f07002b;
+    public static final int action_bar_subtitle=0x7f07002c;
+    public static final int action_bar_title=0x7f07002d;
+    public static final int action_container=0x7f07002e;
+    public static final int action_context_bar=0x7f07002f;
+    public static final int action_divider=0x7f070030;
+    public static final int action_image=0x7f070031;
+    public static final int action_menu_divider=0x7f070032;
+    public static final int action_menu_presenter=0x7f070033;
+    public static final int action_mode_bar=0x7f070034;
+    public static final int action_mode_bar_stub=0x7f070035;
+    public static final int action_mode_close_button=0x7f070036;
+    public static final int action_text=0x7f070037;
+    public static final int actions=0x7f070038;
+    public static final int activity_chooser_view_content=0x7f070039;
+    public static final int add=0x7f07003a;
+    public static final int adjust_height=0x7f07003b;
+    public static final int adjust_width=0x7f07003c;
+    public static final int alertTitle=0x7f07003d;
+    public static final int all=0x7f07003e;
+    public static final int always=0x7f07003f;
+    public static final int async=0x7f070040;
+    public static final int auto=0x7f070041;
+    public static final int barrier=0x7f070042;
+    public static final int beginning=0x7f070043;
+    public static final int blocking=0x7f070044;
+    public static final int bottom=0x7f070045;
+    public static final int browser_actions_header_text=0x7f070046;
+    public static final int browser_actions_menu_item_icon=0x7f070047;
+    public static final int browser_actions_menu_item_text=0x7f070048;
+    public static final int browser_actions_menu_items=0x7f070049;
+    public static final int browser_actions_menu_view=0x7f07004a;
+    public static final int buttonPanel=0x7f07004b;
+    public static final int center=0x7f07004c;
+    public static final int center_horizontal=0x7f07004d;
+    public static final int center_vertical=0x7f07004e;
+    public static final int chains=0x7f07004f;
+    public static final int checkbox=0x7f070050;
+    public static final int chronometer=0x7f070051;
+    public static final int clip_horizontal=0x7f070052;
+    public static final int clip_vertical=0x7f070053;
+    public static final int collapseActionView=0x7f070054;
+    public static final int container=0x7f070055;
+    public static final int content=0x7f070056;
+    public static final int contentPanel=0x7f070057;
+    public static final int custom=0x7f070058;
+    public static final int customPanel=0x7f070059;
+    public static final int dark=0x7f07005a;
+    public static final int decor_content_parent=0x7f07005b;
+    public static final int default_activity_button=0x7f07005c;
+    public static final int desc=0x7f07005d;
+    public static final int dialog_button=0x7f07005e;
+    public static final int dimensions=0x7f07005f;
+    public static final int direct=0x7f070060;
+    public static final int disableHome=0x7f070061;
+    public static final int edit_query=0x7f070062;
+    public static final int end=0x7f070063;
+    public static final int expand_activities_button=0x7f070064;
+    public static final int expanded_menu=0x7f070065;
+    public static final int fill=0x7f070066;
+    public static final int fill_horizontal=0x7f070067;
+    public static final int fill_vertical=0x7f070068;
+    public static final int forever=0x7f070069;
+    public static final int gone=0x7f07006a;
+    public static final int google_login=0x7f07006b;
+    public static final int group_divider=0x7f07006c;
     public static final int groups=0x7f07006d;
     public static final int home=0x7f07006e;
     public static final int homeAsUp=0x7f07006f;
-    public static final int honorRequest=0x7f070070;
-    public static final int icon=0x7f070071;
-    public static final int icon_group=0x7f070072;
-    public static final int icon_only=0x7f070073;
-    public static final int ifRoom=0x7f070074;
-    public static final int ignore=0x7f070075;
-    public static final int ignoreRequest=0x7f070076;
-    public static final int image=0x7f070077;
-    public static final int info=0x7f070078;
-    public static final int invisible=0x7f070079;
-    public static final int italic=0x7f07007a;
-    public static final int jumpToEnd=0x7f07007b;
-    public static final int jumpToStart=0x7f07007c;
-    public static final int layout=0x7f07007d;
-    public static final int left=0x7f07007e;
-    public static final int light=0x7f07007f;
-    public static final int line1=0x7f070080;
-    public static final int line3=0x7f070081;
-    public static final int linear=0x7f070082;
-    public static final int listMode=0x7f070083;
-    public static final int list_item=0x7f070084;
-    public static final int loading=0x7f070085;
-    public static final int login=0x7f070086;
-    public static final int media_actions=0x7f070087;
-    public static final int message=0x7f070088;
-    public static final int middle=0x7f070089;
-    public static final int motion_base=0x7f07008a;
-    public static final int multiply=0x7f07008b;
-    public static final int never=0x7f07008c;
-    public static final int none=0x7f07008d;
-    public static final int normal=0x7f07008e;
-    public static final int notification_background=0x7f07008f;
-    public static final int notification_main_column=0x7f070090;
-    public static final int notification_main_column_container=0x7f070091;
-    public static final int packed=0x7f070092;
-    public static final int parent=0x7f070093;
-    public static final int parentPanel=0x7f070094;
-    public static final int parentRelative=0x7f070095;
-    public static final int password=0x7f070096;
-    public static final int path=0x7f070097;
-    public static final int pathRelative=0x7f070098;
-    public static final int percent=0x7f070099;
-    public static final int position=0x7f07009a;
-    public static final int postLayout=0x7f07009b;
-    public static final int progress_circular=0x7f07009c;
-    public static final int progress_horizontal=0x7f07009d;
-    public static final int radio=0x7f07009e;
-    public static final int ratio=0x7f07009f;
-    public static final int rectangles=0x7f0700a0;
-    public static final int reverseSawtooth=0x7f0700a1;
-    public static final int right=0x7f0700a2;
-    public static final int right_icon=0x7f0700a3;
-    public static final int right_side=0x7f0700a4;
-    public static final int sawtooth=0x7f0700a5;
-    public static final int screen=0x7f0700a6;
-    public static final int scrollIndicatorDown=0x7f0700a7;
-    public static final int scrollIndicatorUp=0x7f0700a8;
-    public static final int scrollView=0x7f0700a9;
-    public static final int search_badge=0x7f0700aa;
-    public static final int search_bar=0x7f0700ab;
-    public static final int search_button=0x7f0700ac;
-    public static final int search_close_btn=0x7f0700ad;
-    public static final int search_edit_frame=0x7f0700ae;
-    public static final int search_go_btn=0x7f0700af;
-    public static final int search_mag_icon=0x7f0700b0;
-    public static final int search_plate=0x7f0700b1;
-    public static final int search_src_text=0x7f0700b2;
-    public static final int search_voice_btn=0x7f0700b3;
-    public static final int select_dialog_listview=0x7f0700b4;
-    public static final int shortcut=0x7f0700b5;
-    public static final int showCustom=0x7f0700b6;
-    public static final int showHome=0x7f0700b7;
-    public static final int showTitle=0x7f0700b8;
-    public static final int sin=0x7f0700b9;
-    public static final int spacer=0x7f0700ba;
-    public static final int spline=0x7f0700bb;
-    public static final int split_action_bar=0x7f0700bc;
-    public static final int spread=0x7f0700bd;
-    public static final int spread_inside=0x7f0700be;
-    public static final int square=0x7f0700bf;
-    public static final int src_atop=0x7f0700c0;
-    public static final int src_in=0x7f0700c1;
-    public static final int src_over=0x7f0700c2;
-    public static final int standard=0x7f0700c3;
-    public static final int start=0x7f0700c4;
-    public static final int startHorizontal=0x7f0700c5;
-    public static final int startRidebutton=0x7f0700c6;
-    public static final int startVertical=0x7f0700c7;
-    public static final int staticLayout=0x7f0700c8;
-    public static final int staticPostLayout=0x7f0700c9;
-    public static final int status_bar_latest_event_content=0x7f0700ca;
-    public static final int stop=0x7f0700cb;
-    public static final int submenuarrow=0x7f0700cc;
-    public static final int submit_area=0x7f0700cd;
-    public static final int tabMode=0x7f0700ce;
-    public static final int tag_transition_group=0x7f0700cf;
-    public static final int tag_unhandled_key_event_manager=0x7f0700d0;
-    public static final int tag_unhandled_key_listeners=0x7f0700d1;
-    public static final int text=0x7f0700d2;
-    public static final int text2=0x7f0700d3;
-    public static final int textSpacerNoButtons=0x7f0700d4;
-    public static final int textSpacerNoTitle=0x7f0700d5;
-    public static final int time=0x7f0700d6;
-    public static final int title=0x7f0700d7;
-    public static final int titleDividerNoCustom=0x7f0700d8;
-    public static final int title_template=0x7f0700d9;
-    public static final int toggle=0x7f0700da;
-    public static final int top=0x7f0700db;
-    public static final int topPanel=0x7f0700dc;
-    public static final int transitionToEnd=0x7f0700dd;
-    public static final int transitionToStart=0x7f0700de;
-    public static final int triangle=0x7f0700df;
-    public static final int uniform=0x7f0700e0;
-    public static final int up=0x7f0700e1;
-    public static final int useLogo=0x7f0700e2;
-    public static final int username=0x7f0700e3;
-    public static final int visible=0x7f0700e4;
-    public static final int wide=0x7f0700e5;
-    public static final int withText=0x7f0700e6;
-    public static final int wrap=0x7f0700e7;
-    public static final int wrap_content=0x7f0700e8;
+    public static final int icon=0x7f070070;
+    public static final int icon_group=0x7f070071;
+    public static final int icon_only=0x7f070072;
+    public static final int ifRoom=0x7f070073;
+    public static final int image=0x7f070074;
+    public static final int info=0x7f070075;
+    public static final int invisible=0x7f070076;
+    public static final int italic=0x7f070077;
+    public static final int left=0x7f070078;
+    public static final int light=0x7f070079;
+    public static final int line1=0x7f07007a;
+    public static final int line3=0x7f07007b;
+    public static final int listMode=0x7f07007c;
+    public static final int list_item=0x7f07007d;
+    public static final int loading=0x7f07007e;
+    public static final int login=0x7f07007f;
+    public static final int message=0x7f070080;
+    public static final int middle=0x7f070081;
+    public static final int multiply=0x7f070082;
+    public static final int never=0x7f070083;
+    public static final int none=0x7f070084;
+    public static final int normal=0x7f070085;
+    public static final int notification_background=0x7f070086;
+    public static final int notification_main_column=0x7f070087;
+    public static final int notification_main_column_container=0x7f070088;
+    public static final int packed=0x7f070089;
+    public static final int parent=0x7f07008a;
+    public static final int parentPanel=0x7f07008b;
+    public static final int password=0x7f07008c;
+    public static final int pastrideslist=0x7f07008d;
+    public static final int percent=0x7f07008e;
+    public static final int progress_circular=0x7f07008f;
+    public static final int progress_horizontal=0x7f070090;
+    public static final int radio=0x7f070091;
+    public static final int right=0x7f070092;
+    public static final int right_icon=0x7f070093;
+    public static final int right_side=0x7f070094;
+    public static final int screen=0x7f070095;
+    public static final int scrollIndicatorDown=0x7f070096;
+    public static final int scrollIndicatorUp=0x7f070097;
+    public static final int scrollView=0x7f070098;
+    public static final int search_badge=0x7f070099;
+    public static final int search_bar=0x7f07009a;
+    public static final int search_button=0x7f07009b;
+    public static final int search_close_btn=0x7f07009c;
+    public static final int search_edit_frame=0x7f07009d;
+    public static final int search_go_btn=0x7f07009e;
+    public static final int search_mag_icon=0x7f07009f;
+    public static final int search_plate=0x7f0700a0;
+    public static final int search_src_text=0x7f0700a1;
+    public static final int search_voice_btn=0x7f0700a2;
+    public static final int select_dialog_listview=0x7f0700a3;
+    public static final int shortcut=0x7f0700a4;
+    public static final int showCustom=0x7f0700a5;
+    public static final int showHome=0x7f0700a6;
+    public static final int showTitle=0x7f0700a7;
+    public static final int spacer=0x7f0700a8;
+    public static final int split_action_bar=0x7f0700a9;
+    public static final int spread=0x7f0700aa;
+    public static final int spread_inside=0x7f0700ab;
+    public static final int src_atop=0x7f0700ac;
+    public static final int src_in=0x7f0700ad;
+    public static final int src_over=0x7f0700ae;
+    public static final int standard=0x7f0700af;
+    public static final int start=0x7f0700b0;
+    public static final int startRidebutton=0x7f0700b1;
+    public static final int submenuarrow=0x7f0700b2;
+    public static final int submit_area=0x7f0700b3;
+    public static final int tabMode=0x7f0700b4;
+    public static final int tag_accessibility_actions=0x7f0700b5;
+    public static final int tag_accessibility_clickable_spans=0x7f0700b6;
+    public static final int tag_accessibility_heading=0x7f0700b7;
+    public static final int tag_accessibility_pane_title=0x7f0700b8;
+    public static final int tag_on_apply_window_listener=0x7f0700b9;
+    public static final int tag_on_receive_content_listener=0x7f0700ba;
+    public static final int tag_on_receive_content_mime_types=0x7f0700bb;
+    public static final int tag_screen_reader_focusable=0x7f0700bc;
+    public static final int tag_state_description=0x7f0700bd;
+    public static final int tag_transition_group=0x7f0700be;
+    public static final int tag_unhandled_key_event_manager=0x7f0700bf;
+    public static final int tag_unhandled_key_listeners=0x7f0700c0;
+    public static final int tag_window_insets_animation_callback=0x7f0700c1;
+    public static final int text=0x7f0700c2;
+    public static final int text2=0x7f0700c3;
+    public static final int textSpacerNoButtons=0x7f0700c4;
+    public static final int textSpacerNoTitle=0x7f0700c5;
+    public static final int time=0x7f0700c6;
+    public static final int title=0x7f0700c7;
+    public static final int titleDividerNoCustom=0x7f0700c8;
+    public static final int title_template=0x7f0700c9;
+    public static final int top=0x7f0700ca;
+    public static final int topPanel=0x7f0700cb;
+    public static final int uniform=0x7f0700cc;
+    public static final int up=0x7f0700cd;
+    public static final int useLogo=0x7f0700ce;
+    public static final int username=0x7f0700cf;
+    public static final int wide=0x7f0700d0;
+    public static final int withText=0x7f0700d1;
+    public static final int wrap=0x7f0700d2;
+    public static final int wrap_content=0x7f0700d3;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f080000;
@@ -4748,25 +3783,20 @@ public final class R {
     public static final int abc_tooltip=0x7f09001b;
     public static final int activity_login=0x7f09001c;
     public static final int activity_main=0x7f09001d;
-    public static final int notification_action=0x7f09001e;
-    public static final int notification_action_tombstone=0x7f09001f;
-    public static final int notification_media_action=0x7f090020;
-    public static final int notification_media_cancel_action=0x7f090021;
-    public static final int notification_template_big_media=0x7f090022;
-    public static final int notification_template_big_media_custom=0x7f090023;
-    public static final int notification_template_big_media_narrow=0x7f090024;
-    public static final int notification_template_big_media_narrow_custom=0x7f090025;
-    public static final int notification_template_custom_big=0x7f090026;
-    public static final int notification_template_icon_group=0x7f090027;
-    public static final int notification_template_lines_media=0x7f090028;
-    public static final int notification_template_media=0x7f090029;
-    public static final int notification_template_media_custom=0x7f09002a;
-    public static final int notification_template_part_chronometer=0x7f09002b;
-    public static final int notification_template_part_time=0x7f09002c;
-    public static final int select_dialog_item_material=0x7f09002d;
-    public static final int select_dialog_multichoice_material=0x7f09002e;
-    public static final int select_dialog_singlechoice_material=0x7f09002f;
-    public static final int support_simple_spinner_dropdown_item=0x7f090030;
+    public static final int browser_actions_context_menu_page=0x7f09001e;
+    public static final int browser_actions_context_menu_row=0x7f09001f;
+    public static final int custom_dialog=0x7f090020;
+    public static final int list_item=0x7f090021;
+    public static final int notification_action=0x7f090022;
+    public static final int notification_action_tombstone=0x7f090023;
+    public static final int notification_template_custom_big=0x7f090024;
+    public static final int notification_template_icon_group=0x7f090025;
+    public static final int notification_template_part_chronometer=0x7f090026;
+    public static final int notification_template_part_time=0x7f090027;
+    public static final int select_dialog_item_material=0x7f090028;
+    public static final int select_dialog_multichoice_material=0x7f090029;
+    public static final int select_dialog_singlechoice_material=0x7f09002a;
+    public static final int support_simple_spinner_dropdown_item=0x7f09002b;
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f0a0000;
@@ -4836,26 +3866,50 @@ public final class R {
     public static final int common_open_on_phone=0x7f0b003b;
     public static final int common_signin_button_text=0x7f0b003c;
     public static final int common_signin_button_text_long=0x7f0b003d;
-    public static final int hello_blank_fragment=0x7f0b003e;
-    public static final int invalid_password=0x7f0b003f;
-    public static final int invalid_username=0x7f0b0040;
-    public static final int location_and_contacts=0x7f0b0041;
-    public static final int login_failed=0x7f0b0042;
-    public static final int prompt_email=0x7f0b0043;
-    public static final int prompt_password=0x7f0b0044;
-    public static final int rationale_ask=0x7f0b0045;
-    public static final int rationale_ask_again=0x7f0b0046;
-    public static final int rationale_camera=0x7f0b0047;
-    public static final int rationale_location=0x7f0b0048;
-    public static final int rationale_location_contacts=0x7f0b0049;
-    public static final int rationale_sms=0x7f0b004a;
-    public static final int returned_from_app_settings_to_activity=0x7f0b004b;
-    public static final int search_menu_title=0x7f0b004c;
-    public static final int sms=0x7f0b004d;
-    public static final int status_bar_notification_info_overflow=0x7f0b004e;
-    public static final int title_activity_login=0x7f0b004f;
-    public static final int title_settings_dialog=0x7f0b0050;
-    public static final int welcome=0x7f0b0051;
+    public static final int default_web_client_id=0x7f0b003e;
+    public static final int gcm_defaultSenderId=0x7f0b003f;
+    public static final int google_api_key=0x7f0b0040;
+    public static final int google_app_id=0x7f0b0041;
+    public static final int google_crash_reporting_api_key=0x7f0b0042;
+    public static final int google_storage_bucket=0x7f0b0043;
+    public static final int hello=0x7f0b0044;
+    public static final int hello_blank_fragment=0x7f0b0045;
+    public static final int image=0x7f0b0046;
+    public static final int invalid_password=0x7f0b0047;
+    public static final int invalid_username=0x7f0b0048;
+    public static final int location_and_contacts=0x7f0b0049;
+    public static final int login_failed=0x7f0b004a;
+    public static final int name=0x7f0b004b;
+    public static final int offline_notification_text=0x7f0b004c;
+    public static final int offline_notification_title=0x7f0b004d;
+    public static final int offline_opt_in_confirm=0x7f0b004e;
+    public static final int offline_opt_in_confirmation=0x7f0b004f;
+    public static final int offline_opt_in_decline=0x7f0b0050;
+    public static final int offline_opt_in_message=0x7f0b0051;
+    public static final int offline_opt_in_title=0x7f0b0052;
+    public static final int project_id=0x7f0b0053;
+    public static final int prompt_email=0x7f0b0054;
+    public static final int prompt_password=0x7f0b0055;
+    public static final int rationale_ask=0x7f0b0056;
+    public static final int rationale_ask_again=0x7f0b0057;
+    public static final int rationale_camera=0x7f0b0058;
+    public static final int rationale_location=0x7f0b0059;
+    public static final int rationale_location_contacts=0x7f0b005a;
+    public static final int rationale_sms=0x7f0b005b;
+    public static final int returned_from_app_settings_to_activity=0x7f0b005c;
+    public static final int s1=0x7f0b005d;
+    public static final int s2=0x7f0b005e;
+    public static final int s3=0x7f0b005f;
+    public static final int s4=0x7f0b0060;
+    public static final int s5=0x7f0b0061;
+    public static final int s6=0x7f0b0062;
+    public static final int s7=0x7f0b0063;
+    public static final int search_menu_title=0x7f0b0064;
+    public static final int sms=0x7f0b0065;
+    public static final int status_bar_notification_info_overflow=0x7f0b0066;
+    public static final int title_activity_login=0x7f0b0067;
+    public static final int title_settings_dialog=0x7f0b0068;
+    public static final int welcome=0x7f0b0069;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0c0000;
@@ -5097,121 +4151,117 @@ public final class R {
     public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0c00ec;
     public static final int TextAppearance_Compat_Notification=0x7f0c00ed;
     public static final int TextAppearance_Compat_Notification_Info=0x7f0c00ee;
-    public static final int TextAppearance_Compat_Notification_Info_Media=0x7f0c00ef;
-    public static final int TextAppearance_Compat_Notification_Line2=0x7f0c00f0;
-    public static final int TextAppearance_Compat_Notification_Line2_Media=0x7f0c00f1;
-    public static final int TextAppearance_Compat_Notification_Media=0x7f0c00f2;
-    public static final int TextAppearance_Compat_Notification_Time=0x7f0c00f3;
-    public static final int TextAppearance_Compat_Notification_Time_Media=0x7f0c00f4;
-    public static final int TextAppearance_Compat_Notification_Title=0x7f0c00f5;
-    public static final int TextAppearance_Compat_Notification_Title_Media=0x7f0c00f6;
-    public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0c00f7;
-    public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0c00f8;
-    public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0c00f9;
-    public static final int Theme_AppCompat=0x7f0c00fa;
-    public static final int Theme_AppCompat_CompactMenu=0x7f0c00fb;
-    public static final int Theme_AppCompat_DayNight=0x7f0c00fc;
-    public static final int Theme_AppCompat_DayNight_DarkActionBar=0x7f0c00fd;
-    public static final int Theme_AppCompat_DayNight_Dialog=0x7f0c00fe;
-    public static final int Theme_AppCompat_DayNight_Dialog_Alert=0x7f0c00ff;
-    public static final int Theme_AppCompat_DayNight_Dialog_MinWidth=0x7f0c0100;
-    public static final int Theme_AppCompat_DayNight_DialogWhenLarge=0x7f0c0101;
-    public static final int Theme_AppCompat_DayNight_NoActionBar=0x7f0c0102;
-    public static final int Theme_AppCompat_Dialog=0x7f0c0103;
-    public static final int Theme_AppCompat_Dialog_Alert=0x7f0c0104;
-    public static final int Theme_AppCompat_Dialog_MinWidth=0x7f0c0105;
-    public static final int Theme_AppCompat_DialogWhenLarge=0x7f0c0106;
-    public static final int Theme_AppCompat_Light=0x7f0c0107;
-    public static final int Theme_AppCompat_Light_DarkActionBar=0x7f0c0108;
-    public static final int Theme_AppCompat_Light_Dialog=0x7f0c0109;
-    public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f0c010a;
-    public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f0c010b;
-    public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0c010c;
-    public static final int Theme_AppCompat_Light_NoActionBar=0x7f0c010d;
-    public static final int Theme_AppCompat_NoActionBar=0x7f0c010e;
-    public static final int Theme_Mati_DSMS=0x7f0c010f;
-    public static final int ThemeOverlay_AppCompat=0x7f0c0110;
-    public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0c0111;
-    public static final int ThemeOverlay_AppCompat_Dark=0x7f0c0112;
-    public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0c0113;
-    public static final int ThemeOverlay_AppCompat_Dialog=0x7f0c0114;
-    public static final int ThemeOverlay_AppCompat_Dialog_Alert=0x7f0c0115;
-    public static final int ThemeOverlay_AppCompat_Light=0x7f0c0116;
-    public static final int Widget_AppCompat_ActionBar=0x7f0c0117;
-    public static final int Widget_AppCompat_ActionBar_Solid=0x7f0c0118;
-    public static final int Widget_AppCompat_ActionBar_TabBar=0x7f0c0119;
-    public static final int Widget_AppCompat_ActionBar_TabText=0x7f0c011a;
-    public static final int Widget_AppCompat_ActionBar_TabView=0x7f0c011b;
-    public static final int Widget_AppCompat_ActionButton=0x7f0c011c;
-    public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f0c011d;
-    public static final int Widget_AppCompat_ActionButton_Overflow=0x7f0c011e;
-    public static final int Widget_AppCompat_ActionMode=0x7f0c011f;
-    public static final int Widget_AppCompat_ActivityChooserView=0x7f0c0120;
-    public static final int Widget_AppCompat_AutoCompleteTextView=0x7f0c0121;
-    public static final int Widget_AppCompat_Button=0x7f0c0122;
-    public static final int Widget_AppCompat_Button_Borderless=0x7f0c0123;
-    public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f0c0124;
-    public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0c0125;
-    public static final int Widget_AppCompat_Button_Colored=0x7f0c0126;
-    public static final int Widget_AppCompat_Button_Small=0x7f0c0127;
-    public static final int Widget_AppCompat_ButtonBar=0x7f0c0128;
-    public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f0c0129;
-    public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f0c012a;
-    public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f0c012b;
-    public static final int Widget_AppCompat_CompoundButton_Switch=0x7f0c012c;
-    public static final int Widget_AppCompat_DrawerArrowToggle=0x7f0c012d;
-    public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f0c012e;
-    public static final int Widget_AppCompat_EditText=0x7f0c012f;
-    public static final int Widget_AppCompat_ImageButton=0x7f0c0130;
-    public static final int Widget_AppCompat_Light_ActionBar=0x7f0c0131;
-    public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f0c0132;
-    public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f0c0133;
-    public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f0c0134;
-    public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f0c0135;
-    public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f0c0136;
-    public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0c0137;
-    public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f0c0138;
-    public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f0c0139;
-    public static final int Widget_AppCompat_Light_ActionButton=0x7f0c013a;
-    public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f0c013b;
-    public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f0c013c;
-    public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f0c013d;
-    public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f0c013e;
-    public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f0c013f;
-    public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f0c0140;
-    public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f0c0141;
-    public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f0c0142;
-    public static final int Widget_AppCompat_Light_PopupMenu=0x7f0c0143;
-    public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0c0144;
-    public static final int Widget_AppCompat_Light_SearchView=0x7f0c0145;
-    public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f0c0146;
-    public static final int Widget_AppCompat_ListMenuView=0x7f0c0147;
-    public static final int Widget_AppCompat_ListPopupWindow=0x7f0c0148;
-    public static final int Widget_AppCompat_ListView=0x7f0c0149;
-    public static final int Widget_AppCompat_ListView_DropDown=0x7f0c014a;
-    public static final int Widget_AppCompat_ListView_Menu=0x7f0c014b;
-    public static final int Widget_AppCompat_PopupMenu=0x7f0c014c;
-    public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f0c014d;
-    public static final int Widget_AppCompat_PopupWindow=0x7f0c014e;
-    public static final int Widget_AppCompat_ProgressBar=0x7f0c014f;
-    public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0c0150;
-    public static final int Widget_AppCompat_RatingBar=0x7f0c0151;
-    public static final int Widget_AppCompat_RatingBar_Indicator=0x7f0c0152;
-    public static final int Widget_AppCompat_RatingBar_Small=0x7f0c0153;
-    public static final int Widget_AppCompat_SearchView=0x7f0c0154;
-    public static final int Widget_AppCompat_SearchView_ActionBar=0x7f0c0155;
-    public static final int Widget_AppCompat_SeekBar=0x7f0c0156;
-    public static final int Widget_AppCompat_SeekBar_Discrete=0x7f0c0157;
-    public static final int Widget_AppCompat_Spinner=0x7f0c0158;
-    public static final int Widget_AppCompat_Spinner_DropDown=0x7f0c0159;
-    public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0c015a;
-    public static final int Widget_AppCompat_Spinner_Underlined=0x7f0c015b;
-    public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f0c015c;
-    public static final int Widget_AppCompat_Toolbar=0x7f0c015d;
-    public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0c015e;
-    public static final int Widget_Compat_NotificationActionContainer=0x7f0c015f;
-    public static final int Widget_Compat_NotificationActionText=0x7f0c0160;
-    public static final int Widget_Support_CoordinatorLayout=0x7f0c0161;
+    public static final int TextAppearance_Compat_Notification_Line2=0x7f0c00ef;
+    public static final int TextAppearance_Compat_Notification_Time=0x7f0c00f0;
+    public static final int TextAppearance_Compat_Notification_Title=0x7f0c00f1;
+    public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0c00f2;
+    public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0c00f3;
+    public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0c00f4;
+    public static final int Theme_AppCompat=0x7f0c00f5;
+    public static final int Theme_AppCompat_CompactMenu=0x7f0c00f6;
+    public static final int Theme_AppCompat_DayNight=0x7f0c00f7;
+    public static final int Theme_AppCompat_DayNight_DarkActionBar=0x7f0c00f8;
+    public static final int Theme_AppCompat_DayNight_Dialog=0x7f0c00f9;
+    public static final int Theme_AppCompat_DayNight_Dialog_Alert=0x7f0c00fa;
+    public static final int Theme_AppCompat_DayNight_Dialog_MinWidth=0x7f0c00fb;
+    public static final int Theme_AppCompat_DayNight_DialogWhenLarge=0x7f0c00fc;
+    public static final int Theme_AppCompat_DayNight_NoActionBar=0x7f0c00fd;
+    public static final int Theme_AppCompat_Dialog=0x7f0c00fe;
+    public static final int Theme_AppCompat_Dialog_Alert=0x7f0c00ff;
+    public static final int Theme_AppCompat_Dialog_MinWidth=0x7f0c0100;
+    public static final int Theme_AppCompat_DialogWhenLarge=0x7f0c0101;
+    public static final int Theme_AppCompat_Light=0x7f0c0102;
+    public static final int Theme_AppCompat_Light_DarkActionBar=0x7f0c0103;
+    public static final int Theme_AppCompat_Light_Dialog=0x7f0c0104;
+    public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f0c0105;
+    public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f0c0106;
+    public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0c0107;
+    public static final int Theme_AppCompat_Light_NoActionBar=0x7f0c0108;
+    public static final int Theme_AppCompat_NoActionBar=0x7f0c0109;
+    public static final int Theme_IAPTheme=0x7f0c010a;
+    public static final int Theme_Mati_DSMS=0x7f0c010b;
+    public static final int ThemeOverlay_AppCompat=0x7f0c010c;
+    public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0c010d;
+    public static final int ThemeOverlay_AppCompat_Dark=0x7f0c010e;
+    public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0c010f;
+    public static final int ThemeOverlay_AppCompat_Dialog=0x7f0c0110;
+    public static final int ThemeOverlay_AppCompat_Dialog_Alert=0x7f0c0111;
+    public static final int ThemeOverlay_AppCompat_Light=0x7f0c0112;
+    public static final int Widget_AppCompat_ActionBar=0x7f0c0113;
+    public static final int Widget_AppCompat_ActionBar_Solid=0x7f0c0114;
+    public static final int Widget_AppCompat_ActionBar_TabBar=0x7f0c0115;
+    public static final int Widget_AppCompat_ActionBar_TabText=0x7f0c0116;
+    public static final int Widget_AppCompat_ActionBar_TabView=0x7f0c0117;
+    public static final int Widget_AppCompat_ActionButton=0x7f0c0118;
+    public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f0c0119;
+    public static final int Widget_AppCompat_ActionButton_Overflow=0x7f0c011a;
+    public static final int Widget_AppCompat_ActionMode=0x7f0c011b;
+    public static final int Widget_AppCompat_ActivityChooserView=0x7f0c011c;
+    public static final int Widget_AppCompat_AutoCompleteTextView=0x7f0c011d;
+    public static final int Widget_AppCompat_Button=0x7f0c011e;
+    public static final int Widget_AppCompat_Button_Borderless=0x7f0c011f;
+    public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f0c0120;
+    public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0c0121;
+    public static final int Widget_AppCompat_Button_Colored=0x7f0c0122;
+    public static final int Widget_AppCompat_Button_Small=0x7f0c0123;
+    public static final int Widget_AppCompat_ButtonBar=0x7f0c0124;
+    public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f0c0125;
+    public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f0c0126;
+    public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f0c0127;
+    public static final int Widget_AppCompat_CompoundButton_Switch=0x7f0c0128;
+    public static final int Widget_AppCompat_DrawerArrowToggle=0x7f0c0129;
+    public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f0c012a;
+    public static final int Widget_AppCompat_EditText=0x7f0c012b;
+    public static final int Widget_AppCompat_ImageButton=0x7f0c012c;
+    public static final int Widget_AppCompat_Light_ActionBar=0x7f0c012d;
+    public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f0c012e;
+    public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f0c012f;
+    public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f0c0130;
+    public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f0c0131;
+    public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f0c0132;
+    public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0c0133;
+    public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f0c0134;
+    public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f0c0135;
+    public static final int Widget_AppCompat_Light_ActionButton=0x7f0c0136;
+    public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f0c0137;
+    public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f0c0138;
+    public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f0c0139;
+    public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f0c013a;
+    public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f0c013b;
+    public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f0c013c;
+    public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f0c013d;
+    public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f0c013e;
+    public static final int Widget_AppCompat_Light_PopupMenu=0x7f0c013f;
+    public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0c0140;
+    public static final int Widget_AppCompat_Light_SearchView=0x7f0c0141;
+    public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f0c0142;
+    public static final int Widget_AppCompat_ListMenuView=0x7f0c0143;
+    public static final int Widget_AppCompat_ListPopupWindow=0x7f0c0144;
+    public static final int Widget_AppCompat_ListView=0x7f0c0145;
+    public static final int Widget_AppCompat_ListView_DropDown=0x7f0c0146;
+    public static final int Widget_AppCompat_ListView_Menu=0x7f0c0147;
+    public static final int Widget_AppCompat_PopupMenu=0x7f0c0148;
+    public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f0c0149;
+    public static final int Widget_AppCompat_PopupWindow=0x7f0c014a;
+    public static final int Widget_AppCompat_ProgressBar=0x7f0c014b;
+    public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0c014c;
+    public static final int Widget_AppCompat_RatingBar=0x7f0c014d;
+    public static final int Widget_AppCompat_RatingBar_Indicator=0x7f0c014e;
+    public static final int Widget_AppCompat_RatingBar_Small=0x7f0c014f;
+    public static final int Widget_AppCompat_SearchView=0x7f0c0150;
+    public static final int Widget_AppCompat_SearchView_ActionBar=0x7f0c0151;
+    public static final int Widget_AppCompat_SeekBar=0x7f0c0152;
+    public static final int Widget_AppCompat_SeekBar_Discrete=0x7f0c0153;
+    public static final int Widget_AppCompat_Spinner=0x7f0c0154;
+    public static final int Widget_AppCompat_Spinner_DropDown=0x7f0c0155;
+    public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0c0156;
+    public static final int Widget_AppCompat_Spinner_Underlined=0x7f0c0157;
+    public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f0c0158;
+    public static final int Widget_AppCompat_Toolbar=0x7f0c0159;
+    public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0c015a;
+    public static final int Widget_Compat_NotificationActionContainer=0x7f0c015b;
+    public static final int Widget_Compat_NotificationActionText=0x7f0c015c;
+    public static final int Widget_Support_CoordinatorLayout=0x7f0c015d;
   }
   public static final class styleable {
     /**
@@ -5286,14 +4336,14 @@ public final class R {
      * @see #ActionBar_titleTextStyle
      */
     public static final int[] ActionBar={
-      0x7f020037, 0x7f020038, 0x7f020039, 0x7f02006e, 
-      0x7f02006f, 0x7f020070, 0x7f020071, 0x7f020072, 
-      0x7f020073, 0x7f020080, 0x7f02008c, 0x7f02008d, 
-      0x7f02009d, 0x7f0200c1, 0x7f0200c2, 0x7f0200c3, 
-      0x7f0200c4, 0x7f0200c5, 0x7f0200cc, 0x7f0200cf, 
-      0x7f02011c, 0x7f020138, 0x7f020154, 0x7f020157, 
-      0x7f020158, 0x7f02017e, 0x7f020181, 0x7f0201a0, 
-      0x7f0201a9
+      0x7f020034, 0x7f020035, 0x7f020036, 0x7f020063, 
+      0x7f020064, 0x7f020065, 0x7f020066, 0x7f020067, 
+      0x7f020068, 0x7f02006b, 0x7f020070, 0x7f020071, 
+      0x7f02007c, 0x7f02008e, 0x7f02008f, 0x7f020090, 
+      0x7f020091, 0x7f020092, 0x7f020099, 0x7f02009c, 
+      0x7f0200e4, 0x7f0200eb, 0x7f0200f6, 0x7f0200f9, 
+      0x7f0200fa, 0x7f020116, 0x7f020119, 0x7f020134, 
+      0x7f02013d
     };
     /**
      * <p>
@@ -5800,8 +4850,8 @@ public final class R {
      * @see #ActionMode_titleTextStyle
      */
     public static final int[] ActionMode={
-      0x7f020037, 0x7f020038, 0x7f020056, 0x7f0200c1, 
-      0x7f020181, 0x7f0201a9
+      0x7f020034, 0x7f020035, 0x7f02004f, 0x7f02008e, 
+      0x7f020119, 0x7f02013d
     };
     /**
      * <p>
@@ -5899,7 +4949,7 @@ public final class R {
      * @see #ActivityChooserView_initialActivityCount
      */
     public static final int[] ActivityChooserView={
-      0x7f02009e, 0x7f0200cd
+      0x7f02007e, 0x7f02009a
     };
     /**
      * <p>
@@ -5930,6 +4980,54 @@ public final class R {
      */
     public static final int ActivityChooserView_initialActivityCount=1;
     /**
+     * Attributes that can be used with a AdsAttrs.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #AdsAttrs_adSize com.torgtek.matidsms:adSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AdsAttrs_adSizes com.torgtek.matidsms:adSizes}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AdsAttrs_adUnitId com.torgtek.matidsms:adUnitId}</code></td><td></td></tr>
+     * </table>
+     * @see #AdsAttrs_adSize
+     * @see #AdsAttrs_adSizes
+     * @see #AdsAttrs_adUnitId
+     */
+    public static final int[] AdsAttrs={
+      0x7f020022, 0x7f020023, 0x7f020024
+    };
+    /**
+     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#adSize}
+     * attribute's value can be found in the {@link #AdsAttrs} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.torgtek.matidsms:adSize
+     */
+    public static final int AdsAttrs_adSize=0;
+    /**
+     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#adSizes}
+     * attribute's value can be found in the {@link #AdsAttrs} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.torgtek.matidsms:adSizes
+     */
+    public static final int AdsAttrs_adSizes=1;
+    /**
+     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#adUnitId}
+     * attribute's value can be found in the {@link #AdsAttrs} array.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.torgtek.matidsms:adUnitId
+     */
+    public static final int AdsAttrs_adUnitId=2;
+    /**
      * Attributes that can be used with a AlertDialog.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -5955,8 +5053,8 @@ public final class R {
      * @see #AlertDialog_singleChoiceItemLayout
      */
     public static final int[] AlertDialog={
-      0x010100f2, 0x7f020048, 0x7f020049, 0x7f020113, 
-      0x7f020114, 0x7f020135, 0x7f020171, 0x7f020172
+      0x010100f2, 0x7f020043, 0x7f020044, 0x7f0200db, 
+      0x7f0200dc, 0x7f0200e8, 0x7f02010b, 0x7f02010c
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout}
@@ -6284,7 +5382,7 @@ public final class R {
      * @see #AppCompatImageView_tintMode
      */
     public static final int[] AppCompatImageView={
-      0x01010119, 0x7f020178, 0x7f02019e, 0x7f02019f
+      0x01010119, 0x7f020111, 0x7f020132, 0x7f020133
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#src}
@@ -6372,7 +5470,7 @@ public final class R {
      * @see #AppCompatSeekBar_tickMarkTintMode
      */
     public static final int[] AppCompatSeekBar={
-      0x01010142, 0x7f02019b, 0x7f02019c, 0x7f02019d
+      0x01010142, 0x7f02012f, 0x7f020130, 0x7f020131
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#thumb}
@@ -6601,9 +5699,9 @@ public final class R {
      * @see #AppCompatTextView_textAllCaps
      */
     public static final int[] AppCompatTextView={
-      0x01010034, 0x7f020031, 0x7f020032, 0x7f020033, 
-      0x7f020034, 0x7f020035, 0x7f02009f, 0x7f0200b4, 
-      0x7f0200d2, 0x7f020110, 0x7f02018b
+      0x01010034, 0x7f02002f, 0x7f020030, 0x7f020031, 
+      0x7f020032, 0x7f020033, 0x7f02007f, 0x7f020081, 
+      0x7f02009e, 0x7f0200d8, 0x7f02011f
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textAppearance}
@@ -7044,29 +6142,29 @@ public final class R {
       0x7f020013, 0x7f020014, 0x7f020015, 0x7f020016, 
       0x7f020017, 0x7f020018, 0x7f020019, 0x7f02001a, 
       0x7f02001b, 0x7f02001c, 0x7f02001d, 0x7f02001e, 
-      0x7f020021, 0x7f020022, 0x7f020023, 0x7f020024, 
-      0x7f020025, 0x7f020030, 0x7f020040, 0x7f020042, 
-      0x7f020043, 0x7f020044, 0x7f020045, 0x7f020046, 
-      0x7f02004b, 0x7f02004c, 0x7f020050, 0x7f020051, 
-      0x7f02005a, 0x7f02005b, 0x7f02005c, 0x7f02005d, 
-      0x7f02005e, 0x7f02005f, 0x7f020060, 0x7f020061, 
-      0x7f020062, 0x7f020064, 0x7f020075, 0x7f020089, 
-      0x7f02008a, 0x7f02008b, 0x7f02008e, 0x7f020090, 
-      0x7f020097, 0x7f020098, 0x7f02009a, 0x7f02009b, 
-      0x7f02009c, 0x7f0200c3, 0x7f0200cb, 0x7f020111, 
-      0x7f020112, 0x7f020115, 0x7f020116, 0x7f020117, 
-      0x7f020118, 0x7f020119, 0x7f02011a, 0x7f02011b, 
-      0x7f020147, 0x7f020148, 0x7f020149, 0x7f020153, 
-      0x7f020155, 0x7f02015b, 0x7f02015c, 0x7f02015d, 
-      0x7f02015e, 0x7f020169, 0x7f02016a, 0x7f02016b, 
-      0x7f02016c, 0x7f020175, 0x7f020176, 0x7f020185, 
-      0x7f02018c, 0x7f02018d, 0x7f02018e, 0x7f02018f, 
-      0x7f020190, 0x7f020191, 0x7f020192, 0x7f020193, 
-      0x7f020194, 0x7f020195, 0x7f0201aa, 0x7f0201ab, 
-      0x7f0201ac, 0x7f0201ad, 0x7f0201bd, 0x7f0201c6, 
-      0x7f0201c7, 0x7f0201c8, 0x7f0201c9, 0x7f0201ca, 
-      0x7f0201cb, 0x7f0201cc, 0x7f0201cd, 0x7f0201ce, 
-      0x7f0201cf
+      0x7f020021, 0x7f020025, 0x7f020026, 0x7f020027, 
+      0x7f020028, 0x7f02002e, 0x7f02003c, 0x7f02003d, 
+      0x7f02003e, 0x7f02003f, 0x7f020040, 0x7f020041, 
+      0x7f020046, 0x7f020047, 0x7f02004b, 0x7f02004c, 
+      0x7f020053, 0x7f020054, 0x7f020055, 0x7f020056, 
+      0x7f020057, 0x7f020058, 0x7f020059, 0x7f02005a, 
+      0x7f02005b, 0x7f02005d, 0x7f020069, 0x7f02006d, 
+      0x7f02006e, 0x7f02006f, 0x7f020072, 0x7f020074, 
+      0x7f020077, 0x7f020078, 0x7f020079, 0x7f02007a, 
+      0x7f02007b, 0x7f020090, 0x7f020098, 0x7f0200d9, 
+      0x7f0200da, 0x7f0200dd, 0x7f0200de, 0x7f0200df, 
+      0x7f0200e0, 0x7f0200e1, 0x7f0200e2, 0x7f0200e3, 
+      0x7f0200f2, 0x7f0200f3, 0x7f0200f4, 0x7f0200f5, 
+      0x7f0200f7, 0x7f0200fd, 0x7f0200fe, 0x7f0200ff, 
+      0x7f020100, 0x7f020104, 0x7f020105, 0x7f020106, 
+      0x7f020107, 0x7f02010e, 0x7f02010f, 0x7f02011d, 
+      0x7f020120, 0x7f020121, 0x7f020122, 0x7f020123, 
+      0x7f020124, 0x7f020125, 0x7f020126, 0x7f020127, 
+      0x7f020128, 0x7f020129, 0x7f02013e, 0x7f02013f, 
+      0x7f020140, 0x7f020141, 0x7f020147, 0x7f020149, 
+      0x7f02014a, 0x7f02014b, 0x7f02014c, 0x7f02014d, 
+      0x7f02014e, 0x7f02014f, 0x7f020150, 0x7f020151, 
+      0x7f020152
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#windowIsFloating}
@@ -8722,7 +7820,7 @@ public final class R {
      * @see #ButtonBarLayout_allowStacking
      */
     public static final int[] ButtonBarLayout={
-      0x7f020026
+      0x7f020029
     };
     /**
      * <p>
@@ -8752,7 +7850,7 @@ public final class R {
      * @see #ColorStateListItem_alpha
      */
     public static final int[] ColorStateListItem={
-      0x010101a5, 0x0101031f, 0x7f020027
+      0x010101a5, 0x0101031f, 0x7f02002a
     };
     /**
      * <p>
@@ -8801,7 +7899,7 @@ public final class R {
      * @see #CompoundButton_buttonTintMode
      */
     public static final int[] CompoundButton={
-      0x01010107, 0x7f02004d, 0x7f02004e
+      0x01010107, 0x7f020048, 0x7f020049
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#button}
@@ -8855,1811 +7953,6 @@ public final class R {
      */
     public static final int CompoundButton_buttonTintMode=2;
     /**
-     * Attributes that can be used with a Constraint.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #Constraint_android_orientation android:orientation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_id android:id}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_visibility android:visibility}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_layout_width android:layout_width}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_layout_height android:layout_height}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_layout_marginLeft android:layout_marginLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_layout_marginTop android:layout_marginTop}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_layout_marginRight android:layout_marginRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_layout_marginBottom android:layout_marginBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_maxHeight android:maxHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_minWidth android:minWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_minHeight android:minHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_alpha android:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_transformPivotX android:transformPivotX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_transformPivotY android:transformPivotY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_translationX android:translationX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_translationY android:translationY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_scaleX android:scaleX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_scaleY android:scaleY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_rotation android:rotation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_rotationX android:rotationX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_rotationY android:rotationY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_layout_marginStart android:layout_marginStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_layout_marginEnd android:layout_marginEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_translationZ android:translationZ}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_android_elevation android:elevation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_animate_relativeTo com.torgtek.matidsms:animate_relativeTo}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_barrierAllowsGoneWidgets com.torgtek.matidsms:barrierAllowsGoneWidgets}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_barrierDirection com.torgtek.matidsms:barrierDirection}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_barrierMargin com.torgtek.matidsms:barrierMargin}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_chainUseRtl com.torgtek.matidsms:chainUseRtl}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_constraint_referenced_ids com.torgtek.matidsms:constraint_referenced_ids}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_constraint_referenced_tags com.torgtek.matidsms:constraint_referenced_tags}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_drawPath com.torgtek.matidsms:drawPath}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_firstHorizontalBias com.torgtek.matidsms:flow_firstHorizontalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_firstHorizontalStyle com.torgtek.matidsms:flow_firstHorizontalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_firstVerticalBias com.torgtek.matidsms:flow_firstVerticalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_firstVerticalStyle com.torgtek.matidsms:flow_firstVerticalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_horizontalAlign com.torgtek.matidsms:flow_horizontalAlign}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_horizontalBias com.torgtek.matidsms:flow_horizontalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_horizontalGap com.torgtek.matidsms:flow_horizontalGap}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_horizontalStyle com.torgtek.matidsms:flow_horizontalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_lastHorizontalBias com.torgtek.matidsms:flow_lastHorizontalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_lastHorizontalStyle com.torgtek.matidsms:flow_lastHorizontalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_lastVerticalBias com.torgtek.matidsms:flow_lastVerticalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_lastVerticalStyle com.torgtek.matidsms:flow_lastVerticalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_maxElementsWrap com.torgtek.matidsms:flow_maxElementsWrap}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_verticalAlign com.torgtek.matidsms:flow_verticalAlign}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_verticalBias com.torgtek.matidsms:flow_verticalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_verticalGap com.torgtek.matidsms:flow_verticalGap}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_verticalStyle com.torgtek.matidsms:flow_verticalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_flow_wrapMode com.torgtek.matidsms:flow_wrapMode}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constrainedHeight com.torgtek.matidsms:layout_constrainedHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constrainedWidth com.torgtek.matidsms:layout_constrainedWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintBaseline_creator com.torgtek.matidsms:layout_constraintBaseline_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintBaseline_toBaselineOf com.torgtek.matidsms:layout_constraintBaseline_toBaselineOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintBottom_creator com.torgtek.matidsms:layout_constraintBottom_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintBottom_toBottomOf com.torgtek.matidsms:layout_constraintBottom_toBottomOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintBottom_toTopOf com.torgtek.matidsms:layout_constraintBottom_toTopOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintCircle com.torgtek.matidsms:layout_constraintCircle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintCircleAngle com.torgtek.matidsms:layout_constraintCircleAngle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintCircleRadius com.torgtek.matidsms:layout_constraintCircleRadius}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintDimensionRatio com.torgtek.matidsms:layout_constraintDimensionRatio}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintEnd_toEndOf com.torgtek.matidsms:layout_constraintEnd_toEndOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintEnd_toStartOf com.torgtek.matidsms:layout_constraintEnd_toStartOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintGuide_begin com.torgtek.matidsms:layout_constraintGuide_begin}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintGuide_end com.torgtek.matidsms:layout_constraintGuide_end}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintGuide_percent com.torgtek.matidsms:layout_constraintGuide_percent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintHeight_default com.torgtek.matidsms:layout_constraintHeight_default}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintHeight_max com.torgtek.matidsms:layout_constraintHeight_max}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintHeight_min com.torgtek.matidsms:layout_constraintHeight_min}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintHeight_percent com.torgtek.matidsms:layout_constraintHeight_percent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintHorizontal_bias com.torgtek.matidsms:layout_constraintHorizontal_bias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintHorizontal_chainStyle com.torgtek.matidsms:layout_constraintHorizontal_chainStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintHorizontal_weight com.torgtek.matidsms:layout_constraintHorizontal_weight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintLeft_creator com.torgtek.matidsms:layout_constraintLeft_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintLeft_toLeftOf com.torgtek.matidsms:layout_constraintLeft_toLeftOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintLeft_toRightOf com.torgtek.matidsms:layout_constraintLeft_toRightOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintRight_creator com.torgtek.matidsms:layout_constraintRight_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintRight_toLeftOf com.torgtek.matidsms:layout_constraintRight_toLeftOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintRight_toRightOf com.torgtek.matidsms:layout_constraintRight_toRightOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintStart_toEndOf com.torgtek.matidsms:layout_constraintStart_toEndOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintStart_toStartOf com.torgtek.matidsms:layout_constraintStart_toStartOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintTag com.torgtek.matidsms:layout_constraintTag}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintTop_creator com.torgtek.matidsms:layout_constraintTop_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintTop_toBottomOf com.torgtek.matidsms:layout_constraintTop_toBottomOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintTop_toTopOf com.torgtek.matidsms:layout_constraintTop_toTopOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintVertical_bias com.torgtek.matidsms:layout_constraintVertical_bias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintVertical_chainStyle com.torgtek.matidsms:layout_constraintVertical_chainStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintVertical_weight com.torgtek.matidsms:layout_constraintVertical_weight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintWidth_default com.torgtek.matidsms:layout_constraintWidth_default}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintWidth_max com.torgtek.matidsms:layout_constraintWidth_max}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintWidth_min com.torgtek.matidsms:layout_constraintWidth_min}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_constraintWidth_percent com.torgtek.matidsms:layout_constraintWidth_percent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_editor_absoluteX com.torgtek.matidsms:layout_editor_absoluteX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_editor_absoluteY com.torgtek.matidsms:layout_editor_absoluteY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_goneMarginBottom com.torgtek.matidsms:layout_goneMarginBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_goneMarginEnd com.torgtek.matidsms:layout_goneMarginEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_goneMarginLeft com.torgtek.matidsms:layout_goneMarginLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_goneMarginRight com.torgtek.matidsms:layout_goneMarginRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_goneMarginStart com.torgtek.matidsms:layout_goneMarginStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_layout_goneMarginTop com.torgtek.matidsms:layout_goneMarginTop}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_motionProgress com.torgtek.matidsms:motionProgress}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_motionStagger com.torgtek.matidsms:motionStagger}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_pathMotionArc com.torgtek.matidsms:pathMotionArc}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_pivotAnchor com.torgtek.matidsms:pivotAnchor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_transitionEasing com.torgtek.matidsms:transitionEasing}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_transitionPathRotate com.torgtek.matidsms:transitionPathRotate}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Constraint_visibilityMode com.torgtek.matidsms:visibilityMode}</code></td><td></td></tr>
-     * </table>
-     * @see #Constraint_android_orientation
-     * @see #Constraint_android_id
-     * @see #Constraint_android_visibility
-     * @see #Constraint_android_layout_width
-     * @see #Constraint_android_layout_height
-     * @see #Constraint_android_layout_marginLeft
-     * @see #Constraint_android_layout_marginTop
-     * @see #Constraint_android_layout_marginRight
-     * @see #Constraint_android_layout_marginBottom
-     * @see #Constraint_android_maxWidth
-     * @see #Constraint_android_maxHeight
-     * @see #Constraint_android_minWidth
-     * @see #Constraint_android_minHeight
-     * @see #Constraint_android_alpha
-     * @see #Constraint_android_transformPivotX
-     * @see #Constraint_android_transformPivotY
-     * @see #Constraint_android_translationX
-     * @see #Constraint_android_translationY
-     * @see #Constraint_android_scaleX
-     * @see #Constraint_android_scaleY
-     * @see #Constraint_android_rotation
-     * @see #Constraint_android_rotationX
-     * @see #Constraint_android_rotationY
-     * @see #Constraint_android_layout_marginStart
-     * @see #Constraint_android_layout_marginEnd
-     * @see #Constraint_android_translationZ
-     * @see #Constraint_android_elevation
-     * @see #Constraint_animate_relativeTo
-     * @see #Constraint_barrierAllowsGoneWidgets
-     * @see #Constraint_barrierDirection
-     * @see #Constraint_barrierMargin
-     * @see #Constraint_chainUseRtl
-     * @see #Constraint_constraint_referenced_ids
-     * @see #Constraint_constraint_referenced_tags
-     * @see #Constraint_drawPath
-     * @see #Constraint_flow_firstHorizontalBias
-     * @see #Constraint_flow_firstHorizontalStyle
-     * @see #Constraint_flow_firstVerticalBias
-     * @see #Constraint_flow_firstVerticalStyle
-     * @see #Constraint_flow_horizontalAlign
-     * @see #Constraint_flow_horizontalBias
-     * @see #Constraint_flow_horizontalGap
-     * @see #Constraint_flow_horizontalStyle
-     * @see #Constraint_flow_lastHorizontalBias
-     * @see #Constraint_flow_lastHorizontalStyle
-     * @see #Constraint_flow_lastVerticalBias
-     * @see #Constraint_flow_lastVerticalStyle
-     * @see #Constraint_flow_maxElementsWrap
-     * @see #Constraint_flow_verticalAlign
-     * @see #Constraint_flow_verticalBias
-     * @see #Constraint_flow_verticalGap
-     * @see #Constraint_flow_verticalStyle
-     * @see #Constraint_flow_wrapMode
-     * @see #Constraint_layout_constrainedHeight
-     * @see #Constraint_layout_constrainedWidth
-     * @see #Constraint_layout_constraintBaseline_creator
-     * @see #Constraint_layout_constraintBaseline_toBaselineOf
-     * @see #Constraint_layout_constraintBottom_creator
-     * @see #Constraint_layout_constraintBottom_toBottomOf
-     * @see #Constraint_layout_constraintBottom_toTopOf
-     * @see #Constraint_layout_constraintCircle
-     * @see #Constraint_layout_constraintCircleAngle
-     * @see #Constraint_layout_constraintCircleRadius
-     * @see #Constraint_layout_constraintDimensionRatio
-     * @see #Constraint_layout_constraintEnd_toEndOf
-     * @see #Constraint_layout_constraintEnd_toStartOf
-     * @see #Constraint_layout_constraintGuide_begin
-     * @see #Constraint_layout_constraintGuide_end
-     * @see #Constraint_layout_constraintGuide_percent
-     * @see #Constraint_layout_constraintHeight_default
-     * @see #Constraint_layout_constraintHeight_max
-     * @see #Constraint_layout_constraintHeight_min
-     * @see #Constraint_layout_constraintHeight_percent
-     * @see #Constraint_layout_constraintHorizontal_bias
-     * @see #Constraint_layout_constraintHorizontal_chainStyle
-     * @see #Constraint_layout_constraintHorizontal_weight
-     * @see #Constraint_layout_constraintLeft_creator
-     * @see #Constraint_layout_constraintLeft_toLeftOf
-     * @see #Constraint_layout_constraintLeft_toRightOf
-     * @see #Constraint_layout_constraintRight_creator
-     * @see #Constraint_layout_constraintRight_toLeftOf
-     * @see #Constraint_layout_constraintRight_toRightOf
-     * @see #Constraint_layout_constraintStart_toEndOf
-     * @see #Constraint_layout_constraintStart_toStartOf
-     * @see #Constraint_layout_constraintTag
-     * @see #Constraint_layout_constraintTop_creator
-     * @see #Constraint_layout_constraintTop_toBottomOf
-     * @see #Constraint_layout_constraintTop_toTopOf
-     * @see #Constraint_layout_constraintVertical_bias
-     * @see #Constraint_layout_constraintVertical_chainStyle
-     * @see #Constraint_layout_constraintVertical_weight
-     * @see #Constraint_layout_constraintWidth_default
-     * @see #Constraint_layout_constraintWidth_max
-     * @see #Constraint_layout_constraintWidth_min
-     * @see #Constraint_layout_constraintWidth_percent
-     * @see #Constraint_layout_editor_absoluteX
-     * @see #Constraint_layout_editor_absoluteY
-     * @see #Constraint_layout_goneMarginBottom
-     * @see #Constraint_layout_goneMarginEnd
-     * @see #Constraint_layout_goneMarginLeft
-     * @see #Constraint_layout_goneMarginRight
-     * @see #Constraint_layout_goneMarginStart
-     * @see #Constraint_layout_goneMarginTop
-     * @see #Constraint_motionProgress
-     * @see #Constraint_motionStagger
-     * @see #Constraint_pathMotionArc
-     * @see #Constraint_pivotAnchor
-     * @see #Constraint_transitionEasing
-     * @see #Constraint_transitionPathRotate
-     * @see #Constraint_visibilityMode
-     */
-    public static final int[] Constraint={
-      0x010100c4, 0x010100d0, 0x010100dc, 0x010100f4, 
-      0x010100f5, 0x010100f7, 0x010100f8, 0x010100f9, 
-      0x010100fa, 0x0101011f, 0x01010120, 0x0101013f, 
-      0x01010140, 0x0101031f, 0x01010320, 0x01010321, 
-      0x01010322, 0x01010323, 0x01010324, 0x01010325, 
-      0x01010326, 0x01010327, 0x01010328, 0x010103b5, 
-      0x010103b6, 0x010103fa, 0x01010440, 0x7f02002a, 
-      0x7f02003d, 0x7f02003e, 0x7f02003f, 0x7f02004f, 
-      0x7f020069, 0x7f02006a, 0x7f020094, 0x7f0200a0, 
-      0x7f0200a1, 0x7f0200a2, 0x7f0200a3, 0x7f0200a4, 
-      0x7f0200a5, 0x7f0200a6, 0x7f0200a7, 0x7f0200a8, 
-      0x7f0200a9, 0x7f0200aa, 0x7f0200ab, 0x7f0200ac, 
-      0x7f0200ae, 0x7f0200af, 0x7f0200b0, 0x7f0200b1, 
-      0x7f0200b2, 0x7f0200d9, 0x7f0200da, 0x7f0200db, 
-      0x7f0200dc, 0x7f0200dd, 0x7f0200de, 0x7f0200df, 
-      0x7f0200e0, 0x7f0200e1, 0x7f0200e2, 0x7f0200e3, 
-      0x7f0200e4, 0x7f0200e5, 0x7f0200e6, 0x7f0200e7, 
-      0x7f0200e8, 0x7f0200e9, 0x7f0200ea, 0x7f0200eb, 
-      0x7f0200ec, 0x7f0200ed, 0x7f0200ee, 0x7f0200ef, 
-      0x7f0200f0, 0x7f0200f1, 0x7f0200f2, 0x7f0200f3, 
-      0x7f0200f4, 0x7f0200f5, 0x7f0200f6, 0x7f0200f7, 
-      0x7f0200f8, 0x7f0200f9, 0x7f0200fa, 0x7f0200fb, 
-      0x7f0200fc, 0x7f0200fd, 0x7f0200fe, 0x7f0200ff, 
-      0x7f020100, 0x7f020101, 0x7f020102, 0x7f020104, 
-      0x7f020105, 0x7f020106, 0x7f020107, 0x7f020108, 
-      0x7f020109, 0x7f02010a, 0x7f02010b, 0x7f02012f, 
-      0x7f020130, 0x7f02014a, 0x7f020151, 0x7f0201b6, 
-      0x7f0201b8, 0x7f0201be
-    };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#orientation}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>horizontal</td><td>0</td><td></td></tr>
-     * <tr><td>vertical</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:orientation
-     */
-    public static final int Constraint_android_orientation=0;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#id}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name android:id
-     */
-    public static final int Constraint_android_id=1;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#visibility}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>gone</td><td>2</td><td></td></tr>
-     * <tr><td>invisible</td><td>1</td><td></td></tr>
-     * <tr><td>visible</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:visibility
-     */
-    public static final int Constraint_android_visibility=2;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_width}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>fill_parent</td><td>ffffffff</td><td></td></tr>
-     * <tr><td>match_parent</td><td>ffffffff</td><td></td></tr>
-     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:layout_width
-     */
-    public static final int Constraint_android_layout_width=3;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_height}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>fill_parent</td><td>ffffffff</td><td></td></tr>
-     * <tr><td>match_parent</td><td>ffffffff</td><td></td></tr>
-     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:layout_height
-     */
-    public static final int Constraint_android_layout_height=4;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_marginLeft}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:layout_marginLeft
-     */
-    public static final int Constraint_android_layout_marginLeft=5;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_marginTop}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:layout_marginTop
-     */
-    public static final int Constraint_android_layout_marginTop=6;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_marginRight}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:layout_marginRight
-     */
-    public static final int Constraint_android_layout_marginRight=7;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_marginBottom}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:layout_marginBottom
-     */
-    public static final int Constraint_android_layout_marginBottom=8;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:maxWidth
-     */
-    public static final int Constraint_android_maxWidth=9;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#maxHeight}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:maxHeight
-     */
-    public static final int Constraint_android_maxHeight=10;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#minWidth}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:minWidth
-     */
-    public static final int Constraint_android_minWidth=11;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#minHeight}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:minHeight
-     */
-    public static final int Constraint_android_minHeight=12;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#alpha}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:alpha
-     */
-    public static final int Constraint_android_alpha=13;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#transformPivotX}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:transformPivotX
-     */
-    public static final int Constraint_android_transformPivotX=14;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#transformPivotY}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:transformPivotY
-     */
-    public static final int Constraint_android_transformPivotY=15;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationX}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationX
-     */
-    public static final int Constraint_android_translationX=16;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationY}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationY
-     */
-    public static final int Constraint_android_translationY=17;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#scaleX}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:scaleX
-     */
-    public static final int Constraint_android_scaleX=18;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#scaleY}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:scaleY
-     */
-    public static final int Constraint_android_scaleY=19;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotation}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotation
-     */
-    public static final int Constraint_android_rotation=20;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotationX}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotationX
-     */
-    public static final int Constraint_android_rotationX=21;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotationY}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotationY
-     */
-    public static final int Constraint_android_rotationY=22;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_marginStart}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:layout_marginStart
-     */
-    public static final int Constraint_android_layout_marginStart=23;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_marginEnd}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:layout_marginEnd
-     */
-    public static final int Constraint_android_layout_marginEnd=24;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationZ}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationZ
-     */
-    public static final int Constraint_android_translationZ=25;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#elevation}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:elevation
-     */
-    public static final int Constraint_android_elevation=26;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#animate_relativeTo}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:animate_relativeTo
-     */
-    public static final int Constraint_animate_relativeTo=27;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#barrierAllowsGoneWidgets}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:barrierAllowsGoneWidgets
-     */
-    public static final int Constraint_barrierAllowsGoneWidgets=28;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#barrierDirection}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>3</td><td></td></tr>
-     * <tr><td>end</td><td>6</td><td></td></tr>
-     * <tr><td>left</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>1</td><td></td></tr>
-     * <tr><td>start</td><td>5</td><td></td></tr>
-     * <tr><td>top</td><td>2</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:barrierDirection
-     */
-    public static final int Constraint_barrierDirection=29;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#barrierMargin}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:barrierMargin
-     */
-    public static final int Constraint_barrierMargin=30;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#chainUseRtl}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:chainUseRtl
-     */
-    public static final int Constraint_chainUseRtl=31;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraint_referenced_ids}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:constraint_referenced_ids
-     */
-    public static final int Constraint_constraint_referenced_ids=32;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraint_referenced_tags}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:constraint_referenced_tags
-     */
-    public static final int Constraint_constraint_referenced_tags=33;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#drawPath}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>asConfigured</td><td>4</td><td></td></tr>
-     * <tr><td>deltaRelative</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>path</td><td>1</td><td></td></tr>
-     * <tr><td>pathRelative</td><td>2</td><td></td></tr>
-     * <tr><td>rectangles</td><td>5</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:drawPath
-     */
-    public static final int Constraint_drawPath=34;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_firstHorizontalBias}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_firstHorizontalBias
-     */
-    public static final int Constraint_flow_firstHorizontalBias=35;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_firstHorizontalStyle}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_firstHorizontalStyle
-     */
-    public static final int Constraint_flow_firstHorizontalStyle=36;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_firstVerticalBias}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_firstVerticalBias
-     */
-    public static final int Constraint_flow_firstVerticalBias=37;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_firstVerticalStyle}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_firstVerticalStyle
-     */
-    public static final int Constraint_flow_firstVerticalStyle=38;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_horizontalAlign}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>center</td><td>2</td><td></td></tr>
-     * <tr><td>end</td><td>1</td><td></td></tr>
-     * <tr><td>start</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_horizontalAlign
-     */
-    public static final int Constraint_flow_horizontalAlign=39;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_horizontalBias}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_horizontalBias
-     */
-    public static final int Constraint_flow_horizontalBias=40;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_horizontalGap}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:flow_horizontalGap
-     */
-    public static final int Constraint_flow_horizontalGap=41;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_horizontalStyle}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_horizontalStyle
-     */
-    public static final int Constraint_flow_horizontalStyle=42;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_lastHorizontalBias}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_lastHorizontalBias
-     */
-    public static final int Constraint_flow_lastHorizontalBias=43;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_lastHorizontalStyle}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_lastHorizontalStyle
-     */
-    public static final int Constraint_flow_lastHorizontalStyle=44;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_lastVerticalBias}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_lastVerticalBias
-     */
-    public static final int Constraint_flow_lastVerticalBias=45;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_lastVerticalStyle}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_lastVerticalStyle
-     */
-    public static final int Constraint_flow_lastVerticalStyle=46;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_maxElementsWrap}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_maxElementsWrap
-     */
-    public static final int Constraint_flow_maxElementsWrap=47;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_verticalAlign}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>baseline</td><td>3</td><td></td></tr>
-     * <tr><td>bottom</td><td>1</td><td></td></tr>
-     * <tr><td>center</td><td>2</td><td></td></tr>
-     * <tr><td>top</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_verticalAlign
-     */
-    public static final int Constraint_flow_verticalAlign=48;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_verticalBias}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_verticalBias
-     */
-    public static final int Constraint_flow_verticalBias=49;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_verticalGap}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:flow_verticalGap
-     */
-    public static final int Constraint_flow_verticalGap=50;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_verticalStyle}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_verticalStyle
-     */
-    public static final int Constraint_flow_verticalStyle=51;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_wrapMode}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>aligned</td><td>2</td><td></td></tr>
-     * <tr><td>chain</td><td>1</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_wrapMode
-     */
-    public static final int Constraint_flow_wrapMode=52;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constrainedHeight}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constrainedHeight
-     */
-    public static final int Constraint_layout_constrainedHeight=53;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constrainedWidth}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constrainedWidth
-     */
-    public static final int Constraint_layout_constrainedWidth=54;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBaseline_creator}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintBaseline_creator
-     */
-    public static final int Constraint_layout_constraintBaseline_creator=55;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBaseline_toBaselineOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintBaseline_toBaselineOf
-     */
-    public static final int Constraint_layout_constraintBaseline_toBaselineOf=56;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBottom_creator}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintBottom_creator
-     */
-    public static final int Constraint_layout_constraintBottom_creator=57;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBottom_toBottomOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintBottom_toBottomOf
-     */
-    public static final int Constraint_layout_constraintBottom_toBottomOf=58;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBottom_toTopOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintBottom_toTopOf
-     */
-    public static final int Constraint_layout_constraintBottom_toTopOf=59;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintCircle}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintCircle
-     */
-    public static final int Constraint_layout_constraintCircle=60;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintCircleAngle}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintCircleAngle
-     */
-    public static final int Constraint_layout_constraintCircleAngle=61;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintCircleRadius}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintCircleRadius
-     */
-    public static final int Constraint_layout_constraintCircleRadius=62;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintDimensionRatio}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintDimensionRatio
-     */
-    public static final int Constraint_layout_constraintDimensionRatio=63;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintEnd_toEndOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintEnd_toEndOf
-     */
-    public static final int Constraint_layout_constraintEnd_toEndOf=64;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintEnd_toStartOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintEnd_toStartOf
-     */
-    public static final int Constraint_layout_constraintEnd_toStartOf=65;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintGuide_begin}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintGuide_begin
-     */
-    public static final int Constraint_layout_constraintGuide_begin=66;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintGuide_end}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintGuide_end
-     */
-    public static final int Constraint_layout_constraintGuide_end=67;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintGuide_percent}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintGuide_percent
-     */
-    public static final int Constraint_layout_constraintGuide_percent=68;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_default}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>percent</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>wrap</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHeight_default
-     */
-    public static final int Constraint_layout_constraintHeight_default=69;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_max}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHeight_max
-     */
-    public static final int Constraint_layout_constraintHeight_max=70;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_min}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHeight_min
-     */
-    public static final int Constraint_layout_constraintHeight_min=71;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_percent}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHeight_percent
-     */
-    public static final int Constraint_layout_constraintHeight_percent=72;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHorizontal_bias}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHorizontal_bias
-     */
-    public static final int Constraint_layout_constraintHorizontal_bias=73;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHorizontal_chainStyle}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHorizontal_chainStyle
-     */
-    public static final int Constraint_layout_constraintHorizontal_chainStyle=74;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHorizontal_weight}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHorizontal_weight
-     */
-    public static final int Constraint_layout_constraintHorizontal_weight=75;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintLeft_creator}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintLeft_creator
-     */
-    public static final int Constraint_layout_constraintLeft_creator=76;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintLeft_toLeftOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintLeft_toLeftOf
-     */
-    public static final int Constraint_layout_constraintLeft_toLeftOf=77;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintLeft_toRightOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintLeft_toRightOf
-     */
-    public static final int Constraint_layout_constraintLeft_toRightOf=78;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintRight_creator}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintRight_creator
-     */
-    public static final int Constraint_layout_constraintRight_creator=79;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintRight_toLeftOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintRight_toLeftOf
-     */
-    public static final int Constraint_layout_constraintRight_toLeftOf=80;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintRight_toRightOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintRight_toRightOf
-     */
-    public static final int Constraint_layout_constraintRight_toRightOf=81;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintStart_toEndOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintStart_toEndOf
-     */
-    public static final int Constraint_layout_constraintStart_toEndOf=82;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintStart_toStartOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintStart_toStartOf
-     */
-    public static final int Constraint_layout_constraintStart_toStartOf=83;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTag}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintTag
-     */
-    public static final int Constraint_layout_constraintTag=84;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTop_creator}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintTop_creator
-     */
-    public static final int Constraint_layout_constraintTop_creator=85;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTop_toBottomOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintTop_toBottomOf
-     */
-    public static final int Constraint_layout_constraintTop_toBottomOf=86;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTop_toTopOf}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintTop_toTopOf
-     */
-    public static final int Constraint_layout_constraintTop_toTopOf=87;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintVertical_bias}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintVertical_bias
-     */
-    public static final int Constraint_layout_constraintVertical_bias=88;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintVertical_chainStyle}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintVertical_chainStyle
-     */
-    public static final int Constraint_layout_constraintVertical_chainStyle=89;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintVertical_weight}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintVertical_weight
-     */
-    public static final int Constraint_layout_constraintVertical_weight=90;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_default}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>percent</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>wrap</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintWidth_default
-     */
-    public static final int Constraint_layout_constraintWidth_default=91;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_max}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintWidth_max
-     */
-    public static final int Constraint_layout_constraintWidth_max=92;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_min}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintWidth_min
-     */
-    public static final int Constraint_layout_constraintWidth_min=93;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_percent}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintWidth_percent
-     */
-    public static final int Constraint_layout_constraintWidth_percent=94;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_editor_absoluteX}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_editor_absoluteX
-     */
-    public static final int Constraint_layout_editor_absoluteX=95;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_editor_absoluteY}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_editor_absoluteY
-     */
-    public static final int Constraint_layout_editor_absoluteY=96;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginBottom}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_goneMarginBottom
-     */
-    public static final int Constraint_layout_goneMarginBottom=97;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginEnd}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_goneMarginEnd
-     */
-    public static final int Constraint_layout_goneMarginEnd=98;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginLeft}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_goneMarginLeft
-     */
-    public static final int Constraint_layout_goneMarginLeft=99;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginRight}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_goneMarginRight
-     */
-    public static final int Constraint_layout_goneMarginRight=100;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginStart}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_goneMarginStart
-     */
-    public static final int Constraint_layout_goneMarginStart=101;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginTop}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_goneMarginTop
-     */
-    public static final int Constraint_layout_goneMarginTop=102;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionProgress}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:motionProgress
-     */
-    public static final int Constraint_motionProgress=103;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionStagger}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:motionStagger
-     */
-    public static final int Constraint_motionStagger=104;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#pathMotionArc}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>flip</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>startHorizontal</td><td>2</td><td></td></tr>
-     * <tr><td>startVertical</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:pathMotionArc
-     */
-    public static final int Constraint_pathMotionArc=105;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#pivotAnchor}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:pivotAnchor
-     */
-    public static final int Constraint_pivotAnchor=106;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionEasing}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>accelerate</td><td>1</td><td></td></tr>
-     * <tr><td>decelerate</td><td>2</td><td></td></tr>
-     * <tr><td>linear</td><td>3</td><td></td></tr>
-     * <tr><td>standard</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:transitionEasing
-     */
-    public static final int Constraint_transitionEasing=107;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionPathRotate}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:transitionPathRotate
-     */
-    public static final int Constraint_transitionPathRotate=108;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#visibilityMode}
-     * attribute's value can be found in the {@link #Constraint} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>ignore</td><td>1</td><td></td></tr>
-     * <tr><td>normal</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:visibilityMode
-     */
-    public static final int Constraint_visibilityMode=109;
-    /**
      * Attributes that can be used with a ConstraintLayout_Layout.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -10667,45 +7960,15 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_orientation android:orientation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_android_padding android:padding}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_android_paddingLeft android:paddingLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_android_paddingTop android:paddingTop}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_android_paddingRight android:paddingRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_android_paddingBottom android:paddingBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_android_visibility android:visibility}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_maxWidth android:maxWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_maxHeight android:maxHeight}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_minWidth android:minWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_android_minHeight android:minHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_android_paddingStart android:paddingStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_android_paddingEnd android:paddingEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_android_elevation android:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_barrierAllowsGoneWidgets com.torgtek.matidsms:barrierAllowsGoneWidgets}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_barrierDirection com.torgtek.matidsms:barrierDirection}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_barrierMargin com.torgtek.matidsms:barrierMargin}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_chainUseRtl com.torgtek.matidsms:chainUseRtl}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_constraintSet com.torgtek.matidsms:constraintSet}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_constraint_referenced_ids com.torgtek.matidsms:constraint_referenced_ids}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_constraint_referenced_tags com.torgtek.matidsms:constraint_referenced_tags}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_firstHorizontalBias com.torgtek.matidsms:flow_firstHorizontalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_firstHorizontalStyle com.torgtek.matidsms:flow_firstHorizontalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_firstVerticalBias com.torgtek.matidsms:flow_firstVerticalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_firstVerticalStyle com.torgtek.matidsms:flow_firstVerticalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_horizontalAlign com.torgtek.matidsms:flow_horizontalAlign}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_horizontalBias com.torgtek.matidsms:flow_horizontalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_horizontalGap com.torgtek.matidsms:flow_horizontalGap}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_horizontalStyle com.torgtek.matidsms:flow_horizontalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_lastHorizontalBias com.torgtek.matidsms:flow_lastHorizontalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_lastHorizontalStyle com.torgtek.matidsms:flow_lastHorizontalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_lastVerticalBias com.torgtek.matidsms:flow_lastVerticalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_lastVerticalStyle com.torgtek.matidsms:flow_lastVerticalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_maxElementsWrap com.torgtek.matidsms:flow_maxElementsWrap}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_verticalAlign com.torgtek.matidsms:flow_verticalAlign}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_verticalBias com.torgtek.matidsms:flow_verticalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_verticalGap com.torgtek.matidsms:flow_verticalGap}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_verticalStyle com.torgtek.matidsms:flow_verticalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_flow_wrapMode com.torgtek.matidsms:flow_wrapMode}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layoutDescription com.torgtek.matidsms:layoutDescription}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constrainedHeight com.torgtek.matidsms:layout_constrainedHeight}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constrainedWidth com.torgtek.matidsms:layout_constrainedWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintBaseline_creator com.torgtek.matidsms:layout_constraintBaseline_creator}</code></td><td></td></tr>
@@ -10737,7 +8000,6 @@ public final class R {
      * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintRight_toRightOf com.torgtek.matidsms:layout_constraintRight_toRightOf}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintStart_toEndOf com.torgtek.matidsms:layout_constraintStart_toEndOf}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintStart_toStartOf com.torgtek.matidsms:layout_constraintStart_toStartOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintTag com.torgtek.matidsms:layout_constraintTag}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintTop_creator com.torgtek.matidsms:layout_constraintTop_creator}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintTop_toBottomOf com.torgtek.matidsms:layout_constraintTop_toBottomOf}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintLayout_Layout_layout_constraintTop_toTopOf com.torgtek.matidsms:layout_constraintTop_toTopOf}</code></td><td></td></tr>
@@ -10759,45 +8021,15 @@ public final class R {
      * <tr><td><code>{@link #ConstraintLayout_Layout_layout_optimizationLevel com.torgtek.matidsms:layout_optimizationLevel}</code></td><td></td></tr>
      * </table>
      * @see #ConstraintLayout_Layout_android_orientation
-     * @see #ConstraintLayout_Layout_android_padding
-     * @see #ConstraintLayout_Layout_android_paddingLeft
-     * @see #ConstraintLayout_Layout_android_paddingTop
-     * @see #ConstraintLayout_Layout_android_paddingRight
-     * @see #ConstraintLayout_Layout_android_paddingBottom
-     * @see #ConstraintLayout_Layout_android_visibility
      * @see #ConstraintLayout_Layout_android_maxWidth
      * @see #ConstraintLayout_Layout_android_maxHeight
      * @see #ConstraintLayout_Layout_android_minWidth
      * @see #ConstraintLayout_Layout_android_minHeight
-     * @see #ConstraintLayout_Layout_android_paddingStart
-     * @see #ConstraintLayout_Layout_android_paddingEnd
-     * @see #ConstraintLayout_Layout_android_elevation
      * @see #ConstraintLayout_Layout_barrierAllowsGoneWidgets
      * @see #ConstraintLayout_Layout_barrierDirection
-     * @see #ConstraintLayout_Layout_barrierMargin
      * @see #ConstraintLayout_Layout_chainUseRtl
      * @see #ConstraintLayout_Layout_constraintSet
      * @see #ConstraintLayout_Layout_constraint_referenced_ids
-     * @see #ConstraintLayout_Layout_constraint_referenced_tags
-     * @see #ConstraintLayout_Layout_flow_firstHorizontalBias
-     * @see #ConstraintLayout_Layout_flow_firstHorizontalStyle
-     * @see #ConstraintLayout_Layout_flow_firstVerticalBias
-     * @see #ConstraintLayout_Layout_flow_firstVerticalStyle
-     * @see #ConstraintLayout_Layout_flow_horizontalAlign
-     * @see #ConstraintLayout_Layout_flow_horizontalBias
-     * @see #ConstraintLayout_Layout_flow_horizontalGap
-     * @see #ConstraintLayout_Layout_flow_horizontalStyle
-     * @see #ConstraintLayout_Layout_flow_lastHorizontalBias
-     * @see #ConstraintLayout_Layout_flow_lastHorizontalStyle
-     * @see #ConstraintLayout_Layout_flow_lastVerticalBias
-     * @see #ConstraintLayout_Layout_flow_lastVerticalStyle
-     * @see #ConstraintLayout_Layout_flow_maxElementsWrap
-     * @see #ConstraintLayout_Layout_flow_verticalAlign
-     * @see #ConstraintLayout_Layout_flow_verticalBias
-     * @see #ConstraintLayout_Layout_flow_verticalGap
-     * @see #ConstraintLayout_Layout_flow_verticalStyle
-     * @see #ConstraintLayout_Layout_flow_wrapMode
-     * @see #ConstraintLayout_Layout_layoutDescription
      * @see #ConstraintLayout_Layout_layout_constrainedHeight
      * @see #ConstraintLayout_Layout_layout_constrainedWidth
      * @see #ConstraintLayout_Layout_layout_constraintBaseline_creator
@@ -10829,7 +8061,6 @@ public final class R {
      * @see #ConstraintLayout_Layout_layout_constraintRight_toRightOf
      * @see #ConstraintLayout_Layout_layout_constraintStart_toEndOf
      * @see #ConstraintLayout_Layout_layout_constraintStart_toStartOf
-     * @see #ConstraintLayout_Layout_layout_constraintTag
      * @see #ConstraintLayout_Layout_layout_constraintTop_creator
      * @see #ConstraintLayout_Layout_layout_constraintTop_toBottomOf
      * @see #ConstraintLayout_Layout_layout_constraintTop_toTopOf
@@ -10851,29 +8082,21 @@ public final class R {
      * @see #ConstraintLayout_Layout_layout_optimizationLevel
      */
     public static final int[] ConstraintLayout_Layout={
-      0x010100c4, 0x010100d5, 0x010100d6, 0x010100d7, 
-      0x010100d8, 0x010100d9, 0x010100dc, 0x0101011f, 
-      0x01010120, 0x0101013f, 0x01010140, 0x010103b3, 
-      0x010103b4, 0x01010440, 0x7f02003d, 0x7f02003e, 
-      0x7f02003f, 0x7f02004f, 0x7f020066, 0x7f020069, 
-      0x7f02006a, 0x7f0200a0, 0x7f0200a1, 0x7f0200a2, 
-      0x7f0200a3, 0x7f0200a4, 0x7f0200a5, 0x7f0200a6, 
-      0x7f0200a7, 0x7f0200a8, 0x7f0200a9, 0x7f0200aa, 
-      0x7f0200ab, 0x7f0200ac, 0x7f0200ae, 0x7f0200af, 
-      0x7f0200b0, 0x7f0200b1, 0x7f0200b2, 0x7f0200d4, 
-      0x7f0200d9, 0x7f0200da, 0x7f0200db, 0x7f0200dc, 
-      0x7f0200dd, 0x7f0200de, 0x7f0200df, 0x7f0200e0, 
-      0x7f0200e1, 0x7f0200e2, 0x7f0200e3, 0x7f0200e4, 
-      0x7f0200e5, 0x7f0200e6, 0x7f0200e7, 0x7f0200e8, 
-      0x7f0200e9, 0x7f0200ea, 0x7f0200eb, 0x7f0200ec, 
-      0x7f0200ed, 0x7f0200ee, 0x7f0200ef, 0x7f0200f0, 
-      0x7f0200f1, 0x7f0200f2, 0x7f0200f3, 0x7f0200f4, 
-      0x7f0200f5, 0x7f0200f6, 0x7f0200f7, 0x7f0200f8, 
-      0x7f0200f9, 0x7f0200fa, 0x7f0200fb, 0x7f0200fc, 
-      0x7f0200fd, 0x7f0200fe, 0x7f0200ff, 0x7f020100, 
-      0x7f020101, 0x7f020102, 0x7f020104, 0x7f020105, 
-      0x7f020106, 0x7f020107, 0x7f020108, 0x7f020109, 
-      0x7f02010a, 0x7f02010b, 0x7f02010e
+      0x010100c4, 0x0101011f, 0x01010120, 0x0101013f, 
+      0x01010140, 0x7f02003a, 0x7f02003b, 0x7f02004a, 
+      0x7f02005f, 0x7f020060, 0x7f0200a3, 0x7f0200a4, 
+      0x7f0200a5, 0x7f0200a6, 0x7f0200a7, 0x7f0200a8, 
+      0x7f0200a9, 0x7f0200aa, 0x7f0200ab, 0x7f0200ac, 
+      0x7f0200ad, 0x7f0200ae, 0x7f0200af, 0x7f0200b0, 
+      0x7f0200b1, 0x7f0200b2, 0x7f0200b3, 0x7f0200b4, 
+      0x7f0200b5, 0x7f0200b6, 0x7f0200b7, 0x7f0200b8, 
+      0x7f0200b9, 0x7f0200ba, 0x7f0200bb, 0x7f0200bc, 
+      0x7f0200bd, 0x7f0200be, 0x7f0200bf, 0x7f0200c0, 
+      0x7f0200c1, 0x7f0200c2, 0x7f0200c3, 0x7f0200c4, 
+      0x7f0200c5, 0x7f0200c6, 0x7f0200c7, 0x7f0200c8, 
+      0x7f0200c9, 0x7f0200ca, 0x7f0200cb, 0x7f0200cd, 
+      0x7f0200ce, 0x7f0200cf, 0x7f0200d0, 0x7f0200d1, 
+      0x7f0200d2, 0x7f0200d3, 0x7f0200d4, 0x7f0200d7
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#orientation}
@@ -10893,89 +8116,6 @@ public final class R {
      */
     public static final int ConstraintLayout_Layout_android_orientation=0;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#padding}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:padding
-     */
-    public static final int ConstraintLayout_Layout_android_padding=1;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#paddingLeft}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:paddingLeft
-     */
-    public static final int ConstraintLayout_Layout_android_paddingLeft=2;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#paddingTop}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:paddingTop
-     */
-    public static final int ConstraintLayout_Layout_android_paddingTop=3;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#paddingRight}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:paddingRight
-     */
-    public static final int ConstraintLayout_Layout_android_paddingRight=4;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#paddingBottom}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:paddingBottom
-     */
-    public static final int ConstraintLayout_Layout_android_paddingBottom=5;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#visibility}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>gone</td><td>2</td><td></td></tr>
-     * <tr><td>invisible</td><td>1</td><td></td></tr>
-     * <tr><td>visible</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:visibility
-     */
-    public static final int ConstraintLayout_Layout_android_visibility=6;
-    /**
      * <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
      *
@@ -10987,7 +8127,7 @@ public final class R {
      *
      * @attr name android:maxWidth
      */
-    public static final int ConstraintLayout_Layout_android_maxWidth=7;
+    public static final int ConstraintLayout_Layout_android_maxWidth=1;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#maxHeight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11000,7 +8140,7 @@ public final class R {
      *
      * @attr name android:maxHeight
      */
-    public static final int ConstraintLayout_Layout_android_maxHeight=8;
+    public static final int ConstraintLayout_Layout_android_maxHeight=2;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#minWidth}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11013,7 +8153,7 @@ public final class R {
      *
      * @attr name android:minWidth
      */
-    public static final int ConstraintLayout_Layout_android_minWidth=9;
+    public static final int ConstraintLayout_Layout_android_minWidth=3;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#minHeight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11026,46 +8166,7 @@ public final class R {
      *
      * @attr name android:minHeight
      */
-    public static final int ConstraintLayout_Layout_android_minHeight=10;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#paddingStart}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:paddingStart
-     */
-    public static final int ConstraintLayout_Layout_android_paddingStart=11;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#paddingEnd}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:paddingEnd
-     */
-    public static final int ConstraintLayout_Layout_android_paddingEnd=12;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#elevation}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:elevation
-     */
-    public static final int ConstraintLayout_Layout_android_elevation=13;
+    public static final int ConstraintLayout_Layout_android_minHeight=4;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#barrierAllowsGoneWidgets}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11075,7 +8176,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:barrierAllowsGoneWidgets
      */
-    public static final int ConstraintLayout_Layout_barrierAllowsGoneWidgets=14;
+    public static final int ConstraintLayout_Layout_barrierAllowsGoneWidgets=5;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#barrierDirection}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11096,20 +8197,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:barrierDirection
      */
-    public static final int ConstraintLayout_Layout_barrierDirection=15;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#barrierMargin}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:barrierMargin
-     */
-    public static final int ConstraintLayout_Layout_barrierMargin=16;
+    public static final int ConstraintLayout_Layout_barrierDirection=6;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#chainUseRtl}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11119,7 +8207,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:chainUseRtl
      */
-    public static final int ConstraintLayout_Layout_chainUseRtl=17;
+    public static final int ConstraintLayout_Layout_chainUseRtl=7;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraintSet}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11131,7 +8219,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:constraintSet
      */
-    public static final int ConstraintLayout_Layout_constraintSet=18;
+    public static final int ConstraintLayout_Layout_constraintSet=8;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraint_referenced_ids}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11141,281 +8229,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:constraint_referenced_ids
      */
-    public static final int ConstraintLayout_Layout_constraint_referenced_ids=19;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraint_referenced_tags}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:constraint_referenced_tags
-     */
-    public static final int ConstraintLayout_Layout_constraint_referenced_tags=20;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_firstHorizontalBias}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_firstHorizontalBias
-     */
-    public static final int ConstraintLayout_Layout_flow_firstHorizontalBias=21;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_firstHorizontalStyle}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_firstHorizontalStyle
-     */
-    public static final int ConstraintLayout_Layout_flow_firstHorizontalStyle=22;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_firstVerticalBias}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_firstVerticalBias
-     */
-    public static final int ConstraintLayout_Layout_flow_firstVerticalBias=23;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_firstVerticalStyle}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_firstVerticalStyle
-     */
-    public static final int ConstraintLayout_Layout_flow_firstVerticalStyle=24;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_horizontalAlign}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>center</td><td>2</td><td></td></tr>
-     * <tr><td>end</td><td>1</td><td></td></tr>
-     * <tr><td>start</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_horizontalAlign
-     */
-    public static final int ConstraintLayout_Layout_flow_horizontalAlign=25;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_horizontalBias}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_horizontalBias
-     */
-    public static final int ConstraintLayout_Layout_flow_horizontalBias=26;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_horizontalGap}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:flow_horizontalGap
-     */
-    public static final int ConstraintLayout_Layout_flow_horizontalGap=27;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_horizontalStyle}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_horizontalStyle
-     */
-    public static final int ConstraintLayout_Layout_flow_horizontalStyle=28;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_lastHorizontalBias}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_lastHorizontalBias
-     */
-    public static final int ConstraintLayout_Layout_flow_lastHorizontalBias=29;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_lastHorizontalStyle}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_lastHorizontalStyle
-     */
-    public static final int ConstraintLayout_Layout_flow_lastHorizontalStyle=30;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_lastVerticalBias}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_lastVerticalBias
-     */
-    public static final int ConstraintLayout_Layout_flow_lastVerticalBias=31;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_lastVerticalStyle}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_lastVerticalStyle
-     */
-    public static final int ConstraintLayout_Layout_flow_lastVerticalStyle=32;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_maxElementsWrap}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_maxElementsWrap
-     */
-    public static final int ConstraintLayout_Layout_flow_maxElementsWrap=33;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_verticalAlign}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>baseline</td><td>3</td><td></td></tr>
-     * <tr><td>bottom</td><td>1</td><td></td></tr>
-     * <tr><td>center</td><td>2</td><td></td></tr>
-     * <tr><td>top</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_verticalAlign
-     */
-    public static final int ConstraintLayout_Layout_flow_verticalAlign=34;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_verticalBias}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_verticalBias
-     */
-    public static final int ConstraintLayout_Layout_flow_verticalBias=35;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_verticalGap}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:flow_verticalGap
-     */
-    public static final int ConstraintLayout_Layout_flow_verticalGap=36;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_verticalStyle}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_verticalStyle
-     */
-    public static final int ConstraintLayout_Layout_flow_verticalStyle=37;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_wrapMode}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>aligned</td><td>2</td><td></td></tr>
-     * <tr><td>chain</td><td>1</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_wrapMode
-     */
-    public static final int ConstraintLayout_Layout_flow_wrapMode=38;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layoutDescription}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:layoutDescription
-     */
-    public static final int ConstraintLayout_Layout_layoutDescription=39;
+    public static final int ConstraintLayout_Layout_constraint_referenced_ids=9;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constrainedHeight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11425,7 +8239,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constrainedHeight
      */
-    public static final int ConstraintLayout_Layout_layout_constrainedHeight=40;
+    public static final int ConstraintLayout_Layout_layout_constrainedHeight=10;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constrainedWidth}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11435,7 +8249,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constrainedWidth
      */
-    public static final int ConstraintLayout_Layout_layout_constrainedWidth=41;
+    public static final int ConstraintLayout_Layout_layout_constrainedWidth=11;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBaseline_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11444,7 +8258,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintBaseline_creator
      */
-    public static final int ConstraintLayout_Layout_layout_constraintBaseline_creator=42;
+    public static final int ConstraintLayout_Layout_layout_constraintBaseline_creator=12;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBaseline_toBaselineOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11464,7 +8278,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintBaseline_toBaselineOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf=43;
+    public static final int ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf=13;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBottom_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11473,7 +8287,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintBottom_creator
      */
-    public static final int ConstraintLayout_Layout_layout_constraintBottom_creator=44;
+    public static final int ConstraintLayout_Layout_layout_constraintBottom_creator=14;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBottom_toBottomOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11493,7 +8307,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintBottom_toBottomOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintBottom_toBottomOf=45;
+    public static final int ConstraintLayout_Layout_layout_constraintBottom_toBottomOf=15;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBottom_toTopOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11513,7 +8327,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintBottom_toTopOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintBottom_toTopOf=46;
+    public static final int ConstraintLayout_Layout_layout_constraintBottom_toTopOf=16;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintCircle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11525,7 +8339,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintCircle
      */
-    public static final int ConstraintLayout_Layout_layout_constraintCircle=47;
+    public static final int ConstraintLayout_Layout_layout_constraintCircle=17;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintCircleAngle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11534,7 +8348,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintCircleAngle
      */
-    public static final int ConstraintLayout_Layout_layout_constraintCircleAngle=48;
+    public static final int ConstraintLayout_Layout_layout_constraintCircleAngle=18;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintCircleRadius}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11547,7 +8361,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintCircleRadius
      */
-    public static final int ConstraintLayout_Layout_layout_constraintCircleRadius=49;
+    public static final int ConstraintLayout_Layout_layout_constraintCircleRadius=19;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintDimensionRatio}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11557,7 +8371,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintDimensionRatio
      */
-    public static final int ConstraintLayout_Layout_layout_constraintDimensionRatio=50;
+    public static final int ConstraintLayout_Layout_layout_constraintDimensionRatio=20;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintEnd_toEndOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11577,7 +8391,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintEnd_toEndOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintEnd_toEndOf=51;
+    public static final int ConstraintLayout_Layout_layout_constraintEnd_toEndOf=21;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintEnd_toStartOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11597,7 +8411,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintEnd_toStartOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintEnd_toStartOf=52;
+    public static final int ConstraintLayout_Layout_layout_constraintEnd_toStartOf=22;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintGuide_begin}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11610,7 +8424,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintGuide_begin
      */
-    public static final int ConstraintLayout_Layout_layout_constraintGuide_begin=53;
+    public static final int ConstraintLayout_Layout_layout_constraintGuide_begin=23;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintGuide_end}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11623,7 +8437,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintGuide_end
      */
-    public static final int ConstraintLayout_Layout_layout_constraintGuide_end=54;
+    public static final int ConstraintLayout_Layout_layout_constraintGuide_end=24;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintGuide_percent}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11632,7 +8446,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintGuide_percent
      */
-    public static final int ConstraintLayout_Layout_layout_constraintGuide_percent=55;
+    public static final int ConstraintLayout_Layout_layout_constraintGuide_percent=25;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_default}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11650,7 +8464,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHeight_default
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHeight_default=56;
+    public static final int ConstraintLayout_Layout_layout_constraintHeight_default=26;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_max}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11671,7 +8485,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHeight_max
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHeight_max=57;
+    public static final int ConstraintLayout_Layout_layout_constraintHeight_max=27;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_min}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11692,7 +8506,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHeight_min
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHeight_min=58;
+    public static final int ConstraintLayout_Layout_layout_constraintHeight_min=28;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_percent}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11701,7 +8515,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHeight_percent
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHeight_percent=59;
+    public static final int ConstraintLayout_Layout_layout_constraintHeight_percent=29;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHorizontal_bias}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11710,7 +8524,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHorizontal_bias
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHorizontal_bias=60;
+    public static final int ConstraintLayout_Layout_layout_constraintHorizontal_bias=30;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHorizontal_chainStyle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11728,7 +8542,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHorizontal_chainStyle
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle=61;
+    public static final int ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle=31;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHorizontal_weight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11737,7 +8551,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHorizontal_weight
      */
-    public static final int ConstraintLayout_Layout_layout_constraintHorizontal_weight=62;
+    public static final int ConstraintLayout_Layout_layout_constraintHorizontal_weight=32;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintLeft_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11746,7 +8560,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintLeft_creator
      */
-    public static final int ConstraintLayout_Layout_layout_constraintLeft_creator=63;
+    public static final int ConstraintLayout_Layout_layout_constraintLeft_creator=33;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintLeft_toLeftOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11766,7 +8580,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintLeft_toLeftOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintLeft_toLeftOf=64;
+    public static final int ConstraintLayout_Layout_layout_constraintLeft_toLeftOf=34;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintLeft_toRightOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11786,7 +8600,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintLeft_toRightOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintLeft_toRightOf=65;
+    public static final int ConstraintLayout_Layout_layout_constraintLeft_toRightOf=35;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintRight_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11795,7 +8609,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintRight_creator
      */
-    public static final int ConstraintLayout_Layout_layout_constraintRight_creator=66;
+    public static final int ConstraintLayout_Layout_layout_constraintRight_creator=36;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintRight_toLeftOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11815,7 +8629,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintRight_toLeftOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintRight_toLeftOf=67;
+    public static final int ConstraintLayout_Layout_layout_constraintRight_toLeftOf=37;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintRight_toRightOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11835,7 +8649,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintRight_toRightOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintRight_toRightOf=68;
+    public static final int ConstraintLayout_Layout_layout_constraintRight_toRightOf=38;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintStart_toEndOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11855,7 +8669,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintStart_toEndOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintStart_toEndOf=69;
+    public static final int ConstraintLayout_Layout_layout_constraintStart_toEndOf=39;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintStart_toStartOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11875,17 +8689,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintStart_toStartOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintStart_toStartOf=70;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTag}
-     * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintTag
-     */
-    public static final int ConstraintLayout_Layout_layout_constraintTag=71;
+    public static final int ConstraintLayout_Layout_layout_constraintStart_toStartOf=40;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTop_creator}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11894,7 +8698,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintTop_creator
      */
-    public static final int ConstraintLayout_Layout_layout_constraintTop_creator=72;
+    public static final int ConstraintLayout_Layout_layout_constraintTop_creator=41;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTop_toBottomOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11914,7 +8718,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintTop_toBottomOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintTop_toBottomOf=73;
+    public static final int ConstraintLayout_Layout_layout_constraintTop_toBottomOf=42;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTop_toTopOf}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11934,7 +8738,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintTop_toTopOf
      */
-    public static final int ConstraintLayout_Layout_layout_constraintTop_toTopOf=74;
+    public static final int ConstraintLayout_Layout_layout_constraintTop_toTopOf=43;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintVertical_bias}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11943,7 +8747,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintVertical_bias
      */
-    public static final int ConstraintLayout_Layout_layout_constraintVertical_bias=75;
+    public static final int ConstraintLayout_Layout_layout_constraintVertical_bias=44;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintVertical_chainStyle}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11961,7 +8765,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintVertical_chainStyle
      */
-    public static final int ConstraintLayout_Layout_layout_constraintVertical_chainStyle=76;
+    public static final int ConstraintLayout_Layout_layout_constraintVertical_chainStyle=45;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintVertical_weight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11970,7 +8774,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintVertical_weight
      */
-    public static final int ConstraintLayout_Layout_layout_constraintVertical_weight=77;
+    public static final int ConstraintLayout_Layout_layout_constraintVertical_weight=46;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_default}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -11988,7 +8792,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintWidth_default
      */
-    public static final int ConstraintLayout_Layout_layout_constraintWidth_default=78;
+    public static final int ConstraintLayout_Layout_layout_constraintWidth_default=47;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_max}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -12009,7 +8813,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintWidth_max
      */
-    public static final int ConstraintLayout_Layout_layout_constraintWidth_max=79;
+    public static final int ConstraintLayout_Layout_layout_constraintWidth_max=48;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_min}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -12030,7 +8834,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintWidth_min
      */
-    public static final int ConstraintLayout_Layout_layout_constraintWidth_min=80;
+    public static final int ConstraintLayout_Layout_layout_constraintWidth_min=49;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_percent}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -12039,7 +8843,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintWidth_percent
      */
-    public static final int ConstraintLayout_Layout_layout_constraintWidth_percent=81;
+    public static final int ConstraintLayout_Layout_layout_constraintWidth_percent=50;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_editor_absoluteX}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -12052,7 +8856,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_editor_absoluteX
      */
-    public static final int ConstraintLayout_Layout_layout_editor_absoluteX=82;
+    public static final int ConstraintLayout_Layout_layout_editor_absoluteX=51;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_editor_absoluteY}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -12065,7 +8869,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_editor_absoluteY
      */
-    public static final int ConstraintLayout_Layout_layout_editor_absoluteY=83;
+    public static final int ConstraintLayout_Layout_layout_editor_absoluteY=52;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginBottom}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -12078,7 +8882,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_goneMarginBottom
      */
-    public static final int ConstraintLayout_Layout_layout_goneMarginBottom=84;
+    public static final int ConstraintLayout_Layout_layout_goneMarginBottom=53;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginEnd}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -12091,7 +8895,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_goneMarginEnd
      */
-    public static final int ConstraintLayout_Layout_layout_goneMarginEnd=85;
+    public static final int ConstraintLayout_Layout_layout_goneMarginEnd=54;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginLeft}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -12104,7 +8908,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_goneMarginLeft
      */
-    public static final int ConstraintLayout_Layout_layout_goneMarginLeft=86;
+    public static final int ConstraintLayout_Layout_layout_goneMarginLeft=55;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginRight}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -12117,7 +8921,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_goneMarginRight
      */
-    public static final int ConstraintLayout_Layout_layout_goneMarginRight=87;
+    public static final int ConstraintLayout_Layout_layout_goneMarginRight=56;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginStart}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -12130,7 +8934,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_goneMarginStart
      */
-    public static final int ConstraintLayout_Layout_layout_goneMarginStart=88;
+    public static final int ConstraintLayout_Layout_layout_goneMarginStart=57;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginTop}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -12143,7 +8947,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_goneMarginTop
      */
-    public static final int ConstraintLayout_Layout_layout_goneMarginTop=89;
+    public static final int ConstraintLayout_Layout_layout_goneMarginTop=58;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_optimizationLevel}
      * attribute's value can be found in the {@link #ConstraintLayout_Layout} array.
@@ -12155,23 +8959,17 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
      * <tr><td>barrier</td><td>2</td><td></td></tr>
-     * <tr><td>cache_measures</td><td>100</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
-     * <tr><td>dependency_ordering</td><td>200</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, measure caches</td></tr>
-     * <tr><td>graph</td><td>40</td><td></td></tr>
-     * <tr><td>graph_wrap</td><td>80</td><td></td></tr>
-     * <tr><td>grouping</td><td>400</td><td></td></tr>
+     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>ratio</td><td>10</td><td></td></tr>
-     * <tr><td>standard</td><td>101</td><td></td></tr>
+     * <tr><td>standard</td><td>7</td><td></td></tr>
      * </table>
      *
      * @attr name com.torgtek.matidsms:layout_optimizationLevel
      */
-    public static final int ConstraintLayout_Layout_layout_optimizationLevel=90;
+    public static final int ConstraintLayout_Layout_layout_optimizationLevel=59;
     /**
      * Attributes that can be used with a ConstraintLayout_placeholder.
      * <p>Includes the following attributes:</p>
@@ -12180,13 +8978,13 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ConstraintLayout_placeholder_content com.torgtek.matidsms:content}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintLayout_placeholder_placeholder_emptyVisibility com.torgtek.matidsms:placeholder_emptyVisibility}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ConstraintLayout_placeholder_emptyVisibility com.torgtek.matidsms:emptyVisibility}</code></td><td></td></tr>
      * </table>
      * @see #ConstraintLayout_placeholder_content
-     * @see #ConstraintLayout_placeholder_placeholder_emptyVisibility
+     * @see #ConstraintLayout_placeholder_emptyVisibility
      */
     public static final int[] ConstraintLayout_placeholder={
-      0x7f02006c, 0x7f020152
+      0x7f020061, 0x7f02007d
     };
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#content}
@@ -12201,7 +8999,7 @@ public final class R {
      */
     public static final int ConstraintLayout_placeholder_content=0;
     /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#placeholder_emptyVisibility}
+     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#emptyVisibility}
      * attribute's value can be found in the {@link #ConstraintLayout_placeholder} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -12210,14 +9008,13 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>gone</td><td>8</td><td></td></tr>
-     * <tr><td>invisible</td><td>4</td><td></td></tr>
-     * <tr><td>visible</td><td>0</td><td></td></tr>
+     * <tr><td>gone</td><td>0</td><td></td></tr>
+     * <tr><td>invisible</td><td>1</td><td></td></tr>
      * </table>
      *
-     * @attr name com.torgtek.matidsms:placeholder_emptyVisibility
+     * @attr name com.torgtek.matidsms:emptyVisibility
      */
-    public static final int ConstraintLayout_placeholder_placeholder_emptyVisibility=1;
+    public static final int ConstraintLayout_placeholder_emptyVisibility=1;
     /**
      * Attributes that can be used with a ConstraintSet.
      * <p>Includes the following attributes:</p>
@@ -12238,8 +9035,6 @@ public final class R {
      * <tr><td><code>{@link #ConstraintSet_android_maxHeight android:maxHeight}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_android_minWidth android:minWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_android_minHeight android:minHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_android_pivotX android:pivotX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_android_pivotY android:pivotY}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_android_alpha android:alpha}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_android_transformPivotX android:transformPivotX}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_android_transformPivotY android:transformPivotY}</code></td><td></td></tr>
@@ -12254,33 +9049,10 @@ public final class R {
      * <tr><td><code>{@link #ConstraintSet_android_layout_marginEnd android:layout_marginEnd}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_android_translationZ android:translationZ}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_android_elevation android:elevation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_animate_relativeTo com.torgtek.matidsms:animate_relativeTo}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_barrierAllowsGoneWidgets com.torgtek.matidsms:barrierAllowsGoneWidgets}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_barrierDirection com.torgtek.matidsms:barrierDirection}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_barrierMargin com.torgtek.matidsms:barrierMargin}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_chainUseRtl com.torgtek.matidsms:chainUseRtl}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_constraint_referenced_ids com.torgtek.matidsms:constraint_referenced_ids}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_constraint_referenced_tags com.torgtek.matidsms:constraint_referenced_tags}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_deriveConstraintsFrom com.torgtek.matidsms:deriveConstraintsFrom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_drawPath com.torgtek.matidsms:drawPath}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_firstHorizontalBias com.torgtek.matidsms:flow_firstHorizontalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_firstHorizontalStyle com.torgtek.matidsms:flow_firstHorizontalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_firstVerticalBias com.torgtek.matidsms:flow_firstVerticalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_firstVerticalStyle com.torgtek.matidsms:flow_firstVerticalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_horizontalAlign com.torgtek.matidsms:flow_horizontalAlign}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_horizontalBias com.torgtek.matidsms:flow_horizontalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_horizontalGap com.torgtek.matidsms:flow_horizontalGap}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_horizontalStyle com.torgtek.matidsms:flow_horizontalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_lastHorizontalBias com.torgtek.matidsms:flow_lastHorizontalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_lastHorizontalStyle com.torgtek.matidsms:flow_lastHorizontalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_lastVerticalBias com.torgtek.matidsms:flow_lastVerticalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_lastVerticalStyle com.torgtek.matidsms:flow_lastVerticalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_maxElementsWrap com.torgtek.matidsms:flow_maxElementsWrap}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_verticalAlign com.torgtek.matidsms:flow_verticalAlign}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_verticalBias com.torgtek.matidsms:flow_verticalBias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_verticalGap com.torgtek.matidsms:flow_verticalGap}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_verticalStyle com.torgtek.matidsms:flow_verticalStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_flow_wrapMode com.torgtek.matidsms:flow_wrapMode}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_layout_constrainedHeight com.torgtek.matidsms:layout_constrainedHeight}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_layout_constrainedWidth com.torgtek.matidsms:layout_constrainedWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_layout_constraintBaseline_creator com.torgtek.matidsms:layout_constraintBaseline_creator}</code></td><td></td></tr>
@@ -12312,7 +9084,6 @@ public final class R {
      * <tr><td><code>{@link #ConstraintSet_layout_constraintRight_toRightOf com.torgtek.matidsms:layout_constraintRight_toRightOf}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_layout_constraintStart_toEndOf com.torgtek.matidsms:layout_constraintStart_toEndOf}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_layout_constraintStart_toStartOf com.torgtek.matidsms:layout_constraintStart_toStartOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_layout_constraintTag com.torgtek.matidsms:layout_constraintTag}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_layout_constraintTop_creator com.torgtek.matidsms:layout_constraintTop_creator}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_layout_constraintTop_toBottomOf com.torgtek.matidsms:layout_constraintTop_toBottomOf}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_layout_constraintTop_toTopOf com.torgtek.matidsms:layout_constraintTop_toTopOf}</code></td><td></td></tr>
@@ -12331,12 +9102,6 @@ public final class R {
      * <tr><td><code>{@link #ConstraintSet_layout_goneMarginRight com.torgtek.matidsms:layout_goneMarginRight}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_layout_goneMarginStart com.torgtek.matidsms:layout_goneMarginStart}</code></td><td></td></tr>
      * <tr><td><code>{@link #ConstraintSet_layout_goneMarginTop com.torgtek.matidsms:layout_goneMarginTop}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_motionProgress com.torgtek.matidsms:motionProgress}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_motionStagger com.torgtek.matidsms:motionStagger}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_pathMotionArc com.torgtek.matidsms:pathMotionArc}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_pivotAnchor com.torgtek.matidsms:pivotAnchor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_transitionEasing com.torgtek.matidsms:transitionEasing}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ConstraintSet_transitionPathRotate com.torgtek.matidsms:transitionPathRotate}</code></td><td></td></tr>
      * </table>
      * @see #ConstraintSet_android_orientation
      * @see #ConstraintSet_android_id
@@ -12351,8 +9116,6 @@ public final class R {
      * @see #ConstraintSet_android_maxHeight
      * @see #ConstraintSet_android_minWidth
      * @see #ConstraintSet_android_minHeight
-     * @see #ConstraintSet_android_pivotX
-     * @see #ConstraintSet_android_pivotY
      * @see #ConstraintSet_android_alpha
      * @see #ConstraintSet_android_transformPivotX
      * @see #ConstraintSet_android_transformPivotY
@@ -12367,33 +9130,10 @@ public final class R {
      * @see #ConstraintSet_android_layout_marginEnd
      * @see #ConstraintSet_android_translationZ
      * @see #ConstraintSet_android_elevation
-     * @see #ConstraintSet_animate_relativeTo
      * @see #ConstraintSet_barrierAllowsGoneWidgets
      * @see #ConstraintSet_barrierDirection
-     * @see #ConstraintSet_barrierMargin
      * @see #ConstraintSet_chainUseRtl
      * @see #ConstraintSet_constraint_referenced_ids
-     * @see #ConstraintSet_constraint_referenced_tags
-     * @see #ConstraintSet_deriveConstraintsFrom
-     * @see #ConstraintSet_drawPath
-     * @see #ConstraintSet_flow_firstHorizontalBias
-     * @see #ConstraintSet_flow_firstHorizontalStyle
-     * @see #ConstraintSet_flow_firstVerticalBias
-     * @see #ConstraintSet_flow_firstVerticalStyle
-     * @see #ConstraintSet_flow_horizontalAlign
-     * @see #ConstraintSet_flow_horizontalBias
-     * @see #ConstraintSet_flow_horizontalGap
-     * @see #ConstraintSet_flow_horizontalStyle
-     * @see #ConstraintSet_flow_lastHorizontalBias
-     * @see #ConstraintSet_flow_lastHorizontalStyle
-     * @see #ConstraintSet_flow_lastVerticalBias
-     * @see #ConstraintSet_flow_lastVerticalStyle
-     * @see #ConstraintSet_flow_maxElementsWrap
-     * @see #ConstraintSet_flow_verticalAlign
-     * @see #ConstraintSet_flow_verticalBias
-     * @see #ConstraintSet_flow_verticalGap
-     * @see #ConstraintSet_flow_verticalStyle
-     * @see #ConstraintSet_flow_wrapMode
      * @see #ConstraintSet_layout_constrainedHeight
      * @see #ConstraintSet_layout_constrainedWidth
      * @see #ConstraintSet_layout_constraintBaseline_creator
@@ -12425,7 +9165,6 @@ public final class R {
      * @see #ConstraintSet_layout_constraintRight_toRightOf
      * @see #ConstraintSet_layout_constraintStart_toEndOf
      * @see #ConstraintSet_layout_constraintStart_toStartOf
-     * @see #ConstraintSet_layout_constraintTag
      * @see #ConstraintSet_layout_constraintTop_creator
      * @see #ConstraintSet_layout_constraintTop_toBottomOf
      * @see #ConstraintSet_layout_constraintTop_toTopOf
@@ -12444,42 +9183,28 @@ public final class R {
      * @see #ConstraintSet_layout_goneMarginRight
      * @see #ConstraintSet_layout_goneMarginStart
      * @see #ConstraintSet_layout_goneMarginTop
-     * @see #ConstraintSet_motionProgress
-     * @see #ConstraintSet_motionStagger
-     * @see #ConstraintSet_pathMotionArc
-     * @see #ConstraintSet_pivotAnchor
-     * @see #ConstraintSet_transitionEasing
-     * @see #ConstraintSet_transitionPathRotate
      */
     public static final int[] ConstraintSet={
       0x010100c4, 0x010100d0, 0x010100dc, 0x010100f4, 
       0x010100f5, 0x010100f7, 0x010100f8, 0x010100f9, 
       0x010100fa, 0x0101011f, 0x01010120, 0x0101013f, 
-      0x01010140, 0x010101b5, 0x010101b6, 0x0101031f, 
-      0x01010320, 0x01010321, 0x01010322, 0x01010323, 
-      0x01010324, 0x01010325, 0x01010326, 0x01010327, 
-      0x01010328, 0x010103b5, 0x010103b6, 0x010103fa, 
-      0x01010440, 0x7f02002a, 0x7f02003d, 0x7f02003e, 
-      0x7f02003f, 0x7f02004f, 0x7f020069, 0x7f02006a, 
-      0x7f020088, 0x7f020094, 0x7f0200a0, 0x7f0200a1, 
-      0x7f0200a2, 0x7f0200a3, 0x7f0200a4, 0x7f0200a5, 
-      0x7f0200a6, 0x7f0200a7, 0x7f0200a8, 0x7f0200a9, 
-      0x7f0200aa, 0x7f0200ab, 0x7f0200ac, 0x7f0200ae, 
-      0x7f0200af, 0x7f0200b0, 0x7f0200b1, 0x7f0200b2, 
-      0x7f0200d9, 0x7f0200da, 0x7f0200db, 0x7f0200dc, 
-      0x7f0200dd, 0x7f0200de, 0x7f0200df, 0x7f0200e0, 
-      0x7f0200e1, 0x7f0200e2, 0x7f0200e3, 0x7f0200e4, 
-      0x7f0200e5, 0x7f0200e6, 0x7f0200e7, 0x7f0200e8, 
-      0x7f0200e9, 0x7f0200ea, 0x7f0200eb, 0x7f0200ec, 
-      0x7f0200ed, 0x7f0200ee, 0x7f0200ef, 0x7f0200f0, 
-      0x7f0200f1, 0x7f0200f2, 0x7f0200f3, 0x7f0200f4, 
-      0x7f0200f5, 0x7f0200f6, 0x7f0200f7, 0x7f0200f8, 
-      0x7f0200f9, 0x7f0200fa, 0x7f0200fb, 0x7f0200fc, 
-      0x7f0200fd, 0x7f0200fe, 0x7f0200ff, 0x7f020100, 
-      0x7f020101, 0x7f020102, 0x7f020104, 0x7f020105, 
-      0x7f020106, 0x7f020107, 0x7f020108, 0x7f020109, 
-      0x7f02010a, 0x7f02010b, 0x7f02012f, 0x7f020130, 
-      0x7f02014a, 0x7f020151, 0x7f0201b6, 0x7f0201b8
+      0x01010140, 0x0101031f, 0x01010320, 0x01010321, 
+      0x01010322, 0x01010323, 0x01010324, 0x01010325, 
+      0x01010326, 0x01010327, 0x01010328, 0x010103b5, 
+      0x010103b6, 0x010103fa, 0x01010440, 0x7f02003a, 
+      0x7f02003b, 0x7f02004a, 0x7f020060, 0x7f0200a3, 
+      0x7f0200a4, 0x7f0200a5, 0x7f0200a6, 0x7f0200a7, 
+      0x7f0200a8, 0x7f0200a9, 0x7f0200aa, 0x7f0200ab, 
+      0x7f0200ac, 0x7f0200ad, 0x7f0200ae, 0x7f0200af, 
+      0x7f0200b0, 0x7f0200b1, 0x7f0200b2, 0x7f0200b3, 
+      0x7f0200b4, 0x7f0200b5, 0x7f0200b6, 0x7f0200b7, 
+      0x7f0200b8, 0x7f0200b9, 0x7f0200ba, 0x7f0200bb, 
+      0x7f0200bc, 0x7f0200bd, 0x7f0200be, 0x7f0200bf, 
+      0x7f0200c0, 0x7f0200c1, 0x7f0200c2, 0x7f0200c3, 
+      0x7f0200c4, 0x7f0200c5, 0x7f0200c6, 0x7f0200c7, 
+      0x7f0200c8, 0x7f0200c9, 0x7f0200ca, 0x7f0200cb, 
+      0x7f0200cd, 0x7f0200ce, 0x7f0200cf, 0x7f0200d0, 
+      0x7f0200d1, 0x7f0200d2, 0x7f0200d3, 0x7f0200d4
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#orientation}
@@ -12679,32 +9404,6 @@ public final class R {
      */
     public static final int ConstraintSet_android_minHeight=12;
     /**
-     * <p>This symbol is the offset where the {@link android.R.attr#pivotX}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     * <p>May be a fractional value, which is a floating point number appended with
-     * either % or %p, such as "<code>14.5%</code>".
-     * The % suffix always means a percentage of the base size;
-     * the optional %p suffix provides a size relative to some parent container.
-     *
-     * @attr name android:pivotX
-     */
-    public static final int ConstraintSet_android_pivotX=13;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#pivotY}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     * <p>May be a fractional value, which is a floating point number appended with
-     * either % or %p, such as "<code>14.5%</code>".
-     * The % suffix always means a percentage of the base size;
-     * the optional %p suffix provides a size relative to some parent container.
-     *
-     * @attr name android:pivotY
-     */
-    public static final int ConstraintSet_android_pivotY=14;
-    /**
      * <p>This symbol is the offset where the {@link android.R.attr#alpha}
      * attribute's value can be found in the {@link #ConstraintSet} array.
      *
@@ -12712,7 +9411,7 @@ public final class R {
      *
      * @attr name android:alpha
      */
-    public static final int ConstraintSet_android_alpha=15;
+    public static final int ConstraintSet_android_alpha=13;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#transformPivotX}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12725,7 +9424,7 @@ public final class R {
      *
      * @attr name android:transformPivotX
      */
-    public static final int ConstraintSet_android_transformPivotX=16;
+    public static final int ConstraintSet_android_transformPivotX=14;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#transformPivotY}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12738,7 +9437,7 @@ public final class R {
      *
      * @attr name android:transformPivotY
      */
-    public static final int ConstraintSet_android_transformPivotY=17;
+    public static final int ConstraintSet_android_transformPivotY=15;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#translationX}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12751,7 +9450,7 @@ public final class R {
      *
      * @attr name android:translationX
      */
-    public static final int ConstraintSet_android_translationX=18;
+    public static final int ConstraintSet_android_translationX=16;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#translationY}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12764,7 +9463,7 @@ public final class R {
      *
      * @attr name android:translationY
      */
-    public static final int ConstraintSet_android_translationY=19;
+    public static final int ConstraintSet_android_translationY=17;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#scaleX}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12773,7 +9472,7 @@ public final class R {
      *
      * @attr name android:scaleX
      */
-    public static final int ConstraintSet_android_scaleX=20;
+    public static final int ConstraintSet_android_scaleX=18;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#scaleY}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12782,7 +9481,7 @@ public final class R {
      *
      * @attr name android:scaleY
      */
-    public static final int ConstraintSet_android_scaleY=21;
+    public static final int ConstraintSet_android_scaleY=19;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#rotation}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12791,7 +9490,7 @@ public final class R {
      *
      * @attr name android:rotation
      */
-    public static final int ConstraintSet_android_rotation=22;
+    public static final int ConstraintSet_android_rotation=20;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#rotationX}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12800,7 +9499,7 @@ public final class R {
      *
      * @attr name android:rotationX
      */
-    public static final int ConstraintSet_android_rotationX=23;
+    public static final int ConstraintSet_android_rotationX=21;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#rotationY}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12809,7 +9508,7 @@ public final class R {
      *
      * @attr name android:rotationY
      */
-    public static final int ConstraintSet_android_rotationY=24;
+    public static final int ConstraintSet_android_rotationY=22;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout_marginStart}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12822,7 +9521,7 @@ public final class R {
      *
      * @attr name android:layout_marginStart
      */
-    public static final int ConstraintSet_android_layout_marginStart=25;
+    public static final int ConstraintSet_android_layout_marginStart=23;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout_marginEnd}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12835,7 +9534,7 @@ public final class R {
      *
      * @attr name android:layout_marginEnd
      */
-    public static final int ConstraintSet_android_layout_marginEnd=26;
+    public static final int ConstraintSet_android_layout_marginEnd=24;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#translationZ}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12848,7 +9547,7 @@ public final class R {
      *
      * @attr name android:translationZ
      */
-    public static final int ConstraintSet_android_translationZ=27;
+    public static final int ConstraintSet_android_translationZ=25;
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#elevation}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12861,19 +9560,7 @@ public final class R {
      *
      * @attr name android:elevation
      */
-    public static final int ConstraintSet_android_elevation=28;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#animate_relativeTo}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:animate_relativeTo
-     */
-    public static final int ConstraintSet_animate_relativeTo=29;
+    public static final int ConstraintSet_android_elevation=26;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#barrierAllowsGoneWidgets}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12883,7 +9570,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:barrierAllowsGoneWidgets
      */
-    public static final int ConstraintSet_barrierAllowsGoneWidgets=30;
+    public static final int ConstraintSet_barrierAllowsGoneWidgets=27;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#barrierDirection}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12904,20 +9591,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:barrierDirection
      */
-    public static final int ConstraintSet_barrierDirection=31;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#barrierMargin}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:barrierMargin
-     */
-    public static final int ConstraintSet_barrierMargin=32;
+    public static final int ConstraintSet_barrierDirection=28;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#chainUseRtl}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12927,7 +9601,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:chainUseRtl
      */
-    public static final int ConstraintSet_chainUseRtl=33;
+    public static final int ConstraintSet_chainUseRtl=29;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraint_referenced_ids}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -12937,302 +9611,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:constraint_referenced_ids
      */
-    public static final int ConstraintSet_constraint_referenced_ids=34;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraint_referenced_tags}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:constraint_referenced_tags
-     */
-    public static final int ConstraintSet_constraint_referenced_tags=35;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#deriveConstraintsFrom}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:deriveConstraintsFrom
-     */
-    public static final int ConstraintSet_deriveConstraintsFrom=36;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#drawPath}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>asConfigured</td><td>4</td><td></td></tr>
-     * <tr><td>deltaRelative</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>path</td><td>1</td><td></td></tr>
-     * <tr><td>pathRelative</td><td>2</td><td></td></tr>
-     * <tr><td>rectangles</td><td>5</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:drawPath
-     */
-    public static final int ConstraintSet_drawPath=37;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_firstHorizontalBias}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_firstHorizontalBias
-     */
-    public static final int ConstraintSet_flow_firstHorizontalBias=38;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_firstHorizontalStyle}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_firstHorizontalStyle
-     */
-    public static final int ConstraintSet_flow_firstHorizontalStyle=39;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_firstVerticalBias}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_firstVerticalBias
-     */
-    public static final int ConstraintSet_flow_firstVerticalBias=40;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_firstVerticalStyle}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_firstVerticalStyle
-     */
-    public static final int ConstraintSet_flow_firstVerticalStyle=41;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_horizontalAlign}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>center</td><td>2</td><td></td></tr>
-     * <tr><td>end</td><td>1</td><td></td></tr>
-     * <tr><td>start</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_horizontalAlign
-     */
-    public static final int ConstraintSet_flow_horizontalAlign=42;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_horizontalBias}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_horizontalBias
-     */
-    public static final int ConstraintSet_flow_horizontalBias=43;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_horizontalGap}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:flow_horizontalGap
-     */
-    public static final int ConstraintSet_flow_horizontalGap=44;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_horizontalStyle}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_horizontalStyle
-     */
-    public static final int ConstraintSet_flow_horizontalStyle=45;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_lastHorizontalBias}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_lastHorizontalBias
-     */
-    public static final int ConstraintSet_flow_lastHorizontalBias=46;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_lastHorizontalStyle}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_lastHorizontalStyle
-     */
-    public static final int ConstraintSet_flow_lastHorizontalStyle=47;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_lastVerticalBias}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_lastVerticalBias
-     */
-    public static final int ConstraintSet_flow_lastVerticalBias=48;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_lastVerticalStyle}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_lastVerticalStyle
-     */
-    public static final int ConstraintSet_flow_lastVerticalStyle=49;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_maxElementsWrap}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_maxElementsWrap
-     */
-    public static final int ConstraintSet_flow_maxElementsWrap=50;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_verticalAlign}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>baseline</td><td>3</td><td></td></tr>
-     * <tr><td>bottom</td><td>1</td><td></td></tr>
-     * <tr><td>center</td><td>2</td><td></td></tr>
-     * <tr><td>top</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_verticalAlign
-     */
-    public static final int ConstraintSet_flow_verticalAlign=51;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_verticalBias}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:flow_verticalBias
-     */
-    public static final int ConstraintSet_flow_verticalBias=52;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_verticalGap}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:flow_verticalGap
-     */
-    public static final int ConstraintSet_flow_verticalGap=53;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_verticalStyle}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_verticalStyle
-     */
-    public static final int ConstraintSet_flow_verticalStyle=54;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#flow_wrapMode}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>aligned</td><td>2</td><td></td></tr>
-     * <tr><td>chain</td><td>1</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:flow_wrapMode
-     */
-    public static final int ConstraintSet_flow_wrapMode=55;
+    public static final int ConstraintSet_constraint_referenced_ids=30;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constrainedHeight}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13242,7 +9621,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constrainedHeight
      */
-    public static final int ConstraintSet_layout_constrainedHeight=56;
+    public static final int ConstraintSet_layout_constrainedHeight=31;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constrainedWidth}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13252,7 +9631,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constrainedWidth
      */
-    public static final int ConstraintSet_layout_constrainedWidth=57;
+    public static final int ConstraintSet_layout_constrainedWidth=32;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBaseline_creator}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13261,7 +9640,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintBaseline_creator
      */
-    public static final int ConstraintSet_layout_constraintBaseline_creator=58;
+    public static final int ConstraintSet_layout_constraintBaseline_creator=33;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBaseline_toBaselineOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13281,7 +9660,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintBaseline_toBaselineOf
      */
-    public static final int ConstraintSet_layout_constraintBaseline_toBaselineOf=59;
+    public static final int ConstraintSet_layout_constraintBaseline_toBaselineOf=34;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBottom_creator}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13290,7 +9669,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintBottom_creator
      */
-    public static final int ConstraintSet_layout_constraintBottom_creator=60;
+    public static final int ConstraintSet_layout_constraintBottom_creator=35;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBottom_toBottomOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13310,7 +9689,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintBottom_toBottomOf
      */
-    public static final int ConstraintSet_layout_constraintBottom_toBottomOf=61;
+    public static final int ConstraintSet_layout_constraintBottom_toBottomOf=36;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBottom_toTopOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13330,7 +9709,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintBottom_toTopOf
      */
-    public static final int ConstraintSet_layout_constraintBottom_toTopOf=62;
+    public static final int ConstraintSet_layout_constraintBottom_toTopOf=37;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintCircle}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13342,7 +9721,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintCircle
      */
-    public static final int ConstraintSet_layout_constraintCircle=63;
+    public static final int ConstraintSet_layout_constraintCircle=38;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintCircleAngle}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13351,7 +9730,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintCircleAngle
      */
-    public static final int ConstraintSet_layout_constraintCircleAngle=64;
+    public static final int ConstraintSet_layout_constraintCircleAngle=39;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintCircleRadius}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13364,7 +9743,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintCircleRadius
      */
-    public static final int ConstraintSet_layout_constraintCircleRadius=65;
+    public static final int ConstraintSet_layout_constraintCircleRadius=40;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintDimensionRatio}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13374,7 +9753,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintDimensionRatio
      */
-    public static final int ConstraintSet_layout_constraintDimensionRatio=66;
+    public static final int ConstraintSet_layout_constraintDimensionRatio=41;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintEnd_toEndOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13394,7 +9773,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintEnd_toEndOf
      */
-    public static final int ConstraintSet_layout_constraintEnd_toEndOf=67;
+    public static final int ConstraintSet_layout_constraintEnd_toEndOf=42;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintEnd_toStartOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13414,7 +9793,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintEnd_toStartOf
      */
-    public static final int ConstraintSet_layout_constraintEnd_toStartOf=68;
+    public static final int ConstraintSet_layout_constraintEnd_toStartOf=43;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintGuide_begin}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13427,7 +9806,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintGuide_begin
      */
-    public static final int ConstraintSet_layout_constraintGuide_begin=69;
+    public static final int ConstraintSet_layout_constraintGuide_begin=44;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintGuide_end}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13440,7 +9819,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintGuide_end
      */
-    public static final int ConstraintSet_layout_constraintGuide_end=70;
+    public static final int ConstraintSet_layout_constraintGuide_end=45;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintGuide_percent}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13449,7 +9828,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintGuide_percent
      */
-    public static final int ConstraintSet_layout_constraintGuide_percent=71;
+    public static final int ConstraintSet_layout_constraintGuide_percent=46;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_default}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13467,7 +9846,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHeight_default
      */
-    public static final int ConstraintSet_layout_constraintHeight_default=72;
+    public static final int ConstraintSet_layout_constraintHeight_default=47;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_max}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13488,7 +9867,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHeight_max
      */
-    public static final int ConstraintSet_layout_constraintHeight_max=73;
+    public static final int ConstraintSet_layout_constraintHeight_max=48;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_min}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13509,7 +9888,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHeight_min
      */
-    public static final int ConstraintSet_layout_constraintHeight_min=74;
+    public static final int ConstraintSet_layout_constraintHeight_min=49;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_percent}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13518,7 +9897,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHeight_percent
      */
-    public static final int ConstraintSet_layout_constraintHeight_percent=75;
+    public static final int ConstraintSet_layout_constraintHeight_percent=50;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHorizontal_bias}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13527,7 +9906,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHorizontal_bias
      */
-    public static final int ConstraintSet_layout_constraintHorizontal_bias=76;
+    public static final int ConstraintSet_layout_constraintHorizontal_bias=51;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHorizontal_chainStyle}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13545,7 +9924,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHorizontal_chainStyle
      */
-    public static final int ConstraintSet_layout_constraintHorizontal_chainStyle=77;
+    public static final int ConstraintSet_layout_constraintHorizontal_chainStyle=52;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHorizontal_weight}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13554,7 +9933,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintHorizontal_weight
      */
-    public static final int ConstraintSet_layout_constraintHorizontal_weight=78;
+    public static final int ConstraintSet_layout_constraintHorizontal_weight=53;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintLeft_creator}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13563,7 +9942,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintLeft_creator
      */
-    public static final int ConstraintSet_layout_constraintLeft_creator=79;
+    public static final int ConstraintSet_layout_constraintLeft_creator=54;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintLeft_toLeftOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13583,7 +9962,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintLeft_toLeftOf
      */
-    public static final int ConstraintSet_layout_constraintLeft_toLeftOf=80;
+    public static final int ConstraintSet_layout_constraintLeft_toLeftOf=55;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintLeft_toRightOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13603,7 +9982,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintLeft_toRightOf
      */
-    public static final int ConstraintSet_layout_constraintLeft_toRightOf=81;
+    public static final int ConstraintSet_layout_constraintLeft_toRightOf=56;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintRight_creator}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13612,7 +9991,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintRight_creator
      */
-    public static final int ConstraintSet_layout_constraintRight_creator=82;
+    public static final int ConstraintSet_layout_constraintRight_creator=57;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintRight_toLeftOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13632,7 +10011,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintRight_toLeftOf
      */
-    public static final int ConstraintSet_layout_constraintRight_toLeftOf=83;
+    public static final int ConstraintSet_layout_constraintRight_toLeftOf=58;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintRight_toRightOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13652,7 +10031,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintRight_toRightOf
      */
-    public static final int ConstraintSet_layout_constraintRight_toRightOf=84;
+    public static final int ConstraintSet_layout_constraintRight_toRightOf=59;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintStart_toEndOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13672,7 +10051,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintStart_toEndOf
      */
-    public static final int ConstraintSet_layout_constraintStart_toEndOf=85;
+    public static final int ConstraintSet_layout_constraintStart_toEndOf=60;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintStart_toStartOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13692,17 +10071,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintStart_toStartOf
      */
-    public static final int ConstraintSet_layout_constraintStart_toStartOf=86;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTag}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintTag
-     */
-    public static final int ConstraintSet_layout_constraintTag=87;
+    public static final int ConstraintSet_layout_constraintStart_toStartOf=61;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTop_creator}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13711,7 +10080,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintTop_creator
      */
-    public static final int ConstraintSet_layout_constraintTop_creator=88;
+    public static final int ConstraintSet_layout_constraintTop_creator=62;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTop_toBottomOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13731,7 +10100,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintTop_toBottomOf
      */
-    public static final int ConstraintSet_layout_constraintTop_toBottomOf=89;
+    public static final int ConstraintSet_layout_constraintTop_toBottomOf=63;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTop_toTopOf}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13751,7 +10120,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintTop_toTopOf
      */
-    public static final int ConstraintSet_layout_constraintTop_toTopOf=90;
+    public static final int ConstraintSet_layout_constraintTop_toTopOf=64;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintVertical_bias}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13760,7 +10129,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintVertical_bias
      */
-    public static final int ConstraintSet_layout_constraintVertical_bias=91;
+    public static final int ConstraintSet_layout_constraintVertical_bias=65;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintVertical_chainStyle}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13778,7 +10147,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintVertical_chainStyle
      */
-    public static final int ConstraintSet_layout_constraintVertical_chainStyle=92;
+    public static final int ConstraintSet_layout_constraintVertical_chainStyle=66;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintVertical_weight}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13787,7 +10156,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintVertical_weight
      */
-    public static final int ConstraintSet_layout_constraintVertical_weight=93;
+    public static final int ConstraintSet_layout_constraintVertical_weight=67;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_default}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13805,7 +10174,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintWidth_default
      */
-    public static final int ConstraintSet_layout_constraintWidth_default=94;
+    public static final int ConstraintSet_layout_constraintWidth_default=68;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_max}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13826,7 +10195,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintWidth_max
      */
-    public static final int ConstraintSet_layout_constraintWidth_max=95;
+    public static final int ConstraintSet_layout_constraintWidth_max=69;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_min}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13847,7 +10216,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintWidth_min
      */
-    public static final int ConstraintSet_layout_constraintWidth_min=96;
+    public static final int ConstraintSet_layout_constraintWidth_min=70;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_percent}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13856,7 +10225,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_constraintWidth_percent
      */
-    public static final int ConstraintSet_layout_constraintWidth_percent=97;
+    public static final int ConstraintSet_layout_constraintWidth_percent=71;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_editor_absoluteX}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13869,7 +10238,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_editor_absoluteX
      */
-    public static final int ConstraintSet_layout_editor_absoluteX=98;
+    public static final int ConstraintSet_layout_editor_absoluteX=72;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_editor_absoluteY}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13882,7 +10251,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_editor_absoluteY
      */
-    public static final int ConstraintSet_layout_editor_absoluteY=99;
+    public static final int ConstraintSet_layout_editor_absoluteY=73;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginBottom}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13895,7 +10264,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_goneMarginBottom
      */
-    public static final int ConstraintSet_layout_goneMarginBottom=100;
+    public static final int ConstraintSet_layout_goneMarginBottom=74;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginEnd}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13908,7 +10277,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_goneMarginEnd
      */
-    public static final int ConstraintSet_layout_goneMarginEnd=101;
+    public static final int ConstraintSet_layout_goneMarginEnd=75;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginLeft}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13921,7 +10290,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_goneMarginLeft
      */
-    public static final int ConstraintSet_layout_goneMarginLeft=102;
+    public static final int ConstraintSet_layout_goneMarginLeft=76;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginRight}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13934,7 +10303,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_goneMarginRight
      */
-    public static final int ConstraintSet_layout_goneMarginRight=103;
+    public static final int ConstraintSet_layout_goneMarginRight=77;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginStart}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13947,7 +10316,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_goneMarginStart
      */
-    public static final int ConstraintSet_layout_goneMarginStart=104;
+    public static final int ConstraintSet_layout_goneMarginStart=78;
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginTop}
      * attribute's value can be found in the {@link #ConstraintSet} array.
@@ -13960,94 +10329,7 @@ public final class R {
      *
      * @attr name com.torgtek.matidsms:layout_goneMarginTop
      */
-    public static final int ConstraintSet_layout_goneMarginTop=105;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionProgress}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:motionProgress
-     */
-    public static final int ConstraintSet_motionProgress=106;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionStagger}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:motionStagger
-     */
-    public static final int ConstraintSet_motionStagger=107;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#pathMotionArc}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>flip</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>startHorizontal</td><td>2</td><td></td></tr>
-     * <tr><td>startVertical</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:pathMotionArc
-     */
-    public static final int ConstraintSet_pathMotionArc=108;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#pivotAnchor}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:pivotAnchor
-     */
-    public static final int ConstraintSet_pivotAnchor=109;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionEasing}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>accelerate</td><td>1</td><td></td></tr>
-     * <tr><td>decelerate</td><td>2</td><td></td></tr>
-     * <tr><td>linear</td><td>3</td><td></td></tr>
-     * <tr><td>standard</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:transitionEasing
-     */
-    public static final int ConstraintSet_transitionEasing=110;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionPathRotate}
-     * attribute's value can be found in the {@link #ConstraintSet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:transitionPathRotate
-     */
-    public static final int ConstraintSet_transitionPathRotate=111;
+    public static final int ConstraintSet_layout_goneMarginTop=79;
     /**
      * Attributes that can be used with a CoordinatorLayout.
      * <p>Includes the following attributes:</p>
@@ -14063,7 +10345,7 @@ public final class R {
      * @see #CoordinatorLayout_statusBarBackground
      */
     public static final int[] CoordinatorLayout={
-      0x7f0200d1, 0x7f02017b
+      0x7f02009d, 0x7f020113
     };
     /**
      * <p>
@@ -14125,8 +10407,8 @@ public final class R {
      * @see #CoordinatorLayout_Layout_layout_keyline
      */
     public static final int[] CoordinatorLayout_Layout={
-      0x010100b3, 0x7f0200d6, 0x7f0200d7, 0x7f0200d8, 
-      0x7f020103, 0x7f02010c, 0x7f02010d
+      0x010100b3, 0x7f0200a0, 0x7f0200a1, 0x7f0200a2, 
+      0x7f0200cc, 0x7f0200d5, 0x7f0200d6
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
@@ -14280,134 +10562,6 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_layout_keyline=6;
     /**
-     * Attributes that can be used with a CustomAttribute.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #CustomAttribute_attributeName com.torgtek.matidsms:attributeName}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CustomAttribute_customBoolean com.torgtek.matidsms:customBoolean}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CustomAttribute_customColorDrawableValue com.torgtek.matidsms:customColorDrawableValue}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CustomAttribute_customColorValue com.torgtek.matidsms:customColorValue}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CustomAttribute_customDimension com.torgtek.matidsms:customDimension}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CustomAttribute_customFloatValue com.torgtek.matidsms:customFloatValue}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CustomAttribute_customIntegerValue com.torgtek.matidsms:customIntegerValue}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CustomAttribute_customPixelDimension com.torgtek.matidsms:customPixelDimension}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CustomAttribute_customStringValue com.torgtek.matidsms:customStringValue}</code></td><td></td></tr>
-     * </table>
-     * @see #CustomAttribute_attributeName
-     * @see #CustomAttribute_customBoolean
-     * @see #CustomAttribute_customColorDrawableValue
-     * @see #CustomAttribute_customColorValue
-     * @see #CustomAttribute_customDimension
-     * @see #CustomAttribute_customFloatValue
-     * @see #CustomAttribute_customIntegerValue
-     * @see #CustomAttribute_customPixelDimension
-     * @see #CustomAttribute_customStringValue
-     */
-    public static final int[] CustomAttribute={
-      0x7f02002f, 0x7f02007a, 0x7f02007b, 0x7f02007c, 
-      0x7f02007d, 0x7f02007e, 0x7f02007f, 0x7f020081, 
-      0x7f020082
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#attributeName}
-     * attribute's value can be found in the {@link #CustomAttribute} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:attributeName
-     */
-    public static final int CustomAttribute_attributeName=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#customBoolean}
-     * attribute's value can be found in the {@link #CustomAttribute} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:customBoolean
-     */
-    public static final int CustomAttribute_customBoolean=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#customColorDrawableValue}
-     * attribute's value can be found in the {@link #CustomAttribute} array.
-     *
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:customColorDrawableValue
-     */
-    public static final int CustomAttribute_customColorDrawableValue=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#customColorValue}
-     * attribute's value can be found in the {@link #CustomAttribute} array.
-     *
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:customColorValue
-     */
-    public static final int CustomAttribute_customColorValue=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#customDimension}
-     * attribute's value can be found in the {@link #CustomAttribute} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:customDimension
-     */
-    public static final int CustomAttribute_customDimension=4;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#customFloatValue}
-     * attribute's value can be found in the {@link #CustomAttribute} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:customFloatValue
-     */
-    public static final int CustomAttribute_customFloatValue=5;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#customIntegerValue}
-     * attribute's value can be found in the {@link #CustomAttribute} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:customIntegerValue
-     */
-    public static final int CustomAttribute_customIntegerValue=6;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#customPixelDimension}
-     * attribute's value can be found in the {@link #CustomAttribute} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:customPixelDimension
-     */
-    public static final int CustomAttribute_customPixelDimension=7;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#customStringValue}
-     * attribute's value can be found in the {@link #CustomAttribute} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:customStringValue
-     */
-    public static final int CustomAttribute_customStringValue=8;
-    /**
      * Attributes that can be used with a DrawerArrowToggle.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -14433,8 +10587,8 @@ public final class R {
      * @see #DrawerArrowToggle_thickness
      */
     public static final int[] DrawerArrowToggle={
-      0x7f02002d, 0x7f02002e, 0x7f02003c, 0x7f020059, 
-      0x7f020095, 0x7f0200bf, 0x7f020174, 0x7f020197
+      0x7f02002c, 0x7f02002d, 0x7f020039, 0x7f020052, 
+      0x7f020075, 0x7f02008c, 0x7f02010d, 0x7f02012b
     };
     /**
      * <p>
@@ -14556,6 +10710,7 @@ public final class R {
      * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.torgtek.matidsms:fontProviderFetchTimeout}</code></td><td>The length of the timeout during fetching.</td></tr>
      * <tr><td><code>{@link #FontFamily_fontProviderPackage com.torgtek.matidsms:fontProviderPackage}</code></td><td>The package for the Font Provider to be used for the request.</td></tr>
      * <tr><td><code>{@link #FontFamily_fontProviderQuery com.torgtek.matidsms:fontProviderQuery}</code></td><td>The query to be sent over to the provider.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderSystemFontFamily com.torgtek.matidsms:fontProviderSystemFontFamily}</code></td><td>Provides the system font family name to check before downloading the font.</td></tr>
      * </table>
      * @see #FontFamily_fontProviderAuthority
      * @see #FontFamily_fontProviderCerts
@@ -14563,10 +10718,11 @@ public final class R {
      * @see #FontFamily_fontProviderFetchTimeout
      * @see #FontFamily_fontProviderPackage
      * @see #FontFamily_fontProviderQuery
+     * @see #FontFamily_fontProviderSystemFontFamily
      */
     public static final int[] FontFamily={
-      0x7f0200b5, 0x7f0200b6, 0x7f0200b7, 0x7f0200b8, 
-      0x7f0200b9, 0x7f0200ba
+      0x7f020082, 0x7f020083, 0x7f020084, 0x7f020085, 
+      0x7f020086, 0x7f020087, 0x7f020088
     };
     /**
      * <p>
@@ -14672,6 +10828,20 @@ public final class R {
      */
     public static final int FontFamily_fontProviderQuery=5;
     /**
+     * <p>
+     * @attr description
+     * Provides the system font family name to check before downloading the font. For
+     * example if the fontProviderQuery asked for "Sans Serif", it is possible to define
+     * fontProviderSystemFontFamily as "sans-serif" to tell the system to use "sans-serif" font
+     * family if it exists on the system.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.torgtek.matidsms:fontProviderSystemFontFamily
+     */
+    public static final int FontFamily_fontProviderSystemFontFamily=6;
+    /**
      * Attributes that can be used with a FontFamilyFont.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -14702,8 +10872,8 @@ public final class R {
      */
     public static final int[] FontFamilyFont={
       0x01010532, 0x01010533, 0x0101053f, 0x0101056f, 
-      0x01010570, 0x7f0200b3, 0x7f0200bb, 0x7f0200bc, 
-      0x7f0200bd, 0x7f0201bc
+      0x01010570, 0x7f020080, 0x7f020089, 0x7f02008a, 
+      0x7f02008b, 0x7f020146
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#font}
@@ -15080,1504 +11250,22 @@ public final class R {
      */
     public static final int GradientColorItem_android_offset=1;
     /**
-     * Attributes that can be used with a ImageFilterView.
+     * Attributes that can be used with a LinearConstraintLayout.
      * <p>Includes the following attributes:</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ImageFilterView_altSrc com.torgtek.matidsms:altSrc}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ImageFilterView_brightness com.torgtek.matidsms:brightness}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ImageFilterView_contrast com.torgtek.matidsms:contrast}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ImageFilterView_crossfade com.torgtek.matidsms:crossfade}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ImageFilterView_overlay com.torgtek.matidsms:overlay}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ImageFilterView_round com.torgtek.matidsms:round}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ImageFilterView_roundPercent com.torgtek.matidsms:roundPercent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ImageFilterView_saturation com.torgtek.matidsms:saturation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ImageFilterView_warmth com.torgtek.matidsms:warmth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearConstraintLayout_android_orientation android:orientation}</code></td><td></td></tr>
      * </table>
-     * @see #ImageFilterView_altSrc
-     * @see #ImageFilterView_brightness
-     * @see #ImageFilterView_contrast
-     * @see #ImageFilterView_crossfade
-     * @see #ImageFilterView_overlay
-     * @see #ImageFilterView_round
-     * @see #ImageFilterView_roundPercent
-     * @see #ImageFilterView_saturation
-     * @see #ImageFilterView_warmth
+     * @see #LinearConstraintLayout_android_orientation
      */
-    public static final int[] ImageFilterView={
-      0x7f020029, 0x7f020041, 0x7f020074, 0x7f020077, 
-      0x7f020142, 0x7f020163, 0x7f020164, 0x7f020165, 
-      0x7f0201c0
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#altSrc}
-     * attribute's value can be found in the {@link #ImageFilterView} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:altSrc
-     */
-    public static final int ImageFilterView_altSrc=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#brightness}
-     * attribute's value can be found in the {@link #ImageFilterView} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:brightness
-     */
-    public static final int ImageFilterView_brightness=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#contrast}
-     * attribute's value can be found in the {@link #ImageFilterView} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:contrast
-     */
-    public static final int ImageFilterView_contrast=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#crossfade}
-     * attribute's value can be found in the {@link #ImageFilterView} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:crossfade
-     */
-    public static final int ImageFilterView_crossfade=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#overlay}
-     * attribute's value can be found in the {@link #ImageFilterView} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:overlay
-     */
-    public static final int ImageFilterView_overlay=4;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#round}
-     * attribute's value can be found in the {@link #ImageFilterView} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:round
-     */
-    public static final int ImageFilterView_round=5;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#roundPercent}
-     * attribute's value can be found in the {@link #ImageFilterView} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:roundPercent
-     */
-    public static final int ImageFilterView_roundPercent=6;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#saturation}
-     * attribute's value can be found in the {@link #ImageFilterView} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:saturation
-     */
-    public static final int ImageFilterView_saturation=7;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#warmth}
-     * attribute's value can be found in the {@link #ImageFilterView} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:warmth
-     */
-    public static final int ImageFilterView_warmth=8;
-    /**
-     * Attributes that can be used with a KeyAttribute.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_alpha android:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_transformPivotX android:transformPivotX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_transformPivotY android:transformPivotY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_translationX android:translationX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_translationY android:translationY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_scaleX android:scaleX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_scaleY android:scaleY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_rotation android:rotation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_rotationX android:rotationX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_rotationY android:rotationY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_translationZ android:translationZ}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_android_elevation android:elevation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_curveFit com.torgtek.matidsms:curveFit}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_framePosition com.torgtek.matidsms:framePosition}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_motionProgress com.torgtek.matidsms:motionProgress}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_motionTarget com.torgtek.matidsms:motionTarget}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_transitionEasing com.torgtek.matidsms:transitionEasing}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyAttribute_transitionPathRotate com.torgtek.matidsms:transitionPathRotate}</code></td><td></td></tr>
-     * </table>
-     * @see #KeyAttribute_android_alpha
-     * @see #KeyAttribute_android_transformPivotX
-     * @see #KeyAttribute_android_transformPivotY
-     * @see #KeyAttribute_android_translationX
-     * @see #KeyAttribute_android_translationY
-     * @see #KeyAttribute_android_scaleX
-     * @see #KeyAttribute_android_scaleY
-     * @see #KeyAttribute_android_rotation
-     * @see #KeyAttribute_android_rotationX
-     * @see #KeyAttribute_android_rotationY
-     * @see #KeyAttribute_android_translationZ
-     * @see #KeyAttribute_android_elevation
-     * @see #KeyAttribute_curveFit
-     * @see #KeyAttribute_framePosition
-     * @see #KeyAttribute_motionProgress
-     * @see #KeyAttribute_motionTarget
-     * @see #KeyAttribute_transitionEasing
-     * @see #KeyAttribute_transitionPathRotate
-     */
-    public static final int[] KeyAttribute={
-      0x0101031f, 0x01010320, 0x01010321, 0x01010322, 
-      0x01010323, 0x01010324, 0x01010325, 0x01010326, 
-      0x01010327, 0x01010328, 0x010103fa, 0x01010440, 
-      0x7f020079, 0x7f0200be, 0x7f02012f, 0x7f020131, 
-      0x7f0201b6, 0x7f0201b8
-    };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#alpha}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:alpha
-     */
-    public static final int KeyAttribute_android_alpha=0;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#transformPivotX}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:transformPivotX
-     */
-    public static final int KeyAttribute_android_transformPivotX=1;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#transformPivotY}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:transformPivotY
-     */
-    public static final int KeyAttribute_android_transformPivotY=2;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationX}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationX
-     */
-    public static final int KeyAttribute_android_translationX=3;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationY}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationY
-     */
-    public static final int KeyAttribute_android_translationY=4;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#scaleX}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:scaleX
-     */
-    public static final int KeyAttribute_android_scaleX=5;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#scaleY}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:scaleY
-     */
-    public static final int KeyAttribute_android_scaleY=6;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotation}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotation
-     */
-    public static final int KeyAttribute_android_rotation=7;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotationX}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotationX
-     */
-    public static final int KeyAttribute_android_rotationX=8;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotationY}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotationY
-     */
-    public static final int KeyAttribute_android_rotationY=9;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationZ}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationZ
-     */
-    public static final int KeyAttribute_android_translationZ=10;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#elevation}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:elevation
-     */
-    public static final int KeyAttribute_android_elevation=11;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#curveFit}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>linear</td><td>1</td><td></td></tr>
-     * <tr><td>spline</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:curveFit
-     */
-    public static final int KeyAttribute_curveFit=12;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#framePosition}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:framePosition
-     */
-    public static final int KeyAttribute_framePosition=13;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionProgress}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:motionProgress
-     */
-    public static final int KeyAttribute_motionProgress=14;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionTarget}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:motionTarget
-     */
-    public static final int KeyAttribute_motionTarget=15;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionEasing}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>accelerate</td><td>1</td><td></td></tr>
-     * <tr><td>decelerate</td><td>2</td><td></td></tr>
-     * <tr><td>linear</td><td>3</td><td></td></tr>
-     * <tr><td>standard</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:transitionEasing
-     */
-    public static final int KeyAttribute_transitionEasing=16;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionPathRotate}
-     * attribute's value can be found in the {@link #KeyAttribute} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:transitionPathRotate
-     */
-    public static final int KeyAttribute_transitionPathRotate=17;
-    /**
-     * Attributes that can be used with a KeyCycle.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #KeyCycle_android_alpha android:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_android_translationX android:translationX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_android_translationY android:translationY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_android_scaleX android:scaleX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_android_scaleY android:scaleY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_android_rotation android:rotation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_android_rotationX android:rotationX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_android_rotationY android:rotationY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_android_translationZ android:translationZ}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_android_elevation android:elevation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_curveFit com.torgtek.matidsms:curveFit}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_framePosition com.torgtek.matidsms:framePosition}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_motionProgress com.torgtek.matidsms:motionProgress}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_motionTarget com.torgtek.matidsms:motionTarget}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_transitionEasing com.torgtek.matidsms:transitionEasing}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_transitionPathRotate com.torgtek.matidsms:transitionPathRotate}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_waveOffset com.torgtek.matidsms:waveOffset}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_wavePeriod com.torgtek.matidsms:wavePeriod}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_waveShape com.torgtek.matidsms:waveShape}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyCycle_waveVariesBy com.torgtek.matidsms:waveVariesBy}</code></td><td></td></tr>
-     * </table>
-     * @see #KeyCycle_android_alpha
-     * @see #KeyCycle_android_translationX
-     * @see #KeyCycle_android_translationY
-     * @see #KeyCycle_android_scaleX
-     * @see #KeyCycle_android_scaleY
-     * @see #KeyCycle_android_rotation
-     * @see #KeyCycle_android_rotationX
-     * @see #KeyCycle_android_rotationY
-     * @see #KeyCycle_android_translationZ
-     * @see #KeyCycle_android_elevation
-     * @see #KeyCycle_curveFit
-     * @see #KeyCycle_framePosition
-     * @see #KeyCycle_motionProgress
-     * @see #KeyCycle_motionTarget
-     * @see #KeyCycle_transitionEasing
-     * @see #KeyCycle_transitionPathRotate
-     * @see #KeyCycle_waveOffset
-     * @see #KeyCycle_wavePeriod
-     * @see #KeyCycle_waveShape
-     * @see #KeyCycle_waveVariesBy
-     */
-    public static final int[] KeyCycle={
-      0x0101031f, 0x01010322, 0x01010323, 0x01010324, 
-      0x01010325, 0x01010326, 0x01010327, 0x01010328, 
-      0x010103fa, 0x01010440, 0x7f020079, 0x7f0200be, 
-      0x7f02012f, 0x7f020131, 0x7f0201b6, 0x7f0201b8, 
-      0x7f0201c2, 0x7f0201c3, 0x7f0201c4, 0x7f0201c5
-    };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#alpha}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:alpha
-     */
-    public static final int KeyCycle_android_alpha=0;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationX}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationX
-     */
-    public static final int KeyCycle_android_translationX=1;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationY}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationY
-     */
-    public static final int KeyCycle_android_translationY=2;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#scaleX}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:scaleX
-     */
-    public static final int KeyCycle_android_scaleX=3;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#scaleY}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:scaleY
-     */
-    public static final int KeyCycle_android_scaleY=4;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotation}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotation
-     */
-    public static final int KeyCycle_android_rotation=5;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotationX}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotationX
-     */
-    public static final int KeyCycle_android_rotationX=6;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotationY}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotationY
-     */
-    public static final int KeyCycle_android_rotationY=7;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationZ}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationZ
-     */
-    public static final int KeyCycle_android_translationZ=8;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#elevation}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:elevation
-     */
-    public static final int KeyCycle_android_elevation=9;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#curveFit}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>linear</td><td>1</td><td></td></tr>
-     * <tr><td>spline</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:curveFit
-     */
-    public static final int KeyCycle_curveFit=10;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#framePosition}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:framePosition
-     */
-    public static final int KeyCycle_framePosition=11;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionProgress}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:motionProgress
-     */
-    public static final int KeyCycle_motionProgress=12;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionTarget}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:motionTarget
-     */
-    public static final int KeyCycle_motionTarget=13;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionEasing}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>accelerate</td><td>1</td><td></td></tr>
-     * <tr><td>decelerate</td><td>2</td><td></td></tr>
-     * <tr><td>linear</td><td>3</td><td></td></tr>
-     * <tr><td>standard</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:transitionEasing
-     */
-    public static final int KeyCycle_transitionEasing=14;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionPathRotate}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:transitionPathRotate
-     */
-    public static final int KeyCycle_transitionPathRotate=15;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#waveOffset}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:waveOffset
-     */
-    public static final int KeyCycle_waveOffset=16;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#wavePeriod}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:wavePeriod
-     */
-    public static final int KeyCycle_wavePeriod=17;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#waveShape}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bounce</td><td>6</td><td></td></tr>
-     * <tr><td>cos</td><td>5</td><td></td></tr>
-     * <tr><td>reverseSawtooth</td><td>4</td><td></td></tr>
-     * <tr><td>sawtooth</td><td>3</td><td></td></tr>
-     * <tr><td>sin</td><td>0</td><td></td></tr>
-     * <tr><td>square</td><td>1</td><td></td></tr>
-     * <tr><td>triangle</td><td>2</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:waveShape
-     */
-    public static final int KeyCycle_waveShape=18;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#waveVariesBy}
-     * attribute's value can be found in the {@link #KeyCycle} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>path</td><td>1</td><td></td></tr>
-     * <tr><td>position</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:waveVariesBy
-     */
-    public static final int KeyCycle_waveVariesBy=19;
-    public static final int[] KeyFrame={
-    };
-    public static final int[] KeyFramesAcceleration={
-    };
-    public static final int[] KeyFramesVelocity={
-    };
-    /**
-     * Attributes that can be used with a KeyPosition.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #KeyPosition_curveFit com.torgtek.matidsms:curveFit}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyPosition_drawPath com.torgtek.matidsms:drawPath}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyPosition_framePosition com.torgtek.matidsms:framePosition}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyPosition_keyPositionType com.torgtek.matidsms:keyPositionType}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyPosition_motionTarget com.torgtek.matidsms:motionTarget}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyPosition_pathMotionArc com.torgtek.matidsms:pathMotionArc}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyPosition_percentHeight com.torgtek.matidsms:percentHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyPosition_percentWidth com.torgtek.matidsms:percentWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyPosition_percentX com.torgtek.matidsms:percentX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyPosition_percentY com.torgtek.matidsms:percentY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyPosition_sizePercent com.torgtek.matidsms:sizePercent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyPosition_transitionEasing com.torgtek.matidsms:transitionEasing}</code></td><td></td></tr>
-     * </table>
-     * @see #KeyPosition_curveFit
-     * @see #KeyPosition_drawPath
-     * @see #KeyPosition_framePosition
-     * @see #KeyPosition_keyPositionType
-     * @see #KeyPosition_motionTarget
-     * @see #KeyPosition_pathMotionArc
-     * @see #KeyPosition_percentHeight
-     * @see #KeyPosition_percentWidth
-     * @see #KeyPosition_percentX
-     * @see #KeyPosition_percentY
-     * @see #KeyPosition_sizePercent
-     * @see #KeyPosition_transitionEasing
-     */
-    public static final int[] KeyPosition={
-      0x7f020079, 0x7f020094, 0x7f0200be, 0x7f0200d0, 
-      0x7f020131, 0x7f02014a, 0x7f02014c, 0x7f02014d, 
-      0x7f02014e, 0x7f02014f, 0x7f020173, 0x7f0201b6
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#curveFit}
-     * attribute's value can be found in the {@link #KeyPosition} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>linear</td><td>1</td><td></td></tr>
-     * <tr><td>spline</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:curveFit
-     */
-    public static final int KeyPosition_curveFit=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#drawPath}
-     * attribute's value can be found in the {@link #KeyPosition} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>asConfigured</td><td>4</td><td></td></tr>
-     * <tr><td>deltaRelative</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>path</td><td>1</td><td></td></tr>
-     * <tr><td>pathRelative</td><td>2</td><td></td></tr>
-     * <tr><td>rectangles</td><td>5</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:drawPath
-     */
-    public static final int KeyPosition_drawPath=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#framePosition}
-     * attribute's value can be found in the {@link #KeyPosition} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:framePosition
-     */
-    public static final int KeyPosition_framePosition=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#keyPositionType}
-     * attribute's value can be found in the {@link #KeyPosition} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>deltaRelative</td><td>0</td><td></td></tr>
-     * <tr><td>parentRelative</td><td>2</td><td></td></tr>
-     * <tr><td>pathRelative</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:keyPositionType
-     */
-    public static final int KeyPosition_keyPositionType=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionTarget}
-     * attribute's value can be found in the {@link #KeyPosition} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:motionTarget
-     */
-    public static final int KeyPosition_motionTarget=4;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#pathMotionArc}
-     * attribute's value can be found in the {@link #KeyPosition} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>flip</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>startHorizontal</td><td>2</td><td></td></tr>
-     * <tr><td>startVertical</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:pathMotionArc
-     */
-    public static final int KeyPosition_pathMotionArc=5;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#percentHeight}
-     * attribute's value can be found in the {@link #KeyPosition} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:percentHeight
-     */
-    public static final int KeyPosition_percentHeight=6;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#percentWidth}
-     * attribute's value can be found in the {@link #KeyPosition} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:percentWidth
-     */
-    public static final int KeyPosition_percentWidth=7;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#percentX}
-     * attribute's value can be found in the {@link #KeyPosition} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:percentX
-     */
-    public static final int KeyPosition_percentX=8;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#percentY}
-     * attribute's value can be found in the {@link #KeyPosition} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:percentY
-     */
-    public static final int KeyPosition_percentY=9;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#sizePercent}
-     * attribute's value can be found in the {@link #KeyPosition} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:sizePercent
-     */
-    public static final int KeyPosition_sizePercent=10;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionEasing}
-     * attribute's value can be found in the {@link #KeyPosition} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>accelerate</td><td>1</td><td></td></tr>
-     * <tr><td>decelerate</td><td>2</td><td></td></tr>
-     * <tr><td>linear</td><td>3</td><td></td></tr>
-     * <tr><td>standard</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:transitionEasing
-     */
-    public static final int KeyPosition_transitionEasing=11;
-    /**
-     * Attributes that can be used with a KeyTimeCycle.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_android_alpha android:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_android_translationX android:translationX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_android_translationY android:translationY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_android_scaleX android:scaleX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_android_scaleY android:scaleY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_android_rotation android:rotation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_android_rotationX android:rotationX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_android_rotationY android:rotationY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_android_translationZ android:translationZ}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_android_elevation android:elevation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_curveFit com.torgtek.matidsms:curveFit}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_framePosition com.torgtek.matidsms:framePosition}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_motionProgress com.torgtek.matidsms:motionProgress}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_motionTarget com.torgtek.matidsms:motionTarget}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_transitionEasing com.torgtek.matidsms:transitionEasing}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_transitionPathRotate com.torgtek.matidsms:transitionPathRotate}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_waveDecay com.torgtek.matidsms:waveDecay}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_waveOffset com.torgtek.matidsms:waveOffset}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_wavePeriod com.torgtek.matidsms:wavePeriod}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTimeCycle_waveShape com.torgtek.matidsms:waveShape}</code></td><td></td></tr>
-     * </table>
-     * @see #KeyTimeCycle_android_alpha
-     * @see #KeyTimeCycle_android_translationX
-     * @see #KeyTimeCycle_android_translationY
-     * @see #KeyTimeCycle_android_scaleX
-     * @see #KeyTimeCycle_android_scaleY
-     * @see #KeyTimeCycle_android_rotation
-     * @see #KeyTimeCycle_android_rotationX
-     * @see #KeyTimeCycle_android_rotationY
-     * @see #KeyTimeCycle_android_translationZ
-     * @see #KeyTimeCycle_android_elevation
-     * @see #KeyTimeCycle_curveFit
-     * @see #KeyTimeCycle_framePosition
-     * @see #KeyTimeCycle_motionProgress
-     * @see #KeyTimeCycle_motionTarget
-     * @see #KeyTimeCycle_transitionEasing
-     * @see #KeyTimeCycle_transitionPathRotate
-     * @see #KeyTimeCycle_waveDecay
-     * @see #KeyTimeCycle_waveOffset
-     * @see #KeyTimeCycle_wavePeriod
-     * @see #KeyTimeCycle_waveShape
-     */
-    public static final int[] KeyTimeCycle={
-      0x0101031f, 0x01010322, 0x01010323, 0x01010324, 
-      0x01010325, 0x01010326, 0x01010327, 0x01010328, 
-      0x010103fa, 0x01010440, 0x7f020079, 0x7f0200be, 
-      0x7f02012f, 0x7f020131, 0x7f0201b6, 0x7f0201b8, 
-      0x7f0201c1, 0x7f0201c2, 0x7f0201c3, 0x7f0201c4
-    };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#alpha}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:alpha
-     */
-    public static final int KeyTimeCycle_android_alpha=0;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationX}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationX
-     */
-    public static final int KeyTimeCycle_android_translationX=1;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationY}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationY
-     */
-    public static final int KeyTimeCycle_android_translationY=2;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#scaleX}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:scaleX
-     */
-    public static final int KeyTimeCycle_android_scaleX=3;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#scaleY}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:scaleY
-     */
-    public static final int KeyTimeCycle_android_scaleY=4;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotation}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotation
-     */
-    public static final int KeyTimeCycle_android_rotation=5;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotationX}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotationX
-     */
-    public static final int KeyTimeCycle_android_rotationX=6;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotationY}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotationY
-     */
-    public static final int KeyTimeCycle_android_rotationY=7;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationZ}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationZ
-     */
-    public static final int KeyTimeCycle_android_translationZ=8;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#elevation}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:elevation
-     */
-    public static final int KeyTimeCycle_android_elevation=9;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#curveFit}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>linear</td><td>1</td><td></td></tr>
-     * <tr><td>spline</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:curveFit
-     */
-    public static final int KeyTimeCycle_curveFit=10;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#framePosition}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:framePosition
-     */
-    public static final int KeyTimeCycle_framePosition=11;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionProgress}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:motionProgress
-     */
-    public static final int KeyTimeCycle_motionProgress=12;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionTarget}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:motionTarget
-     */
-    public static final int KeyTimeCycle_motionTarget=13;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionEasing}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>accelerate</td><td>1</td><td></td></tr>
-     * <tr><td>decelerate</td><td>2</td><td></td></tr>
-     * <tr><td>linear</td><td>3</td><td></td></tr>
-     * <tr><td>standard</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:transitionEasing
-     */
-    public static final int KeyTimeCycle_transitionEasing=14;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionPathRotate}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:transitionPathRotate
-     */
-    public static final int KeyTimeCycle_transitionPathRotate=15;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#waveDecay}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:waveDecay
-     */
-    public static final int KeyTimeCycle_waveDecay=16;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#waveOffset}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:waveOffset
-     */
-    public static final int KeyTimeCycle_waveOffset=17;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#wavePeriod}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:wavePeriod
-     */
-    public static final int KeyTimeCycle_wavePeriod=18;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#waveShape}
-     * attribute's value can be found in the {@link #KeyTimeCycle} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bounce</td><td>6</td><td></td></tr>
-     * <tr><td>cos</td><td>5</td><td></td></tr>
-     * <tr><td>reverseSawtooth</td><td>4</td><td></td></tr>
-     * <tr><td>sawtooth</td><td>3</td><td></td></tr>
-     * <tr><td>sin</td><td>0</td><td></td></tr>
-     * <tr><td>square</td><td>1</td><td></td></tr>
-     * <tr><td>triangle</td><td>2</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:waveShape
-     */
-    public static final int KeyTimeCycle_waveShape=19;
-    /**
-     * Attributes that can be used with a KeyTrigger.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #KeyTrigger_framePosition com.torgtek.matidsms:framePosition}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTrigger_motionTarget com.torgtek.matidsms:motionTarget}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTrigger_motion_postLayoutCollision com.torgtek.matidsms:motion_postLayoutCollision}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTrigger_motion_triggerOnCollision com.torgtek.matidsms:motion_triggerOnCollision}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTrigger_onCross com.torgtek.matidsms:onCross}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTrigger_onNegativeCross com.torgtek.matidsms:onNegativeCross}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTrigger_onPositiveCross com.torgtek.matidsms:onPositiveCross}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTrigger_triggerId com.torgtek.matidsms:triggerId}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTrigger_triggerReceiver com.torgtek.matidsms:triggerReceiver}</code></td><td></td></tr>
-     * <tr><td><code>{@link #KeyTrigger_triggerSlack com.torgtek.matidsms:triggerSlack}</code></td><td></td></tr>
-     * </table>
-     * @see #KeyTrigger_framePosition
-     * @see #KeyTrigger_motionTarget
-     * @see #KeyTrigger_motion_postLayoutCollision
-     * @see #KeyTrigger_motion_triggerOnCollision
-     * @see #KeyTrigger_onCross
-     * @see #KeyTrigger_onNegativeCross
-     * @see #KeyTrigger_onPositiveCross
-     * @see #KeyTrigger_triggerId
-     * @see #KeyTrigger_triggerReceiver
-     * @see #KeyTrigger_triggerSlack
-     */
-    public static final int[] KeyTrigger={
-      0x7f0200be, 0x7f020131, 0x7f020132, 0x7f020133, 
-      0x7f02013b, 0x7f02013d, 0x7f02013e, 0x7f0201b9, 
-      0x7f0201ba, 0x7f0201bb
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#framePosition}
-     * attribute's value can be found in the {@link #KeyTrigger} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:framePosition
-     */
-    public static final int KeyTrigger_framePosition=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionTarget}
-     * attribute's value can be found in the {@link #KeyTrigger} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:motionTarget
-     */
-    public static final int KeyTrigger_motionTarget=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motion_postLayoutCollision}
-     * attribute's value can be found in the {@link #KeyTrigger} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:motion_postLayoutCollision
-     */
-    public static final int KeyTrigger_motion_postLayoutCollision=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motion_triggerOnCollision}
-     * attribute's value can be found in the {@link #KeyTrigger} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:motion_triggerOnCollision
-     */
-    public static final int KeyTrigger_motion_triggerOnCollision=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#onCross}
-     * attribute's value can be found in the {@link #KeyTrigger} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:onCross
-     */
-    public static final int KeyTrigger_onCross=4;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#onNegativeCross}
-     * attribute's value can be found in the {@link #KeyTrigger} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:onNegativeCross
-     */
-    public static final int KeyTrigger_onNegativeCross=5;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#onPositiveCross}
-     * attribute's value can be found in the {@link #KeyTrigger} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:onPositiveCross
-     */
-    public static final int KeyTrigger_onPositiveCross=6;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#triggerId}
-     * attribute's value can be found in the {@link #KeyTrigger} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:triggerId
-     */
-    public static final int KeyTrigger_triggerId=7;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#triggerReceiver}
-     * attribute's value can be found in the {@link #KeyTrigger} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:triggerReceiver
-     */
-    public static final int KeyTrigger_triggerReceiver=8;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#triggerSlack}
-     * attribute's value can be found in the {@link #KeyTrigger} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:triggerSlack
-     */
-    public static final int KeyTrigger_triggerSlack=9;
-    /**
-     * Attributes that can be used with a Layout.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #Layout_android_orientation android:orientation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_android_layout_width android:layout_width}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_android_layout_height android:layout_height}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_android_layout_marginLeft android:layout_marginLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_android_layout_marginTop android:layout_marginTop}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_android_layout_marginRight android:layout_marginRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_android_layout_marginBottom android:layout_marginBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_android_layout_marginStart android:layout_marginStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_android_layout_marginEnd android:layout_marginEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_barrierAllowsGoneWidgets com.torgtek.matidsms:barrierAllowsGoneWidgets}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_barrierDirection com.torgtek.matidsms:barrierDirection}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_barrierMargin com.torgtek.matidsms:barrierMargin}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_chainUseRtl com.torgtek.matidsms:chainUseRtl}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_constraint_referenced_ids com.torgtek.matidsms:constraint_referenced_ids}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_constraint_referenced_tags com.torgtek.matidsms:constraint_referenced_tags}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constrainedHeight com.torgtek.matidsms:layout_constrainedHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constrainedWidth com.torgtek.matidsms:layout_constrainedWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintBaseline_creator com.torgtek.matidsms:layout_constraintBaseline_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintBaseline_toBaselineOf com.torgtek.matidsms:layout_constraintBaseline_toBaselineOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintBottom_creator com.torgtek.matidsms:layout_constraintBottom_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintBottom_toBottomOf com.torgtek.matidsms:layout_constraintBottom_toBottomOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintBottom_toTopOf com.torgtek.matidsms:layout_constraintBottom_toTopOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintCircle com.torgtek.matidsms:layout_constraintCircle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintCircleAngle com.torgtek.matidsms:layout_constraintCircleAngle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintCircleRadius com.torgtek.matidsms:layout_constraintCircleRadius}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintDimensionRatio com.torgtek.matidsms:layout_constraintDimensionRatio}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintEnd_toEndOf com.torgtek.matidsms:layout_constraintEnd_toEndOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintEnd_toStartOf com.torgtek.matidsms:layout_constraintEnd_toStartOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintGuide_begin com.torgtek.matidsms:layout_constraintGuide_begin}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintGuide_end com.torgtek.matidsms:layout_constraintGuide_end}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintGuide_percent com.torgtek.matidsms:layout_constraintGuide_percent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintHeight_default com.torgtek.matidsms:layout_constraintHeight_default}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintHeight_max com.torgtek.matidsms:layout_constraintHeight_max}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintHeight_min com.torgtek.matidsms:layout_constraintHeight_min}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintHeight_percent com.torgtek.matidsms:layout_constraintHeight_percent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintHorizontal_bias com.torgtek.matidsms:layout_constraintHorizontal_bias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintHorizontal_chainStyle com.torgtek.matidsms:layout_constraintHorizontal_chainStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintHorizontal_weight com.torgtek.matidsms:layout_constraintHorizontal_weight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintLeft_creator com.torgtek.matidsms:layout_constraintLeft_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintLeft_toLeftOf com.torgtek.matidsms:layout_constraintLeft_toLeftOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintLeft_toRightOf com.torgtek.matidsms:layout_constraintLeft_toRightOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintRight_creator com.torgtek.matidsms:layout_constraintRight_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintRight_toLeftOf com.torgtek.matidsms:layout_constraintRight_toLeftOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintRight_toRightOf com.torgtek.matidsms:layout_constraintRight_toRightOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintStart_toEndOf com.torgtek.matidsms:layout_constraintStart_toEndOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintStart_toStartOf com.torgtek.matidsms:layout_constraintStart_toStartOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintTop_creator com.torgtek.matidsms:layout_constraintTop_creator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintTop_toBottomOf com.torgtek.matidsms:layout_constraintTop_toBottomOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintTop_toTopOf com.torgtek.matidsms:layout_constraintTop_toTopOf}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintVertical_bias com.torgtek.matidsms:layout_constraintVertical_bias}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintVertical_chainStyle com.torgtek.matidsms:layout_constraintVertical_chainStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintVertical_weight com.torgtek.matidsms:layout_constraintVertical_weight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintWidth_default com.torgtek.matidsms:layout_constraintWidth_default}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintWidth_max com.torgtek.matidsms:layout_constraintWidth_max}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintWidth_min com.torgtek.matidsms:layout_constraintWidth_min}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_constraintWidth_percent com.torgtek.matidsms:layout_constraintWidth_percent}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_editor_absoluteX com.torgtek.matidsms:layout_editor_absoluteX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_editor_absoluteY com.torgtek.matidsms:layout_editor_absoluteY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_goneMarginBottom com.torgtek.matidsms:layout_goneMarginBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_goneMarginEnd com.torgtek.matidsms:layout_goneMarginEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_goneMarginLeft com.torgtek.matidsms:layout_goneMarginLeft}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_goneMarginRight com.torgtek.matidsms:layout_goneMarginRight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_goneMarginStart com.torgtek.matidsms:layout_goneMarginStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_layout_goneMarginTop com.torgtek.matidsms:layout_goneMarginTop}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_maxHeight com.torgtek.matidsms:maxHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_maxWidth com.torgtek.matidsms:maxWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_minHeight com.torgtek.matidsms:minHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Layout_minWidth com.torgtek.matidsms:minWidth}</code></td><td></td></tr>
-     * </table>
-     * @see #Layout_android_orientation
-     * @see #Layout_android_layout_width
-     * @see #Layout_android_layout_height
-     * @see #Layout_android_layout_marginLeft
-     * @see #Layout_android_layout_marginTop
-     * @see #Layout_android_layout_marginRight
-     * @see #Layout_android_layout_marginBottom
-     * @see #Layout_android_layout_marginStart
-     * @see #Layout_android_layout_marginEnd
-     * @see #Layout_barrierAllowsGoneWidgets
-     * @see #Layout_barrierDirection
-     * @see #Layout_barrierMargin
-     * @see #Layout_chainUseRtl
-     * @see #Layout_constraint_referenced_ids
-     * @see #Layout_constraint_referenced_tags
-     * @see #Layout_layout_constrainedHeight
-     * @see #Layout_layout_constrainedWidth
-     * @see #Layout_layout_constraintBaseline_creator
-     * @see #Layout_layout_constraintBaseline_toBaselineOf
-     * @see #Layout_layout_constraintBottom_creator
-     * @see #Layout_layout_constraintBottom_toBottomOf
-     * @see #Layout_layout_constraintBottom_toTopOf
-     * @see #Layout_layout_constraintCircle
-     * @see #Layout_layout_constraintCircleAngle
-     * @see #Layout_layout_constraintCircleRadius
-     * @see #Layout_layout_constraintDimensionRatio
-     * @see #Layout_layout_constraintEnd_toEndOf
-     * @see #Layout_layout_constraintEnd_toStartOf
-     * @see #Layout_layout_constraintGuide_begin
-     * @see #Layout_layout_constraintGuide_end
-     * @see #Layout_layout_constraintGuide_percent
-     * @see #Layout_layout_constraintHeight_default
-     * @see #Layout_layout_constraintHeight_max
-     * @see #Layout_layout_constraintHeight_min
-     * @see #Layout_layout_constraintHeight_percent
-     * @see #Layout_layout_constraintHorizontal_bias
-     * @see #Layout_layout_constraintHorizontal_chainStyle
-     * @see #Layout_layout_constraintHorizontal_weight
-     * @see #Layout_layout_constraintLeft_creator
-     * @see #Layout_layout_constraintLeft_toLeftOf
-     * @see #Layout_layout_constraintLeft_toRightOf
-     * @see #Layout_layout_constraintRight_creator
-     * @see #Layout_layout_constraintRight_toLeftOf
-     * @see #Layout_layout_constraintRight_toRightOf
-     * @see #Layout_layout_constraintStart_toEndOf
-     * @see #Layout_layout_constraintStart_toStartOf
-     * @see #Layout_layout_constraintTop_creator
-     * @see #Layout_layout_constraintTop_toBottomOf
-     * @see #Layout_layout_constraintTop_toTopOf
-     * @see #Layout_layout_constraintVertical_bias
-     * @see #Layout_layout_constraintVertical_chainStyle
-     * @see #Layout_layout_constraintVertical_weight
-     * @see #Layout_layout_constraintWidth_default
-     * @see #Layout_layout_constraintWidth_max
-     * @see #Layout_layout_constraintWidth_min
-     * @see #Layout_layout_constraintWidth_percent
-     * @see #Layout_layout_editor_absoluteX
-     * @see #Layout_layout_editor_absoluteY
-     * @see #Layout_layout_goneMarginBottom
-     * @see #Layout_layout_goneMarginEnd
-     * @see #Layout_layout_goneMarginLeft
-     * @see #Layout_layout_goneMarginRight
-     * @see #Layout_layout_goneMarginStart
-     * @see #Layout_layout_goneMarginTop
-     * @see #Layout_maxHeight
-     * @see #Layout_maxWidth
-     * @see #Layout_minHeight
-     * @see #Layout_minWidth
-     */
-    public static final int[] Layout={
-      0x010100c4, 0x010100f4, 0x010100f5, 0x010100f7, 
-      0x010100f8, 0x010100f9, 0x010100fa, 0x010103b5, 
-      0x010103b6, 0x7f02003d, 0x7f02003e, 0x7f02003f, 
-      0x7f02004f, 0x7f020069, 0x7f02006a, 0x7f0200d9, 
-      0x7f0200da, 0x7f0200db, 0x7f0200dc, 0x7f0200dd, 
-      0x7f0200de, 0x7f0200df, 0x7f0200e0, 0x7f0200e1, 
-      0x7f0200e2, 0x7f0200e3, 0x7f0200e4, 0x7f0200e5, 
-      0x7f0200e6, 0x7f0200e7, 0x7f0200e8, 0x7f0200e9, 
-      0x7f0200ea, 0x7f0200eb, 0x7f0200ec, 0x7f0200ed, 
-      0x7f0200ee, 0x7f0200ef, 0x7f0200f0, 0x7f0200f1, 
-      0x7f0200f2, 0x7f0200f3, 0x7f0200f4, 0x7f0200f5, 
-      0x7f0200f6, 0x7f0200f7, 0x7f0200f9, 0x7f0200fa, 
-      0x7f0200fb, 0x7f0200fc, 0x7f0200fd, 0x7f0200fe, 
-      0x7f0200ff, 0x7f020100, 0x7f020101, 0x7f020102, 
-      0x7f020104, 0x7f020105, 0x7f020106, 0x7f020107, 
-      0x7f020108, 0x7f020109, 0x7f02010a, 0x7f02010b, 
-      0x7f020120, 0x7f020122, 0x7f020124, 0x7f020125
+    public static final int[] LinearConstraintLayout={
+      0x010100c4
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#orientation}
-     * attribute's value can be found in the {@link #Layout} array.
+     * attribute's value can be found in the {@link #LinearConstraintLayout} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -16591,975 +11279,7 @@ public final class R {
      *
      * @attr name android:orientation
      */
-    public static final int Layout_android_orientation=0;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_width}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>fill_parent</td><td>ffffffff</td><td></td></tr>
-     * <tr><td>match_parent</td><td>ffffffff</td><td></td></tr>
-     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:layout_width
-     */
-    public static final int Layout_android_layout_width=1;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_height}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>fill_parent</td><td>ffffffff</td><td></td></tr>
-     * <tr><td>match_parent</td><td>ffffffff</td><td></td></tr>
-     * <tr><td>wrap_content</td><td>fffffffe</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:layout_height
-     */
-    public static final int Layout_android_layout_height=2;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_marginLeft}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:layout_marginLeft
-     */
-    public static final int Layout_android_layout_marginLeft=3;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_marginTop}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:layout_marginTop
-     */
-    public static final int Layout_android_layout_marginTop=4;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_marginRight}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:layout_marginRight
-     */
-    public static final int Layout_android_layout_marginRight=5;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_marginBottom}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:layout_marginBottom
-     */
-    public static final int Layout_android_layout_marginBottom=6;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_marginStart}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:layout_marginStart
-     */
-    public static final int Layout_android_layout_marginStart=7;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#layout_marginEnd}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:layout_marginEnd
-     */
-    public static final int Layout_android_layout_marginEnd=8;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#barrierAllowsGoneWidgets}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:barrierAllowsGoneWidgets
-     */
-    public static final int Layout_barrierAllowsGoneWidgets=9;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#barrierDirection}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>3</td><td></td></tr>
-     * <tr><td>end</td><td>6</td><td></td></tr>
-     * <tr><td>left</td><td>0</td><td></td></tr>
-     * <tr><td>right</td><td>1</td><td></td></tr>
-     * <tr><td>start</td><td>5</td><td></td></tr>
-     * <tr><td>top</td><td>2</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:barrierDirection
-     */
-    public static final int Layout_barrierDirection=10;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#barrierMargin}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:barrierMargin
-     */
-    public static final int Layout_barrierMargin=11;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#chainUseRtl}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:chainUseRtl
-     */
-    public static final int Layout_chainUseRtl=12;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraint_referenced_ids}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:constraint_referenced_ids
-     */
-    public static final int Layout_constraint_referenced_ids=13;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraint_referenced_tags}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:constraint_referenced_tags
-     */
-    public static final int Layout_constraint_referenced_tags=14;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constrainedHeight}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constrainedHeight
-     */
-    public static final int Layout_layout_constrainedHeight=15;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constrainedWidth}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constrainedWidth
-     */
-    public static final int Layout_layout_constrainedWidth=16;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBaseline_creator}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintBaseline_creator
-     */
-    public static final int Layout_layout_constraintBaseline_creator=17;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBaseline_toBaselineOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintBaseline_toBaselineOf
-     */
-    public static final int Layout_layout_constraintBaseline_toBaselineOf=18;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBottom_creator}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintBottom_creator
-     */
-    public static final int Layout_layout_constraintBottom_creator=19;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBottom_toBottomOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintBottom_toBottomOf
-     */
-    public static final int Layout_layout_constraintBottom_toBottomOf=20;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintBottom_toTopOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintBottom_toTopOf
-     */
-    public static final int Layout_layout_constraintBottom_toTopOf=21;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintCircle}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintCircle
-     */
-    public static final int Layout_layout_constraintCircle=22;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintCircleAngle}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintCircleAngle
-     */
-    public static final int Layout_layout_constraintCircleAngle=23;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintCircleRadius}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintCircleRadius
-     */
-    public static final int Layout_layout_constraintCircleRadius=24;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintDimensionRatio}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintDimensionRatio
-     */
-    public static final int Layout_layout_constraintDimensionRatio=25;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintEnd_toEndOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintEnd_toEndOf
-     */
-    public static final int Layout_layout_constraintEnd_toEndOf=26;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintEnd_toStartOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintEnd_toStartOf
-     */
-    public static final int Layout_layout_constraintEnd_toStartOf=27;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintGuide_begin}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintGuide_begin
-     */
-    public static final int Layout_layout_constraintGuide_begin=28;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintGuide_end}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintGuide_end
-     */
-    public static final int Layout_layout_constraintGuide_end=29;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintGuide_percent}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintGuide_percent
-     */
-    public static final int Layout_layout_constraintGuide_percent=30;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_default}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>percent</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>wrap</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHeight_default
-     */
-    public static final int Layout_layout_constraintHeight_default=31;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_max}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHeight_max
-     */
-    public static final int Layout_layout_constraintHeight_max=32;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_min}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHeight_min
-     */
-    public static final int Layout_layout_constraintHeight_min=33;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHeight_percent}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHeight_percent
-     */
-    public static final int Layout_layout_constraintHeight_percent=34;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHorizontal_bias}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHorizontal_bias
-     */
-    public static final int Layout_layout_constraintHorizontal_bias=35;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHorizontal_chainStyle}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHorizontal_chainStyle
-     */
-    public static final int Layout_layout_constraintHorizontal_chainStyle=36;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintHorizontal_weight}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintHorizontal_weight
-     */
-    public static final int Layout_layout_constraintHorizontal_weight=37;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintLeft_creator}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintLeft_creator
-     */
-    public static final int Layout_layout_constraintLeft_creator=38;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintLeft_toLeftOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintLeft_toLeftOf
-     */
-    public static final int Layout_layout_constraintLeft_toLeftOf=39;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintLeft_toRightOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintLeft_toRightOf
-     */
-    public static final int Layout_layout_constraintLeft_toRightOf=40;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintRight_creator}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintRight_creator
-     */
-    public static final int Layout_layout_constraintRight_creator=41;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintRight_toLeftOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintRight_toLeftOf
-     */
-    public static final int Layout_layout_constraintRight_toLeftOf=42;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintRight_toRightOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintRight_toRightOf
-     */
-    public static final int Layout_layout_constraintRight_toRightOf=43;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintStart_toEndOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintStart_toEndOf
-     */
-    public static final int Layout_layout_constraintStart_toEndOf=44;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintStart_toStartOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintStart_toStartOf
-     */
-    public static final int Layout_layout_constraintStart_toStartOf=45;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTop_creator}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintTop_creator
-     */
-    public static final int Layout_layout_constraintTop_creator=46;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTop_toBottomOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintTop_toBottomOf
-     */
-    public static final int Layout_layout_constraintTop_toBottomOf=47;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTop_toTopOf}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>parent</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintTop_toTopOf
-     */
-    public static final int Layout_layout_constraintTop_toTopOf=48;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintVertical_bias}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintVertical_bias
-     */
-    public static final int Layout_layout_constraintVertical_bias=49;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintVertical_chainStyle}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>packed</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>spread_inside</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintVertical_chainStyle
-     */
-    public static final int Layout_layout_constraintVertical_chainStyle=50;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintVertical_weight}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintVertical_weight
-     */
-    public static final int Layout_layout_constraintVertical_weight=51;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_default}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>percent</td><td>2</td><td></td></tr>
-     * <tr><td>spread</td><td>0</td><td></td></tr>
-     * <tr><td>wrap</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintWidth_default
-     */
-    public static final int Layout_layout_constraintWidth_default=52;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_max}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintWidth_max
-     */
-    public static final int Layout_layout_constraintWidth_max=53;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_min}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>wrap</td><td>fffffffe</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintWidth_min
-     */
-    public static final int Layout_layout_constraintWidth_min=54;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintWidth_percent}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintWidth_percent
-     */
-    public static final int Layout_layout_constraintWidth_percent=55;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_editor_absoluteX}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_editor_absoluteX
-     */
-    public static final int Layout_layout_editor_absoluteX=56;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_editor_absoluteY}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_editor_absoluteY
-     */
-    public static final int Layout_layout_editor_absoluteY=57;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginBottom}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_goneMarginBottom
-     */
-    public static final int Layout_layout_goneMarginBottom=58;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginEnd}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_goneMarginEnd
-     */
-    public static final int Layout_layout_goneMarginEnd=59;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginLeft}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_goneMarginLeft
-     */
-    public static final int Layout_layout_goneMarginLeft=60;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginRight}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_goneMarginRight
-     */
-    public static final int Layout_layout_goneMarginRight=61;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginStart}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_goneMarginStart
-     */
-    public static final int Layout_layout_goneMarginStart=62;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_goneMarginTop}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:layout_goneMarginTop
-     */
-    public static final int Layout_layout_goneMarginTop=63;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#maxHeight}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:maxHeight
-     */
-    public static final int Layout_maxHeight=64;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#maxWidth}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:maxWidth
-     */
-    public static final int Layout_maxWidth=65;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#minHeight}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:minHeight
-     */
-    public static final int Layout_minHeight=66;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#minWidth}
-     * attribute's value can be found in the {@link #Layout} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:minWidth
-     */
-    public static final int Layout_minWidth=67;
+    public static final int LinearConstraintLayout_android_orientation=0;
     /**
      * Attributes that can be used with a LinearLayoutCompat.
      * <p>Includes the following attributes:</p>
@@ -17590,8 +11310,8 @@ public final class R {
      */
     public static final int[] LinearLayoutCompat={
       0x010100af, 0x010100c4, 0x01010126, 0x01010127, 
-      0x01010128, 0x7f02008d, 0x7f02008f, 0x7f020123, 
-      0x7f02016e
+      0x01010128, 0x7f020071, 0x7f020073, 0x7f0200e7, 
+      0x7f020109
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#gravity}
@@ -17905,7 +11625,7 @@ public final class R {
      * @see #LoadingImageView_imageAspectRatioAdjust
      */
     public static final int[] LoadingImageView={
-      0x7f020052, 0x7f0200c9, 0x7f0200ca
+      0x7f02004d, 0x7f020096, 0x7f020097
     };
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#circleCrop}
@@ -18117,8 +11837,8 @@ public final class R {
       0x01010194, 0x010101de, 0x010101df, 0x010101e1, 
       0x010101e2, 0x010101e3, 0x010101e4, 0x010101e5, 
       0x0101026f, 0x7f02000d, 0x7f02001f, 0x7f020020, 
-      0x7f020028, 0x7f02006d, 0x7f0200c6, 0x7f0200c7, 
-      0x7f02013a, 0x7f02016d, 0x7f0201ae
+      0x7f02002b, 0x7f020062, 0x7f020093, 0x7f020094, 
+      0x7f0200ec, 0x7f020108, 0x7f020142
     };
     /**
      * <p>
@@ -18491,8 +12211,8 @@ public final class R {
      */
     public static final int[] MenuView={
       0x010100ae, 0x0101012c, 0x0101012d, 0x0101012e, 
-      0x0101012f, 0x01010130, 0x01010131, 0x7f020156, 
-      0x7f02017c
+      0x0101012f, 0x01010130, 0x01010131, 0x7f0200f8, 
+      0x7f020114
     };
     /**
      * <p>
@@ -18613,692 +12333,6 @@ public final class R {
      */
     public static final int MenuView_subMenuArrow=8;
     /**
-     * Attributes that can be used with a MockView.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #MockView_mock_diagonalsColor com.torgtek.matidsms:mock_diagonalsColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MockView_mock_label com.torgtek.matidsms:mock_label}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MockView_mock_labelBackgroundColor com.torgtek.matidsms:mock_labelBackgroundColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MockView_mock_labelColor com.torgtek.matidsms:mock_labelColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MockView_mock_showDiagonals com.torgtek.matidsms:mock_showDiagonals}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MockView_mock_showLabel com.torgtek.matidsms:mock_showLabel}</code></td><td></td></tr>
-     * </table>
-     * @see #MockView_mock_diagonalsColor
-     * @see #MockView_mock_label
-     * @see #MockView_mock_labelBackgroundColor
-     * @see #MockView_mock_labelColor
-     * @see #MockView_mock_showDiagonals
-     * @see #MockView_mock_showLabel
-     */
-    public static final int[] MockView={
-      0x7f020126, 0x7f020127, 0x7f020128, 0x7f020129, 
-      0x7f02012a, 0x7f02012b
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#mock_diagonalsColor}
-     * attribute's value can be found in the {@link #MockView} array.
-     *
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:mock_diagonalsColor
-     */
-    public static final int MockView_mock_diagonalsColor=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#mock_label}
-     * attribute's value can be found in the {@link #MockView} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:mock_label
-     */
-    public static final int MockView_mock_label=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#mock_labelBackgroundColor}
-     * attribute's value can be found in the {@link #MockView} array.
-     *
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:mock_labelBackgroundColor
-     */
-    public static final int MockView_mock_labelBackgroundColor=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#mock_labelColor}
-     * attribute's value can be found in the {@link #MockView} array.
-     *
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:mock_labelColor
-     */
-    public static final int MockView_mock_labelColor=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#mock_showDiagonals}
-     * attribute's value can be found in the {@link #MockView} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:mock_showDiagonals
-     */
-    public static final int MockView_mock_showDiagonals=4;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#mock_showLabel}
-     * attribute's value can be found in the {@link #MockView} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:mock_showLabel
-     */
-    public static final int MockView_mock_showLabel=5;
-    /**
-     * Attributes that can be used with a Motion.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #Motion_animate_relativeTo com.torgtek.matidsms:animate_relativeTo}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Motion_drawPath com.torgtek.matidsms:drawPath}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Motion_motionPathRotate com.torgtek.matidsms:motionPathRotate}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Motion_motionStagger com.torgtek.matidsms:motionStagger}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Motion_pathMotionArc com.torgtek.matidsms:pathMotionArc}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Motion_transitionEasing com.torgtek.matidsms:transitionEasing}</code></td><td></td></tr>
-     * </table>
-     * @see #Motion_animate_relativeTo
-     * @see #Motion_drawPath
-     * @see #Motion_motionPathRotate
-     * @see #Motion_motionStagger
-     * @see #Motion_pathMotionArc
-     * @see #Motion_transitionEasing
-     */
-    public static final int[] Motion={
-      0x7f02002a, 0x7f020094, 0x7f02012e, 0x7f020130, 
-      0x7f02014a, 0x7f0201b6
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#animate_relativeTo}
-     * attribute's value can be found in the {@link #Motion} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:animate_relativeTo
-     */
-    public static final int Motion_animate_relativeTo=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#drawPath}
-     * attribute's value can be found in the {@link #Motion} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>asConfigured</td><td>4</td><td></td></tr>
-     * <tr><td>deltaRelative</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>path</td><td>1</td><td></td></tr>
-     * <tr><td>pathRelative</td><td>2</td><td></td></tr>
-     * <tr><td>rectangles</td><td>5</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:drawPath
-     */
-    public static final int Motion_drawPath=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionPathRotate}
-     * attribute's value can be found in the {@link #Motion} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:motionPathRotate
-     */
-    public static final int Motion_motionPathRotate=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionStagger}
-     * attribute's value can be found in the {@link #Motion} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:motionStagger
-     */
-    public static final int Motion_motionStagger=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#pathMotionArc}
-     * attribute's value can be found in the {@link #Motion} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>flip</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>startHorizontal</td><td>2</td><td></td></tr>
-     * <tr><td>startVertical</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:pathMotionArc
-     */
-    public static final int Motion_pathMotionArc=4;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionEasing}
-     * attribute's value can be found in the {@link #Motion} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>accelerate</td><td>1</td><td></td></tr>
-     * <tr><td>decelerate</td><td>2</td><td></td></tr>
-     * <tr><td>linear</td><td>3</td><td></td></tr>
-     * <tr><td>standard</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:transitionEasing
-     */
-    public static final int Motion_transitionEasing=5;
-    /**
-     * Attributes that can be used with a MotionHelper.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #MotionHelper_onHide com.torgtek.matidsms:onHide}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MotionHelper_onShow com.torgtek.matidsms:onShow}</code></td><td></td></tr>
-     * </table>
-     * @see #MotionHelper_onHide
-     * @see #MotionHelper_onShow
-     */
-    public static final int[] MotionHelper={
-      0x7f02013c, 0x7f02013f
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#onHide}
-     * attribute's value can be found in the {@link #MotionHelper} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:onHide
-     */
-    public static final int MotionHelper_onHide=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#onShow}
-     * attribute's value can be found in the {@link #MotionHelper} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:onShow
-     */
-    public static final int MotionHelper_onShow=1;
-    /**
-     * Attributes that can be used with a MotionLayout.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #MotionLayout_applyMotionScene com.torgtek.matidsms:applyMotionScene}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MotionLayout_currentState com.torgtek.matidsms:currentState}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MotionLayout_layoutDescription com.torgtek.matidsms:layoutDescription}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MotionLayout_motionDebug com.torgtek.matidsms:motionDebug}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MotionLayout_motionProgress com.torgtek.matidsms:motionProgress}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MotionLayout_showPaths com.torgtek.matidsms:showPaths}</code></td><td></td></tr>
-     * </table>
-     * @see #MotionLayout_applyMotionScene
-     * @see #MotionLayout_currentState
-     * @see #MotionLayout_layoutDescription
-     * @see #MotionLayout_motionDebug
-     * @see #MotionLayout_motionProgress
-     * @see #MotionLayout_showPaths
-     */
-    public static final int[] MotionLayout={
-      0x7f02002b, 0x7f020078, 0x7f0200d4, 0x7f02012c, 
-      0x7f02012f, 0x7f02016f
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#applyMotionScene}
-     * attribute's value can be found in the {@link #MotionLayout} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:applyMotionScene
-     */
-    public static final int MotionLayout_applyMotionScene=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#currentState}
-     * attribute's value can be found in the {@link #MotionLayout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:currentState
-     */
-    public static final int MotionLayout_currentState=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layoutDescription}
-     * attribute's value can be found in the {@link #MotionLayout} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:layoutDescription
-     */
-    public static final int MotionLayout_layoutDescription=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionDebug}
-     * attribute's value can be found in the {@link #MotionLayout} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>NO_DEBUG</td><td>0</td><td></td></tr>
-     * <tr><td>SHOW_ALL</td><td>3</td><td></td></tr>
-     * <tr><td>SHOW_PATH</td><td>2</td><td></td></tr>
-     * <tr><td>SHOW_PROGRESS</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:motionDebug
-     */
-    public static final int MotionLayout_motionDebug=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionProgress}
-     * attribute's value can be found in the {@link #MotionLayout} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:motionProgress
-     */
-    public static final int MotionLayout_motionProgress=4;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#showPaths}
-     * attribute's value can be found in the {@link #MotionLayout} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:showPaths
-     */
-    public static final int MotionLayout_showPaths=5;
-    /**
-     * Attributes that can be used with a MotionScene.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #MotionScene_defaultDuration com.torgtek.matidsms:defaultDuration}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MotionScene_layoutDuringTransition com.torgtek.matidsms:layoutDuringTransition}</code></td><td></td></tr>
-     * </table>
-     * @see #MotionScene_defaultDuration
-     * @see #MotionScene_layoutDuringTransition
-     */
-    public static final int[] MotionScene={
-      0x7f020083, 0x7f0200d5
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#defaultDuration}
-     * attribute's value can be found in the {@link #MotionScene} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:defaultDuration
-     */
-    public static final int MotionScene_defaultDuration=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layoutDuringTransition}
-     * attribute's value can be found in the {@link #MotionScene} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>honorRequest</td><td>1</td><td></td></tr>
-     * <tr><td>ignoreRequest</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layoutDuringTransition
-     */
-    public static final int MotionScene_layoutDuringTransition=1;
-    /**
-     * Attributes that can be used with a MotionTelltales.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #MotionTelltales_telltales_tailColor com.torgtek.matidsms:telltales_tailColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MotionTelltales_telltales_tailScale com.torgtek.matidsms:telltales_tailScale}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MotionTelltales_telltales_velocityMode com.torgtek.matidsms:telltales_velocityMode}</code></td><td></td></tr>
-     * </table>
-     * @see #MotionTelltales_telltales_tailColor
-     * @see #MotionTelltales_telltales_tailScale
-     * @see #MotionTelltales_telltales_velocityMode
-     */
-    public static final int[] MotionTelltales={
-      0x7f020188, 0x7f020189, 0x7f02018a
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#telltales_tailColor}
-     * attribute's value can be found in the {@link #MotionTelltales} array.
-     *
-     * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
-     * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
-     * "<code>#<i>aarrggbb</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:telltales_tailColor
-     */
-    public static final int MotionTelltales_telltales_tailColor=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#telltales_tailScale}
-     * attribute's value can be found in the {@link #MotionTelltales} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:telltales_tailScale
-     */
-    public static final int MotionTelltales_telltales_tailScale=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#telltales_velocityMode}
-     * attribute's value can be found in the {@link #MotionTelltales} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>layout</td><td>0</td><td></td></tr>
-     * <tr><td>postLayout</td><td>1</td><td></td></tr>
-     * <tr><td>staticLayout</td><td>3</td><td></td></tr>
-     * <tr><td>staticPostLayout</td><td>2</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:telltales_velocityMode
-     */
-    public static final int MotionTelltales_telltales_velocityMode=2;
-    /**
-     * Attributes that can be used with a OnClick.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #OnClick_clickAction com.torgtek.matidsms:clickAction}</code></td><td></td></tr>
-     * <tr><td><code>{@link #OnClick_targetId com.torgtek.matidsms:targetId}</code></td><td></td></tr>
-     * </table>
-     * @see #OnClick_clickAction
-     * @see #OnClick_targetId
-     */
-    public static final int[] OnClick={
-      0x7f020054, 0x7f020187
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#clickAction}
-     * attribute's value can be found in the {@link #OnClick} array.
-     *
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>jumpToEnd</td><td>100</td><td></td></tr>
-     * <tr><td>jumpToStart</td><td>1000</td><td></td></tr>
-     * <tr><td>toggle</td><td>11</td><td></td></tr>
-     * <tr><td>transitionToEnd</td><td>1</td><td></td></tr>
-     * <tr><td>transitionToStart</td><td>10</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:clickAction
-     */
-    public static final int OnClick_clickAction=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#targetId}
-     * attribute's value can be found in the {@link #OnClick} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:targetId
-     */
-    public static final int OnClick_targetId=1;
-    /**
-     * Attributes that can be used with a OnSwipe.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #OnSwipe_dragDirection com.torgtek.matidsms:dragDirection}</code></td><td></td></tr>
-     * <tr><td><code>{@link #OnSwipe_dragScale com.torgtek.matidsms:dragScale}</code></td><td></td></tr>
-     * <tr><td><code>{@link #OnSwipe_dragThreshold com.torgtek.matidsms:dragThreshold}</code></td><td></td></tr>
-     * <tr><td><code>{@link #OnSwipe_limitBoundsTo com.torgtek.matidsms:limitBoundsTo}</code></td><td></td></tr>
-     * <tr><td><code>{@link #OnSwipe_maxAcceleration com.torgtek.matidsms:maxAcceleration}</code></td><td></td></tr>
-     * <tr><td><code>{@link #OnSwipe_maxVelocity com.torgtek.matidsms:maxVelocity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #OnSwipe_moveWhenScrollAtTop com.torgtek.matidsms:moveWhenScrollAtTop}</code></td><td></td></tr>
-     * <tr><td><code>{@link #OnSwipe_nestedScrollFlags com.torgtek.matidsms:nestedScrollFlags}</code></td><td></td></tr>
-     * <tr><td><code>{@link #OnSwipe_onTouchUp com.torgtek.matidsms:onTouchUp}</code></td><td></td></tr>
-     * <tr><td><code>{@link #OnSwipe_touchAnchorId com.torgtek.matidsms:touchAnchorId}</code></td><td></td></tr>
-     * <tr><td><code>{@link #OnSwipe_touchAnchorSide com.torgtek.matidsms:touchAnchorSide}</code></td><td></td></tr>
-     * <tr><td><code>{@link #OnSwipe_touchRegionId com.torgtek.matidsms:touchRegionId}</code></td><td></td></tr>
-     * </table>
-     * @see #OnSwipe_dragDirection
-     * @see #OnSwipe_dragScale
-     * @see #OnSwipe_dragThreshold
-     * @see #OnSwipe_limitBoundsTo
-     * @see #OnSwipe_maxAcceleration
-     * @see #OnSwipe_maxVelocity
-     * @see #OnSwipe_moveWhenScrollAtTop
-     * @see #OnSwipe_nestedScrollFlags
-     * @see #OnSwipe_onTouchUp
-     * @see #OnSwipe_touchAnchorId
-     * @see #OnSwipe_touchAnchorSide
-     * @see #OnSwipe_touchRegionId
-     */
-    public static final int[] OnSwipe={
-      0x7f020091, 0x7f020092, 0x7f020093, 0x7f02010f, 
-      0x7f02011e, 0x7f020121, 0x7f020134, 0x7f020139, 
-      0x7f020140, 0x7f0201af, 0x7f0201b0, 0x7f0201b1
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#dragDirection}
-     * attribute's value can be found in the {@link #OnSwipe} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>dragDown</td><td>1</td><td></td></tr>
-     * <tr><td>dragEnd</td><td>5</td><td></td></tr>
-     * <tr><td>dragLeft</td><td>2</td><td></td></tr>
-     * <tr><td>dragRight</td><td>3</td><td></td></tr>
-     * <tr><td>dragStart</td><td>4</td><td></td></tr>
-     * <tr><td>dragUp</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:dragDirection
-     */
-    public static final int OnSwipe_dragDirection=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#dragScale}
-     * attribute's value can be found in the {@link #OnSwipe} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:dragScale
-     */
-    public static final int OnSwipe_dragScale=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#dragThreshold}
-     * attribute's value can be found in the {@link #OnSwipe} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:dragThreshold
-     */
-    public static final int OnSwipe_dragThreshold=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#limitBoundsTo}
-     * attribute's value can be found in the {@link #OnSwipe} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:limitBoundsTo
-     */
-    public static final int OnSwipe_limitBoundsTo=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#maxAcceleration}
-     * attribute's value can be found in the {@link #OnSwipe} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:maxAcceleration
-     */
-    public static final int OnSwipe_maxAcceleration=4;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#maxVelocity}
-     * attribute's value can be found in the {@link #OnSwipe} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:maxVelocity
-     */
-    public static final int OnSwipe_maxVelocity=5;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#moveWhenScrollAtTop}
-     * attribute's value can be found in the {@link #OnSwipe} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:moveWhenScrollAtTop
-     */
-    public static final int OnSwipe_moveWhenScrollAtTop=6;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#nestedScrollFlags}
-     * attribute's value can be found in the {@link #OnSwipe} array.
-     *
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>disablePostScroll</td><td>1</td><td></td></tr>
-     * <tr><td>disableScroll</td><td>2</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:nestedScrollFlags
-     */
-    public static final int OnSwipe_nestedScrollFlags=7;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#onTouchUp}
-     * attribute's value can be found in the {@link #OnSwipe} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>autoComplete</td><td>0</td><td></td></tr>
-     * <tr><td>autoCompleteToEnd</td><td>2</td><td></td></tr>
-     * <tr><td>autoCompleteToStart</td><td>1</td><td></td></tr>
-     * <tr><td>decelerate</td><td>4</td><td></td></tr>
-     * <tr><td>decelerateAndComplete</td><td>5</td><td></td></tr>
-     * <tr><td>stop</td><td>3</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:onTouchUp
-     */
-    public static final int OnSwipe_onTouchUp=8;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#touchAnchorId}
-     * attribute's value can be found in the {@link #OnSwipe} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:touchAnchorId
-     */
-    public static final int OnSwipe_touchAnchorId=9;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#touchAnchorSide}
-     * attribute's value can be found in the {@link #OnSwipe} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>3</td><td></td></tr>
-     * <tr><td>end</td><td>6</td><td></td></tr>
-     * <tr><td>left</td><td>1</td><td></td></tr>
-     * <tr><td>middle</td><td>4</td><td></td></tr>
-     * <tr><td>right</td><td>2</td><td></td></tr>
-     * <tr><td>start</td><td>5</td><td></td></tr>
-     * <tr><td>top</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:touchAnchorSide
-     */
-    public static final int OnSwipe_touchAnchorSide=10;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#touchRegionId}
-     * attribute's value can be found in the {@link #OnSwipe} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:touchRegionId
-     */
-    public static final int OnSwipe_touchRegionId=11;
-    /**
      * Attributes that can be used with a PopupWindow.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -19314,7 +12348,7 @@ public final class R {
      * @see #PopupWindow_overlapAnchor
      */
     public static final int[] PopupWindow={
-      0x01010176, 0x010102c9, 0x7f020141
+      0x01010176, 0x010102c9, 0x7f0200ed
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
@@ -19366,7 +12400,7 @@ public final class R {
      * @see #PopupWindowBackgroundState_state_above_anchor
      */
     public static final int[] PopupWindowBackgroundState={
-      0x7f02017a
+      0x7f020112
     };
     /**
      * <p>
@@ -19379,92 +12413,6 @@ public final class R {
      * @attr name com.torgtek.matidsms:state_above_anchor
      */
     public static final int PopupWindowBackgroundState_state_above_anchor=0;
-    /**
-     * Attributes that can be used with a PropertySet.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #PropertySet_android_visibility android:visibility}</code></td><td></td></tr>
-     * <tr><td><code>{@link #PropertySet_android_alpha android:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #PropertySet_layout_constraintTag com.torgtek.matidsms:layout_constraintTag}</code></td><td></td></tr>
-     * <tr><td><code>{@link #PropertySet_motionProgress com.torgtek.matidsms:motionProgress}</code></td><td></td></tr>
-     * <tr><td><code>{@link #PropertySet_visibilityMode com.torgtek.matidsms:visibilityMode}</code></td><td></td></tr>
-     * </table>
-     * @see #PropertySet_android_visibility
-     * @see #PropertySet_android_alpha
-     * @see #PropertySet_layout_constraintTag
-     * @see #PropertySet_motionProgress
-     * @see #PropertySet_visibilityMode
-     */
-    public static final int[] PropertySet={
-      0x010100dc, 0x0101031f, 0x7f0200f8, 0x7f02012f, 
-      0x7f0201be
-    };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#visibility}
-     * attribute's value can be found in the {@link #PropertySet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>gone</td><td>2</td><td></td></tr>
-     * <tr><td>invisible</td><td>1</td><td></td></tr>
-     * <tr><td>visible</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name android:visibility
-     */
-    public static final int PropertySet_android_visibility=0;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#alpha}
-     * attribute's value can be found in the {@link #PropertySet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:alpha
-     */
-    public static final int PropertySet_android_alpha=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layout_constraintTag}
-     * attribute's value can be found in the {@link #PropertySet} array.
-     *
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     *
-     * @attr name com.torgtek.matidsms:layout_constraintTag
-     */
-    public static final int PropertySet_layout_constraintTag=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionProgress}
-     * attribute's value can be found in the {@link #PropertySet} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:motionProgress
-     */
-    public static final int PropertySet_motionProgress=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#visibilityMode}
-     * attribute's value can be found in the {@link #PropertySet} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>ignore</td><td>1</td><td></td></tr>
-     * <tr><td>normal</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:visibilityMode
-     */
-    public static final int PropertySet_visibilityMode=4;
     /**
      * Attributes that can be used with a RecycleListView.
      * <p>Includes the following attributes:</p>
@@ -19479,7 +12427,7 @@ public final class R {
      * @see #RecycleListView_paddingTopNoTitle
      */
     public static final int[] RecycleListView={
-      0x7f020143, 0x7f020146
+      0x7f0200ee, 0x7f0200f1
     };
     /**
      * <p>
@@ -19555,10 +12503,10 @@ public final class R {
      */
     public static final int[] SearchView={
       0x010100da, 0x0101011f, 0x01010220, 0x01010264, 
-      0x7f020055, 0x7f020065, 0x7f020084, 0x7f0200c0, 
-      0x7f0200c8, 0x7f0200d3, 0x7f020159, 0x7f02015a, 
-      0x7f020167, 0x7f020168, 0x7f02017d, 0x7f020182, 
-      0x7f0201bf
+      0x7f02004e, 0x7f02005e, 0x7f02006c, 0x7f02008d, 
+      0x7f020095, 0x7f02009f, 0x7f0200fb, 0x7f0200fc, 
+      0x7f020102, 0x7f020103, 0x7f020115, 0x7f02011a, 
+      0x7f020148
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#focusable}
@@ -19854,7 +12802,7 @@ public final class R {
      * @see #SignInButton_scopeUris
      */
     public static final int[] SignInButton={
-      0x7f02004a, 0x7f020063, 0x7f020166
+      0x7f020045, 0x7f02005c, 0x7f020101
     };
     /**
      * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#buttonSize}
@@ -19936,7 +12884,7 @@ public final class R {
      */
     public static final int[] Spinner={
       0x010100b2, 0x01010176, 0x0101017b, 0x01010262, 
-      0x7f020154
+      0x7f0200f6
     };
     /**
      * <p>
@@ -20017,46 +12965,6 @@ public final class R {
      * @attr name com.torgtek.matidsms:popupTheme
      */
     public static final int Spinner_popupTheme=4;
-    /**
-     * Attributes that can be used with a State.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #State_android_id android:id}</code></td><td></td></tr>
-     * <tr><td><code>{@link #State_constraints com.torgtek.matidsms:constraints}</code></td><td></td></tr>
-     * </table>
-     * @see #State_android_id
-     * @see #State_constraints
-     */
-    public static final int[] State={
-      0x010100d0, 0x7f02006b
-    };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#id}
-     * attribute's value can be found in the {@link #State} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name android:id
-     */
-    public static final int State_android_id=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraints}
-     * attribute's value can be found in the {@link #State} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:constraints
-     */
-    public static final int State_constraints=1;
     /**
      * Attributes that can be used with a StateListDrawable.
      * <p>Includes the following attributes:</p>
@@ -20185,32 +13093,6 @@ public final class R {
      */
     public static final int StateListDrawableItem_android_drawable=0;
     /**
-     * Attributes that can be used with a StateSet.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #StateSet_defaultState com.torgtek.matidsms:defaultState}</code></td><td></td></tr>
-     * </table>
-     * @see #StateSet_defaultState
-     */
-    public static final int[] StateSet={
-      0x7f020085
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#defaultState}
-     * attribute's value can be found in the {@link #StateSet} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:defaultState
-     */
-    public static final int StateSet_defaultState=0;
-    /**
      * Attributes that can be used with a SwitchCompat.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -20248,10 +13130,10 @@ public final class R {
      * @see #SwitchCompat_trackTintMode
      */
     public static final int[] SwitchCompat={
-      0x01010124, 0x01010125, 0x01010142, 0x7f020170, 
-      0x7f020177, 0x7f020183, 0x7f020184, 0x7f020186, 
-      0x7f020198, 0x7f020199, 0x7f02019a, 0x7f0201b2, 
-      0x7f0201b3, 0x7f0201b4
+      0x01010124, 0x01010125, 0x01010142, 0x7f02010a, 
+      0x7f020110, 0x7f02011b, 0x7f02011c, 0x7f02011e, 
+      0x7f02012c, 0x7f02012d, 0x7f02012e, 0x7f020143, 
+      0x7f020144, 0x7f020145
     };
     /**
      * <p>
@@ -20494,8 +13376,8 @@ public final class R {
     public static final int[] TextAppearance={
       0x01010095, 0x01010096, 0x01010097, 0x01010098, 
       0x0101009a, 0x0101009b, 0x01010161, 0x01010162, 
-      0x01010163, 0x01010164, 0x010103ac, 0x7f0200b4, 
-      0x7f02018b
+      0x01010163, 0x01010164, 0x010103ac, 0x7f020081, 
+      0x7f02011f
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#textSize}
@@ -20742,14 +13624,14 @@ public final class R {
      */
     @Deprecated
     public static final int[] Toolbar={
-      0x010100af, 0x01010140, 0x7f020047, 0x7f020057, 
-      0x7f020058, 0x7f02006e, 0x7f02006f, 0x7f020070, 
-      0x7f020071, 0x7f020072, 0x7f020073, 0x7f02011c, 
-      0x7f02011d, 0x7f02011f, 0x7f020136, 0x7f020137, 
-      0x7f020154, 0x7f02017e, 0x7f02017f, 0x7f020180, 
-      0x7f0201a0, 0x7f0201a1, 0x7f0201a2, 0x7f0201a3, 
-      0x7f0201a4, 0x7f0201a5, 0x7f0201a6, 0x7f0201a7, 
-      0x7f0201a8
+      0x010100af, 0x01010140, 0x7f020042, 0x7f020050, 
+      0x7f020051, 0x7f020063, 0x7f020064, 0x7f020065, 
+      0x7f020066, 0x7f020067, 0x7f020068, 0x7f0200e4, 
+      0x7f0200e5, 0x7f0200e6, 0x7f0200e9, 0x7f0200ea, 
+      0x7f0200f6, 0x7f020116, 0x7f020117, 0x7f020118, 
+      0x7f020134, 0x7f020135, 0x7f020136, 0x7f020137, 
+      0x7f020138, 0x7f020139, 0x7f02013a, 0x7f02013b, 
+      0x7f02013c
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#gravity}
@@ -21167,451 +14049,6 @@ public final class R {
      */
     public static final int Toolbar_titleTextColor=28;
     /**
-     * Attributes that can be used with a Transform.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #Transform_android_transformPivotX android:transformPivotX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transform_android_transformPivotY android:transformPivotY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transform_android_translationX android:translationX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transform_android_translationY android:translationY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transform_android_scaleX android:scaleX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transform_android_scaleY android:scaleY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transform_android_rotation android:rotation}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transform_android_rotationX android:rotationX}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transform_android_rotationY android:rotationY}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transform_android_translationZ android:translationZ}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transform_android_elevation android:elevation}</code></td><td></td></tr>
-     * </table>
-     * @see #Transform_android_transformPivotX
-     * @see #Transform_android_transformPivotY
-     * @see #Transform_android_translationX
-     * @see #Transform_android_translationY
-     * @see #Transform_android_scaleX
-     * @see #Transform_android_scaleY
-     * @see #Transform_android_rotation
-     * @see #Transform_android_rotationX
-     * @see #Transform_android_rotationY
-     * @see #Transform_android_translationZ
-     * @see #Transform_android_elevation
-     */
-    public static final int[] Transform={
-      0x01010320, 0x01010321, 0x01010322, 0x01010323, 
-      0x01010324, 0x01010325, 0x01010326, 0x01010327, 
-      0x01010328, 0x010103fa, 0x01010440
-    };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#transformPivotX}
-     * attribute's value can be found in the {@link #Transform} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:transformPivotX
-     */
-    public static final int Transform_android_transformPivotX=0;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#transformPivotY}
-     * attribute's value can be found in the {@link #Transform} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:transformPivotY
-     */
-    public static final int Transform_android_transformPivotY=1;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationX}
-     * attribute's value can be found in the {@link #Transform} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationX
-     */
-    public static final int Transform_android_translationX=2;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationY}
-     * attribute's value can be found in the {@link #Transform} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationY
-     */
-    public static final int Transform_android_translationY=3;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#scaleX}
-     * attribute's value can be found in the {@link #Transform} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:scaleX
-     */
-    public static final int Transform_android_scaleX=4;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#scaleY}
-     * attribute's value can be found in the {@link #Transform} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:scaleY
-     */
-    public static final int Transform_android_scaleY=5;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotation}
-     * attribute's value can be found in the {@link #Transform} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotation
-     */
-    public static final int Transform_android_rotation=6;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotationX}
-     * attribute's value can be found in the {@link #Transform} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotationX
-     */
-    public static final int Transform_android_rotationX=7;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#rotationY}
-     * attribute's value can be found in the {@link #Transform} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name android:rotationY
-     */
-    public static final int Transform_android_rotationY=8;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#translationZ}
-     * attribute's value can be found in the {@link #Transform} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:translationZ
-     */
-    public static final int Transform_android_translationZ=9;
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#elevation}
-     * attribute's value can be found in the {@link #Transform} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name android:elevation
-     */
-    public static final int Transform_android_elevation=10;
-    /**
-     * Attributes that can be used with a Transition.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #Transition_android_id android:id}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transition_autoTransition com.torgtek.matidsms:autoTransition}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transition_constraintSetEnd com.torgtek.matidsms:constraintSetEnd}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transition_constraintSetStart com.torgtek.matidsms:constraintSetStart}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transition_duration com.torgtek.matidsms:duration}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transition_layoutDuringTransition com.torgtek.matidsms:layoutDuringTransition}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transition_motionInterpolator com.torgtek.matidsms:motionInterpolator}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transition_pathMotionArc com.torgtek.matidsms:pathMotionArc}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transition_staggered com.torgtek.matidsms:staggered}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transition_transitionDisable com.torgtek.matidsms:transitionDisable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Transition_transitionFlags com.torgtek.matidsms:transitionFlags}</code></td><td></td></tr>
-     * </table>
-     * @see #Transition_android_id
-     * @see #Transition_autoTransition
-     * @see #Transition_constraintSetEnd
-     * @see #Transition_constraintSetStart
-     * @see #Transition_duration
-     * @see #Transition_layoutDuringTransition
-     * @see #Transition_motionInterpolator
-     * @see #Transition_pathMotionArc
-     * @see #Transition_staggered
-     * @see #Transition_transitionDisable
-     * @see #Transition_transitionFlags
-     */
-    public static final int[] Transition={
-      0x010100d0, 0x7f020036, 0x7f020067, 0x7f020068, 
-      0x7f020099, 0x7f0200d5, 0x7f02012d, 0x7f02014a, 
-      0x7f020179, 0x7f0201b5, 0x7f0201b7
-    };
-    /**
-     * <p>This symbol is the offset where the {@link android.R.attr#id}
-     * attribute's value can be found in the {@link #Transition} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name android:id
-     */
-    public static final int Transition_android_id=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#autoTransition}
-     * attribute's value can be found in the {@link #Transition} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>animateToEnd</td><td>4</td><td></td></tr>
-     * <tr><td>animateToStart</td><td>3</td><td></td></tr>
-     * <tr><td>jumpToEnd</td><td>2</td><td></td></tr>
-     * <tr><td>jumpToStart</td><td>1</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:autoTransition
-     */
-    public static final int Transition_autoTransition=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraintSetEnd}
-     * attribute's value can be found in the {@link #Transition} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:constraintSetEnd
-     */
-    public static final int Transition_constraintSetEnd=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraintSetStart}
-     * attribute's value can be found in the {@link #Transition} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:constraintSetStart
-     */
-    public static final int Transition_constraintSetStart=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#duration}
-     * attribute's value can be found in the {@link #Transition} array.
-     *
-     * <p>May be an integer value, such as "<code>100</code>".
-     *
-     * @attr name com.torgtek.matidsms:duration
-     */
-    public static final int Transition_duration=4;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#layoutDuringTransition}
-     * attribute's value can be found in the {@link #Transition} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>honorRequest</td><td>1</td><td></td></tr>
-     * <tr><td>ignoreRequest</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:layoutDuringTransition
-     */
-    public static final int Transition_layoutDuringTransition=5;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#motionInterpolator}
-     * attribute's value can be found in the {@link #Transition} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     * <p>May be a string value, using '\\;' to escape characters such as
-     * '\\n' or '\\uxxxx' for a unicode character;
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bounce</td><td>5</td><td></td></tr>
-     * <tr><td>easeIn</td><td>1</td><td></td></tr>
-     * <tr><td>easeInOut</td><td>0</td><td></td></tr>
-     * <tr><td>easeOut</td><td>2</td><td></td></tr>
-     * <tr><td>linear</td><td>3</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:motionInterpolator
-     */
-    public static final int Transition_motionInterpolator=6;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#pathMotionArc}
-     * attribute's value can be found in the {@link #Transition} array.
-     *
-     * <p>Must be one of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>flip</td><td>3</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * <tr><td>startHorizontal</td><td>2</td><td></td></tr>
-     * <tr><td>startVertical</td><td>1</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:pathMotionArc
-     */
-    public static final int Transition_pathMotionArc=7;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#staggered}
-     * attribute's value can be found in the {@link #Transition} array.
-     *
-     * <p>May be a floating point value, such as "<code>1.2</code>".
-     *
-     * @attr name com.torgtek.matidsms:staggered
-     */
-    public static final int Transition_staggered=8;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionDisable}
-     * attribute's value can be found in the {@link #Transition} array.
-     *
-     * <p>May be a boolean value, such as "<code>true</code>" or
-     * "<code>false</code>".
-     *
-     * @attr name com.torgtek.matidsms:transitionDisable
-     */
-    public static final int Transition_transitionDisable=9;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#transitionFlags}
-     * attribute's value can be found in the {@link #Transition} array.
-     *
-     * <p>Must be one or more (separated by '|') of the following constant values.</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>beginOnFirstDraw</td><td>1</td><td></td></tr>
-     * <tr><td>none</td><td>0</td><td></td></tr>
-     * </table>
-     *
-     * @attr name com.torgtek.matidsms:transitionFlags
-     */
-    public static final int Transition_transitionFlags=10;
-    /**
-     * Attributes that can be used with a Variant.
-     * <p>Includes the following attributes:</p>
-     * <table>
-     * <colgroup align="left" />
-     * <colgroup align="left" />
-     * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #Variant_constraints com.torgtek.matidsms:constraints}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Variant_region_heightLessThan com.torgtek.matidsms:region_heightLessThan}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Variant_region_heightMoreThan com.torgtek.matidsms:region_heightMoreThan}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Variant_region_widthLessThan com.torgtek.matidsms:region_widthLessThan}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Variant_region_widthMoreThan com.torgtek.matidsms:region_widthMoreThan}</code></td><td></td></tr>
-     * </table>
-     * @see #Variant_constraints
-     * @see #Variant_region_heightLessThan
-     * @see #Variant_region_heightMoreThan
-     * @see #Variant_region_widthLessThan
-     * @see #Variant_region_widthMoreThan
-     */
-    public static final int[] Variant={
-      0x7f02006b, 0x7f02015f, 0x7f020160, 0x7f020161, 
-      0x7f020162
-    };
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#constraints}
-     * attribute's value can be found in the {@link #Variant} array.
-     *
-     * <p>May be a reference to another resource, in the form
-     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
-     * attribute in the form
-     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
-     *
-     * @attr name com.torgtek.matidsms:constraints
-     */
-    public static final int Variant_constraints=0;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#region_heightLessThan}
-     * attribute's value can be found in the {@link #Variant} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:region_heightLessThan
-     */
-    public static final int Variant_region_heightLessThan=1;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#region_heightMoreThan}
-     * attribute's value can be found in the {@link #Variant} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:region_heightMoreThan
-     */
-    public static final int Variant_region_heightMoreThan=2;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#region_widthLessThan}
-     * attribute's value can be found in the {@link #Variant} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:region_widthLessThan
-     */
-    public static final int Variant_region_widthLessThan=3;
-    /**
-     * <p>This symbol is the offset where the {@link com.torgtek.matidsms.R.attr#region_widthMoreThan}
-     * attribute's value can be found in the {@link #Variant} array.
-     *
-     * <p>May be a dimension value, which is a floating point number appended with a
-     * unit such as "<code>14.5sp</code>".
-     * Available units are: px (pixels), dp (density-independent pixels),
-     * sp (scaled pixels based on preferred font size), in (inches), and
-     * mm (millimeters).
-     *
-     * @attr name com.torgtek.matidsms:region_widthMoreThan
-     */
-    public static final int Variant_region_widthMoreThan=4;
-    /**
      * Attributes that can be used with a View.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -21631,8 +14068,8 @@ public final class R {
      * @see #View_theme
      */
     public static final int[] View={
-      0x01010000, 0x010100da, 0x7f020144, 0x7f020145, 
-      0x7f020196
+      0x01010000, 0x010100da, 0x7f0200ef, 0x7f0200f0, 
+      0x7f02012a
     };
     /**
      * <p>
@@ -21730,7 +14167,7 @@ public final class R {
      * @see #ViewBackgroundHelper_backgroundTintMode
      */
     public static final int[] ViewBackgroundHelper={
-      0x010100d4, 0x7f02003a, 0x7f02003b
+      0x010100d4, 0x7f020037, 0x7f020038
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#background}

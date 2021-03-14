@@ -6,8 +6,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Debug;
+import android.os.SystemClock;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.torgtek.matidsms.ui.login.GPSTracker;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,6 +38,7 @@ public class BackgroundService extends IntentService {
     public static String personEmail;
     public static String personId;
     public static Uri personPhoto;
+    public  static Boolean inapp2=false;
 
     // TODO: Rename actions, choose action names that describe tasks that this
     // IntentService can perform, e.g. ACTION_FETCH_NEW_ITEMS
@@ -47,6 +52,7 @@ public class BackgroundService extends IntentService {
     public BackgroundService() {
         super("BackgroundService");
     }
+    GPSTracker gps;
 
     @Override
     protected void onHandleIntent(Intent intent) {
@@ -55,16 +61,35 @@ public class BackgroundService extends IntentService {
         SQLiteDatabase mydatabase = null;
         Debug.waitForDebugger();
         while(true) {
+            double latitude=0;
+            double longitude=0;
+            Log.d("BackgroundService", "ENTRY");
             try {
-                mydatabase = openOrCreateDatabase("/data/data/com.torgtek.matidsms/databases/dsms.db", MODE_PRIVATE, null);
+//                SystemClock.sleep(1000);
+                mydatabase = openOrCreateDatabase("/data/data/com.torgtek.matidsms/databases/dsms.db",MODE_PRIVATE, null);
 
-                Cursor resultSet = mydatabase.rawQuery("Select * from LOGS where processed =0 limit 100;", null);
+                Cursor resultSet = mydatabase.rawQuery("Select * from `LOGS` where processed =0 limit 100;", null);
                 Map<String, Object> params_user = new HashMap<String, Object>();
+                Map<Double, Double> coordinates = new HashMap<Double, Double>();
+
                 params_user.put("personName",personName);
                 params_user.put("personGivenName",personGivenName);
                 params_user.put("personFamilyName",personFamilyName);
                 params_user.put("personEmail",personEmail);
                 params_user.put("personId",personId);
+                Log.d("BackgroundService", "Size of list");
+                Log.d("BackgroundService", String.valueOf(resultSet.getCount()));
+                gps = new GPSTracker(this);
+
+                // Check if GPS enabled
+                if(gps.canGetLocation()) {
+
+                     latitude = gps.getLatitude();
+                     longitude = gps.getLongitude();
+
+                    // \n is for new line
+                    Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+                }
                 if (resultSet.moveToFirst()) {
                     do {
                         Map<String, Object> params = new HashMap<String, Object>();
@@ -238,6 +263,7 @@ public class BackgroundService extends IntentService {
                 Map<String,Object> finallist=new HashMap<>();
                 finallist.put("user",params_user);
                 finallist.put("data",jsonlist);
+                finallist.put("coordinates",coordinates);
 
                 Gson gson = new Gson();
                 String kx = gson.toJson(finallist);
@@ -278,6 +304,9 @@ public class BackgroundService extends IntentService {
             } catch (Exception e) {
                 // database doesn't exist yet.
                 Object a = "";
+                System.out.println(e.getMessage());
+
+                continue;
             } finally {
                 mydatabase.close();
             }

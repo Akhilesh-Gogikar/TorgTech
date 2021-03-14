@@ -1,7 +1,10 @@
-#Wed Feb 24 04:37:17 PST 2021
-base.0=/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex
+#Tue Mar 02 14:25:13 PST 2021
+path.2=classes2.dex
 path.1=classes.dex
-renamed.1=classes2.dex
 path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.2=/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes2.dex
 base.1=/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex
+base.0=/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/build/intermediates/dex/debug/mergeExtDexDebug/out/classes.dex

@@ -12,7 +12,14 @@
 #include <chrono>
 #include <cstdio>
 #include <ctime>
+#include <firebase/admob.h>
+#include <firebase/admob/types.h>
+#include <firebase/app.h>
+#include <firebase/future.h>
+#include <firebase/analytics.h>
+#include <firebase/admob/banner_view.h>
 
+#include <android/native_activity.h>
 
 static AppEngine *s_pEngineObj = nullptr;
 
@@ -121,6 +128,34 @@ static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
     return 0;
 }
 
+static struct android_app* g_app_state = nullptr;
+static bool g_destroy_requested = false;
+static bool g_started = false;
+static bool g_restarted = false;
+
+bool ProcessEvents(int msec) {
+    struct android_poll_source* source = nullptr;
+    int events;
+    int looperId = ALooper_pollAll(msec, nullptr, &events,
+                                   reinterpret_cast<void**>(&source));
+    if (looperId >= 0 && source) {
+        source->process(g_app_state, source);
+    }
+    return g_destroy_requested | g_restarted;
+}
+
+static void WaitForFutureCompletion(firebase::FutureBase future) {
+    while (!ProcessEvents(1000)) {
+        if (future.status() != firebase::kFutureStatusPending) {
+            break;
+        }
+    }
+
+    if (future.error() != firebase::admob::kAdMobErrorNone) {
+        return;
+    }
+}
+
 /*--------------------------------------------------------------------------- *
  *      M A I N    F U N C T I O N
  *--------------------------------------------------------------------------- */
@@ -130,6 +165,7 @@ void android_main(struct android_app* state)
     state->userData = reinterpret_cast<void*>(&engine);
     state->onAppCmd = ProcessAndroidCmd;
     state->onInputEvent = engine_handle_input;
+    g_app_state = state;
 
     s_pEngineObj = &engine;
 
@@ -187,6 +223,106 @@ void android_main(struct android_app* state)
     } else {
         fprintf(stdout, "Table created successfully\n");
     }
+
+    {
+
+        //App ID: ca-app-pub-1062260908990670~7999149993
+        // Ad unit ID : ca-app-pub-1062260908990670/7488299511
+
+        using namespace firebase;
+
+        JNIEnv *env;
+
+        state->activity->vm->AttachCurrentThread(&env, nullptr);
+
+        auto app = App::Create(AppOptions(), env, state->activity->clazz);
+
+        const char* kAdMobAppID = "ca-app-pub-1062260908990670~7999149993";
+        analytics::Initialize(*app);
+
+        admob::Initialize(*app, kAdMobAppID);
+
+        const char* kBannerAdUnit = "ca-app-pub-3940256099942544/6300978111";
+
+        admob::BannerView* banner_view;
+        banner_view = new admob::BannerView();
+
+        admob::AdSize ad_size;
+        ad_size.ad_size_type = firebase::admob::kAdSizeStandard;
+        ad_size.width = 320;
+        ad_size.height = 50;
+// my_ad_parent is a reference to an iOS UIView or an Android Activity.
+// This is the parent UIView or Activity of the banner view.
+        banner_view->Initialize(static_cast<firebase::admob::AdParent>(state->activity->clazz), kBannerAdUnit, ad_size);
+
+        banner_view->InitializeLastResult();
+        struct AdRequest {
+            const char **test_device_ids;
+            unsigned int test_device_id_count;
+            const char **keywords;
+            unsigned int keyword_count;
+            const admob::KeyValuePair *extras;
+            unsigned int extras_count;
+            int birthday_day;
+            int birthday_month;
+            int birthday_year;
+            admob::Gender gender;
+            admob::ChildDirectedTreatmentState tagged_for_child_directed_treatment;
+        };
+
+        firebase::admob::AdRequest my_ad_request = {};
+
+        // If the app is aware of the user's gender, it can be added to the
+// targeting information. Otherwise, "unknown" should be used.
+        my_ad_request.gender = firebase::admob::kGenderUnknown;
+
+// The user's birthday, if known. Note that months are indexed from one.
+        my_ad_request.birthday_day = 10;
+        my_ad_request.birthday_month = 11;
+        my_ad_request.birthday_year = 1976;
+
+// Additional keywords to be used in targeting.
+        static const char* kKeywords[] = {"AdMob", "C++", "Fun"};
+        my_ad_request.keyword_count = sizeof(kKeywords) / sizeof(kKeywords[0]);
+        my_ad_request.keywords = kKeywords;
+
+// "Extra" key value pairs can be added to the request as well.
+        static const firebase::admob::KeyValuePair kRequestExtras[] = {
+                {"the_name_of_an_extra", "the_value_for_that_extra"}};
+        my_ad_request.extras_count = sizeof(kRequestExtras) / sizeof(kRequestExtras[0]);
+        my_ad_request.extras = kRequestExtras;
+
+// Register the device IDs associated with any devices that will be used to
+// test your app. Below are sample test device IDs used for making the ad request.
+        static const char* kTestDeviceIDs[] =
+                {"2077ef9a63d2b398840261c8221a0c9b",
+                 "098fe087d987c9a878965454a65654d7"};
+        my_ad_request.test_device_id_count =
+                sizeof(kTestDeviceIDs) / sizeof(kTestDeviceIDs[0]);
+        my_ad_request.test_device_ids = kTestDeviceIDs;
+
+        WaitForFutureCompletion(banner_view->InitializeLastResult());
+
+        banner_view->LoadAd(my_ad_request);
+
+        WaitForFutureCompletion(banner_view->LoadAdLastResult());
+
+        banner_view->Show();
+
+        WaitForFutureCompletion(banner_view->ShowLastResult());
+
+        banner_view->MoveTo(firebase::admob::BannerView::kPositionBottom);
+
+        WaitForFutureCompletion(banner_view->MoveToLastResult());
+
+        if (state->destroyRequested != 0) {
+            delete banner_view;
+            delete app;
+            firebase::admob::Terminate();
+        }
+
+    }
+
 
 
     while (1)
@@ -249,6 +385,7 @@ void android_main(struct android_app* state)
         if (state->destroyRequested != 0) {
             engine.OnAppTermWindow();
             s_pEngineObj = nullptr;
+            firebase::admob::Terminate();
             break;
         }
 

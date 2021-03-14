@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="hello">Hello World, ImageTextListViewActivity!</string>
+    <string name="name">ListViewBaseAdapter</string>
+    <string name="image">Thumbnail</string>
     <string name="app_name">Mati DSMS</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>

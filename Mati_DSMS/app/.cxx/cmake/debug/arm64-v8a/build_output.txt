@@ -10,4 +10,5 @@ Detecting CXX compiler ABI info
 Detecting CXX compiler ABI info - done
 Detecting CXX compile features
 Detecting CXX compile features - done
+Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
 Configuring done

@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 29
 
@@ -28,17 +28,26 @@ android {
         }
     }
 }
+apply from: "$gradle.firebase_cpp_sdk_dir/Android/firebase_dependencies.gradle"
 
+
+firebaseCpp.dependencies{
+    admob
+    analytics
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:support-annotations:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
-    implementation 'android.arch.lifecycle:livedata:1.1.1'
-    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+    implementation "android.arch.lifecycle:extensions"
+    annotationProcessor "android.arch.lifecycle:compiler"
     implementation 'com.google.android.gms:play-services-auth:16.0.0'
     implementation 'pub.devrel:easypermissions:2.0.1'
     implementation("com.squareup.okhttp3:okhttp:4.9.0")
     implementation 'com.google.code.gson:gson:2.8.6'
+    implementation "androidx.core:core-ktx:+"
+
+
 
 
 

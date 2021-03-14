@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a/oboe/cmake_install.cmake")
+  include("/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/.cxx/cmake/release/arm64-v8a/firebase_cpp_sdk/cmake_install.cmake")
 
 endif()
 

@@ -3,6 +3,7 @@
     "/home/aki/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
     "/home/aki/Android/Sdk/ndk/21.1.6352462/build/cmake/platforms.cmake",
     "/home/aki/StudioProjects/TorgTech2/third_party/oboe/CMakeLists.txt",
+    "/home/aki/StudioProjects/TorgTech2/third_party/firebase_cpp_sdk/CMakeLists.txt",
     "/home/aki/StudioProjects/TorgTech2/Mati_DSMS/app/src/main/cpp/CMakeLists.txt"
   ],
   "cleanCommands": [

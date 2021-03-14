@@ -1,16 +1,17 @@
 package com.torgtek.matidsms.ui.login;
 
 import android.app.Activity;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProvider;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -170,6 +171,9 @@ public class LoginActivity extends AppCompatActivity {
                 BackgroundService.personPhoto = acct.getPhotoUrl();
                 Intent ax=new Intent(LoginActivity.this,
                         MainActivity.class);
+                Log.d("test","LOGIN ACTIVITY");
+//                Log.d("test", String.valueOf(inapp));
+                ax.putExtra("last_activity","Login");
                 startActivity(ax);
             }
         } catch (ApiException e) {

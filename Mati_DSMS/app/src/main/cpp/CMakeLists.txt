@@ -19,7 +19,7 @@ cmake_minimum_required(VERSION 3.4.1)
 # build native_app_glue as a static lib
 set(${CMAKE_C_FLAGS}, "${CMAKE_C_FLAGS}")
 add_library(native_app_glue STATIC
-    ${ANDROID_NDK}/sources/android/native_app_glue/android_native_app_glue.c)
+        ${ANDROID_NDK}/sources/android/native_app_glue/android_native_app_glue.c)
 
 # now build app's shared lib
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -Wall")
@@ -27,22 +27,26 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -Wall")
 # Export ANativeActivity_onCreate(),
 # Refer to: https://github.com/android-ndk/ndk/issues/381.
 set(CMAKE_SHARED_LINKER_FLAGS
-    "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
+        "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
 
 set(commonDir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../common)
 set(thirdpDir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../third_party)
 set(jnilibDir ${CMAKE_CURRENT_SOURCE_DIR}/../jniLibs)
 set(OBOE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../third_party/oboe)
 
+set(fb_cpp_sdk_Dir ${CMAKE_CURRENT_SOURCE_DIR}/../../../../../third_party/firebase_cpp_sdk)
+
 add_subdirectory (${OBOE_DIR} ./oboe)
+
+add_subdirectory (${fb_cpp_sdk_Dir} ./firebase_cpp_sdk)
 
 # download stb library
 if ((NOT EXISTS ${thirdpDir}/stb) OR
-    (NOT EXISTS ${thirdpDir}/stb/stb_image.h))
+(NOT EXISTS ${thirdpDir}/stb/stb_image.h))
     execute_process(COMMAND git clone
-                            https://github.com/nothings/stb.git
-                            stb
-                    WORKING_DIRECTORY ${commonDir})
+            https://github.com/nothings/stb.git
+            stb
+            WORKING_DIRECTORY ${commonDir})
 endif()
 
 
@@ -55,16 +59,16 @@ get_filename_component(tfliteDir ${thirdpDir}/tensorflow ABSOLUTE)
 get_filename_component(bazelgenDir ${tfliteDir}/bazel-bin ABSOLUTE) #for tf2.2
 
 file(COPY ${bazelgenDir}/tensorflow/lite/libtensorflowlite.so
-	DESTINATION ${jnilibDir}/arm64-v8a)
+        DESTINATION ${jnilibDir}/arm64-v8a)
 
 add_library(lib_tflite SHARED IMPORTED)
 set_target_properties(lib_tflite PROPERTIES IMPORTED_LOCATION
-	${jnilibDir}/arm64-v8a/libtensorflowlite.so)
+        ${jnilibDir}/arm64-v8a/libtensorflowlite.so)
 
 include_directories(${tfliteDir}/
-                    ${bazelgenDir}/../../../external/flatbuffers/include
-                    ${bazelgenDir}/../../../external/com_google_absl
-                    )
+        ${bazelgenDir}/../../../external/flatbuffers/include
+        ${bazelgenDir}/../../../external/com_google_absl
+        )
 
 
 # ------------------------------------------------------------
@@ -73,11 +77,11 @@ include_directories(${tfliteDir}/
 add_compile_options(-DUSE_GPU_DELEGATEV2)
 
 file(COPY ${bazelgenDir}/tensorflow/lite/delegates/gpu/libtensorflowlite_gpu_delegate.so
-    DESTINATION ${jnilibDir}/arm64-v8a)
+        DESTINATION ${jnilibDir}/arm64-v8a)
 
 add_library(lib_tflite_gpu_delegate SHARED IMPORTED)
 set_target_properties(lib_tflite_gpu_delegate PROPERTIES IMPORTED_LOCATION
-    ${jnilibDir}/arm64-v8a/libtensorflowlite_gpu_delegate.so)
+        ${jnilibDir}/arm64-v8a/libtensorflowlite_gpu_delegate.so)
 
 
 # ------------------------------------------------------------
@@ -113,7 +117,7 @@ set_target_properties(lib_tflite_gpu_delegate PROPERTIES IMPORTED_LOCATION
 add_compile_options(-DUSE_IMGUI)
 add_compile_options(-DIMGUI_IMPL_OPENGL_ES2)
 include_directories(${thirdpDir}/imgui/
-                    ${thirdpDir}/imgui/examples)
+        ${thirdpDir}/imgui/examples)
 
 add_compile_options(-DEGL_EGLEXT_PROTOTYPES)
 add_compile_options(-DGL_GLEXT_PROTOTYPES)
@@ -148,24 +152,27 @@ add_library(native-activity SHARED
 
 
 include_directories(${thirdpDir}
-                    ${commonDir}
-                    ${commonDir}/android/
-                    ${commonDir}/winsys/)
+        ${commonDir}
+        ${commonDir}/android/
+        ${commonDir}/winsys/)
 
 target_include_directories(native-activity PRIVATE
-    ${ANDROID_NDK}/sources/android/native_app_glue)
+        ${ANDROID_NDK}/sources/android/native_app_glue)
 
 # add lib dependencies
 target_link_libraries(native-activity
-    android
-    native_app_glue
-    m
-    camera2ndk
-    mediandk
-    EGL
-    GLESv2
-    lib_tflite
-    lib_tflite_gpu_delegate
+        android
+        native_app_glue
+        m
+        camera2ndk
+        mediandk
+        EGL
+        GLESv2
+        lib_tflite
+        lib_tflite_gpu_delegate
         oboe
-#   lib_tflite_hexagon_delegate
-    log)
+        firebase_admob
+        firebase_analytics
+        firebase_app
+        #   lib_tflite_hexagon_delegate
+        log)
