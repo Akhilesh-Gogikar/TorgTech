@@ -1,5 +1,5 @@
-/* ------------------------------------------------
- * Copyright (c) 2020 akhilesh@torgtek.com
+/* ------------------------------------------------ *
+ * Copyright (c) 2020 gogikar.akhilesh@gmail.com
  * ------------------------------------------------ */
 #include <cstdio>
 #include "util_debug.h"

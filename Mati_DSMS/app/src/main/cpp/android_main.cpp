@@ -1,6 +1,5 @@
 /* ------------------------------------------------ *
- * The MIT License (MIT)
- * Copyright (c) 2020 terryky1220@gmail.com
+ * Copyright (c) 2020 gogikar.akhilesh@gmail.com
  * ------------------------------------------------ */
 #include <cstdlib>
 #include <cstring>
