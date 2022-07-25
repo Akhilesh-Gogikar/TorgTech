@@ -18,6 +18,16 @@ extern "C" {
 #define MAX_DETECT_OBJS     100
 #define MAX_OBJ_DETECT_CLASS    90
     
+/**
+ * Computes the output shape of a slice operation.
+ *
+ * @param input_rank The rank of the input tensor.
+ * @param start The start index of the slice.
+ * @param end The end index of the slice.
+ * @param step The step size of the slice.
+ *
+ * @returns The output shape of the slice operation.
+ */
 typedef struct _detect_obj_t
 {
     float x1, x2, y1, y2;
@@ -25,6 +35,20 @@ typedef struct _detect_obj_t
     int det_class;
 } detect_obj_t;
 
+/**
+ * Detects objects in an image.
+ *
+ * @param image The image to detect objects in.
+ * @param threshold The minimum score a class must have to be detected.
+ * @param classes The classes to detect, represented as a vector of class
+ *                indices.
+ * @param nms_threshold The threshold used when applying non-maximum
+ *                      suppression.
+ * @param max_detections The maximum number of objects to detect.
+ * @param detections The detected objects.
+ *
+ * @returns Status
+ */
 typedef struct _detect_result_t
 {
     int num;

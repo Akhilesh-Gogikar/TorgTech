@@ -31,6 +31,11 @@ static GLint        s_loc_alpha;
 static GLint        s_loc_lightpos;
 
 
+/**
+ * Computes the normals for the cube.
+ *
+ * @returns None
+ */
 static GLfloat s_nrm[] =
 {
      0.0f,  0.0f,  1.0f,
@@ -42,6 +47,11 @@ static GLfloat s_nrm[] =
 };
 
 
+/**
+ * A simple function that returns the UV coordinates for a texture.
+ *
+ * @returns A pointer to the UV coordinates.
+ */
 static GLfloat s_uv [] =
 {
 #if 0
@@ -58,6 +68,14 @@ static GLfloat s_uv [] =
 };
 
 
+/**
+ * Computes the diffuse and specular lighting for a point.
+ *
+ * @param normal The normal of the point.
+ * @param eyePos The position of the eye.
+ *
+ * @returns None
+ */
 static char s_strVS[] = "                                   \n\
                                                             \n\
 attribute vec4  a_Vertex;                                   \n\
@@ -102,6 +120,17 @@ void main(void)                                             \n\
     v_texcoord  = a_TexCoord;                               \n\
 }                                                           ";
 
+/**
+ * A simple fragment shader that renders a single pixel.
+ *
+ * @param u_color The color of the pixel.
+ * @param u_alpha The alpha value of the pixel.
+ * @param v_diffuse The diffuse color of the pixel.
+ * @param v_specular The specular color of the pixel.
+ * @param v_texcoord The texture coordinate of the pixel.
+ *
+ * @returns The color of the pixel.
+ */
 static char s_strFS[] = "                                   \n\
 precision mediump float;                                    \n\
                                                             \n\
@@ -122,6 +151,14 @@ void main(void)                                             \n\
 }                                                           ";
 
 
+/**
+ * Computes the inverse of a 3x3 matrix.
+ *
+ * @param matMVI3x3 The inverse of the matrix.
+ * @param matMV The matrix to compute the inverse of.
+ *
+ * @returns None
+ */
 static void
 compute_invmat3x3 (float *matMVI3x3, float *matMV)
 {
@@ -142,6 +179,13 @@ compute_invmat3x3 (float *matMVI3x3, float *matMV)
 }
 
 
+/**
+ * Initializes the OpenGL state for the cube.
+ *
+ * @param aspect The aspect ratio of the viewport.
+ *
+ * @returns None
+ */
 int
 init_cube (float aspect)
 {
@@ -164,6 +208,17 @@ init_cube (float aspect)
 
 
 
+/**
+ * Draws a triangle.
+ *
+ * @param mtxGlobal The global matrix.
+ * @param p0 The first point of the triangle.
+ * @param p1 The second point of the triangle.
+ * @param p2 The third point of the triangle.
+ * @param color The color of the triangle.
+ *
+ * @returns None
+ */
 int
 draw_triangle (float *mtxGlobal, float *p0, float *p1, float *p2, float *color)
 {
@@ -212,6 +267,18 @@ draw_triangle (float *mtxGlobal, float *p0, float *p1, float *p2, float *color)
     return 0;
 }
 
+
+
+/**
+ * Draws a line between two points.
+ *
+ * @param mtxGlobal The global matrix.
+ * @param p0 The first point.
+ * @param p1 The second point.
+ * @param color The color of the line.
+ *
+ * @returns None
+ */
 int
 draw_line (float *mtxGlobal, float *p0, float *p1, float *color)
 {
@@ -260,6 +327,15 @@ draw_line (float *mtxGlobal, float *p0, float *p1, float *color)
 }
 
 
+/**
+ * Draws a point in the scene.
+ *
+ * @param mtxGlobal The global model-view matrix.
+ * @param p0 The position of the point.
+ * @param color The color of the point.
+ *
+ * @returns None
+ */
 int
 draw_point (float *mtxGlobal, float *p0, float *color)
 {
@@ -301,6 +377,18 @@ draw_point (float *mtxGlobal, float *p0, float *color)
 }
 
 
+/**
+ * Draws a point array.
+ *
+ * @param mtxGlobal The global model-view matrix.
+ * @param vtx The vertex array.
+ * @param uv The texture coordinate array.
+ * @param num The number of points to draw.
+ * @param texid The texture ID.
+ * @param color The color of the points.
+ *
+ * @returns None
+ */
 int
 draw_point_arrays (float *mtxGlobal, float *vtx, float *uv, int num, int texid, float *color)
 {
@@ -342,6 +430,15 @@ draw_point_arrays (float *mtxGlobal, float *vtx, float *uv, int num, int texid, 
 }
 
 
+/**
+ * Creates a mesh object.
+ *
+ * @param mesh The mesh object to create.
+ * @param num_tile_w The number of tiles in the u direction.
+ * @param num_tile_h The number of tiles in the v direction.
+ *
+ * @returns 0 on success, -1 on failure.
+ */
 int
 create_mesh (mesh_obj_t *mesh, int num_tile_w, int num_tile_h)
 {

@@ -8,6 +8,13 @@
 extern "C" {
 #endif
 
+/**
+ * Initializes the imgui data structure.
+ *
+ * @param data The imgui data structure.
+ *
+ * @returns None
+ */
 typedef struct _imgui_data_t
 {
     int     camera_facing;

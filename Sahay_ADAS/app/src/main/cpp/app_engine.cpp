@@ -23,6 +23,15 @@
 #define CAMERA_CROP_HEIGHT      480 /* make a src image square */
 
 /* resize image to (300x300) for input image of MobileNet SSD */
+/**
+ * Feeds the input image to the detection network.
+ *
+ * @param srctex The texture containing the input image.
+ * @param win_w The width of the window.
+ * @param win_h The height of the window.
+ *
+ * @returns None
+ */
 void
 feed_detect_image_uint8 (texture_2d_t *srctex, int win_w, int win_h)
 {
@@ -60,6 +69,15 @@ feed_detect_image_uint8 (texture_2d_t *srctex, int win_w, int win_h)
 }
 
 /* resize image to DNN network input size and convert to fp32. */
+/**
+ * Feeds an image into the neural network and returns the detections.
+ *
+ * @param srctex The texture containing the image.
+ * @param win_w The width of the window.
+ * @param win_h The height of the window.
+ *
+ * @returns None
+ */
 void
 feed_detect_image_float (texture_2d_t *srctex, int win_w, int win_h)
 {
@@ -98,6 +116,15 @@ feed_detect_image_float (texture_2d_t *srctex, int win_w, int win_h)
     return;
 }
 
+/**
+ * Feeds the input image to the detection network.
+ *
+ * @param srctex The source texture.
+ * @param win_w The width of the window.
+ * @param win_h The height of the window.
+ *
+ * @returns None
+ */
 void
 feed_detect_image(texture_2d_t *srctex, int win_w, int win_h)
 {
@@ -109,6 +136,15 @@ feed_detect_image(texture_2d_t *srctex, int win_w, int win_h)
 }
 
 /* resize image to DNN network input size and convert to fp32. */
+/**
+ * Feeds an image into the DeepLab model.
+ *
+ * @param srctex The texture containing the image.
+ * @param win_w The width of the window.
+ * @param win_h The height of the window.
+ *
+ * @returns None
+ */
 void
 feed_deeplab_image(texture_2d_t *srctex, int win_w, int win_h) {
     int x, y, w, h;
@@ -146,6 +182,15 @@ feed_deeplab_image(texture_2d_t *srctex, int win_w, int win_h) {
 }
 
 /* resize image to DNN network input size and convert to fp32. */
+/**
+ * Feeds a depth image into the network.
+ *
+ * @param srctex The source texture.
+ * @param win_w The width of the window.
+ * @param win_h The height of the window.
+ *
+ * @returns None
+ */
 void
 feed_dense_depth_image(texture_2d_t *srctex, int win_w, int win_h)
 {
@@ -185,6 +230,15 @@ feed_dense_depth_image(texture_2d_t *srctex, int win_w, int win_h)
 }
 
 /* resize image to DNN network input size and convert to fp32. */
+/**
+ * Feeds an image into the face detection network.
+ *
+ * @param srctex The texture containing the image.
+ * @param win_w The width of the window.
+ * @param win_h The height of the window.
+ *
+ * @returns None
+ */
 void
 feed_face_detect_image(texture_2d_t *srctex, int win_w, int win_h)
 {
@@ -223,6 +277,17 @@ feed_face_detect_image(texture_2d_t *srctex, int win_w, int win_h)
     return;
 }
 
+/**
+ * Feeds the face landmark image to the model.
+ *
+ * @param srctex The source texture.
+ * @param win_w The width of the window.
+ * @param win_h The height of the window.
+ * @param detection The face detection result.
+ * @param face_id The face ID.
+ *
+ * @returns None
+ */
 void
 feed_face_landmark_image(texture_2d_t *srctex, int win_w, int win_h, face_detect_result_t *detection, unsigned int face_id)
 {
@@ -284,6 +349,18 @@ feed_face_landmark_image(texture_2d_t *srctex, int win_w, int win_h, face_detect
 }
 
 
+/**
+ * Feeds the iris landmark image into the irismesh network.
+ *
+ * @param srctex The source texture.
+ * @param win_w The width of the window.
+ * @param win_h The height of the window.
+ * @param face The face structure.
+ * @param facemesh The face landmark result structure.
+ * @param eye_id The eye id.
+ *
+ * @returns None
+ */
 void
 feed_iris_landmark_image(texture_2d_t *srctex, int win_w, int win_h, 
                          face_t *face, face_landmark_result_t *facemesh, int eye_id)
@@ -376,6 +453,17 @@ feed_iris_landmark_image(texture_2d_t *srctex, int win_w, int win_h,
 }
 
 
+/**
+ * Renders the face detection results.
+ *
+ * @param ofstx The x offset of the texture.
+ * @param ofsty The y offset of the texture.
+ * @param texw The width of the texture.
+ * @param texh The height of the texture.
+ * @param detection The face detection results.
+ *
+ * @returns None
+ */
 static void
 render_detect_region (int ofstx, int ofsty, int texw, int texh,
                       face_detect_result_t *detection)
@@ -417,6 +505,17 @@ render_detect_region (int ofstx, int ofsty, int texw, int texh,
 
 
 
+/**
+ * Renders a cropped face image.
+ *
+ * @param srctex The source texture.
+ * @param ofstx The x offset of the cropped face image.
+ * @param ofsty The y offset of the cropped face image.
+ * @param texw The width of the cropped face image.
+ * @param texh The height of the cropped face image.
+ * @param detection The face detection result.
+ * @param face_id The face ID.
+ */
 static void
 render_cropped_face_image (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int texh,
                            face_detect_result_t *detection, unsigned int face_id)
@@ -443,6 +542,20 @@ render_cropped_face_image (texture_2d_t *srctex, int ofstx, int ofsty, int texw,
     draw_2d_texture_ex_texcoord (srctex, ofstx, ofsty, texw, texh, texcoord);
 }
 
+/**
+ * Renders a cropped eye image.
+ *
+ * @param srctex The source texture.
+ * @param ofstx The x-offset of the cropped image.
+ * @param ofsty The y-offset of the cropped image.
+ * @param texw The width of the cropped image.
+ * @param texh The height of the cropped image.
+ * @param face The face information.
+ * @param facemesh The face landmark information.
+ * @param eye_id The eye id.
+ *
+ * @returns None
+ */
 static void
 render_cropped_eye_image (texture_2d_t *srctex, int ofstx, int ofsty, int texw, int texh,
                            face_t *face, face_landmark_result_t *facemesh, int eye_id)
@@ -492,6 +605,20 @@ render_cropped_eye_image (texture_2d_t *srctex, int ofstx, int ofsty, int texw, 
 }
 
 
+/**
+ * Renders the iris mesh.
+ *
+ * @param ofstx The x offset of the texture.
+ * @param ofsty The y offset of the texture.
+ * @param texw The width of the texture.
+ * @param texh The height of the texture.
+ * @param mat The transformation matrix.
+ * @param irismesh The iris mesh.
+ * @param idx The indices of the iris mesh.
+ * @param num The number of indices.
+ *
+ * @returns None
+ */
 static void
 render_lines (int ofstx, int ofsty, int texw, int texh, float *mat, irismesh_result_t *irismesh, int *idx, int num)
 {
@@ -511,6 +638,17 @@ render_lines (int ofstx, int ofsty, int texw, int texh, float *mat, irismesh_res
     }
 }
 
+/**
+ * Renders the iris landmark points.
+ *
+ * @param ofstx The x offset of the texture.
+ * @param ofsty The y offset of the texture.
+ * @param texw The width of the texture.
+ * @param texh The height of the texture.
+ * @param irismesh The iris mesh result.
+ *
+ * @returns None
+ */
 static void
 render_iris_landmark (int ofstx, int ofsty, int texw, int texh, irismesh_result_t *irismesh)
 {
@@ -556,6 +694,18 @@ render_iris_landmark (int ofstx, int ofsty, int texw, int texh, irismesh_result_
     }
 }
 
+/**
+ * Renders the iris landmarks on the face mesh.
+ *
+ * @param ofstx The x offset of the texture.
+ * @param ofsty The y offset of the texture.
+ * @param texw The width of the texture.
+ * @param texh The height of the texture.
+ * @param facemesh The face mesh.
+ * @param irismesh The iris mesh.
+ *
+ * @returns None
+ */
 static void
 render_iris_landmark_on_face (int ofstx, int ofsty, int texw, int texh, 
                               face_landmark_result_t *facemesh, irismesh_result_t *irismesh)
@@ -630,6 +780,19 @@ render_iris_landmark_on_face (int ofstx, int ofsty, int texw, int texh,
     }
 }
 
+/**
+ * Renders a face mesh keypoint.
+ *
+ * @param ofstx The x offset of the texture.
+ * @param ofsty The y offset of the texture.
+ * @param texw The width of the texture.
+ * @param texh The height of the texture.
+ * @param mat The transformation matrix.
+ * @param joint The face mesh keypoint.
+ * @param idx The index of the keypoint.
+ *
+ * @returns None
+ */
 static void
 render_facemesh_keypoint (int ofstx, int ofsty, int texw, int texh, float *mat, fvec3 *joint, int idx)
 {
@@ -645,6 +808,19 @@ render_facemesh_keypoint (int ofstx, int ofsty, int texw, int texh, float *mat, 
     draw_2d_fillrect (x - (r/2), y - (r/2), r, r, col_cyan);
 }
 
+/**
+ * Renders the face mesh on the main framebuffer.
+ *
+ * @param ofstx The x offset of the texture.
+ * @param ofstx The y offset of the texture.
+ * @param texw The width of the texture.
+ * @param texh The height of the texture.
+ * @param face The face mesh.
+ * @param facemesh The face landmark result.
+ * @param irismesh The iris mesh result.
+ *
+ * @returns None
+ */
 static void
 render_iris_landmark_on_main (int ofstx, int ofsty, int texw, int texh, 
                               face_t *face, face_landmark_result_t *facemesh, irismesh_result_t *irismesh)
@@ -749,6 +925,13 @@ render_iris_landmark_on_main (int ofstx, int ofsty, int texw, int texh,
     }
 }
 
+/**
+ * Flips the iris landmark horizontally.
+ *
+ * @param irismesh The iris mesh result.
+ *
+ * @returns None
+ */
 static void
 flip_horizontal_iris_landmark (irismesh_result_t *irismesh)
 {
@@ -768,6 +951,13 @@ flip_horizontal_iris_landmark (irismesh_result_t *irismesh)
 }
 
 
+/**
+ * Draws debug information about the TFLite interpreter.
+ *
+ * @param None
+ *
+ * @returns None
+ */
 void
 AppEngine::DrawTFLiteConfigInfo ()
 {
@@ -795,6 +985,19 @@ AppEngine::DrawTFLiteConfigInfo ()
  *     | |      | |     |      |
  *     +-+------+-+     +------+
  *                      +------+
+ */
+/**
+ * Adjusts the texture coordinates to fit the window.
+ *
+ * @param win_w The width of the window.
+ * @param win_h The height of the window.
+ * @param texw The width of the texture.
+ * @param texh The height of the texture.
+ * @param dx The x coordinate of the texture.
+ * @param dy The y coordinate of the texture.
+ * @param dw The width of the texture.
+ * @param dh The height of the texture.
+ * @param full_zoom Whether to zoom to fit the window.
  */
 static void
 adjust_texture (int win_w, int win_h, int texw, int texh,
@@ -832,24 +1035,61 @@ adjust_texture (int win_w, int win_h, int texw, int texh,
 
 
 #if defined (USE_IMGUI)
+/**
+ * Callback for mouse movement.
+ *
+ * @param x The x-coordinate of the mouse.
+ * @param y The y-coordinate of the mouse.
+ *
+ * @returns None
+ */
 void
 AppEngine::mousemove_cb (int x, int y)
 {
     imgui_mousemove (x, y);
 }
 
+/**
+ * Callback for mouse events.
+ *
+ * @param button The button that was pressed or released.
+ * @param state The state of the button.
+ * @param x The x-coordinate of the mouse.
+ * @param y The y-coordinate of the mouse.
+ *
+ * @returns None
+ */
 void
 AppEngine::button_cb (int button, int state, int x, int y)
 {
     imgui_mousebutton (button, state, x, y);
 }
 
+/**
+ * Callback function for keyboard events.
+ *
+ * @param key The key that was pressed.
+ * @param state The state of the key (up or down).
+ * @param x The x-coordinate of the mouse when the key was pressed.
+ * @param y The y-coordinate of the mouse when the key was pressed.
+ *
+ * @returns None
+ */
 void
 AppEngine::keyboard_cb (int key, int state, int x, int y)
 {
 }
 #endif
 
+
+/**
+ * Initializes the ImGui library.
+ *
+ * @param win_w The width of the window.
+ * @param win_h The height of the window.
+ *
+ * @returns None
+ */
 void
 AppEngine::setup_imgui (int win_w, int win_h, imgui_data_t *imgui_data)
 {
@@ -865,6 +1105,11 @@ AppEngine::setup_imgui (int win_w, int win_h, imgui_data_t *imgui_data)
 }
 
 
+/**
+ * Renders a frame.
+ *
+ * @returns None
+ */
 void 
 AppEngine::RenderFrame ()
 {
@@ -1063,6 +1308,11 @@ AppEngine::RenderFrame ()
 }
 
 
+/**
+ * Initializes the app engine.
+ *
+ * @returns 0 on success, -1 on failure.
+ */
 AppEngine::AppEngine (android_app* app)
     : m_app(app),
       m_cameraGranted(false),
@@ -1072,6 +1322,11 @@ AppEngine::AppEngine (android_app* app)
     memset (&glctx, 0, sizeof (glctx));
 }
 
+/**
+ * Destructor for the AppEngine class.
+ *
+ * @returns None
+ */
 AppEngine::~AppEngine()
 {
     DeleteCamera();
@@ -1081,6 +1336,11 @@ AppEngine::~AppEngine()
 /* ---------------------------------------------------------------------------- *
  *  Interfaces to android application framework
  * ---------------------------------------------------------------------------- */
+/**
+ * Initializes the OpenGL ES context.
+ *
+ * @returns None
+ */
 void
 AppEngine::OnAppInitWindow (void)
 {
@@ -1088,6 +1348,11 @@ AppEngine::OnAppInitWindow (void)
     InitCamera();
 }
 
+/**
+ * Called when the application is terminated.
+ *
+ * @returns None
+ */
 void
 AppEngine::OnAppTermWindow (void)
 {
@@ -1095,6 +1360,11 @@ AppEngine::OnAppTermWindow (void)
     TerminateGLES();
 }
 
+/**
+ * Returns the Android application object.
+ *
+ * @returns The Android application object.
+ */
 struct android_app *
 AppEngine::AndroidApp (void) const
 {
@@ -1105,6 +1375,14 @@ AppEngine::AndroidApp (void) const
 /* ---------------------------------------------------------------------------- *
  *  OpenGLES Render Functions
  * ---------------------------------------------------------------------------- */
+/**
+ * Loads an image from the assets directory and creates a texture for it.
+ *
+ * @param tex The texture to load the image into.
+ * @param fname The filename of the image to load.
+ *
+ * @returns None
+ */
 void
 AppEngine::LoadInputTexture (texture_2d_t *tex, char *fname)
 {
@@ -1115,6 +1393,11 @@ AppEngine::LoadInputTexture (texture_2d_t *tex, char *fname)
     asset_free_image (img_buf);
 }
 
+/**
+ * Initializes the GLES context.
+ *
+ * @returns None
+ */
 void 
 AppEngine::InitGLES (void)
 {
@@ -1191,6 +1474,11 @@ AppEngine::InitGLES (void)
 }
 
 
+/**
+ * Terminates the GLES context.
+ *
+ * @returns None
+ */
 void
 AppEngine::TerminateGLES (void)
 {
@@ -1198,6 +1486,11 @@ AppEngine::TerminateGLES (void)
 }
 
 
+/**
+ * Updates the frame.
+ *
+ * @returns None
+ */
 void
 AppEngine::UpdateFrame (void)
 {
@@ -1223,6 +1516,11 @@ AppEngine::UpdateFrame (void)
     RenderFrame();
 }
 
+/**
+ * Renders the camera texture to the main render target.
+ *
+ * @returns None
+ */
 void
 AppEngine::CropCameraTexture (void)
 {
@@ -1255,6 +1553,11 @@ AppEngine::CropCameraTexture (void)
 /* ---------------------------------------------------------------------------- *
  *  Manage NDKCamera Functions
  * ---------------------------------------------------------------------------- */
+/**
+ * Initializes the camera.
+ *
+ * @returns None
+ */
 void 
 AppEngine::InitCamera (void)
 {
@@ -1269,6 +1572,11 @@ AppEngine::InitCamera (void)
 }
 
 
+/**
+ * Deletes the camera and releases the image reader.
+ *
+ * @returns None
+ */
 void
 AppEngine::DeleteCamera(void)
 {
@@ -1283,6 +1591,13 @@ AppEngine::DeleteCamera(void)
 }
 
 
+/**
+ * Creates a camera object and starts the camera preview.
+ *
+ * @param facing The camera facing to use.
+ *
+ * @returns None
+ */
 void 
 AppEngine::CreateCamera (int facing)
 {
@@ -1298,6 +1613,11 @@ AppEngine::CreateCamera (int facing)
     m_camera->StartPreview (true);
 }
 
+/**
+ * Updates the camera texture.
+ *
+ * @returns None
+ */
 void
 AppEngine::UpdateCameraTexture ()
 {
@@ -1356,6 +1676,11 @@ AppEngine::UpdateCameraTexture ()
  * Initiate a Camera Run-time usage request to Java side implementation
  *  [The request result will be passed back in function notifyCameraPermission()]
  * --------------------------------------------------------------------------- */
+/**
+ * Requests the camera permission.
+ *
+ * @returns None
+ */
 void
 AppEngine::RequestCameraPermission()
 {
@@ -1377,6 +1702,11 @@ AppEngine::RequestCameraPermission()
     activity->vm->DetachCurrentThread();
 }
 
+/**
+ * Initializes the camera.
+ *
+ * @returns None
+ */
 void
 AppEngine::OnCameraPermission (jboolean granted)
 {
@@ -1389,6 +1719,13 @@ AppEngine::OnCameraPermission (jboolean granted)
 }
 
 
+/**
+ * Notifies the app engine that the camera permission has been granted.
+ *
+ * @param permission The permission granted.
+ *
+ * @returns None
+ */
 extern "C" JNIEXPORT void JNICALL
 Java_com_glesapp_glesapp_GLESAppNativeActivity_notifyCameraPermission (
                             JNIEnv *env, jclass type, jboolean permission)

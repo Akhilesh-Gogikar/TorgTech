@@ -5,7 +5,13 @@
 #include "tflite_deeplab.h"
 #include "util_debug.h"
 
+/**
+ * A function that initializes the segment interpreter.
+ *
+ * @returns None
+ */
 static tflite_interpreter_t s_segment_interpreter;
+
 static tflite_tensor_t      s_tensor_segment_input;
 static tflite_tensor_t      s_tensor_segment;
 
@@ -35,6 +41,11 @@ static char  s_class_name [MAX_DETECT_CLASS + 1][64] =
     "tvmonitor"     // 20
 };
 
+/**
+ * Initializes the color array for the class colors.
+ *
+ * @returns None
+ */
 static int
 init_class_color ()
 {
@@ -57,6 +68,14 @@ init_class_color ()
 }
 
 
+/**
+ * Initializes the TFLite interpreter for segmentation.
+ *
+ * @param model_buf The model buffer.
+ * @param model_size The size of the model buffer.
+ *
+ * @returns 0 on success, -1 on failure.
+ */
 int
 init_tflite_deeplab(const char *model_buf, size_t model_size)
 {
@@ -73,6 +92,11 @@ init_tflite_deeplab(const char *model_buf, size_t model_size)
     return 0;
 }
 
+/**
+ * Returns the input type of the Deeplab model.
+ *
+ * @returns The input type of the Deeplab model.
+ */
 int
 get_deeplab_input_type ()
 {
@@ -82,6 +106,14 @@ get_deeplab_input_type ()
         return 0;
 }
 
+/**
+ * Returns a pointer to the input buffer for the Deeplab model.
+ *
+ * @param w A pointer to the width of the input buffer.
+ * @param h A pointer to the height of the input buffer.
+ *
+ * @returns A pointer to the input buffer.
+ */
 void *
 get_deeplab_input_buf (int *w, int *h)
 {
@@ -90,12 +122,26 @@ get_deeplab_input_buf (int *w, int *h)
     return s_tensor_segment_input.ptr;
 }
 
+/**
+ * Returns the name of the class for a given class index.
+ *
+ * @param class_idx The class index.
+ *
+ * @returns The name of the class.
+ */
 char *
 get_deeplab_class_name (int class_idx)
 {
     return s_class_name[class_idx];
 }
 
+/**
+ * Returns the color for a class in the DeepLab model.
+ *
+ * @param class_idx The index of the class.
+ *
+ * @returns The color for the class.
+ */
 float *
 get_deeplab_class_color (int class_idx)
 {
@@ -103,6 +149,13 @@ get_deeplab_class_color (int class_idx)
 }
 
 
+/**
+ * Invokes the Deeplab model.
+ *
+ * @param deeplab_result The result of the Deeplab model.
+ *
+ * @returns None
+ */
 int
 invoke_deeplab (deeplab_result_t *deeplab_result)
 {

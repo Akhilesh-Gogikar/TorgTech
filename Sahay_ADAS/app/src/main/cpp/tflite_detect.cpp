@@ -25,6 +25,14 @@ static tflite_tensor_t  s_tensor_num;
 static char  s_class_name [MAX_OBJ_DETECT_CLASS + 1][128];
 static float s_class_color[MAX_OBJ_DETECT_CLASS + 1][4];
 
+/**
+ * Parses a string into a token.
+ *
+ * @param lpSrc The string to parse.
+ * @param lpToken The token to store the parsed string.
+ *
+ * @returns The next character in the string.
+ */
 static char *
 get_token (char *lpSrc, char *lpToken)
 {
@@ -81,6 +89,14 @@ get_token (char *lpSrc, char *lpToken)
     return lpSrc;
 }
 
+/**
+ * Loads the label map from a file.
+ *
+ * @param label_buf The buffer containing the label map.
+ * @param label_size The size of the label map buffer.
+ *
+ * @returns None
+ */
 static int
 load_label_map (const char *label_buf, size_t label_size)
 {
@@ -120,6 +136,11 @@ load_label_map (const char *label_buf, size_t label_size)
     return 0;
 }
 
+/**
+ * Initializes the color array for the class colors.
+ *
+ * @returns None
+ */
 static int
 init_class_color ()
 {
@@ -135,6 +156,16 @@ init_class_color ()
 }
 
 
+/**
+ * Initializes the TFLite interpreter and loads the label map.
+ *
+ * @param model_buf The model buffer.
+ * @param model_size The size of the model buffer.
+ * @param label_buf The label map buffer.
+ * @param label_size The size of the label map buffer.
+ *
+ * @returns 0 on success, -1 on failure.
+ */
 int
 init_tflite_detection (const char *model_buf, size_t model_size,
                        const char *label_buf, size_t label_size)
@@ -174,6 +205,11 @@ init_tflite_detection (const char *model_buf, size_t model_size,
     return 0;
 }
 
+/**
+ * Returns the input type of the model.
+ *
+ * @returns The input type of the model.
+ */
 int
 get_detect_input_type ()
 {
@@ -183,6 +219,14 @@ get_detect_input_type ()
         return 0;
 }
 
+/**
+ * Returns a pointer to the input buffer.
+ *
+ * @param w A pointer to the width of the input buffer.
+ * @param h A pointer to the height of the input buffer.
+ *
+ * @returns A pointer to the input buffer.
+ */
 void *
 get_detect_input_buf (int *w, int *h)
 {
@@ -191,12 +235,26 @@ get_detect_input_buf (int *w, int *h)
     return s_tensor_input.ptr;
 }
 
+/**
+ * Returns the name of the class of the object.
+ *
+ * @param class_idx The index of the class.
+ *
+ * @returns The name of the class.
+ */
 char *
 get_detect_class_name (int class_idx)
 {
     return s_class_name[class_idx + 1];
 }
 
+/**
+ * Returns the color for a class.
+ *
+ * @param class_idx The index of the class.
+ *
+ * @returns The color for the class.
+ */
 float *
 get_detect_class_color (int class_idx)
 {
@@ -204,6 +262,13 @@ get_detect_class_color (int class_idx)
 }
 
 
+/**
+ * Invokes the TFLite interpreter.
+ *
+ * @param detection The detection result.
+ *
+ * @returns None
+ */
 int
 invoke_detect (detect_result_t *detection)
 {

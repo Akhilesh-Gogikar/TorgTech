@@ -30,6 +30,11 @@ public:
     virtual ~OboeSinePlayer() = default;
 
     // Call this from Activity onResume()
+    /**
+     * Starts the audio stream.
+     *
+     * @returns oboe::Result::OK if the stream was successfully started.
+     */
     int32_t startAudio() {
         std::lock_guard<std::mutex> lock(mLock);
         oboe::AudioStreamBuilder builder;
@@ -60,6 +65,16 @@ public:
         }
     }
 
+    /**
+     * A callback function that is called when the stream is ready to be started.
+     *
+     * @param oboeStream The stream that is ready to be started.
+     * @param audioData The audio data that will be passed to the callback.
+     * @param numFrames The number of frames that will be passed to the callback.
+     *
+     * @returns oboe::DataCallbackResult::Continue to continue playback, or
+     * oboe::DataCallbackResult::Stop to stop playback.
+     */
     oboe::DataCallbackResult onAudioReady(oboe::AudioStream *oboeStream, void *audioData, int32_t numFrames) override {
         float *floatData = (float *) audioData;
         for (int i = 0; i < numFrames; ++i) {

@@ -18,6 +18,14 @@ static ImVec2 s_win_pos [10];
 static int    s_win_num = 0;
 static ImVec2 s_mouse_pos;
 
+/**
+ * Initializes the ImGui library.
+ *
+ * @param win_w The width of the window.
+ * @param win_h The height of the window.
+ *
+ * @returns None
+ */
 int
 init_imgui (int win_w, int win_h)
 {
@@ -41,6 +49,16 @@ init_imgui (int win_w, int win_h)
     return 0;
 }
 
+/**
+ * Handles mouse button events.
+ *
+ * @param button The button that was pressed or released.
+ * @param state The state of the button.
+ * @param x The x-coordinate of the mouse.
+ * @param y The y-coordinate of the mouse.
+ *
+ * @returns None
+ */
 void
 imgui_mousebutton (int button, int state, int x, int y)
 {
@@ -56,6 +74,14 @@ imgui_mousebutton (int button, int state, int x, int y)
     s_mouse_pos.y = y;
 }
 
+/**
+ * Handles mouse movement events.
+ *
+ * @param x The x-coordinate of the mouse.
+ * @param y The y-coordinate of the mouse.
+ *
+ * @returns None
+ */
 void
 imgui_mousemove (int x, int y)
 {
@@ -66,6 +92,11 @@ imgui_mousemove (int x, int y)
     s_mouse_pos.y = y;
 }
 
+/**
+ * Returns true if any window is hovered.
+ *
+ * @returns True if any window is hovered.
+ */
 bool
 imgui_is_anywindow_hovered ()
 {
@@ -87,6 +118,13 @@ imgui_is_anywindow_hovered ()
 #endif
 }
 
+/**
+ * Renders the GUI.
+ *
+ * @param imgui_data The data structure for the GUI.
+ *
+ * @returns None
+ */
 static void
 render_gui (imgui_data_t *imgui_data)
 {
@@ -127,6 +165,13 @@ render_gui (imgui_data_t *imgui_data)
     ImGui::End();
 }
 
+/**
+ * Renders the GUI.
+ *
+ * @param imgui_data The data for the GUI.
+ *
+ * @returns None
+ */
 int
 invoke_imgui (imgui_data_t *imgui_data)
 {

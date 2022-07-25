@@ -14,6 +14,14 @@ static tflite_tensor_t      s_tensor_depth;
 /* -------------------------------------------------- *
  *  Create TFLite Interpreter
  * -------------------------------------------------- */
+/**
+ * Initializes the TFLite interpreter.
+ *
+ * @param model_buf The model buffer.
+ * @param model_size The size of the model buffer.
+ *
+ * @returns 0 on success, -1 on failure.
+ */
 int
 init_tflite_dense_depth (const char *model_buf, size_t model_size)
 {
@@ -25,6 +33,15 @@ init_tflite_dense_depth (const char *model_buf, size_t model_size)
 }
 
 
+/**
+ * Returns a pointer to the input buffer for the specified input tensor.
+ *
+ * @param input_name The name of the input tensor.
+ * @param w A pointer to the width of the input tensor.
+ * @param h A pointer to the height of the input tensor.
+ *
+ * @returns A pointer to the input buffer.
+ */
 void *
 get_dense_depth_input_buf (int *w, int *h)
 {
@@ -40,6 +57,16 @@ get_dense_depth_input_buf (int *w, int *h)
 /* -------------------------------------------------- *
  * Invoke TensorFlow Lite
  * -------------------------------------------------- */
+/**
+ * Invokes the TensorFlow Lite model with the given input data.
+ *
+ * @param input_data The input data to the model.
+ * @param input_data_size The size of input_data.
+ * @param output_data The output data from the model.
+ * @param output_data_size The size of output_data.
+ *
+ * @returns 0 if the model runs without error.
+ */
 int
 invoke_dense_depth (dense_depth_result_t *dense_depth_result)
 {

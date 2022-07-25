@@ -48,6 +48,16 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
+/**
+ * Encodes a box with the specified coordinates.
+ *
+ * @param ymin The y-coordinate of the lower bound of the box.
+ * @param xmin The x-coordinate of the lower bound of the box.
+ * @param ymax The y-coordinate of the upper bound of the box.
+ * @param xmax The x-coordinate of the upper bound of the box.
+ *
+ * @returns A `BoxCornerEncoding` object with the specified coordinates.
+ */
 struct BoxCornerEncoding {
     float ymin;
     float xmin;
@@ -55,6 +65,16 @@ struct BoxCornerEncoding {
     float xmax;
 };
 
+/**
+ * Encodes a center-size encoding for a bounding box.
+ *
+ * @param center_y The center y coordinate of the bounding box.
+ * @param center_x The center x coordinate of the bounding box.
+ * @param height The height of the bounding box.
+ * @param width The width of the bounding box.
+ *
+ * @returns The center-size encoding of the bounding box.
+ */
 struct CenterSizeEncoding {
     float y;
     float x;
@@ -62,6 +82,14 @@ struct CenterSizeEncoding {
     float w;
 };
 
+/**
+ * Decodes the center-size encoding of a bounding box.
+ *
+ * @param decoded_boxes The decoded boxes.
+ * @param input_box_encodings The input bounding box encodings.
+ *
+ * @returns None
+ */
 int
 DecodeCenterSizeBoxes (float *decoded_boxes, const float *input_box_encodings) 
 {
@@ -98,6 +126,16 @@ DecodeCenterSizeBoxes (float *decoded_boxes, const float *input_box_encodings)
 }
 
 
+/**
+ * Sorts the values in the input array in decreasing order.
+ *
+ * @param values The input array.
+ * @param num_values The number of values in the input array.
+ * @param num_to_sort The number of values to sort.
+ * @param indices The output array containing the sorted indices.
+ *
+ * @returns None
+ */
 void DecreasingPartialArgSort(const float* values, int num_values,
                               int num_to_sort, int* indices) {
   std::iota(indices, indices + num_values, 0);
@@ -107,6 +145,16 @@ void DecreasingPartialArgSort(const float* values, int num_values,
 }
 
 
+/**
+ * Selects detections with scores above a given threshold.
+ *
+ * @param values The detection scores.
+ * @param threshold The threshold used to select detections.
+ * @param keep_values The selected detection scores.
+ * @param keep_indices The selected detection indices.
+ *
+ * @returns None
+ */
 void SelectDetectionsAboveScoreThreshold(const std::vector<float>& values,
                                          const float threshold,
                                          std::vector<float>* keep_values,
@@ -120,6 +168,15 @@ void SelectDetectionsAboveScoreThreshold(const std::vector<float>& values,
 }
 
 
+/**
+ * Computes the intersection over union of two bounding boxes.
+ *
+ * @param decoded_boxes The bounding boxes before decoding.
+ * @param i The first index of the bounding boxes.
+ * @param j The second index of the bounding boxes.
+ *
+ * @returns The intersection over union of the two bounding boxes.
+ */
 float ComputeIntersectionOverUnion(const float* decoded_boxes,
                                    const int i, const int j) {
   auto& box_i = reinterpret_cast<const BoxCornerEncoding*>(decoded_boxes)[i];
@@ -144,6 +201,18 @@ float ComputeIntersectionOverUnion(const float* decoded_boxes,
 // If lower-scoring box has too much overlap with a higher-scoring box,
 // we get rid of the lower-scoring box.
 // Complexity is O(N^2) pairwise comparison between boxes
+/**
+ * Performs non-maximum suppression on the input boxes.
+ *
+ * @param boxes The input boxes.
+ * @param scores The input scores.
+ * @param selected The output indices of the selected boxes.
+ * @param max_detections The maximum number of boxes to keep.
+ * @param iou_threshold The intersection over union threshold.
+ * @param score_threshold The score threshold.
+ *
+ * @returns The number of selected boxes.
+ */
 int
 NonMaxSuppressionSingleClassHelper(const float *decoded_boxes,
                                    const std::vector<float>& scores, 
@@ -209,6 +278,18 @@ NonMaxSuppressionSingleClassHelper(const float *decoded_boxes,
 // 3) The worst runtime of the regular NMS is O(K*N^2)
 // where N is the number of anchors and K the number of
 // classes.
+/**
+ * Performs non-max suppression on the input boxes.
+ *
+ * @param detection_boxes The input boxes.
+ * @param scores The input scores.
+ * @param max_detections The maximum number of detections to return.
+ * @param max_classes_per_detection The maximum number of classes per detection.
+ * @param max_suppression_overlap The overlap threshold for suppressing
+ * overlapping bounding boxes.
+ *
+ * @returns A vector of selected indices.
+ */
 int
 NonMaxSuppressionMultiClassRegularHelper(std::vector<DetectionBox> &detection_boxes, 
                                          const float *decoded_boxes, const float* scores) {
@@ -309,6 +390,20 @@ NonMaxSuppressionMultiClassRegularHelper(std::vector<DetectionBox> &detection_bo
 // 3) Compared to standard NMS, the worst runtime of this version is O(N^2)
 // instead of O(KN^2) where N is the number of anchors and K the number of
 // classes.
+/**
+ * Performs non-maximum suppression on the input boxes.
+ *
+ * @param boxes The input boxes.
+ * @param scores The input scores.
+ * @param max_boxes_per_class The maximum number of boxes per class.
+ * @param max_total_boxes The maximum number of boxes.
+ * @param iou_threshold The intersection over union threshold.
+ * @param score_threshold The score threshold.
+ * @param num_classes The number of classes.
+ * @param num_boxes The number of boxes.
+ * @param num_categories The number of categories.
+ * @param num_scores The number of scores.
+ */
 int
 NonMaxSuppressionMultiClassFastHelper (std::vector<DetectionBox> &detection_boxes, 
                                        const float *decoded_boxes, const float* scores) {
@@ -372,6 +467,13 @@ NonMaxSuppressionMultiClassFastHelper (std::vector<DetectionBox> &detection_boxe
 /* -------------------------------------------------------------------- *
  *  software routine for "TFLite_Detection_PostProcess" Op.
  * -------------------------------------------------------------------- */
+/**
+ '.
+ * Reads a file containing anchor boxes.
+ * @param filename The name of the file containing anchor boxes.
+ * @param size The number of boxes in the file.
+ * @returns A pointer to the anchor boxes.
+ */
 float *
 read_anchors_file (std::string filename, int& size) 
 {
@@ -399,6 +501,13 @@ read_anchors_file (std::string filename, int& size)
 }
 
 
+/**
+ * Initializes the detection post-processing.
+ *
+ * @param filename The path to the anchor file.
+ *
+ * @returns 0 on success, -1 on failure.
+ */
 int
 init_detect_postprocess (std::string filename)
 {
@@ -419,6 +528,15 @@ init_detect_postprocess (std::string filename)
 }
 
 
+/**
+ * Decodes the bounding boxes from the output of the YOLO model.
+ *
+ * @param detection_boxes The detection boxes.
+ * @param boxes_ptr The pointer to the boxes.
+ * @param scores_ptr The pointer to the scores.
+ *
+ * @returns None
+ */
 int
 invoke_detection_postprocess (std::vector<DetectionBox> &detection_boxes,  /* [OUT] */
                               const float *boxes_ptr,                      /* [IN ] */

@@ -14,6 +14,19 @@ extern "C" {
 #define MAX_DETECT_CLASS 20
 
 
+
+/**
+ * Runs the Deeplab model on an input image.
+ *
+ * @param input_image The input image to run the model on.
+ * @param input_image_dims The dimensions of the input image.
+ * @param input_image_type The type of the input image.
+ * @param input_image_format The format of the input image.
+ * @param input_image_layout The layout of the input image.
+ * @param input_image_scale The scale of the input image.
+ * @param input_image_zero_point The zero point of the input image.
+ * @param input_image_dtype The data type of the input image.
+ */
 typedef struct _deeplab_result_t
 {
     float *segmentmap;

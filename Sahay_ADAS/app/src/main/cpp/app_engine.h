@@ -26,12 +26,24 @@
 #include <oboe/Oboe.h>
 #include <math.h>
 
+/**
+ * Computes the sine waveform for a given sample.
+ *
+ * @param sample The sample to compute the sine waveform for.
+ *
+ * @returns The sine waveform for the given sample.
+ */
 class OboeSinePlayer: public oboe::AudioStreamCallback {
 public:
 
     virtual ~OboeSinePlayer() = default;
 
     // Call this from Activity onResume()
+    /**
+     * Starts the audio stream.
+     *
+     * @returns oboe::Result::OK if the stream was successfully started.
+     */
     int32_t startAudio() {
         std::lock_guard<std::mutex> lock(mLock);
         oboe::AudioStreamBuilder builder;
@@ -52,6 +64,11 @@ public:
     }
 
     // Call this from Activity onPause()
+    /**
+     * Stops the audio stream.
+     *
+     * @returns None
+     */
     void stopAudio() {
         // Stop, close and delete in case not already closed.
         std::lock_guard<std::mutex> lock(mLock);
@@ -62,6 +79,16 @@ public:
         }
     }
 
+    /**
+     * A callback function that is called when the stream is ready to be started.
+     *
+     * @param oboeStream The stream that is ready to be started.
+     * @param audioData The audio data that will be passed to the callback.
+     * @param numFrames The number of frames that will be passed to the callback.
+     *
+     * @returns oboe::DataCallbackResult::Continue to continue playback, or
+     * oboe::DataCallbackResult::Stop to stop playback.
+     */
     oboe::DataCallbackResult onAudioReady(oboe::AudioStream *oboeStream, void *audioData, int32_t numFrames) override {
         float *floatData = (float *) audioData;
         for (int i = 0; i < numFrames; ++i) {
@@ -93,6 +120,21 @@ private:
 };
 
 
+/**
+ * Initializes the GLES context.
+ *
+ * @param ctx The GLES context to initialize.
+ * @param disp_w The width of the display.
+ * @param disp_h The height of the display.
+ * @param tex_camera_valid Whether the camera texture is valid.
+ * @param tex_camera The camera texture.
+ * @param tex_input The input texture.
+ * @param egl_img The EGL image.
+ * @param rtarget_main The main render target.
+ * @param rtarget_crop The crop render target.
+ *
+ * @returns None
+ */
 typedef struct gles_ctx {
     int initdone;
     int frame_count;
@@ -114,6 +156,13 @@ typedef struct gles_ctx {
 } gles_ctx_t;
 
 
+/**
+ * Initializes the app engine.
+ *
+ * @param app The application instance.
+ *
+ * @returns None
+ */
 class AppEngine {
 public:
     explicit AppEngine(android_app* app);

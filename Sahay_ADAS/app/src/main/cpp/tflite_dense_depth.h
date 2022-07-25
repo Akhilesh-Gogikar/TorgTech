@@ -14,12 +14,33 @@ extern "C" {
 #define DENSEDEPTH_MODEL_PATH         "model/model.tflite"
 #define DENSEDEPTH_QUANT_MODEL_PATH   "model/dense_depth_nyu_480x640_float32.tflite"
 
+/**
+ * Computes the depth map of a dense cloud.
+ *
+ * @param dense_cloud The dense cloud.
+ * @param dense_cloud_dims The dimensions of the dense cloud.
+ * @param dense_cloud_strides The strides of the dense cloud.
+ * @param camera_intr The intrinsic parameters of the camera.
+ * @param camera_extr The extrinsic parameters of the camera.
+ * @param depth_map_dims The dimensions of the depth map.
+ * @param depth_map_strides The strides of the depth map.
+ * @param depth_map_scale The scale of the depth map.
+ * @param depth_map_offset
+ */
 typedef struct _dense_depth_result_t
 {
     float *depthmap;
     int   depthmap_dims[3];
 } dense_depth_result_t;
 
+/**
+ * Initializes the TFLite interpreter for the model.
+ *
+ * @param model_buf The model buffer.
+ * @param model_size The size of the model buffer.
+ *
+ * @returns 0 on success, -1 on failure.
+ */
 int init_tflite_dense_depth (const char *model_buf, size_t model_size);
 
 void  *get_dense_depth_input_buf (int *w, int *h);

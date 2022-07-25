@@ -15,6 +15,15 @@ static float s_mdl_mtx[16];
 static int s_win_width  = 100;
 static int s_win_height = 100;
 
+/**
+ * Handles the start of a touch event.
+ *
+ * @param id The ID of the touch event.
+ * @param x The x-coordinate of the touch event.
+ * @param y The y-coordinate of the touch event.
+ *
+ * @returns None
+ */
 void
 touch_event_start (int id, int x, int y)
 {
@@ -25,12 +34,28 @@ touch_event_start (int id, int x, int y)
     quaternion_copy (s_mdl_qtn0, s_mdl_qtn);
 }
 
+/**
+ * Handles the end of a touch event.
+ *
+ * @param id The ID of the touch event.
+ *
+ * @returns None
+ */
 void
 touch_event_end (int id)
 {
     s_mouse_down = 0;
 }
 
+/**
+ * Handles mouse events.
+ *
+ * @param id The id of the mouse event.
+ * @param x The x-coordinate of the mouse event.
+ * @param y The y-coordinate of the mouse event.
+ *
+ * @returns None
+ */
 void
 touch_event_move (int id, int x, int y)
 {
@@ -56,6 +81,14 @@ touch_event_move (int id, int x, int y)
 }
 
 
+/**
+ * Initializes the touch event state.
+ *
+ * @param width The width of the window.
+ * @param height The height of the window.
+ *
+ * @returns None
+ */
 int
 init_touch_event (int width, int height)
 {
@@ -67,6 +100,13 @@ init_touch_event (int width, int height)
     return 0;
 }
 
+/**
+ * Computes the touch event matrix for the current model.
+ *
+ * @param mtx The output matrix.
+ *
+ * @returns None
+ */
 int
 get_touch_event_matrix (float *mtx)
 {

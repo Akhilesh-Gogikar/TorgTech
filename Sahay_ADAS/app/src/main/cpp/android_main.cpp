@@ -11,6 +11,11 @@
 
 static AppEngine *s_pEngineObj = nullptr;
 
+/**
+ * Returns the AppEngine object.
+ *
+ * @returns The AppEngine object.
+ */
 AppEngine *
 GetAppEngine(void)
 {
@@ -18,6 +23,14 @@ GetAppEngine(void)
 }
 
 
+/**
+ * Handles input events from the Android OS.
+ *
+ * @param engine The engine to handle the input for.
+ * @param event The input event to handle.
+ *
+ * @returns 1 if the event was handled, 0 otherwise.
+ */
 static void
 handle_imgui_input (AppEngine *engine, AInputEvent *event)
 {
@@ -61,6 +74,13 @@ handle_imgui_input (AppEngine *engine, AInputEvent *event)
     }
 }
 
+/**
+ * Handles input events.
+ *
+ * @param engine The engine instance.
+ * @param event The input event.
+ * @return 1 if the event was handled, 0 otherwise.
+ */
 static int32_t
 engine_handle_input (struct android_app *app, AInputEvent *event)
 {
@@ -77,6 +97,12 @@ engine_handle_input (struct android_app *app, AInputEvent *event)
     return 0;
 }
 
+/**
+ * Processes Android application commands.
+ *
+ * @param app The application instance.
+ * @param cmd The command to process.
+ */
 static void
 ProcessAndroidCmd (struct android_app* app, int32_t cmd) 
 {
@@ -102,6 +128,14 @@ ProcessAndroidCmd (struct android_app* app, int32_t cmd)
 /*--------------------------------------------------------------------------- *
  *      M A I N    F U N C T I O N
  *--------------------------------------------------------------------------- */
+/**
+ * The main entry point for the application.
+ *
+ * @param argc The number of arguments.
+ * @param argv The argument list.
+ *
+ * @returns 0 on success, non-zero on failure.
+ */
 void android_main(struct android_app* state) 
 {
     AppEngine engine(state);

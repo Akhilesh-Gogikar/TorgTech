@@ -28,6 +28,14 @@ static std::list<fvec2> s_anchors;
  * determine where the anchor points are scatterd.
  *   https://github.com/tensorflow/tfjs-models/blob/master/blazeface/src/face.ts
  */
+/**
+ * Creates the anchors for the BlazeFace model.
+ *
+ * @param input_w The width of the input image.
+ * @param input_h The height of the input image.
+ *
+ * @returns None
+ */
 static int
 create_blazeface_anchors(int input_w, int input_h)
 {
@@ -67,6 +75,18 @@ create_blazeface_anchors(int input_w, int input_h)
 /* -------------------------------------------------- *
  *  Create TFLite Interpreter
  * -------------------------------------------------- */
+/**
+ * Initializes the face detection model.
+ *
+ * @param face_detect_model_buf The model buffer.
+ * @param face_detect_model_size The model buffer size.
+ * @param face_landmark_model_buf The model buffer.
+ * @param face_landmark_model_size The model buffer size.
+ * @param iris_landmark_model_buf The model buffer.
+ * @param iris_landmark_model_size The model buffer size.
+ *
+ * @returns 0 on success, -1 on failure.
+ */
 int
 init_tflite_facemesh (const char *face_detect_model_buf, size_t face_detect_model_size,
                            const char *face_landmark_model_buf, size_t face_landmark_model_size,
@@ -97,6 +117,14 @@ init_tflite_facemesh (const char *face_detect_model_buf, size_t face_detect_mode
     return 0;
 }
 
+/**
+ * Returns a pointer to the input buffer for the face detection model.
+ *
+ * @param w A pointer to the width of the input tensor.
+ * @param h A pointer to the height of the input tensor.
+ *
+ * @returns A pointer to the input buffer.
+ */
 void *
 get_face_detect_input_buf (int *w, int *h)
 {
@@ -105,6 +133,14 @@ get_face_detect_input_buf (int *w, int *h)
     return s_detect_tensor_input.ptr;
 }
 
+/**
+ * Returns a pointer to the input tensor buffer.
+ *
+ * @param w A pointer to the width of the input tensor.
+ * @param h A pointer to the height of the input tensor.
+ *
+ * @returns A pointer to the input tensor buffer.
+ */
 void *
 get_facemesh_landmark_input_buf (int *w, int *h)
 {
@@ -125,6 +161,13 @@ get_irismesh_landmark_input_buf (int *w, int *h)
 /* -------------------------------------------------- *
  * Invoke TensorFlow Lite (Face detection)
  * -------------------------------------------------- */
+/**
+ * Returns a pointer to the bounding box data for a given anchor.
+ *
+ * @param anchor_idx The index of the anchor.
+ *
+ * @returns A pointer to the bounding box data for the anchor.
+ */
 static float *
 get_bbox_ptr (int anchor_idx)
 {
@@ -134,6 +177,16 @@ get_bbox_ptr (int anchor_idx)
     return &bboxes_ptr[idx];
 }
 
+/**
+ * Decodes the bounding boxes and scores of the detected faces.
+ *
+ * @param face_list The list of detected faces.
+ * @param score_thresh The threshold of the detection score.
+ * @param input_img_w The width of the input image.
+ * @param input_img_h The height of the input image.
+ *
+ * @returns None
+ */
 static int
 decode_bounds (std::list<face_t> &face_list, float score_thresh, int input_img_w, int input_img_h)
 {
@@ -199,6 +252,14 @@ decode_bounds (std::list<face_t> &face_list, float score_thresh, int input_img_w
  *  Apply NonMaxSuppression:
  *      https://github.com/tensorflow/tfjs/blob/master/tfjs-core/src/ops/image_ops.ts
  * -------------------------------------------------- */
+/**
+ * Computes the intersection over union of two faces.
+ *
+ * @param face0 The first face.
+ * @param face1 The second face.
+ *
+ * @returns The intersection over union of the two faces.
+ */
 static float
 calc_intersection_over_union (face_t &face0, face_t &face1)
 {
@@ -236,6 +297,14 @@ calc_intersection_over_union (face_t &face0, face_t &face1)
     return intersect_area / (area0 + area1 - intersect_area);
 }
 
+/**
+ * Compares two faces based on their score.
+ *
+ * @param v1 The first face.
+ * @param v2 The second face.
+ *
+ * @returns True if the first face has a higher score than the second face.
+ */
 static bool
 compare (face_t &v1, face_t &v2)
 {
@@ -245,6 +314,15 @@ compare (face_t &v1, face_t &v2)
         return false;
 }
 
+/**
+ * Non-maximum suppression algorithm.
+ *
+ * @param face_list The input face list.
+ * @param face_sel_list The output face list.
+ * @param iou_thresh The intersection over union threshold.
+ *
+ * @returns None
+ */
 static int
 non_max_suppression (std::list<face_t> &face_list, std::list<face_t> &face_sel_list, float iou_thresh)
 {
@@ -281,12 +359,26 @@ non_max_suppression (std::list<face_t> &face_list, std::list<face_t> &face_sel_l
 /* -------------------------------------------------- *
  *  Scale bbox
  * -------------------------------------------------- */
+/**
+ * Normalizes an angle to the range (-pi, pi].
+ *
+ * @param angle The angle to normalize.
+ *
+ * @returns The normalized angle.
+ */
 static float
 normalize_radians (float angle)
 {
     return angle - 2 * M_PI * std::floor((angle - (-M_PI)) / (2 * M_PI));
 }
 
+/**
+ * Computes the rotation of the face.
+ *
+ * @param face The face to compute the rotation for.
+ *
+ * @returns None
+ */
 static void
 compute_rotation (face_t &face)
 {
@@ -301,6 +393,14 @@ compute_rotation (face_t &face)
     face.rotation = normalize_radians (rotation);
 }
 
+/**
+ * Rotates a vector by a given angle.
+ *
+ * @param vec The vector to rotate.
+ * @param rotation The angle of rotation in radians.
+ *
+ * @returns None
+ */
 static void
 rot_vec (fvec2 &vec, float rotation)
 {
@@ -310,6 +410,13 @@ rot_vec (fvec2 &vec, float rotation)
     vec.y = sx * std::sin(rotation) + sy * std::cos(rotation);
 }
 
+/**
+ * Computes the face rectangle for a face.
+ *
+ * @param face The face to compute the rectangle for.
+ *
+ * @returns None
+ */
 static void
 compute_face_rect (face_t &face)
 {
@@ -365,6 +472,13 @@ compute_face_rect (face_t &face)
     }
 }
 
+/**
+ * Sorts the face data in right-major order.
+ *
+ * @param faces The face data to sort.
+ *
+ * @returns None
+ */
 static bool
 sort_right_major (face_t &v1, face_t &v2)
 {
@@ -374,6 +488,14 @@ sort_right_major (face_t &v1, face_t &v2)
         return false;
 }
 
+/**
+ * Packs the face detect result.
+ *
+ * @param facedet_result The face detect result.
+ * @param face_list The face list.
+ *
+ * @returns None
+ */
 static void
 pack_face_result (face_detect_result_t *facedet_result, std::list<face_t> &face_list)
 {
@@ -400,6 +522,13 @@ pack_face_result (face_detect_result_t *facedet_result, std::list<face_t> &face_
 /* -------------------------------------------------- *
  * Invoke TensorFlow Lite
  * -------------------------------------------------- */
+/**
+ * Invokes the face detection model.
+ *
+ * @param facedet_result The result of the face detection model.
+ *
+ * @returns 0 on success, -1 on failure.
+ */
 int
 invoke_face_detect (face_detect_result_t *facedet_result)
 {
@@ -435,6 +564,16 @@ invoke_face_detect (face_detect_result_t *facedet_result)
 /* -------------------------------------------------- *
  * Invoke TensorFlow Lite (Facemesh landmark)
  * -------------------------------------------------- */
+/**
+ * Computes the eye region of the face.
+ *
+ * @param facemesh_result The face mesh result.
+ * @param id The id of the face.
+ * @param idx0 The index of the first eye joint.
+ * @param idx1 The index of the second eye joint.
+ *
+ * @returns None
+ */
 static void
 compute_eye_roi_one (face_landmark_result_t *facemesh_result, int id, int idx0, int idx1)
 {
@@ -483,6 +622,16 @@ compute_eye_roi_one (face_landmark_result_t *facemesh_result, int id, int idx0, 
     eye_rgn->size.y   = h;
 }
 
+/**
+ * Computes the eye ROI for a face mesh.
+ *
+ * @param facemesh_result The face mesh result.
+ * @param eye_id The eye id.
+ * @param eye_start The start index of the eye.
+ * @param eye_end The end index of the eye.
+ *
+ * @returns None
+ */
 static void
 compute_eye_roi (face_landmark_result_t *facemesh_result)
 {
@@ -490,6 +639,13 @@ compute_eye_roi (face_landmark_result_t *facemesh_result)
     compute_eye_roi_one (facemesh_result, 1, 362, 263);
 }
  
+/**
+ * Computes the eye roi of the face.
+ *
+ * @param facemesh_result The face mesh result.
+ *
+ * @returns None
+ */
 int
 invoke_facemesh_landmark (face_landmark_result_t *facemesh_result)
 {
@@ -527,6 +683,13 @@ invoke_facemesh_landmark (face_landmark_result_t *facemesh_result)
 
 
 
+/**
+ * Invokes the irismesh model.
+ *
+ * @param irismesh_result The irismesh result structure.
+ *
+ * @returns 0 on success, -1 on failure.
+ */
 int
 invoke_irismesh_landmark (irismesh_result_t *irismesh_result)
 {
@@ -583,6 +746,13 @@ invoke_irismesh_landmark (irismesh_result_t *irismesh_result)
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * =============================================================================
+ */
+/**
+ * Computes the face triangles for a cube.
+ *
+ * @param cube_size The size of the cube.
+ *
+ * @returns The face triangles for the cube.
  */
 static int s_face_tris[] = 
 {
@@ -757,6 +927,11 @@ static int s_face_tris[] =
 };
 
 
+/**
+ * Computes the face without eyes triangle.
+ *
+ * @returns None
+ */
 static int s_face_wo_eyes_tris[] =
 {
     127, 34, 139, 11, 0, 37, 232, 231, 120, 72, 37, 39, 128, 121, 47, 232, 121,
@@ -930,6 +1105,15 @@ static int s_face_wo_eyes_tris[] =
 };
 
 
+/**
+ * Returns the indicies of the triangles that make up the face mesh.
+ *
+ * @param num_tris The number of triangles in the face mesh.
+ * @param flags A flag indicating whether or not the face mesh should
+ * include the eyes.
+ *
+ * @returns The indicies of the triangles that make up the face mesh.
+ */
 int *
 get_facemesh_tri_indicies (int *num_tris, int flags)
 {
@@ -948,9 +1132,13 @@ get_facemesh_tri_indicies (int *num_tris, int flags)
 
 
 
-
-
-
+/**
+ * Computes the face vertices of a cube.
+ *
+ * @param None
+ *
+ * @returns None
+ */
 static float s_face_uv[] =
 {
   0.499976992607117, 0.652534008026123,
@@ -1424,6 +1612,13 @@ static float s_face_uv[] =
 };
 
 
+/**
+ * Returns the UV coordinates for the face mesh.
+ *
+ * @param num_uvs The number of UV coordinates.
+ *
+ * @returns The UV coordinates for the face mesh.
+ */
 float *
 get_facemesh_uv_coords (int *num_uvs)
 {
@@ -1436,6 +1631,14 @@ get_facemesh_uv_coords (int *num_uvs)
 /* -------------------------------------------------- *
  * Get face detect result for static face mask
  * -------------------------------------------------- */
+/**
+ * Gets the static face mesh landmark result.
+ *
+ * @param facedet_result The face detection result.
+ * @param facemesh_result The face mesh landmark result.
+ *
+ * @returns None
+ */
 int
 get_static_facemesh_landmark (face_detect_result_t   *facedet_result,
                               face_landmark_result_t *facemesh_result)
