@@ -1,5 +1,13 @@
-# Mati DSMS and Tarzan ADAS are GPU Accelerated TensorFlow Lite applications on Android NDK.
-Run and measure the performance of TensorFlow Lite GPU Delegate on Android NDK.
+# TorgTech Android TensorFlow Lite Apps
+
+GPU-accelerated Android NDK examples for running TensorFlow Lite computer-vision models on-device. The repository is useful for Android developers evaluating native TFLite GPU Delegate builds for driver-monitoring and ADAS-style prototypes.
+
+## Repository Map
+
+- `Mati_DSMS/`: camera-based face detection and face/iris landmark experiments using bundled MediaPipe TensorFlow Lite models.
+- `Tarzan_ADAS/`: dense depth, segmentation, object detection, and face mesh examples packaged as an Android NDK app.
+- `Sahay_ADAS/`: additional ADAS app source and assets covering dense depth, detection, segmentation, and face mesh models.
+- `third_party/`: TensorFlow Lite build scripts and checked-in support code used by the Android app projects.
 
 ## 1. How to Build & Run
 
@@ -29,7 +37,7 @@ $ sudo ./bazel-3.1.0-installer-linux-x86_64.sh
 ```
 $ mkdir ~/work
 $ git clone https://github.com/Akhilesh-Gogikar/TorgTech.git
-$ cd android_tflite/third_party/
+$ cd TorgTech/third_party/
 $ ./build_libtflite_r2.4_android.sh
 
 (Tensorflow configure will start after a while. Please enter according to your environment)
@@ -37,13 +45,14 @@ $ ./build_libtflite_r2.4_android.sh
 $ ls -l tensorflow/bazel-bin/tensorflow/lite/
 
 $ ls -l tensorflow/bazel-bin/tensorflow/lite/delegates/gpu/
+```
 
 
 
 ### 1.3 Download the needed assets
 
 ```
-$ cd ~/work/android_tflite
+$ cd ~/work/TorgTech
 $ ./download_all_assets.sh
 ```
 
@@ -58,7 +67,7 @@ $ ./studio.sh
 ```
 
 - Install NDK 20.0 by SDK Manager of Android Studio.
-- Open application folder (eg. ```~/work/android_tflite/tflite_posenet```).
+- Open an application folder such as `~/work/TorgTech/Mati_DSMS` or `~/work/TorgTech/Tarzan_ADAS`.
 - Build and Run.
 
 ## 3. Tested Environment
